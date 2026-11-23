@@ -1,0 +1,39 @@
+# נתוני משתמשים ומחקר - לעולם לא במאגר קוד
+data/
+research_data/
+research/samples/
+research/models/
+server/server_data/
+*.db
+*.db-wal
+*.db-shm
+data.key
+deploy/.env
+server_url.txt
+
+# סביבה ובנייה
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+tests/web_e2e/node_modules/
+.claude/settings.local.json
+
+# אפליקציית Android - כלי בנייה מקומיים (JDK/SDK/Gradle) ותוצרי בנייה
+.tools/
+android/**/build/
+android/.gradle/
+android/local.properties
+android/.kotlin/
+*.apk
+
+# רשת עמודי התאורה (נגזרת משכבת GIS של תל אביב - רישיון השכבה לא אומת; לבנות מקומית)
+models/street_lights_grid.json.gz
+models/safety_layers.json.gz
+
+# Firebase service account (FCM)
+deploy/secrets/
+
+# גורמי סיכון סביבתיים (research_tools/risk_factors.py) - נגזר משכבות OSM/עירוניות/משטרה; לבנות מקומית
+models/risk_factors_*.json.gz

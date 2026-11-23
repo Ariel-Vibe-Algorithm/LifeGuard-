@@ -1,0 +1,20 @@
+# Windows x64 / Python 3.11 recommended
+requests>=2.31.0
+keyboard>=0.13.5
+sounddevice>=0.4.6
+numpy>=1.24.0
+SpeechRecognition>=3.10.0
+opencv-python>=4.9.0
+tkintermapview>=1.29
+pillow>=10.0.0
+pyserial>=3.5
+pyttsx3>=2.90
+gtts>=2.5.0
+playsound==1.2.2
+pycaw>=20230407
+comtypes>=1.2.0
+phonenumbers>=8.13.0
+PyAudio>=0.2.14   # required for all voice commands (prebuilt wheels exist for Python 3.11 x64)
+sherpa-onnx==1.13.8   # on-device speech recognition; then: python speech_local.py --download he
+cryptography==44.0.2  # required: evidence vault / personal voice models encryption (AES-GCM)
+pywin32==312          # required: DPAPI protection of encryption keys
