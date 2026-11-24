@@ -85,7 +85,7 @@ streamlit run dashboard/app.py
 | יהב כהן | חווית משתמש | [Yahavb97](https://github.com/Yahavb97) |
 | עמית מוסרי | איסוף נתונים ומתכנת | [amitmosseri01-cloud](https://github.com/amitmosseri01-cloud) |
 | עמית כהן | עיצוב מוצר | [aamitochen](https://github.com/aamitochen) |
-| רועי | [למלא] | [roei789](https://github.com/roei789) |
+| רועי כהן | איסוף נתונים | [roei789](https://github.com/roei789) |
 
 ---
 
