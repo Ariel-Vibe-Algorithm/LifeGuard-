@@ -36,6 +36,21 @@ python dashboard/clean.py
 streamlit run dashboard/app.py
 ```
 
+## What we learned about the data (from the EDA)
+
+Full list, one conclusion per graph: `notebook/conclusions.md`.
+
+- **Only 47% of areas are usable** (530 of 1,126): 249 have no census population, 322 have 0 cases in both years
+  despite thousands of residents (unassigned in police data = missing, not safe), 25 have < 1,000 residents.
+- **The answer is imbalanced:** 78 of 530 (14.7%) are high-risk in 2025, so accuracy alone misleads; recall is the main metric.
+- **The signal is persistence:** ratio-to-city-median 2024 vs 2025 correlates at r ≈ 0.97; `ratio_2024` vs `high_risk_2025` = 0.72.
+  The rule `ratio_2024 ≥ 2` gets recall 91.0%, precision 86.6%, accuracy 96.6%.
+- **Baseline for M3 to beat:** majority class ("always no") = accuracy 85.3%, recall 0%.
+- **Raw counts are a trap:** cases 2024 vs 2025 correlate at 0.98 mostly because big areas have more cases.
+- **Visitor areas** (CBD/market/industrial) are 34% high-risk vs 11% elsewhere; the per-resident rate is inflated there.
+- **Concentration differs by city:** > 20% of areas high-risk in Ashdod and Tel Aviv, < 7% in Holon and Petah Tikva.
+- **y is rule-based** (ratio_2025 ≥ 2), so any 2025-derived column leaks the formula.
+
 ## Analysis conventions (do not break these)
 
 - **Answer column:** `high_risk_2025` = 1 if the 2025 rate per 1,000 residents is ≥ 2× the median of the same city in 2025.
