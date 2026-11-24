@@ -81,10 +81,10 @@ streamlit run dashboard/app.py
 
 | שם | חלק בפרויקט | GitHub |
 |---|---|---|
-| דניאל למברסקי | [למלא] | [danielemb1](https://github.com/danielemb1) |
+| דניאל למברסקי | [איסוף נתונים] | [danielemb1](https://github.com/danielemb1) |
 | יהב כהן | [למלא] | [Yahavb97](https://github.com/Yahavb97) |
-| עמית מוסרי | [למלא] | [amitmosseri01-cloud](https://github.com/amitmosseri01-cloud) |
-| עמית כהן | [למלא] | [aamitochen](https://github.com/aamitochen) |
+| עמית מוסרי | [איסוף נתונים ומתכנת] | [amitmosseri01-cloud](https://github.com/amitmosseri01-cloud) |
+| עמית כהן | [עיצוב מוצר] | [aamitochen](https://github.com/aamitochen) |
 | [למלא] | [למלא] | [roei789](https://github.com/roei789) |
 
 ---
