@@ -8,6 +8,13 @@ LifeGuard is a personal-safety app (Windows desktop prototype in Python/Tkinter,
 built in a vibe-coding course at Ariel University. The course deliverable on top of it is a **data project**:
 crime by statistical area in 10 Israeli cities (2024–2025), cleaned, explored, and shown in a Streamlit dashboard.
 
+**Milestone 2 (current submission):** what is graded is `main` of the team repo in the course org
+(`github.com/Ariel-Vibe-Algorithm/LifeGuard-`), deadline 2026-11-25 14:00. The deliverable is the **Jupyter notebook**
+(`notebook/eda_notebook.ipynb`) + clean data + Data Card + README (problem, y, source, fixes, team table, one insight,
+baseline). The Streamlit dashboard is a bonus, not required for this milestone. Every graph in the notebook must be
+followed by a written conclusion, and the notebook must run top to bottom (Run All) from a fresh clone.
+Every team member needs at least one commit under their own GitHub account.
+
 ## Course deliverable – where things are
 
 | Path | What |
