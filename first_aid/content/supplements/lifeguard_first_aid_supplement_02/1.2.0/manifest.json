@@ -1,0 +1,11 @@
+{
+  "package_id": "lifeguard_first_aid_supplement_02",
+  "version": "1.2.0",
+  "language": "he",
+  "guide_count": 45,
+  "new_guides_in_this_update": 23,
+  "supplement_to": "LifeGuard_First_Aid_Offline",
+  "images_included": false,
+  "medical_review_status": "pending",
+  "updated": "2026-11-07"
+}

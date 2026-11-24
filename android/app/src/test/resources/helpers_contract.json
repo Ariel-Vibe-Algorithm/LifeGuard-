@@ -1,0 +1,2277 @@
+{
+ "generated_by": "tools/build_helpers_contract.py (real LifeGuardService on a temp DB + Windows UI logic)",
+ "constants": {
+  "hotlines": [
+   {
+    "name": "ער\"ן - עזרה ראשונה נפשית",
+    "number": "1201",
+    "note": "24/7, גם בצ'אט באתר"
+   },
+   {
+    "name": "סה\"ר - סיוע והקשבה ברשת",
+    "number": null,
+    "url": "https://sahar.org.il",
+    "note": "צ'אט אנונימי"
+   },
+   {
+    "name": "נט\"ל - טראומה על רקע לאומי",
+    "number": "1-800-363-363",
+    "note": null
+   },
+   {
+    "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+    "number": "1202 / 1203",
+    "note": "נשים / גברים"
+   },
+   {
+    "name": "מוקד 105 - הגנה על ילדים ברשת",
+    "number": "105",
+    "note": null
+   },
+   {
+    "name": "משטרה",
+    "number": "100",
+    "note": "בסכנה מיידית"
+   }
+  ],
+  "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+  "liaison_actions": [
+   [
+    "called_police",
+    "הזעיק/ה משטרה (100)"
+   ],
+   [
+    "called_mda",
+    "הזעיק/ה מד\"א (101)"
+   ],
+   [
+    "called_fire",
+    "הזעיק/ה כבאות (102)"
+   ],
+   [
+    "reported_other",
+    "דיווח/ה לגורם רשמי אחר"
+   ],
+   [
+    "could_not_reach",
+    "לא הצליח/ה ליצור קשר עם הרשויות - ממשיך/ה לנסות"
+   ]
+  ],
+  "role_he": {
+   "on_scene": "הגעה למקום",
+   "remote_support": "שיחת תמיכה מרחוק",
+   "authority_liaison": "הזעקת רשויות"
+  },
+  "vol_roles": [
+   "on_scene",
+   "remote_support",
+   "authority_liaison"
+  ],
+  "langs": [
+   "he",
+   "ar",
+   "en",
+   "ru",
+   "am",
+   "fr",
+   "es"
+  ],
+  "guidance": {
+   "remote_support": [
+    "הקשיבו ושקפו - בלי שיפוט ובלי להבטיח הבטחות",
+    "אל תבקשו פרטים מזהים או מיקום",
+    "אם יש סכנה מיידית - הציעו לפנות ל-100/101 או לבקש 'מתנדב/ת הזעקה'",
+    "אינכם מטפלים מקצועיים: אפשר להפנות לקווי הסיוע (ער\"ן 1201 ועוד)"
+   ],
+   "authority_liaison": [
+    "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+    "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+    "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+    "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+   ]
+  },
+  "role_rows": [
+   [
+    "on_scene",
+    "🚶 הגעה למקום",
+    "קריאות בקרבתך - כמו היום"
+   ],
+   [
+    "remote_support",
+    "💬 שיחת תמיכה מרחוק",
+    "צ'אט עם מי שצריך/ה להרגיש שמישהו איתו/ה. מכל מקום, בלי לראות שם ומיקום. חשבון בן 3 ימים לפחות."
+   ],
+   [
+    "authority_liaison",
+    "👮 הזעקת רשויות",
+    "מתקשר/ת ל-100/101/102 בשביל מי שלא יכול/ה לדבר. רואה שם ומיקום - לכן דורש אימות (גם אימות זהות ידני, בלי ארגון)."
+   ]
+  ],
+  "lang_rows": [
+   [
+    "he",
+    "עברית"
+   ],
+   [
+    "ar",
+    "ערבית"
+   ],
+   [
+    "en",
+    "אנגלית"
+   ],
+   [
+    "ru",
+    "רוסית"
+   ],
+   [
+    "am",
+    "אמהרית"
+   ]
+  ]
+ },
+ "views": {
+  "roles_liaison_unverified": {
+   "roles": [
+    "authority_liaison",
+    "on_scene"
+   ],
+   "languages": [
+    "he",
+    "ar"
+   ],
+   "effective": {
+    "authority_liaison": "ממתין לאימות (אימות זהות ע\"י מנהל/ת - לא חייב להיות ארגון)",
+    "on_scene": "active"
+   },
+   "labels": {
+    "on_scene": "הגעה למקום",
+    "remote_support": "שיחת תמיכה מרחוק",
+    "authority_liaison": "הזעקת רשויות"
+   },
+   "available": true
+  },
+  "roles_newbie": {
+   "roles": [
+    "remote_support"
+   ],
+   "languages": [
+    "he"
+   ],
+   "effective": {
+    "remote_support": "זמין 3 ימים אחרי פתיחת החשבון"
+   },
+   "labels": {
+    "on_scene": "הגעה למקום",
+    "remote_support": "שיחת תמיכה מרחוק",
+    "authority_liaison": "הזעקת רשויות"
+   },
+   "available": true
+  },
+  "roles_none": {
+   "roles": [],
+   "languages": [
+    "he"
+   ],
+   "effective": {},
+   "available": false
+  },
+  "roles_liaison_verified": {
+   "roles": [
+    "authority_liaison",
+    "on_scene"
+   ],
+   "languages": [
+    "he",
+    "ar"
+   ],
+   "effective": {
+    "authority_liaison": "active",
+    "on_scene": "active"
+   },
+   "labels": {
+    "on_scene": "הגעה למקום",
+    "remote_support": "שיחת תמיכה מרחוק",
+    "authority_liaison": "הזעקת רשויות"
+   },
+   "available": true
+  },
+  "support_created": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "severity": "low",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "updated_at": 1794165723.0452619,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "support",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    },
+    {
+     "username": "talker2",
+     "display_name": "talker2",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "remote_support"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0452619,
+     "actor": "dana",
+     "kind": "created",
+     "text": "בקשת שיחה (לא חירום)"
+    },
+    {
+     "ts": 1794165723.0474176,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    }
+   ],
+   "messages": [
+    {
+     "id": 1,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": []
+    }
+   ],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "support_offer_notification": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "my_role": "helper",
+   "helper_kind": "remote_support",
+   "helper_kind_label": "שיחת תמיכה מרחוק",
+   "my_state": "notified",
+   "support_request": true,
+   "guidance": [
+    "הקשיבו ושקפו - בלי שיפוט ובלי להבטיח הבטחות",
+    "אל תבקשו פרטים מזהים או מיקום",
+    "אם יש סכנה מיידית - הציעו לפנות ל-100/101 או לבקש 'מתנדב/ת הזעקה'",
+    "אינכם מטפלים מקצועיים: אפשר להפנות לקווי הסיוע (ער\"ן 1201 ועוד)"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "מישהו צריך לדבר",
+   "ring": false
+  },
+  "support_helper_before_accept": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "my_role": "helper",
+   "helper_kind": "remote_support",
+   "helper_kind_label": "שיחת תמיכה מרחוק",
+   "my_state": "notified",
+   "support_request": true,
+   "guidance": [
+    "הקשיבו ושקפו - בלי שיפוט ובלי להבטיח הבטחות",
+    "אל תבקשו פרטים מזהים או מיקום",
+    "אם יש סכנה מיידית - הציעו לפנות ל-100/101 או לבקש 'מתנדב/ת הזעקה'",
+    "אינכם מטפלים מקצועיים: אפשר להפנות לקווי הסיוע (ער\"ן 1201 ועוד)"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "מישהו צריך לדבר"
+  },
+  "support_owner_notified": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "severity": "low",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "updated_at": 1794165723.0452619,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "support",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    },
+    {
+     "username": "talker2",
+     "display_name": "talker2",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "remote_support"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0452619,
+     "actor": "dana",
+     "kind": "created",
+     "text": "בקשת שיחה (לא חירום)"
+    },
+    {
+     "ts": 1794165723.0474176,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    }
+   ],
+   "messages": [
+    {
+     "id": 1,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": []
+    }
+   ],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "support_helper_accepted": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "my_role": "helper",
+   "helper_kind": "remote_support",
+   "helper_kind_label": "שיחת תמיכה מרחוק",
+   "my_state": "accepted",
+   "support_request": true,
+   "guidance": [
+    "הקשיבו ושקפו - בלי שיפוט ובלי להבטיח הבטחות",
+    "אל תבקשו פרטים מזהים או מיקום",
+    "אם יש סכנה מיידית - הציעו לפנות ל-100/101 או לבקש 'מתנדב/ת הזעקה'",
+    "אינכם מטפלים מקצועיים: אפשר להפנות לקווי הסיוע (ער\"ן 1201 ועוד)"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "מישהו צריך לדבר",
+   "messages": [
+    {
+     "id": 1,
+     "sender": null,
+     "sender_display": "הפונה",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": []
+    }
+   ]
+  },
+  "support_helper_chat": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "my_role": "helper",
+   "helper_kind": "remote_support",
+   "helper_kind_label": "שיחת תמיכה מרחוק",
+   "my_state": "accepted",
+   "support_request": true,
+   "guidance": [
+    "הקשיבו ושקפו - בלי שיפוט ובלי להבטיח הבטחות",
+    "אל תבקשו פרטים מזהים או מיקום",
+    "אם יש סכנה מיידית - הציעו לפנות ל-100/101 או לבקש 'מתנדב/ת הזעקה'",
+    "אינכם מטפלים מקצועיים: אפשר להפנות לקווי הסיוע (ער\"ן 1201 ועוד)"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "מישהו צריך לדבר",
+   "messages": [
+    {
+     "id": 1,
+     "sender": null,
+     "sender_display": "הפונה",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": [
+      "talker"
+     ]
+    },
+    {
+     "id": 2,
+     "sender": "talker",
+     "sender_display": "talker",
+     "role": "helper",
+     "text": "אני כאן איתך",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": [
+      "הפונה"
+     ]
+    },
+    {
+     "id": 3,
+     "sender": null,
+     "sender_display": "הפונה",
+     "role": "owner",
+     "text": "תודה",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": []
+    }
+   ]
+  },
+  "support_owner_accepted": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "severity": "low",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "updated_at": 1794165723.0452619,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "support",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "accepted",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "remote_support"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0452619,
+     "actor": "dana",
+     "kind": "created",
+     "text": "בקשת שיחה (לא חירום)"
+    },
+    {
+     "ts": 1794165723.0474176,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    },
+    {
+     "ts": 1794165723.0485892,
+     "actor": "talker",
+     "kind": "helper_accepted",
+     "text": "מתנדב/ת תמיכה הצטרף/ה (שיחת תמיכה מרחוק)"
+    }
+   ],
+   "messages": [
+    {
+     "id": 1,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": [
+      "talker"
+     ]
+    },
+    {
+     "id": 2,
+     "sender": "talker",
+     "sender_display": "talker",
+     "role": "helper",
+     "text": "אני כאן איתך",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": [
+      "דנה כהן"
+     ]
+    },
+    {
+     "id": 3,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "תודה",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": []
+    }
+   ],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "support_resumed": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "severity": "low",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "updated_at": 1794165723.0452619,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "support",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "accepted",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "remote_support"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0452619,
+     "actor": "dana",
+     "kind": "created",
+     "text": "בקשת שיחה (לא חירום)"
+    },
+    {
+     "ts": 1794165723.0474176,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    },
+    {
+     "ts": 1794165723.0485892,
+     "actor": "talker",
+     "kind": "helper_accepted",
+     "text": "מתנדב/ת תמיכה הצטרף/ה (שיחת תמיכה מרחוק)"
+    }
+   ],
+   "messages": [
+    {
+     "id": 1,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": [
+      "talker"
+     ]
+    },
+    {
+     "id": 2,
+     "sender": "talker",
+     "sender_display": "talker",
+     "role": "helper",
+     "text": "אני כאן איתך",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": [
+      "דנה כהן"
+     ]
+    },
+    {
+     "id": 3,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "תודה",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": []
+    },
+    {
+     "id": 4,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "עוד משהו",
+     "quick": null,
+     "created_at": 1794165723.0510182,
+     "read_by": []
+    }
+   ],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   },
+   "resumed": true
+  },
+  "support_owner_done": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "severity": "low",
+   "status": "active",
+   "created_at": 1794165723.0452619,
+   "updated_at": 1794165723.0452619,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "support",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "done",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "remote_support"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0452619,
+     "actor": "dana",
+     "kind": "created",
+     "text": "בקשת שיחה (לא חירום)"
+    },
+    {
+     "ts": 1794165723.0474176,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    },
+    {
+     "ts": 1794165723.0485892,
+     "actor": "talker",
+     "kind": "helper_accepted",
+     "text": "מתנדב/ת תמיכה הצטרף/ה (שיחת תמיכה מרחוק)"
+    },
+    {
+     "ts": 1794165723.0520518,
+     "actor": "talker",
+     "kind": "helper_done",
+     "text": "שיחת תמיכה מרחוק: סיים/ה את ההשתתפות"
+    }
+   ],
+   "messages": [
+    {
+     "id": 1,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": [
+      "talker"
+     ]
+    },
+    {
+     "id": 2,
+     "sender": "talker",
+     "sender_display": "talker",
+     "role": "helper",
+     "text": "אני כאן איתך",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": [
+      "דנה כהן"
+     ]
+    },
+    {
+     "id": 3,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "תודה",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": []
+    },
+    {
+     "id": 4,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "עוד משהו",
+     "quick": null,
+     "created_at": 1794165723.0510182,
+     "read_by": []
+    }
+   ],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "support_owner_closed": {
+   "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+   "mode": "silent",
+   "emergency_type": "emotional_support",
+   "severity": "low",
+   "status": "resolved",
+   "created_at": 1794165723.0452619,
+   "updated_at": 1794165723.0530887,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "support",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "done",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "remote_support"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0452619,
+     "actor": "dana",
+     "kind": "created",
+     "text": "בקשת שיחה (לא חירום)"
+    },
+    {
+     "ts": 1794165723.0474176,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    },
+    {
+     "ts": 1794165723.0485892,
+     "actor": "talker",
+     "kind": "helper_accepted",
+     "text": "מתנדב/ת תמיכה הצטרף/ה (שיחת תמיכה מרחוק)"
+    },
+    {
+     "ts": 1794165723.0520518,
+     "actor": "talker",
+     "kind": "helper_done",
+     "text": "שיחת תמיכה מרחוק: סיים/ה את ההשתתפות"
+    },
+    {
+     "ts": 1794165723.0530887,
+     "actor": "dana",
+     "kind": "closed",
+     "text": "האירוע הסתיים"
+    }
+   ],
+   "messages": [
+    {
+     "id": 1,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "קשה לי הערב",
+     "quick": null,
+     "created_at": 1794165723.0452619,
+     "read_by": [
+      "talker"
+     ]
+    },
+    {
+     "id": 2,
+     "sender": "talker",
+     "sender_display": "talker",
+     "role": "helper",
+     "text": "אני כאן איתך",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": [
+      "דנה כהן"
+     ]
+    },
+    {
+     "id": 3,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "תודה",
+     "quick": null,
+     "created_at": 1794165723.0499215,
+     "read_by": []
+    },
+    {
+     "id": 4,
+     "sender": "dana",
+     "sender_display": "דנה כהן",
+     "role": "owner",
+     "text": "עוד משהו",
+     "quick": null,
+     "created_at": 1794165723.0510182,
+     "read_by": []
+    }
+   ],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "owner_request_liaison": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "severity": "unknown",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "updated_at": 1794165723.0530887,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "manual",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "authority_liaison"
+   ],
+   "location": {
+    "lat": 32.08,
+    "lon": 34.78,
+    "accuracy_m": null,
+    "source": "",
+    "is_precise": 1,
+    "captured_at": 1794165723.0530887,
+    "received_at": 1794165723.0530887,
+    "stale": false
+   },
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0530887,
+     "actor": "dana",
+     "kind": "created",
+     "text": "אירוע נפתח (שקט)"
+    },
+    {
+     "ts": 1794165723.054122,
+     "actor": null,
+     "kind": "fallback",
+     "text": "אין אנשי קשר מחוברים - מצוקה שקטה נשלחת למתנדבים זמינים בקרבת מקום"
+    },
+    {
+     "ts": 1794165723.0849974,
+     "actor": null,
+     "kind": "no_volunteer",
+     "text": "אין מתנדב זמין ומתאים נוסף בטווח - האירוע ממתין בתור"
+    },
+    {
+     "ts": 1794165723.0860326,
+     "actor": "dana",
+     "kind": "helper_requested",
+     "text": "בקשה להזעקת רשויות"
+    },
+    {
+     "ts": 1794165723.0860326,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-1 מתנדבי הזעקת רשויות"
+    }
+   ],
+   "messages": [],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "liaison_offer_notification": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "my_role": "helper",
+   "helper_kind": "authority_liaison",
+   "helper_kind_label": "הזעקת רשויות",
+   "my_state": "notified",
+   "support_request": false,
+   "guidance": [
+    "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+    "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+    "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+    "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "מישהו במצוקה",
+   "ring": true
+  },
+  "liaison_before_accept": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "my_role": "helper",
+   "helper_kind": "authority_liaison",
+   "helper_kind_label": "הזעקת רשויות",
+   "my_state": "notified",
+   "support_request": false,
+   "guidance": [
+    "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+    "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+    "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+    "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "מישהו במצוקה"
+  },
+  "liaison_accepted": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "my_role": "helper",
+   "helper_kind": "authority_liaison",
+   "helper_kind_label": "הזעקת רשויות",
+   "my_state": "accepted",
+   "support_request": false,
+   "guidance": [
+    "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+    "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+    "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+    "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "דנה כהן",
+   "location": {
+    "lat": 32.08,
+    "lon": 34.78,
+    "accuracy_m": null,
+    "source": "",
+    "is_precise": 1,
+    "captured_at": 1794165723.0530887,
+    "received_at": 1794165723.0530887,
+    "stale": false
+   },
+   "profile": {},
+   "liaison_actions": {
+    "called_police": "הזעיק/ה משטרה (100)",
+    "called_mda": "הזעיק/ה מד\"א (101)",
+    "called_fire": "הזעיק/ה כבאות (102)",
+    "reported_other": "דיווח/ה לגורם רשמי אחר",
+    "could_not_reach": "לא הצליח/ה ליצור קשר עם הרשויות - ממשיך/ה לנסות"
+   },
+   "last_action": null,
+   "last_action_label": null,
+   "messages": []
+  },
+  "liaison_after_action": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "my_role": "helper",
+   "helper_kind": "authority_liaison",
+   "helper_kind_label": "הזעקת רשויות",
+   "my_state": "accepted",
+   "support_request": false,
+   "guidance": [
+    "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+    "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+    "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+    "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "דנה כהן",
+   "location": {
+    "lat": 32.08,
+    "lon": 34.78,
+    "accuracy_m": null,
+    "source": "",
+    "is_precise": 1,
+    "captured_at": 1794165723.0530887,
+    "received_at": 1794165723.0530887,
+    "stale": false
+   },
+   "profile": {},
+   "liaison_actions": {
+    "called_police": "הזעיק/ה משטרה (100)",
+    "called_mda": "הזעיק/ה מד\"א (101)",
+    "called_fire": "הזעיק/ה כבאות (102)",
+    "reported_other": "דיווח/ה לגורם רשמי אחר",
+    "could_not_reach": "לא הצליח/ה ליצור קשר עם הרשויות - ממשיך/ה לנסות"
+   },
+   "last_action": "called_police",
+   "last_action_label": "הזעיק/ה משטרה (100)",
+   "messages": []
+  },
+  "owner_liaison_accepted": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "severity": "unknown",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "updated_at": 1794165723.0530887,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "manual",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "accepted",
+     "last_action": "called_police",
+     "last_action_label": "הזעיק/ה משטרה (100)"
+    }
+   ],
+   "helper_requests": [
+    "authority_liaison"
+   ],
+   "location": {
+    "lat": 32.08,
+    "lon": 34.78,
+    "accuracy_m": null,
+    "source": "",
+    "is_precise": 1,
+    "captured_at": 1794165723.0530887,
+    "received_at": 1794165723.0530887,
+    "stale": false
+   },
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0530887,
+     "actor": "dana",
+     "kind": "created",
+     "text": "אירוע נפתח (שקט)"
+    },
+    {
+     "ts": 1794165723.054122,
+     "actor": null,
+     "kind": "fallback",
+     "text": "אין אנשי קשר מחוברים - מצוקה שקטה נשלחת למתנדבים זמינים בקרבת מקום"
+    },
+    {
+     "ts": 1794165723.0849974,
+     "actor": null,
+     "kind": "no_volunteer",
+     "text": "אין מתנדב זמין ומתאים נוסף בטווח - האירוע ממתין בתור"
+    },
+    {
+     "ts": 1794165723.0860326,
+     "actor": "dana",
+     "kind": "helper_requested",
+     "text": "בקשה להזעקת רשויות"
+    },
+    {
+     "ts": 1794165723.0860326,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-1 מתנדבי הזעקת רשויות"
+    },
+    {
+     "ts": 1794165723.0870378,
+     "actor": "liaison",
+     "kind": "helper_accepted",
+     "text": "liaison הצטרף/ה (הזעקת רשויות)"
+    },
+    {
+     "ts": 1794165723.088325,
+     "actor": "liaison",
+     "kind": "liaison_called_police",
+     "text": "liaison הזעיק/ה משטרה (100)"
+    }
+   ],
+   "messages": [],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "owner_request_talk": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "severity": "unknown",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "updated_at": 1794165723.0530887,
+   "owner": "dana",
+   "owner_display": "דנה כהן",
+   "my_role": "owner",
+   "my_state": null,
+   "full_access": true,
+   "my_ring_status": null,
+   "signal_lost_since": null,
+   "activation": "manual",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "accepted",
+     "last_action": "called_police",
+     "last_action_label": "הזעיק/ה משטרה (100)"
+    },
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    },
+    {
+     "username": "talker2",
+     "display_name": "talker2",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "helper_requests": [
+    "authority_liaison",
+    "remote_support"
+   ],
+   "location": {
+    "lat": 32.08,
+    "lon": 34.78,
+    "accuracy_m": null,
+    "source": "",
+    "is_precise": 1,
+    "captured_at": 1794165723.0530887,
+    "received_at": 1794165723.0530887,
+    "stale": false
+   },
+   "profile": {},
+   "recipients": [],
+   "timeline": [
+    {
+     "ts": 1794165723.0530887,
+     "actor": "dana",
+     "kind": "created",
+     "text": "אירוע נפתח (שקט)"
+    },
+    {
+     "ts": 1794165723.054122,
+     "actor": null,
+     "kind": "fallback",
+     "text": "אין אנשי קשר מחוברים - מצוקה שקטה נשלחת למתנדבים זמינים בקרבת מקום"
+    },
+    {
+     "ts": 1794165723.0849974,
+     "actor": null,
+     "kind": "no_volunteer",
+     "text": "אין מתנדב זמין ומתאים נוסף בטווח - האירוע ממתין בתור"
+    },
+    {
+     "ts": 1794165723.0860326,
+     "actor": "dana",
+     "kind": "helper_requested",
+     "text": "בקשה להזעקת רשויות"
+    },
+    {
+     "ts": 1794165723.0860326,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-1 מתנדבי הזעקת רשויות"
+    },
+    {
+     "ts": 1794165723.0870378,
+     "actor": "liaison",
+     "kind": "helper_accepted",
+     "text": "liaison הצטרף/ה (הזעקת רשויות)"
+    },
+    {
+     "ts": 1794165723.088325,
+     "actor": "liaison",
+     "kind": "liaison_called_police",
+     "text": "liaison הזעיק/ה משטרה (100)"
+    },
+    {
+     "ts": 1794165723.0893667,
+     "actor": "dana",
+     "kind": "helper_requested",
+     "text": "בקשה לשיחת תמיכה מרחוק"
+    },
+    {
+     "ts": 1794165723.090401,
+     "actor": null,
+     "kind": "helper_notified",
+     "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+    }
+   ],
+   "messages": [],
+   "quick_replies": {
+    "ok": "אני בסדר עכשיו",
+    "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+    "call_police": "תתקשרו למשטרה (100)",
+    "hiding": "אני מסתתר/ת",
+    "hurry": "בואו מהר",
+    "injured": "אני פצוע/ה"
+   }
+  },
+  "liaison_stale_location": {
+   "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+   "status": "active",
+   "created_at": 1794165723.0530887,
+   "mode": "silent",
+   "emergency_type": "unknown",
+   "my_role": "helper",
+   "helper_kind": "authority_liaison",
+   "helper_kind_label": "הזעקת רשויות",
+   "my_state": "accepted",
+   "support_request": false,
+   "guidance": [
+    "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+    "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+    "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+    "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+   ],
+   "hotlines": [
+    {
+     "name": "ער\"ן - עזרה ראשונה נפשית",
+     "number": "1201",
+     "note": "24/7, גם בצ'אט באתר"
+    },
+    {
+     "name": "סה\"ר - סיוע והקשבה ברשת",
+     "number": null,
+     "url": "https://sahar.org.il",
+     "note": "צ'אט אנונימי"
+    },
+    {
+     "name": "נט\"ל - טראומה על רקע לאומי",
+     "number": "1-800-363-363",
+     "note": null
+    },
+    {
+     "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+     "number": "1202 / 1203",
+     "note": "נשים / גברים"
+    },
+    {
+     "name": "מוקד 105 - הגנה על ילדים ברשת",
+     "number": "105",
+     "note": null
+    },
+    {
+     "name": "משטרה",
+     "number": "100",
+     "note": "בסכנה מיידית"
+    }
+   ],
+   "owner": null,
+   "owner_display": "דנה כהן",
+   "location": {
+    "lat": 32.08,
+    "lon": 34.78,
+    "accuracy_m": null,
+    "source": "",
+    "is_precise": 1,
+    "captured_at": 1794165723.0530887,
+    "received_at": 1794164823.0914054,
+    "stale": true
+   },
+   "profile": {},
+   "liaison_actions": {
+    "called_police": "הזעיק/ה משטרה (100)",
+    "called_mda": "הזעיק/ה מד\"א (101)",
+    "called_fire": "הזעיק/ה כבאות (102)",
+    "reported_other": "דיווח/ה לגורם רשמי אחר",
+    "could_not_reach": "לא הצליח/ה ליצור קשר עם הרשויות - ממשיך/ה לנסות"
+   },
+   "last_action": "called_police",
+   "last_action_label": "הזעיק/ה משטרה (100)",
+   "messages": []
+  },
+  "inbox_liaison": [
+   {
+    "id": "inc_c52353da0f2d4da699a7a142d85ef700",
+    "status": "active",
+    "created_at": 1794165723.0530887,
+    "mode": "silent",
+    "emergency_type": "unknown",
+    "my_role": "helper",
+    "helper_kind": "authority_liaison",
+    "helper_kind_label": "הזעקת רשויות",
+    "my_state": "accepted",
+    "support_request": false,
+    "guidance": [
+     "התקשרו מיד ל-100 (משטרה) או 101 (מד\"א) לפי המצב",
+     "מסרו: מיקום מדויק, מה ידוע, שהפונה לא יכול/ה לדבר (אם במצוקה שקטה)",
+     "עדכנו כאן בכפתורים מה עשיתם - הפונה ואנשי הקשר שלו/ה רואים את זה",
+     "אל תגיעו בעצמכם למקום אלא אם אתם גם מתנדבים בשטח"
+    ],
+    "hotlines": [
+     {
+      "name": "ער\"ן - עזרה ראשונה נפשית",
+      "number": "1201",
+      "note": "24/7, גם בצ'אט באתר"
+     },
+     {
+      "name": "סה\"ר - סיוע והקשבה ברשת",
+      "number": null,
+      "url": "https://sahar.org.il",
+      "note": "צ'אט אנונימי"
+     },
+     {
+      "name": "נט\"ל - טראומה על רקע לאומי",
+      "number": "1-800-363-363",
+      "note": null
+     },
+     {
+      "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+      "number": "1202 / 1203",
+      "note": "נשים / גברים"
+     },
+     {
+      "name": "מוקד 105 - הגנה על ילדים ברשת",
+      "number": "105",
+      "note": null
+     },
+     {
+      "name": "משטרה",
+      "number": "100",
+      "note": "בסכנה מיידית"
+     }
+    ],
+    "owner": null,
+    "owner_display": "דנה כהן",
+    "location": {
+     "lat": 32.08,
+     "lon": 34.78,
+     "accuracy_m": null,
+     "source": "",
+     "is_precise": 1,
+     "captured_at": 1794165723.0530887,
+     "received_at": 1794164823.0914054,
+     "stale": true
+    },
+    "profile": {},
+    "liaison_actions": {
+     "called_police": "הזעיק/ה משטרה (100)",
+     "called_mda": "הזעיק/ה מד\"א (101)",
+     "called_fire": "הזעיק/ה כבאות (102)",
+     "reported_other": "דיווח/ה לגורם רשמי אחר",
+     "could_not_reach": "לא הצליח/ה ליצור קשר עם הרשויות - ממשיך/ה לנסות"
+    },
+    "last_action": "called_police",
+    "last_action_label": "הזעיק/ה משטרה (100)",
+    "messages": []
+   }
+  ]
+ },
+ "helpers_summary": [
+  {
+   "id": "empty_nothing_requested",
+   "helpers": [],
+   "requested": [],
+   "text": "",
+   "tone": "MUTED"
+  },
+  {
+   "id": "empty_requested_liaison",
+   "helpers": [],
+   "requested": [
+    "authority_liaison"
+   ],
+   "text": "⚠️ אין כרגע מתנדבים זמינים לזה. בסכנה מיידית: 100 / 101",
+   "tone": "ERROR"
+  },
+  {
+   "id": "empty_requested_both",
+   "helpers": [],
+   "requested": [
+    "authority_liaison",
+    "remote_support"
+   ],
+   "text": "⚠️ אין כרגע מתנדבים זמינים לזה. בסכנה מיידית: 100 / 101\n⚠️ אין כרגע מתנדבים זמינים לזה. בסכנה מיידית: 100 / 101",
+   "tone": "ERROR"
+  },
+  {
+   "id": "liaison_notified",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "requested": [
+    "authority_liaison"
+   ],
+   "text": "⏳ הזעקת רשויות: נשלח למתנדבים, ממתינים שמישהו יקבל",
+   "tone": "MUTED"
+  },
+  {
+   "id": "liaison_accepted_with_action",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "accepted",
+     "last_action": "called_police",
+     "last_action_label": "הזעיק/ה משטרה (100)"
+    }
+   ],
+   "requested": [
+    "authority_liaison"
+   ],
+   "text": "✅ הזעקת רשויות: liaison איתך\n   הזעיק/ה משטרה (100)",
+   "tone": "OK"
+  },
+  {
+   "id": "liaison_accepted_talk_notified",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "accepted",
+     "last_action": "called_police",
+     "last_action_label": "הזעיק/ה משטרה (100)"
+    },
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    },
+    {
+     "username": "talker2",
+     "display_name": "talker2",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "requested": [
+    "authority_liaison",
+    "remote_support"
+   ],
+   "text": "✅ הזעקת רשויות: liaison איתך\n   הזעיק/ה משטרה (100)\n⏳ שיחת תמיכה מרחוק: נשלח למתנדבים, ממתינים שמישהו יקבל",
+   "tone": "OK"
+  },
+  {
+   "id": "talk_notified_only",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    },
+    {
+     "username": "talker2",
+     "display_name": "talker2",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "notified",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "requested": [
+    "remote_support"
+   ],
+   "text": "⏳ שיחת תמיכה מרחוק: נשלח למתנדבים, ממתינים שמישהו יקבל",
+   "tone": "MUTED"
+  },
+  {
+   "id": "talk_requested_none_available",
+   "helpers": [
+    {
+     "username": "liaison",
+     "display_name": "liaison",
+     "kind": "authority_liaison",
+     "kind_label": "הזעקת רשויות",
+     "state": "accepted",
+     "last_action": "called_police",
+     "last_action_label": "הזעיק/ה משטרה (100)"
+    }
+   ],
+   "requested": [
+    "authority_liaison",
+    "remote_support"
+   ],
+   "text": "✅ הזעקת רשויות: liaison איתך\n   הזעיק/ה משטרה (100)\n⚠️ אין כרגע מתנדבים זמינים לזה. בסכנה מיידית: 100 / 101",
+   "tone": "ERROR"
+  },
+  {
+   "id": "support_done",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "done",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "requested": [
+    "remote_support"
+   ],
+   "text": "✔️ שיחת תמיכה מרחוק: המתנדב/ת סיים/ה",
+   "tone": "MUTED"
+  },
+  {
+   "id": "support_accepted",
+   "helpers": [
+    {
+     "username": "talker",
+     "display_name": "talker",
+     "kind": "remote_support",
+     "kind_label": "שיחת תמיכה מרחוק",
+     "state": "accepted",
+     "last_action": null,
+     "last_action_label": null
+    }
+   ],
+   "requested": [],
+   "text": "✅ שיחת תמיכה מרחוק: מתנדב/ת איתך",
+   "tone": "OK"
+  }
+ ],
+ "support_status": [
+  {
+   "view": "support_created",
+   "text": "⏳ הבקשה נשלחה ל-2 מתנדבים. ממתינים שמישהו יקבל - בינתיים אפשר לכתוב כאן.",
+   "tone": "MUTED"
+  },
+  {
+   "view": "support_owner_notified",
+   "text": "⏳ הבקשה נשלחה ל-2 מתנדבים. ממתינים שמישהו יקבל - בינתיים אפשר לכתוב כאן.",
+   "tone": "MUTED"
+  },
+  {
+   "view": "support_owner_accepted",
+   "text": "✅ מתנדב/ת הצטרף/ה לשיחה - אפשר לכתוב. המתנדב/ת לא רואה את שמך ואת מיקומך.",
+   "tone": "OK"
+  },
+  {
+   "view": "support_owner_done",
+   "text": "המתנדב/ת סיים/ה את השיחה. אפשר לסגור ולפתוח בקשה חדשה.",
+   "tone": "MUTED"
+  },
+  {
+   "view": "support_owner_closed",
+   "text": "השיחה הסתיימה. אפשר תמיד לפתוח שיחה חדשה או לפנות לקווי הסיוע.",
+   "tone": "MUTED"
+  },
+  {
+   "view": "inline:no_helpers",
+   "inline": {
+    "id": "inc_26f6dfafa54c7a299d200c0b5737ceee",
+    "mode": "silent",
+    "emergency_type": "emotional_support",
+    "severity": "low",
+    "status": "active",
+    "created_at": 1794165723.0452619,
+    "updated_at": 1794165723.0452619,
+    "owner": "dana",
+    "owner_display": "דנה כהן",
+    "my_role": "owner",
+    "my_state": null,
+    "full_access": true,
+    "my_ring_status": null,
+    "signal_lost_since": null,
+    "activation": "support",
+    "helpers": [],
+    "helper_requests": [
+     "remote_support"
+    ],
+    "hotlines": [
+     {
+      "name": "ער\"ן - עזרה ראשונה נפשית",
+      "number": "1201",
+      "note": "24/7, גם בצ'אט באתר"
+     },
+     {
+      "name": "סה\"ר - סיוע והקשבה ברשת",
+      "number": null,
+      "url": "https://sahar.org.il",
+      "note": "צ'אט אנונימי"
+     },
+     {
+      "name": "נט\"ל - טראומה על רקע לאומי",
+      "number": "1-800-363-363",
+      "note": null
+     },
+     {
+      "name": "מרכזי סיוע לנפגעות ולנפגעי תקיפה מינית",
+      "number": "1202 / 1203",
+      "note": "נשים / גברים"
+     },
+     {
+      "name": "מוקד 105 - הגנה על ילדים ברשת",
+      "number": "105",
+      "note": null
+     },
+     {
+      "name": "משטרה",
+      "number": "100",
+      "note": "בסכנה מיידית"
+     }
+    ],
+    "hotlines_note": "מספרי הקווים יש לאמת לפני הפצה לציבור.",
+    "profile": {},
+    "recipients": [],
+    "timeline": [
+     {
+      "ts": 1794165723.0452619,
+      "actor": "dana",
+      "kind": "created",
+      "text": "בקשת שיחה (לא חירום)"
+     },
+     {
+      "ts": 1794165723.0474176,
+      "actor": null,
+      "kind": "helper_notified",
+      "text": "נשלח ל-2 מתנדבי שיחת תמיכה מרחוק"
+     }
+    ],
+    "messages": [
+     {
+      "id": 1,
+      "sender": "dana",
+      "sender_display": "דנה כהן",
+      "role": "owner",
+      "text": "קשה לי הערב",
+      "quick": null,
+      "created_at": 1794165723.0452619,
+      "read_by": []
+     }
+    ],
+    "quick_replies": {
+     "ok": "אני בסדר עכשיו",
+     "cant_talk": "אני לא יכול/ה לדבר - רק הודעות",
+     "call_police": "תתקשרו למשטרה (100)",
+     "hiding": "אני מסתתר/ת",
+     "hurry": "בואו מהר",
+     "injured": "אני פצוע/ה"
+    }
+   },
+   "text": "⚠️ אין כרגע מתנדבי שיחה זמינים. הבקשה נשארת פתוחה וננסה שוב - ובינתיים אפשר לפנות לקווי הסיוע למטה.",
+   "tone": "WARN"
+  }
+ ]
+}

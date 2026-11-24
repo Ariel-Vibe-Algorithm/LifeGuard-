@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  LifeGuard design tokens (design/tokens.json, color.light). Night values: values-night/colors.xml.
+  Every text/background pair used in the app meets WCAG 4.5:1 in both modes (WCAG relative-luminance check).
+  Rule for the "*_fill" colours: they carry WHITE text in both modes and do not change with the theme
+  (SOS, urgency chips, the incoming-alert screen) - an emergency must look the same day or night.
+-->
+<resources>
+    <!-- ===== tokens (light) ===== -->
+    <color name="lg_brand_navy">#0A1F44</color>
+    <color name="lg_brand_navy_2">#132E5C</color>
+    <color name="lg_bg">#F4F6FA</color>
+    <color name="lg_surface">#FFFFFF</color>
+    <color name="lg_surface_2">#EEF2F8</color>
+    <color name="lg_fill">#E6EBF3</color>
+    <color name="lg_separator">#D5DCE7</color>
+    <color name="lg_label">#0B1426</color>
+    <color name="lg_label_secondary">#47546A</color>
+    <color name="lg_label_tertiary">#5F6B80</color>
+    <color name="lg_accent">#0B63E5</color>
+    <color name="lg_accent_pressed">#0950BA</color>
+    <color name="lg_accent_tint">#E3EEFF</color>
+    <color name="lg_on_accent">#FFFFFF</color>
+    <color name="lg_sos">#D70015</color>
+    <color name="lg_sos_pressed">#A50011</color>
+    <color name="lg_sos_tint">#FFE9EA</color>
+    <color name="lg_success">#1E7F3B</color>
+    <color name="lg_success_tint">#E4F5E9</color>
+    <color name="lg_warning">#A44A00</color>
+    <color name="lg_warning_tint">#FFF1DE</color>
+    <color name="lg_focus">#0B63E5</color>
+    <color name="lg_map_layer_low">#DCE8FB</color>
+    <color name="lg_map_layer_mid">#7FA8EC</color>
+    <color name="lg_map_layer_high">#0A1F44</color>
+    <!-- neutral fill for the discreet (silent) SOS: grey, not red, white text -->
+    <color name="lg_neutral_fill">#5F6B80</color>
+    <color name="lg_card_shadow">#140A1F44</color>
+
+    <!-- ===== fixed fills (same in both modes, white text on top) ===== -->
+    <color name="lg_fill_sos">#D70015</color>
+    <color name="lg_fill_sos_pressed">#A50011</color>
+    <color name="lg_fill_success">#1E7F3B</color>
+    <color name="lg_fill_warning">#A44A00</color>
+    <color name="lg_fill_accent">#0B63E5</color>
+    <color name="lg_fill_neutral">#47546A</color>
+    <color name="lg_fill_navy">#0A1F44</color>
+    <color name="lg_on_fill">#FFFFFF</color>
+
+    <!-- ===== legacy names (kept so existing code keeps compiling) -> tokens ===== -->
+    <color name="sos_red">@color/lg_sos</color>
+    <color name="sos_red_dark">@color/lg_sos</color>
+    <color name="ok_green">@color/lg_success</color>
+    <color name="neutral">@color/lg_neutral_fill</color>
+    <color name="warn_amber">@color/lg_warning</color>
+    <color name="card_alert">@color/lg_sos_tint</color>
+    <color name="card_neutral">@color/lg_surface</color>
+    <color name="brand">@color/lg_accent</color>
+    <color name="bubble_me">@color/lg_accent</color>
+    <color name="bubble_other">@color/lg_surface</color>
+</resources>

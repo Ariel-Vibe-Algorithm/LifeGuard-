@@ -1,0 +1,2253 @@
+{
+ "machine_before": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:07:13",
+  "cpu_percent_busy": 25.8,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 18.7,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    1050
+   ],
+   [
+    "python.exe",
+    60
+   ],
+   [
+    "dwm.exe",
+    12
+   ],
+   [
+    "msedgewebview2.exe",
+    8
+   ],
+   [
+    "Code.exe",
+    8
+   ]
+  ]
+ },
+ "params": {
+  "reps": 3,
+  "seconds": 5.0,
+  "owners": 300,
+  "vols": 30,
+  "levels": "1,16,64",
+  "only": "",
+  "synchronous": "",
+  "indexes": false,
+  "tag": "quiet_baseline"
+ },
+ "reps": [
+  {
+   "rep": 0,
+   "results": [
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 1,
+     "wall_s": 4.9,
+     "ok_rps": 8.4,
+     "latency_ms": {
+      "n": 41,
+      "p50": 117.3,
+      "p95": 130.5,
+      "p99": 142.3,
+      "max": 147.4,
+      "mean": 119.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 41
+     },
+     "server_lock_hold_utilization": 0.025,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 38.7,
+     "server_cpu_cores_used": 0.97,
+     "tick_ms": {
+      "n": 5,
+      "p50": 0.4,
+      "p95": 0.8,
+      "max": 0.8
+     }
+    },
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 16,
+     "wall_s": 5.73,
+     "ok_rps": 11.2,
+     "latency_ms": {
+      "n": 64,
+      "p50": 1355.4,
+      "p95": 1846.9,
+      "p99": 2099.5,
+      "max": 2139.1,
+      "mean": 1374.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 64
+     },
+     "server_lock_hold_utilization": 0.074,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 39.2,
+     "server_cpu_cores_used": 10.25,
+     "tick_ms": {
+      "n": 5,
+      "p50": 1.2,
+      "p95": 1.2,
+      "max": 1.2
+     }
+    },
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 64,
+     "wall_s": 6.39,
+     "ok_rps": 21.0,
+     "latency_ms": {
+      "n": 134,
+      "p50": 1697.9,
+      "p95": 3257.2,
+      "p99": 4137.0,
+      "max": 4860.4,
+      "mean": 1835.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 134,
+      "-2": 1
+     },
+     "server_lock_hold_utilization": 0.174,
+     "server_lock_wait_p95_ms": 3.4,
+     "server_threads": 7,
+     "server_rss_mb": 39.9,
+     "server_cpu_cores_used": 10.72,
+     "tick_ms": {
+      "n": 6,
+      "p50": 1.1,
+      "p95": 2.4,
+      "max": 2.7
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 1,
+     "wall_s": 4.97,
+     "ok_rps": 1371.8,
+     "latency_ms": {
+      "n": 6816,
+      "p50": 0.6,
+      "p95": 1.4,
+      "p99": 2.3,
+      "max": 32.4,
+      "mean": 0.7,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 6816
+     },
+     "server_lock_hold_utilization": 0.292,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 46.8,
+     "server_cpu_cores_used": 0.74,
+     "tick_ms": {
+      "n": 5,
+      "p50": 0.7,
+      "p95": 1.0,
+      "max": 1.0
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 16,
+     "wall_s": 4.91,
+     "ok_rps": 1108.0,
+     "latency_ms": {
+      "n": 5438,
+      "p50": 12.3,
+      "p95": 31.1,
+      "p99": 44.6,
+      "max": 540.5,
+      "mean": 14.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 5438
+     },
+     "server_lock_hold_utilization": 0.617,
+     "server_lock_wait_p95_ms": 7.0,
+     "server_threads": 7,
+     "server_rss_mb": 45.6,
+     "server_cpu_cores_used": 1.22,
+     "tick_ms": {
+      "n": 5,
+      "p50": 9.7,
+      "p95": 38.1,
+      "max": 44.7
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 64,
+     "wall_s": 4.98,
+     "ok_rps": 1152.1,
+     "latency_ms": {
+      "n": 5732,
+      "p50": 44.5,
+      "p95": 119.5,
+      "p99": 175.0,
+      "max": 1567.7,
+      "mean": 55.0,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 5732
+     },
+     "server_lock_hold_utilization": 0.621,
+     "server_lock_wait_p95_ms": 29.3,
+     "server_threads": 9,
+     "server_rss_mb": 47.3,
+     "server_cpu_cores_used": 1.29,
+     "tick_ms": {
+      "n": 5,
+      "p50": 37.5,
+      "p95": 73.8,
+      "max": 79.9
+     }
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 1,
+     "wall_s": 4.93,
+     "ok_rps": 27.4,
+     "latency_ms": {
+      "n": 135,
+      "p50": 35.8,
+      "p95": 41.9,
+      "p99": 55.2,
+      "max": 57.9,
+      "mean": 36.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 135
+     },
+     "server_lock_hold_utilization": 0.853,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 9,
+     "server_rss_mb": 46.8,
+     "server_cpu_cores_used": 0.52,
+     "tick_ms": {
+      "n": 5,
+      "p50": 21.4,
+      "p95": 33.3,
+      "max": 34.9
+     },
+     "active_incidents_after": 135
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 16,
+     "wall_s": 5.32,
+     "ok_rps": 21.1,
+     "latency_ms": {
+      "n": 112,
+      "p50": 639.8,
+      "p95": 1359.6,
+      "p99": 1378.8,
+      "max": 1381.6,
+      "mean": 751.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 112
+     },
+     "server_lock_hold_utilization": 0.876,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 10,
+     "server_rss_mb": 48.7,
+     "server_cpu_cores_used": 0.58,
+     "tick_ms": {
+      "n": 4,
+      "p50": 309.6,
+      "p95": 2541.0,
+      "max": 2932.7
+     },
+     "active_incidents_after": 112
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 64,
+     "wall_s": 6.5,
+     "ok_rps": 19.7,
+     "latency_ms": {
+      "n": 128,
+      "p50": 2824.8,
+      "p95": 3412.1,
+      "p99": 4083.9,
+      "max": 4106.3,
+      "mean": 2968.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 128
+     },
+     "server_lock_hold_utilization": 0.863,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 10,
+     "server_rss_mb": 50.0,
+     "server_cpu_cores_used": 0.69,
+     "tick_ms": {
+      "n": 3,
+      "p50": 1759.5,
+      "p95": 2523.1,
+      "max": 2607.9
+     },
+     "active_incidents_after": 128
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 1,
+     "wall_s": 4.88,
+     "ok_rps": 113.0,
+     "latency_ms": {
+      "n": 551,
+      "p50": 7.9,
+      "p95": 13.1,
+      "p99": 19.8,
+      "max": 78.6,
+      "mean": 8.8,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 551
+     },
+     "server_lock_hold_utilization": 0.844,
+     "server_lock_wait_p95_ms": 0.3,
+     "server_threads": 7,
+     "server_rss_mb": 49.4,
+     "server_cpu_cores_used": 0.34,
+     "tick_ms": {
+      "n": 4,
+      "p50": 71.0,
+      "p95": 433.1,
+      "max": 495.2
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 16,
+     "wall_s": 5.05,
+     "ok_rps": 124.9,
+     "latency_ms": {
+      "n": 631,
+      "p50": 119.4,
+      "p95": 215.6,
+      "p99": 284.8,
+      "max": 683.3,
+      "mean": 126.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 631
+     },
+     "server_lock_hold_utilization": 0.91,
+     "server_lock_wait_p95_ms": 47.6,
+     "server_threads": 7,
+     "server_rss_mb": 50.5,
+     "server_cpu_cores_used": 0.43
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 64,
+     "wall_s": 5.36,
+     "ok_rps": 142.2,
+     "latency_ms": {
+      "n": 762,
+      "p50": 394.6,
+      "p95": 852.6,
+      "p99": 1034.4,
+      "max": 1922.5,
+      "mean": 435.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 762
+     },
+     "server_lock_hold_utilization": 0.91,
+     "server_lock_wait_p95_ms": 188.7,
+     "server_threads": 7,
+     "server_rss_mb": 49.6,
+     "server_cpu_cores_used": 0.49
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 1,
+     "wall_s": 4.98,
+     "ok_rps": 345.8,
+     "latency_ms": {
+      "n": 1723,
+      "p50": 2.0,
+      "p95": 7.1,
+      "p99": 11.1,
+      "max": 33.5,
+      "mean": 2.8,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1723
+     },
+     "server_lock_hold_utilization": 0.519,
+     "server_lock_wait_p95_ms": 0.2,
+     "server_threads": 7,
+     "server_rss_mb": 51.4,
+     "server_cpu_cores_used": 0.93,
+     "tick_ms": {
+      "n": 3,
+      "p50": 1395.7,
+      "p95": 9982.2,
+      "max": 10936.3
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 16,
+     "wall_s": 4.98,
+     "ok_rps": 497.8,
+     "latency_ms": {
+      "n": 2478,
+      "p50": 28.5,
+      "p95": 57.8,
+      "p99": 76.8,
+      "max": 542.6,
+      "mean": 31.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2478
+     },
+     "server_lock_hold_utilization": 0.623,
+     "server_lock_wait_p95_ms": 7.6,
+     "server_threads": 7,
+     "server_rss_mb": 52.3,
+     "server_cpu_cores_used": 1.22,
+     "tick_ms": {
+      "n": 2,
+      "p50": 312.7,
+      "p95": 356.2,
+      "max": 361.1
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 64,
+     "wall_s": 4.9,
+     "ok_rps": 370.9,
+     "latency_ms": {
+      "n": 1819,
+      "p50": 109.8,
+      "p95": 403.2,
+      "p99": 658.2,
+      "max": 1449.0,
+      "mean": 143.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1819
+     },
+     "server_lock_hold_utilization": 0.596,
+     "server_lock_wait_p95_ms": 35.9,
+     "server_threads": 7,
+     "server_rss_mb": 51.5,
+     "server_cpu_cores_used": 1.09
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 1,
+     "wall_s": 4.95,
+     "ok_rps": 606.3,
+     "latency_ms": {
+      "n": 3001,
+      "p50": 1.0,
+      "p95": 4.1,
+      "p99": 7.6,
+      "max": 16.0,
+      "mean": 1.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3001
+     },
+     "server_lock_hold_utilization": 0.463,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 7,
+     "server_rss_mb": 53.1,
+     "server_cpu_cores_used": 0.9,
+     "tick_ms": {
+      "n": 4,
+      "p50": 449.8,
+      "p95": 7741.0,
+      "max": 8952.4
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 16,
+     "wall_s": 4.66,
+     "ok_rps": 398.7,
+     "latency_ms": {
+      "n": 1859,
+      "p50": 37.1,
+      "p95": 62.8,
+      "p99": 74.7,
+      "max": 559.1,
+      "mean": 39.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1859
+     },
+     "server_lock_hold_utilization": 0.571,
+     "server_lock_wait_p95_ms": 5.6,
+     "server_threads": 7,
+     "server_rss_mb": 51.9,
+     "server_cpu_cores_used": 1.18,
+     "tick_ms": {
+      "n": 1,
+      "p50": 163.9,
+      "p95": 163.9,
+      "max": 163.9
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 64,
+     "wall_s": 4.54,
+     "ok_rps": 387.4,
+     "latency_ms": {
+      "n": 1757,
+      "p50": 156.1,
+      "p95": 247.6,
+      "p99": 615.6,
+      "max": 718.1,
+      "mean": 162.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1757
+     },
+     "server_lock_hold_utilization": 0.571,
+     "server_lock_wait_p95_ms": 22.3,
+     "server_threads": 7,
+     "server_rss_mb": 50.9,
+     "server_cpu_cores_used": 1.2
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 1,
+     "wall_s": 4.94,
+     "ok_rps": 67.2,
+     "latency_ms": {
+      "n": 332,
+      "p50": 8.5,
+      "p95": 18.2,
+      "p99": 23.9,
+      "max": 36.6,
+      "mean": 9.8,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 332
+     },
+     "server_lock_hold_utilization": 0.799,
+     "server_lock_wait_p95_ms": 0.4,
+     "server_threads": 7,
+     "server_rss_mb": 51.3,
+     "server_cpu_cores_used": 0.53,
+     "tick_ms": {
+      "n": 3,
+      "p50": 2341.0,
+      "p95": 8010.2,
+      "max": 8640.1
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 16,
+     "wall_s": 5.84,
+     "ok_rps": 61.5,
+     "latency_ms": {
+      "n": 359,
+      "p50": 171.3,
+      "p95": 270.1,
+      "p99": 381.0,
+      "max": 783.4,
+      "mean": 161.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 359,
+      "429": 18
+     },
+     "server_lock_hold_utilization": 0.861,
+     "server_lock_wait_p95_ms": 21.9,
+     "server_threads": 7,
+     "server_rss_mb": 51.7,
+     "server_cpu_cores_used": 0.6,
+     "tick_ms": {
+      "n": 2,
+      "p50": 1843.0,
+      "p95": 1898.2,
+      "max": 1904.4
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 64,
+     "wall_s": 5.73,
+     "ok_rps": 69.8,
+     "latency_ms": {
+      "n": 400,
+      "p50": 534.0,
+      "p95": 1605.4,
+      "p99": 2013.4,
+      "max": 2443.3,
+      "mean": 632.7,
+      "unit": "ms"
+     },
+     "statuses": {
+      "429": 283,
+      "200": 400
+     },
+     "server_lock_hold_utilization": 0.842,
+     "server_lock_wait_p95_ms": 191.2,
+     "server_threads": 6,
+     "server_rss_mb": 50.4,
+     "server_cpu_cores_used": 0.51,
+     "tick_ms": {
+      "n": 1,
+      "p50": 4972.8,
+      "p95": 4972.8,
+      "max": 4972.8
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 1,
+     "wall_s": 4.99,
+     "ok_rps": 834.0,
+     "latency_ms": {
+      "n": 4160,
+      "p50": 0.8,
+      "p95": 2.9,
+      "p99": 4.5,
+      "max": 35.9,
+      "mean": 1.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 4160
+     },
+     "server_lock_hold_utilization": 0.224,
+     "server_lock_wait_p95_ms": 0.3,
+     "server_threads": 6,
+     "server_rss_mb": 52.1,
+     "server_cpu_cores_used": 0.79,
+     "tick_ms": {
+      "n": 4,
+      "p50": 50.5,
+      "p95": 1000.7,
+      "max": 1165.2
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 16,
+     "wall_s": 5.02,
+     "ok_rps": 268.5,
+     "latency_ms": {
+      "n": 1348,
+      "p50": 47.3,
+      "p95": 142.5,
+      "p99": 211.3,
+      "max": 568.3,
+      "mean": 58.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1348
+     },
+     "server_lock_hold_utilization": 0.354,
+     "server_lock_wait_p95_ms": 73.0,
+     "server_threads": 4,
+     "server_rss_mb": 52.2,
+     "server_cpu_cores_used": 1.0
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 64,
+     "wall_s": 5.43,
+     "ok_rps": 146.5,
+     "latency_ms": {
+      "n": 795,
+      "p50": 331.8,
+      "p95": 1190.0,
+      "p99": 1951.6,
+      "max": 2950.1,
+      "mean": 388.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 795
+     },
+     "server_lock_hold_utilization": 0.307,
+     "server_lock_wait_p95_ms": 418.9,
+     "server_threads": 4,
+     "server_rss_mb": 50.7,
+     "server_cpu_cores_used": 0.77
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 1,
+     "latency_ms": {
+      "n": 8,
+      "p50": 19.9,
+      "p95": 88.8,
+      "p99": 97.4,
+      "max": 99.5,
+      "mean": 34.1,
+      "unit": "ms"
+     }
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 16,
+     "latency_ms": {
+      "n": 128,
+      "p50": 21.4,
+      "p95": 59.3,
+      "p99": 84.3,
+      "max": 92.7,
+      "mean": 25.9,
+      "unit": "ms"
+     }
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 64,
+     "latency_ms": {
+      "n": 512,
+      "p50": 75.8,
+      "p95": 222.6,
+      "p99": 345.2,
+      "max": 487.4,
+      "mean": 97.2,
+      "unit": "ms"
+     }
+    }
+   ],
+   "server_final": {
+    "rss_mb": 53.4,
+    "threads_os": 4,
+    "handles": 667,
+    "db_mb": 8.43
+   },
+   "server_errors": []
+  },
+  {
+   "rep": 1,
+   "results": [
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 1,
+     "wall_s": 4.94,
+     "ok_rps": 3.8,
+     "latency_ms": {
+      "n": 19,
+      "p50": 268.2,
+      "p95": 300.9,
+      "p99": 302.4,
+      "max": 302.8,
+      "mean": 259.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 19
+     },
+     "server_lock_hold_utilization": 0.014,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 38.6,
+     "server_cpu_cores_used": 0.98,
+     "tick_ms": {
+      "n": 5,
+      "p50": 1.2,
+      "p95": 2.3,
+      "max": 2.4
+     }
+    },
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 16,
+     "wall_s": 5.81,
+     "ok_rps": 12.7,
+     "latency_ms": {
+      "n": 74,
+      "p50": 1092.8,
+      "p95": 2452.2,
+      "p99": 2672.7,
+      "max": 2764.3,
+      "mean": 1180.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 74
+     },
+     "server_lock_hold_utilization": 0.088,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 39.4,
+     "server_cpu_cores_used": 6.82,
+     "tick_ms": {
+      "n": 5,
+      "p50": 0.8,
+      "p95": 4.1,
+      "max": 4.9
+     }
+    },
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 64,
+     "wall_s": 6.92,
+     "ok_rps": 10.8,
+     "latency_ms": {
+      "n": 75,
+      "p50": 1332.2,
+      "p95": 4665.1,
+      "p99": 5794.1,
+      "max": 6160.5,
+      "mean": 1789.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 75
+     },
+     "server_lock_hold_utilization": 0.09,
+     "server_lock_wait_p95_ms": 6.3,
+     "server_threads": 7,
+     "server_rss_mb": 39.4,
+     "server_cpu_cores_used": 5.33,
+     "tick_ms": {
+      "n": 7,
+      "p50": 0.9,
+      "p95": 1.4,
+      "max": 1.4
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 1,
+     "wall_s": 4.97,
+     "ok_rps": 420.2,
+     "latency_ms": {
+      "n": 2090,
+      "p50": 1.7,
+      "p95": 5.8,
+      "p99": 8.2,
+      "max": 21.3,
+      "mean": 2.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2090
+     },
+     "server_lock_hold_utilization": 0.286,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 41.8,
+     "server_cpu_cores_used": 0.72,
+     "tick_ms": {
+      "n": 5,
+      "p50": 2.2,
+      "p95": 2.6,
+      "max": 2.7
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 16,
+     "wall_s": 4.89,
+     "ok_rps": 737.1,
+     "latency_ms": {
+      "n": 3606,
+      "p50": 18.7,
+      "p95": 45.4,
+      "p99": 58.2,
+      "max": 103.9,
+      "mean": 21.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3606
+     },
+     "server_lock_hold_utilization": 0.609,
+     "server_lock_wait_p95_ms": 7.3,
+     "server_threads": 7,
+     "server_rss_mb": 43.5,
+     "server_cpu_cores_used": 1.23,
+     "tick_ms": {
+      "n": 5,
+      "p50": 22.5,
+      "p95": 36.6,
+      "max": 38.7
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 64,
+     "wall_s": 5.03,
+     "ok_rps": 792.4,
+     "latency_ms": {
+      "n": 3982,
+      "p50": 66.1,
+      "p95": 164.4,
+      "p99": 219.9,
+      "max": 1759.8,
+      "mean": 79.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3982
+     },
+     "server_lock_hold_utilization": 0.621,
+     "server_lock_wait_p95_ms": 27.8,
+     "server_threads": 9,
+     "server_rss_mb": 43.6,
+     "server_cpu_cores_used": 1.32,
+     "tick_ms": {
+      "n": 5,
+      "p50": 69.4,
+      "p95": 109.7,
+      "max": 119.7
+     }
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 1,
+     "wall_s": 4.9,
+     "ok_rps": 21.0,
+     "latency_ms": {
+      "n": 103,
+      "p50": 45.6,
+      "p95": 67.0,
+      "p99": 78.4,
+      "max": 80.8,
+      "mean": 47.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 103
+     },
+     "server_lock_hold_utilization": 0.798,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 9,
+     "server_rss_mb": 45.9,
+     "server_cpu_cores_used": 0.62,
+     "tick_ms": {
+      "n": 5,
+      "p50": 27.3,
+      "p95": 43.8,
+      "max": 44.9
+     },
+     "active_incidents_after": 103
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 16,
+     "wall_s": 5.42,
+     "ok_rps": 14.8,
+     "latency_ms": {
+      "n": 80,
+      "p50": 1056.0,
+      "p95": 1286.8,
+      "p99": 1309.3,
+      "max": 1323.0,
+      "mean": 1049.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 80
+     },
+     "server_lock_hold_utilization": 0.809,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 10,
+     "server_rss_mb": 45.8,
+     "server_cpu_cores_used": 0.78,
+     "tick_ms": {
+      "n": 4,
+      "p50": 678.1,
+      "p95": 2034.3,
+      "max": 2265.8
+     },
+     "active_incidents_after": 80
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 64,
+     "wall_s": 8.59,
+     "ok_rps": 14.0,
+     "latency_ms": {
+      "n": 120,
+      "p50": 4020.8,
+      "p95": 5149.2,
+      "p99": 5239.2,
+      "max": 5726.7,
+      "mean": 3861.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 120
+     },
+     "server_lock_hold_utilization": 0.814,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 10,
+     "server_rss_mb": 49.6,
+     "server_cpu_cores_used": 0.75,
+     "tick_ms": {
+      "n": 3,
+      "p50": 2217.3,
+      "p95": 2585.9,
+      "max": 2626.9
+     },
+     "active_incidents_after": 120
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 1,
+     "wall_s": 4.76,
+     "ok_rps": 79.1,
+     "latency_ms": {
+      "n": 376,
+      "p50": 11.5,
+      "p95": 19.2,
+      "p99": 26.3,
+      "max": 36.0,
+      "mean": 12.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 376
+     },
+     "server_lock_hold_utilization": 0.761,
+     "server_lock_wait_p95_ms": 1.6,
+     "server_threads": 7,
+     "server_rss_mb": 49.0,
+     "server_cpu_cores_used": 0.51,
+     "tick_ms": {
+      "n": 3,
+      "p50": 262.5,
+      "p95": 913.9,
+      "max": 986.3
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 16,
+     "wall_s": 5.13,
+     "ok_rps": 73.3,
+     "latency_ms": {
+      "n": 376,
+      "p50": 156.1,
+      "p95": 603.6,
+      "p99": 1071.1,
+      "max": 1257.2,
+      "mean": 214.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 376
+     },
+     "server_lock_hold_utilization": 0.858,
+     "server_lock_wait_p95_ms": 67.2,
+     "server_threads": 7,
+     "server_rss_mb": 49.9,
+     "server_cpu_cores_used": 0.46
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 64,
+     "wall_s": 5.4,
+     "ok_rps": 73.3,
+     "latency_ms": {
+      "n": 396,
+      "p50": 752.9,
+      "p95": 1576.5,
+      "p99": 2116.6,
+      "max": 2388.8,
+      "mean": 816.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 396
+     },
+     "server_lock_hold_utilization": 0.842,
+     "server_lock_wait_p95_ms": 295.7,
+     "server_threads": 7,
+     "server_rss_mb": 48.5,
+     "server_cpu_cores_used": 0.6
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 1,
+     "wall_s": 4.99,
+     "ok_rps": 161.4,
+     "latency_ms": {
+      "n": 805,
+      "p50": 5.1,
+      "p95": 13.0,
+      "p99": 15.2,
+      "max": 32.9,
+      "mean": 6.0,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 805
+     },
+     "server_lock_hold_utilization": 0.598,
+     "server_lock_wait_p95_ms": 0.4,
+     "server_threads": 7,
+     "server_rss_mb": 50.0,
+     "server_cpu_cores_used": 1.02,
+     "tick_ms": {
+      "n": 1,
+      "p50": 12547.5,
+      "p95": 12547.5,
+      "max": 12547.5
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 16,
+     "wall_s": 4.95,
+     "ok_rps": 254.5,
+     "latency_ms": {
+      "n": 1259,
+      "p50": 56.8,
+      "p95": 94.0,
+      "p99": 185.9,
+      "max": 607.6,
+      "mean": 62.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1259
+     },
+     "server_lock_hold_utilization": 0.611,
+     "server_lock_wait_p95_ms": 10.2,
+     "server_threads": 7,
+     "server_rss_mb": 50.8,
+     "server_cpu_cores_used": 1.1,
+     "tick_ms": {
+      "n": 1,
+      "p50": 5154.5,
+      "p95": 5154.5,
+      "max": 5154.5
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 64,
+     "wall_s": 5.01,
+     "ok_rps": 415.3,
+     "latency_ms": {
+      "n": 2081,
+      "p50": 137.8,
+      "p95": 275.7,
+      "p99": 741.1,
+      "max": 1216.5,
+      "mean": 151.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2081
+     },
+     "server_lock_hold_utilization": 0.615,
+     "server_lock_wait_p95_ms": 31.7,
+     "server_threads": 7,
+     "server_rss_mb": 49.8,
+     "server_cpu_cores_used": 1.15
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 1,
+     "wall_s": 4.94,
+     "ok_rps": 730.7,
+     "latency_ms": {
+      "n": 3613,
+      "p50": 0.9,
+      "p95": 3.1,
+      "p99": 5.0,
+      "max": 25.9,
+      "mean": 1.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3613
+     },
+     "server_lock_hold_utilization": 0.435,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 7,
+     "server_rss_mb": 53.6,
+     "server_cpu_cores_used": 0.92,
+     "tick_ms": {
+      "n": 4,
+      "p50": 358.4,
+      "p95": 5659.3,
+      "max": 6534.5
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 16,
+     "wall_s": 4.72,
+     "ok_rps": 601.9,
+     "latency_ms": {
+      "n": 2839,
+      "p50": 24.3,
+      "p95": 47.6,
+      "p99": 62.9,
+      "max": 557.7,
+      "mean": 26.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2839
+     },
+     "server_lock_hold_utilization": 0.573,
+     "server_lock_wait_p95_ms": 5.7,
+     "server_threads": 7,
+     "server_rss_mb": 52.9,
+     "server_cpu_cores_used": 1.21,
+     "tick_ms": {
+      "n": 1,
+      "p50": 134.9,
+      "p95": 134.9,
+      "max": 134.9
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 64,
+     "wall_s": 4.12,
+     "ok_rps": 554.1,
+     "latency_ms": {
+      "n": 2282,
+      "p50": 98.5,
+      "p95": 214.5,
+      "p99": 583.8,
+      "max": 1116.0,
+      "mean": 112.8,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2282
+     },
+     "server_lock_hold_utilization": 0.583,
+     "server_lock_wait_p95_ms": 25.4,
+     "server_threads": 7,
+     "server_rss_mb": 53.0,
+     "server_cpu_cores_used": 1.22,
+     "tick_ms": {
+      "n": 1,
+      "p50": 2776.1,
+      "p95": 2776.1,
+      "max": 2776.1
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 1,
+     "wall_s": 5.06,
+     "ok_rps": 86.6,
+     "latency_ms": {
+      "n": 438,
+      "p50": 6.9,
+      "p95": 16.9,
+      "p99": 27.5,
+      "max": 37.1,
+      "mean": 8.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 438
+     },
+     "server_lock_hold_utilization": 0.803,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 7,
+     "server_rss_mb": 51.6,
+     "server_cpu_cores_used": 0.43,
+     "tick_ms": {
+      "n": 4,
+      "p50": 241.3,
+      "p95": 1884.1,
+      "max": 2136.5
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 16,
+     "wall_s": 5.46,
+     "ok_rps": 94.5,
+     "latency_ms": {
+      "n": 516,
+      "p50": 74.9,
+      "p95": 256.0,
+      "p99": 429.1,
+      "max": 670.2,
+      "mean": 107.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 516,
+      "429": 18
+     },
+     "server_lock_hold_utilization": 0.91,
+     "server_lock_wait_p95_ms": 36.8,
+     "server_threads": 7,
+     "server_rss_mb": 51.7,
+     "server_cpu_cores_used": 0.52,
+     "tick_ms": {
+      "n": 2,
+      "p50": 1549.8,
+      "p95": 1587.0,
+      "max": 1591.1
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 64,
+     "wall_s": 5.88,
+     "ok_rps": 88.1,
+     "latency_ms": {
+      "n": 518,
+      "p50": 427.1,
+      "p95": 957.6,
+      "p99": 1281.3,
+      "max": 1434.5,
+      "mean": 483.8,
+      "unit": "ms"
+     },
+     "statuses": {
+      "429": 289,
+      "200": 518
+     },
+     "server_lock_hold_utilization": 0.891,
+     "server_lock_wait_p95_ms": 118.0,
+     "server_threads": 6,
+     "server_rss_mb": 51.5,
+     "server_cpu_cores_used": 0.52,
+     "tick_ms": {
+      "n": 1,
+      "p50": 4996.8,
+      "p95": 4996.8,
+      "max": 4996.8
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 1,
+     "wall_s": 4.97,
+     "ok_rps": 1987.9,
+     "latency_ms": {
+      "n": 9871,
+      "p50": 0.4,
+      "p95": 1.0,
+      "p99": 2.0,
+      "max": 22.8,
+      "mean": 0.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 9871
+     },
+     "server_lock_hold_utilization": 0.192,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 4,
+     "server_rss_mb": 50.5,
+     "server_cpu_cores_used": 0.71,
+     "tick_ms": {
+      "n": 4,
+      "p50": 41.4,
+      "p95": 562.7,
+      "max": 652.0
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 16,
+     "wall_s": 4.98,
+     "ok_rps": 582.6,
+     "latency_ms": {
+      "n": 2902,
+      "p50": 22.3,
+      "p95": 56.1,
+      "p99": 80.6,
+      "max": 591.0,
+      "mean": 27.0,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2902
+     },
+     "server_lock_hold_utilization": 0.375,
+     "server_lock_wait_p95_ms": 30.8,
+     "server_threads": 4,
+     "server_rss_mb": 50.6,
+     "server_cpu_cores_used": 1.15,
+     "tick_ms": {
+      "n": 1,
+      "p50": 1334.8,
+      "p95": 1334.8,
+      "max": 1334.8
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 64,
+     "wall_s": 5.06,
+     "ok_rps": 819.3,
+     "latency_ms": {
+      "n": 4146,
+      "p50": 65.4,
+      "p95": 168.0,
+      "p99": 268.6,
+      "max": 1179.0,
+      "mean": 77.0,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 4146
+     },
+     "server_lock_hold_utilization": 0.387,
+     "server_lock_wait_p95_ms": 99.8,
+     "server_threads": 4,
+     "server_rss_mb": 51.2,
+     "server_cpu_cores_used": 1.16
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 1,
+     "latency_ms": {
+      "n": 8,
+      "p50": 11.4,
+      "p95": 14.2,
+      "p99": 14.6,
+      "max": 14.7,
+      "mean": 11.2,
+      "unit": "ms"
+     }
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 16,
+     "latency_ms": {
+      "n": 128,
+      "p50": 12.1,
+      "p95": 35.5,
+      "p99": 56.3,
+      "max": 62.5,
+      "mean": 14.9,
+      "unit": "ms"
+     }
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 64,
+     "latency_ms": {
+      "n": 512,
+      "p50": 24.6,
+      "p95": 80.0,
+      "p99": 118.2,
+      "max": 168.0,
+      "mean": 31.7,
+      "unit": "ms"
+     }
+    }
+   ],
+   "server_final": {
+    "rss_mb": 51.6,
+    "threads_os": 4,
+    "handles": 658,
+    "db_mb": 7.73
+   },
+   "server_errors": []
+  },
+  {
+   "rep": 2,
+   "results": [
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 1,
+     "wall_s": 4.92,
+     "ok_rps": 7.1,
+     "latency_ms": {
+      "n": 35,
+      "p50": 120.5,
+      "p95": 222.8,
+      "p99": 315.4,
+      "max": 341.9,
+      "mean": 140.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 35
+     },
+     "server_lock_hold_utilization": 0.016,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 39.4,
+     "server_cpu_cores_used": 0.96,
+     "tick_ms": {
+      "n": 5,
+      "p50": 0.6,
+      "p95": 1.7,
+      "max": 2.0
+     }
+    },
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 16,
+     "wall_s": 5.4,
+     "ok_rps": 18.3,
+     "latency_ms": {
+      "n": 99,
+      "p50": 806.3,
+      "p95": 1173.3,
+      "p99": 1232.9,
+      "max": 1360.2,
+      "mean": 840.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 99
+     },
+     "server_lock_hold_utilization": 0.078,
+     "server_lock_wait_p95_ms": 0.7,
+     "server_threads": 7,
+     "server_rss_mb": 39.1,
+     "server_cpu_cores_used": 9.84,
+     "tick_ms": {
+      "n": 5,
+      "p50": 1.0,
+      "p95": 1.3,
+      "max": 1.3
+     }
+    },
+    {
+     "endpoint": "POST /auth/login",
+     "concurrency": 64,
+     "wall_s": 6.73,
+     "ok_rps": 19.6,
+     "latency_ms": {
+      "n": 132,
+      "p50": 1704.2,
+      "p95": 3432.2,
+      "p99": 4320.3,
+      "max": 5419.1,
+      "mean": 1869.7,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 132,
+      "-2": 3
+     },
+     "server_lock_hold_utilization": 0.128,
+     "server_lock_wait_p95_ms": 1.7,
+     "server_threads": 7,
+     "server_rss_mb": 39.6,
+     "server_cpu_cores_used": 10.28,
+     "tick_ms": {
+      "n": 6,
+      "p50": 1.1,
+      "p95": 18.1,
+      "max": 23.6
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 1,
+     "wall_s": 4.97,
+     "ok_rps": 733.1,
+     "latency_ms": {
+      "n": 3641,
+      "p50": 0.8,
+      "p95": 3.8,
+      "p99": 6.1,
+      "max": 24.6,
+      "mean": 1.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3641
+     },
+     "server_lock_hold_utilization": 0.282,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 7,
+     "server_rss_mb": 43.7,
+     "server_cpu_cores_used": 0.69,
+     "tick_ms": {
+      "n": 5,
+      "p50": 2.1,
+      "p95": 3.6,
+      "max": 4.0
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 16,
+     "wall_s": 4.9,
+     "ok_rps": 846.5,
+     "latency_ms": {
+      "n": 4147,
+      "p50": 16.0,
+      "p95": 40.1,
+      "p99": 53.7,
+      "max": 544.4,
+      "mean": 18.8,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 4147
+     },
+     "server_lock_hold_utilization": 0.62,
+     "server_lock_wait_p95_ms": 6.9,
+     "server_threads": 7,
+     "server_rss_mb": 44.6,
+     "server_cpu_cores_used": 1.23,
+     "tick_ms": {
+      "n": 5,
+      "p50": 15.2,
+      "p95": 20.1,
+      "max": 20.2
+     }
+    },
+    {
+     "endpoint": "GET /circle",
+     "concurrency": 64,
+     "wall_s": 4.98,
+     "ok_rps": 766.1,
+     "latency_ms": {
+      "n": 3815,
+      "p50": 70.4,
+      "p95": 168.8,
+      "p99": 222.0,
+      "max": 1152.2,
+      "mean": 82.9,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3815
+     },
+     "server_lock_hold_utilization": 0.626,
+     "server_lock_wait_p95_ms": 28.0,
+     "server_threads": 9,
+     "server_rss_mb": 44.7,
+     "server_cpu_cores_used": 1.3,
+     "tick_ms": {
+      "n": 5,
+      "p50": 81.4,
+      "p95": 185.7,
+      "max": 196.4
+     }
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 1,
+     "wall_s": 4.9,
+     "ok_rps": 20.6,
+     "latency_ms": {
+      "n": 101,
+      "p50": 44.5,
+      "p95": 71.5,
+      "p99": 83.8,
+      "max": 94.9,
+      "mean": 48.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 101
+     },
+     "server_lock_hold_utilization": 0.792,
+     "server_lock_wait_p95_ms": 0.0,
+     "server_threads": 9,
+     "server_rss_mb": 45.6,
+     "server_cpu_cores_used": 0.64,
+     "tick_ms": {
+      "n": 5,
+      "p50": 27.4,
+      "p95": 38.0,
+      "max": 38.2
+     },
+     "active_incidents_after": 101
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 16,
+     "wall_s": 5.74,
+     "ok_rps": 16.7,
+     "latency_ms": {
+      "n": 96,
+      "p50": 908.7,
+      "p95": 1106.9,
+      "p99": 1203.3,
+      "max": 1239.1,
+      "mean": 930.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 96
+     },
+     "server_lock_hold_utilization": 0.823,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 10,
+     "server_rss_mb": 46.6,
+     "server_cpu_cores_used": 0.75,
+     "tick_ms": {
+      "n": 4,
+      "p50": 555.7,
+      "p95": 1509.3,
+      "max": 1672.3
+     },
+     "active_incidents_after": 96
+    },
+    {
+     "endpoint": "POST /incidents",
+     "concurrency": 64,
+     "wall_s": 7.95,
+     "ok_rps": 15.2,
+     "latency_ms": {
+      "n": 121,
+      "p50": 3397.3,
+      "p95": 4894.3,
+      "p99": 4950.1,
+      "max": 5026.4,
+      "mean": 3522.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 121
+     },
+     "server_lock_hold_utilization": 0.832,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 10,
+     "server_rss_mb": 48.8,
+     "server_cpu_cores_used": 0.71,
+     "tick_ms": {
+      "n": 3,
+      "p50": 2151.3,
+      "p95": 2917.9,
+      "max": 3003.1
+     },
+     "active_incidents_after": 121
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 1,
+     "wall_s": 4.7,
+     "ok_rps": 103.9,
+     "latency_ms": {
+      "n": 488,
+      "p50": 8.9,
+      "p95": 14.6,
+      "p99": 19.7,
+      "max": 26.7,
+      "mean": 9.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 488
+     },
+     "server_lock_hold_utilization": 0.828,
+     "server_lock_wait_p95_ms": 0.4,
+     "server_threads": 7,
+     "server_rss_mb": 49.2,
+     "server_cpu_cores_used": 0.41,
+     "tick_ms": {
+      "n": 3,
+      "p50": 66.6,
+      "p95": 106.4,
+      "max": 110.8
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 16,
+     "wall_s": 5.06,
+     "ok_rps": 108.7,
+     "latency_ms": {
+      "n": 550,
+      "p50": 138.1,
+      "p95": 249.3,
+      "p99": 321.8,
+      "max": 746.3,
+      "mean": 145.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 550
+     },
+     "server_lock_hold_utilization": 0.911,
+     "server_lock_wait_p95_ms": 53.0,
+     "server_threads": 7,
+     "server_rss_mb": 48.7,
+     "server_cpu_cores_used": 0.45
+    },
+    {
+     "endpoint": "POST /incidents/{id}/location",
+     "concurrency": 64,
+     "wall_s": 5.38,
+     "ok_rps": 128.8,
+     "latency_ms": {
+      "n": 693,
+      "p50": 439.5,
+      "p95": 913.2,
+      "p99": 1387.7,
+      "max": 1838.5,
+      "mean": 477.7,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 693
+     },
+     "server_lock_hold_utilization": 0.909,
+     "server_lock_wait_p95_ms": 219.6,
+     "server_threads": 7,
+     "server_rss_mb": 49.5,
+     "server_cpu_cores_used": 0.49,
+     "tick_ms": {
+      "n": 1,
+      "p50": 11383.2,
+      "p95": 11383.2,
+      "max": 11383.2
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 1,
+     "wall_s": 4.97,
+     "ok_rps": 605.0,
+     "latency_ms": {
+      "n": 3009,
+      "p50": 1.1,
+      "p95": 4.1,
+      "p99": 6.2,
+      "max": 19.6,
+      "mean": 1.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3009
+     },
+     "server_lock_hold_utilization": 0.435,
+     "server_lock_wait_p95_ms": 0.1,
+     "server_threads": 7,
+     "server_rss_mb": 51.9,
+     "server_cpu_cores_used": 0.84,
+     "tick_ms": {
+      "n": 4,
+      "p50": 25.8,
+      "p95": 720.5,
+      "max": 842.7
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 16,
+     "wall_s": 4.95,
+     "ok_rps": 647.9,
+     "latency_ms": {
+      "n": 3205,
+      "p50": 22.1,
+      "p95": 45.6,
+      "p99": 61.8,
+      "max": 567.3,
+      "mean": 24.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 3205
+     },
+     "server_lock_hold_utilization": 0.603,
+     "server_lock_wait_p95_ms": 6.9,
+     "server_threads": 7,
+     "server_rss_mb": 51.8,
+     "server_cpu_cores_used": 1.22,
+     "tick_ms": {
+      "n": 1,
+      "p50": 198.6,
+      "p95": 198.6,
+      "max": 198.6
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (owner)",
+     "concurrency": 64,
+     "wall_s": 5.03,
+     "ok_rps": 553.3,
+     "latency_ms": {
+      "n": 2784,
+      "p50": 101.9,
+      "p95": 201.5,
+      "p99": 291.9,
+      "max": 1655.5,
+      "mean": 114.0,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 2784
+     },
+     "server_lock_hold_utilization": 0.611,
+     "server_lock_wait_p95_ms": 28.0,
+     "server_threads": 7,
+     "server_rss_mb": 51.6,
+     "server_cpu_cores_used": 1.21
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 1,
+     "wall_s": 4.92,
+     "ok_rps": 382.3,
+     "latency_ms": {
+      "n": 1882,
+      "p50": 1.5,
+      "p95": 7.0,
+      "p99": 14.3,
+      "max": 24.9,
+      "mean": 2.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1882
+     },
+     "server_lock_hold_utilization": 0.479,
+     "server_lock_wait_p95_ms": 0.2,
+     "server_threads": 7,
+     "server_rss_mb": 51.9,
+     "server_cpu_cores_used": 0.94,
+     "tick_ms": {
+      "n": 3,
+      "p50": 1588.9,
+      "p95": 8082.2,
+      "max": 8803.7
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 16,
+     "wall_s": 4.78,
+     "ok_rps": 353.5,
+     "latency_ms": {
+      "n": 1688,
+      "p50": 41.3,
+      "p95": 74.2,
+      "p99": 87.8,
+      "max": 563.3,
+      "mean": 45.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1688
+     },
+     "server_lock_hold_utilization": 0.571,
+     "server_lock_wait_p95_ms": 6.0,
+     "server_threads": 7,
+     "server_rss_mb": 51.5,
+     "server_cpu_cores_used": 1.19,
+     "tick_ms": {
+      "n": 1,
+      "p50": 334.6,
+      "p95": 334.6,
+      "max": 334.6
+     }
+    },
+    {
+     "endpoint": "GET /incidents/{id} (contact)",
+     "concurrency": 64,
+     "wall_s": 4.73,
+     "ok_rps": 235.1,
+     "latency_ms": {
+      "n": 1111,
+      "p50": 217.5,
+      "p95": 571.2,
+      "p99": 742.3,
+      "max": 1247.1,
+      "mean": 261.4,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1111
+     },
+     "server_lock_hold_utilization": 0.552,
+     "server_lock_wait_p95_ms": 34.3,
+     "server_threads": 7,
+     "server_rss_mb": 51.6,
+     "server_cpu_cores_used": 1.08
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 1,
+     "wall_s": 4.87,
+     "ok_rps": 59.1,
+     "latency_ms": {
+      "n": 288,
+      "p50": 10.7,
+      "p95": 23.7,
+      "p99": 29.7,
+      "max": 55.4,
+      "mean": 12.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 288
+     },
+     "server_lock_hold_utilization": 0.838,
+     "server_lock_wait_p95_ms": 1.7,
+     "server_threads": 7,
+     "server_rss_mb": 50.3,
+     "server_cpu_cores_used": 0.6,
+     "tick_ms": {
+      "n": 2,
+      "p50": 5902.9,
+      "p95": 8404.0,
+      "max": 8681.9
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 16,
+     "wall_s": 5.4,
+     "ok_rps": 65.9,
+     "latency_ms": {
+      "n": 356,
+      "p50": 169.1,
+      "p95": 250.8,
+      "p99": 309.8,
+      "max": 790.6,
+      "mean": 158.3,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 356,
+      "429": 18
+     },
+     "server_lock_hold_utilization": 0.866,
+     "server_lock_wait_p95_ms": 22.0,
+     "server_threads": 7,
+     "server_rss_mb": 50.3,
+     "server_cpu_cores_used": 0.6,
+     "tick_ms": {
+      "n": 2,
+      "p50": 1497.0,
+      "p95": 1575.2,
+      "max": 1583.9
+     }
+    },
+    {
+     "endpoint": "POST /incidents/{id}/messages",
+     "concurrency": 64,
+     "wall_s": 5.68,
+     "ok_rps": 66.7,
+     "latency_ms": {
+      "n": 379,
+      "p50": 642.0,
+      "p95": 1173.9,
+      "p99": 1732.0,
+      "max": 1879.0,
+      "mean": 673.1,
+      "unit": "ms"
+     },
+     "statuses": {
+      "429": 286,
+      "200": 379
+     },
+     "server_lock_hold_utilization": 0.849,
+     "server_lock_wait_p95_ms": 131.9,
+     "server_threads": 6,
+     "server_rss_mb": 49.9,
+     "server_cpu_cores_used": 0.64,
+     "tick_ms": {
+      "n": 1,
+      "p50": 5287.5,
+      "p95": 5287.5,
+      "max": 5287.5
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 1,
+     "wall_s": 4.97,
+     "ok_rps": 344.3,
+     "latency_ms": {
+      "n": 1710,
+      "p50": 1.8,
+      "p95": 7.0,
+      "p99": 9.5,
+      "max": 52.2,
+      "mean": 2.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1710
+     },
+     "server_lock_hold_utilization": 0.266,
+     "server_lock_wait_p95_ms": 0.4,
+     "server_threads": 6,
+     "server_rss_mb": 49.2,
+     "server_cpu_cores_used": 0.81,
+     "tick_ms": {
+      "n": 3,
+      "p50": 121.7,
+      "p95": 1304.1,
+      "max": 1435.5
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 16,
+     "wall_s": 4.99,
+     "ok_rps": 192.6,
+     "latency_ms": {
+      "n": 961,
+      "p50": 75.4,
+      "p95": 142.3,
+      "p99": 208.5,
+      "max": 602.1,
+      "mean": 81.5,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 961
+     },
+     "server_lock_hold_utilization": 0.368,
+     "server_lock_wait_p95_ms": 72.3,
+     "server_threads": 4,
+     "server_rss_mb": 51.0,
+     "server_cpu_cores_used": 1.02,
+     "tick_ms": {
+      "n": 1,
+      "p50": 4684.0,
+      "p95": 4684.0,
+      "max": 4684.0
+     }
+    },
+    {
+     "endpoint": "GET /notifications wait=0",
+     "concurrency": 64,
+     "wall_s": 5.27,
+     "ok_rps": 260.8,
+     "latency_ms": {
+      "n": 1375,
+      "p50": 227.1,
+      "p95": 355.2,
+      "p99": 1336.6,
+      "max": 1772.4,
+      "mean": 236.6,
+      "unit": "ms"
+     },
+     "statuses": {
+      "200": 1375
+     },
+     "server_lock_hold_utilization": 0.406,
+     "server_lock_wait_p95_ms": 192.2,
+     "server_threads": 4,
+     "server_rss_mb": 49.3,
+     "server_cpu_cores_used": 1.12
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 1,
+     "latency_ms": {
+      "n": 8,
+      "p50": 10.4,
+      "p95": 18.0,
+      "p99": 18.9,
+      "max": 19.1,
+      "mean": 11.5,
+      "unit": "ms"
+     }
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 16,
+     "latency_ms": {
+      "n": 128,
+      "p50": 24.5,
+      "p95": 107.9,
+      "p99": 181.0,
+      "max": 191.8,
+      "mean": 40.1,
+      "unit": "ms"
+     }
+    },
+    {
+     "endpoint": "long-poll delivery (POST msg -> waiting GET returns)",
+     "concurrency": 64,
+     "latency_ms": {
+      "n": 512,
+      "p50": 44.6,
+      "p95": 154.8,
+      "p99": 211.3,
+      "max": 297.2,
+      "mean": 59.0,
+      "unit": "ms"
+     }
+    }
+   ],
+   "server_final": {
+    "rss_mb": 51.8,
+    "threads_os": 4,
+    "handles": 648,
+    "db_mb": 7.95
+   },
+   "server_errors": []
+  }
+ ],
+ "machine_after": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:15:22",
+  "cpu_percent_busy": 33.4,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 17.1,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    603
+   ],
+   [
+    "python.exe",
+    69
+   ],
+   [
+    "MsMpEng.exe",
+    63
+   ],
+   [
+    "python.exe",
+    35
+   ],
+   [
+    "System",
+    34
+   ]
+  ]
+ }
+}

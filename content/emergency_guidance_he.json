@@ -1,0 +1,240 @@
+{
+  "content_version": "2026.11.04",
+  "language": "he",
+  "reviewed_on": "2026-11-04",
+  "review_status": "סיכום מתוך המקורות המצוינים. לא נבדק ע\"י גורם רפואי/חירום מוסמך - חובה לבצע סקירה מקצועית לפני שחרור לציבור.",
+  "disclaimer": "הנחיות כלליות בלבד ואינן תחליף להוראות מוקד החירום. בכל חירום: התקשר/י למוקד ופעל/י לפי הוראותיו.",
+  "verification_levels": {
+    "content_checked": "תוכן הדף נבדק מול הסיכום בתאריך הבדיקה",
+    "url_checked": "קיום הדף אומת; הנוסח לא הושווה אוטומטית",
+    "not_checked": "האתר חוסם גישה אוטומטית - הנוסח מבוסס על ההנחיות המוכרות ודורש אימות אנושי"
+  },
+  "sources": {
+    "readygov_earthquakes": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Earthquakes", "url": "https://www.ready.gov/earthquakes", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "readygov_fires": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Home Fires", "url": "https://www.ready.gov/home-fires", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "readygov_power": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Power Outages", "url": "https://www.ready.gov/power-outages", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "readygov_floods": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Floods", "url": "https://www.ready.gov/floods", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "readygov_kit": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Build A Kit", "url": "https://www.ready.gov/kit", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "readygov_plan": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Make A Plan", "url": "https://www.ready.gov/plan", "retrieved": "2026-11-04", "verification": "url_checked"},
+    "readygov_attack": {"org": "Ready.gov (FEMA, ארה\"ב)", "title": "Attacks in Crowded and Public Spaces", "url": "https://www.ready.gov/mass-gatherings-incidents", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "sja_first_aid": {"org": "St John Ambulance (בריטניה)", "title": "First aid advice", "url": "https://www.sja.org.uk/first-aid-advice/", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "redcross_first_aid": {"org": "American Red Cross", "title": "Learn First Aid", "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid", "retrieved": "2026-11-04", "verification": "url_checked"},
+    "missingkids": {"org": "National Center for Missing & Exploited Children", "title": "Is your child missing?", "url": "https://www.missingkids.org/gethelpnow/isyourchildmissing", "retrieved": "2026-11-04", "verification": "content_checked"},
+    "oref": {"org": "פיקוד העורף", "title": "הנחיות התגוננות", "url": "https://www.oref.org.il/", "retrieved": "2026-11-04", "verification": "not_checked"},
+    "lifeguard_app": {"org": "LifeGuard", "title": "שימוש באפליקציה ובתוכנית האישית שלך", "url": "", "retrieved": "2026-11-04", "verification": "content_checked", "note": "הוראות הפעלה של האפליקציה בלבד - אינן נוהל חירום מקצועי"}
+  },
+  "scenarios": [
+    {
+      "id": "medical",
+      "title": "מצב חירום רפואי",
+      "icon": "🚑",
+      "call": ["ambulance"],
+      "steps": [
+        {"id": "call", "text": "התקשר/י עכשיו לאמבולנס ופעל/י לפי הוראות המוקדן.", "source": "sja_first_aid"},
+        {"id": "unresponsive", "text": "אינו מגיב ואינו נושם כרגיל: אמור/י זאת למוקדן והתחל/י החייאה מיד לפי הנחייתו. אם יש דפיברילטור - השתמש/י בו.", "source": "sja_first_aid"},
+        {"id": "breathing", "text": "אינו מגיב אך נושם כרגיל: השכב/י אותו בתנוחת התאוששות (על הצד) כדי לשמור על נתיב אוויר.", "source": "sja_first_aid"},
+        {"id": "bleeding", "text": "דימום חמור: הפעל/י לחץ חזק וישיר על הפצע.", "source": "sja_first_aid"},
+        {"id": "info", "text": "הכן/י למוקדן מידע רפואי מהתוכנית האישית (תרופות, אלרגיות).", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "fire",
+      "title": "שריפה",
+      "icon": "🔥",
+      "call": ["fire"],
+      "steps": [
+        {"id": "out", "text": "צא/י מיד. כל שנייה חשובה - אל תתעכב/י לאסוף חפצים.", "source": "readygov_fires"},
+        {"id": "low", "text": "יש עשן? רד/י לרצפה וזחל/י נמוך אל היציאה. העשן והגזים מצטברים למעלה.", "source": "readygov_fires"},
+        {"id": "door", "text": "לפני פתיחת דלת - גע/י בידית ובדלת. חמה או עשן מסביב? השאר/י סגורה והשתמש/י ביציאה השנייה.", "source": "readygov_fires"},
+        {"id": "call", "text": "מחוץ לבית - התקשר/י לכבאות. אם מישהו נשאר בפנים, אמור/י למוקדן היכן הוא.", "source": "readygov_fires"},
+        {"id": "trapped", "text": "לא ניתן לצאת? סגור/י את הדלת, אטום/י סדקים בבד, התקשר/י, וסמן/י מהחלון עם פנס או בד בהיר.", "source": "readygov_fires"}
+      ]
+    },
+    {
+      "id": "earthquake",
+      "title": "רעידת אדמה",
+      "icon": "🌍",
+      "call": [],
+      "variants": {
+        "IL": {
+          "source_note": "ישראל: פעל/י לפי הנחיות פיקוד העורף (אפליקציה / oref.org.il / מוקד 104).",
+          "steps": [
+            {"id": "il_out", "text": "אם אפשר לצאת מהבניין תוך שניות - צא/י לשטח פתוח, הרחק ממבנים ועמודי חשמל.", "source": "oref"},
+            {"id": "il_protected", "text": "אם לא - היכנס/י לממ\"ד, או לחדר המדרגות ורד/י למטה.", "source": "oref"},
+            {"id": "il_last", "text": "אין אפשרות? שב/י על הרצפה ליד קיר פנימי או מתחת לרהיט כבד, והגן/י על הראש והצוואר.", "source": "oref"},
+            {"id": "il_after", "text": "כשהרעידה נפסקת - צא/י לשטח פתוח. לא להשתמש במעלית.", "source": "oref"}
+          ]
+        }
+      },
+      "steps": [
+        {"id": "drop", "text": "רד/י על הידיים והברכיים במקום שבו את/ה נמצא/ת.", "source": "readygov_earthquakes"},
+        {"id": "cover", "text": "כסה/י את הראש והצוואר בזרוע. שולחן יציב קרוב? זחל/י מתחתיו. אחרת - ליד קיר פנימי, הרחק מחלונות.", "source": "readygov_earthquakes"},
+        {"id": "hold", "text": "החזק/י עד שהרעד נפסק.", "source": "readygov_earthquakes"},
+        {"id": "outside", "text": "בחוץ? הישאר/י בחוץ, בשטח פתוח הרחק ממבנים, עצים וקווי חשמל.", "source": "readygov_earthquakes"},
+        {"id": "after", "text": "מבנה פגוע? צא/י והתרחק/י ממנו. צפה/י לרעידות משנה.", "source": "readygov_earthquakes"},
+        {"id": "trapped", "text": "לכוד/ה? שלח/י הודעה או הקש/י על צינור או קיר. כסה/י את הפה בבגד. עדיף משרוקית על פני צעקות.", "source": "readygov_earthquakes"}
+      ]
+    },
+    {
+      "id": "security",
+      "title": "סכנה ביטחונית / תוקף",
+      "icon": "🛡️",
+      "call": ["police"],
+      "variants": {
+        "IL": {
+          "source_note": "התרעת טילים/רקטות בישראל: פעל/י לפי הנחיות פיקוד העורף העדכניות לאזורך.",
+          "prepend_steps": [
+            {"id": "il_siren", "text": "אזעקה? היכנס/י למרחב המוגן בזמן המוגדר לאזורך, והישאר/י בו עד להנחיה של פיקוד העורף.", "source": "oref"},
+            {"id": "il_open", "text": "בשטח פתוח ללא מרחב מוגן: שכב/י על הקרקע והגן/י על הראש בידיים.", "source": "oref"}
+          ]
+        }
+      },
+      "steps": [
+        {"id": "run", "text": "ברח/י - התרחקות מהתוקף היא העדיפות הראשונה.", "source": "readygov_attack"},
+        {"id": "hide", "text": "אי אפשר לברוח? הסתתר/י מחוץ לטווח ראייה, מאחורי מחסום מוצק. נעל/י וחסום/י דלתות, כבה/י אורות.", "source": "readygov_attack"},
+        {"id": "fight", "text": "רק כמוצא אחרון - נסה/י לשבש או לנטרל את התוקף.", "source": "readygov_attack"},
+        {"id": "call", "text": "כשבטוח - התקשר/י למשטרה. מסתתר/ת? מצב שקט (\"מצוקה שקטה\") משדר בלי לחשוף אותך.", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "physical_danger",
+      "title": "סכנה אישית / מישהו מאיים עליי",
+      "icon": "⚠️",
+      "call": ["police"],
+      "steps": [
+        {"id": "away", "text": "התרחק/י מהאדם המאיים. העדיפות הראשונה היא להגיע למקום בטוח.", "source": "readygov_attack"},
+        {"id": "public", "text": "לך/י למקום הבטוח הקרוב שבמפה או לנקודת המפגש מהתוכנית שלך.", "source": "lifeguard_app"},
+        {"id": "call", "text": "התקשר/י למשטרה. אם אסור שיראו שאת/ה מבקש/ת עזרה - אמור/י את מילת המצוקה השקטה.", "source": "lifeguard_app"},
+        {"id": "sos", "text": "צריך עזרה מיד? לחץ/י PANIC - סירנה והתראה בלי ספירה לאחור.", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "road_accident",
+      "title": "תאונת דרכים",
+      "icon": "🚗",
+      "call": ["ambulance", "police"],
+      "steps": [
+        {"id": "call", "text": "יש פצועים? התקשר/י לאמבולנס ופעל/י לפי הוראות המוקדן.", "source": "sja_first_aid"},
+        {"id": "unresponsive", "text": "פצוע שאינו מגיב ואינו נושם כרגיל - אמור/י זאת מיד למוקדן; הוא ינחה אותך בהחייאה.", "source": "sja_first_aid"},
+        {"id": "bleeding", "text": "דימום חמור: לחץ חזק וישיר על הפצע.", "source": "sja_first_aid"},
+        {"id": "location", "text": "מסור/י למוקד את מיקומך המדויק: כביש, כיוון נסיעה, ציון דרך קרוב.", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "lost",
+      "title": "הלכתי לאיבוד",
+      "icon": "🧭",
+      "call": [],
+      "steps": [
+        {"id": "plan", "text": "בדוק/י את נקודות המפגש והיעדים החלופיים בתוכנית האישית שלך.", "source": "lifeguard_app"},
+        {"id": "contact", "text": "התקשר/י לאחד מאנשי הקשר שלך, או לחץ/י SOS כדי לשלוח מיקום.", "source": "lifeguard_app"},
+        {"id": "battery", "text": "חסוך/י בסוללה: סגור/י אפליקציות והנמך/י בהירות מסך.", "source": "lifeguard_app"},
+        {"id": "danger", "text": "מרגיש/ה בסכנה? עבור/י לתרחיש \"סכנה אישית\" והתקשר/י למשטרה.", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "missing_person",
+      "title": "אדם נעדר (ילד/בן משפחה)",
+      "icon": "🔎",
+      "call": ["police"],
+      "steps": [
+        {"id": "now", "text": "פעל/י מיד - אין צורך לחכות זמן מסוים לפני דיווח.", "source": "missingkids"},
+        {"id": "police", "text": "התקשר/י מיד למשטרה.", "source": "missingkids"},
+        {"id": "search", "text": "נעדר מהבית? חפש/י גם במקומות מסתור, ארונות, רכבים ומתחת למיטות.", "source": "missingkids"},
+        {"id": "store", "text": "נעדר בחנות/קניון? הודע/י מיד לאבטחה או למנהל, ואז התקשר/י למשטרה.", "source": "missingkids"},
+        {"id": "info", "text": "הכן/י תמונה עדכנית ותיאור: לבוש, גובה, היכן נראה לאחרונה.", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "flood_weather",
+      "title": "שיטפון / מזג אוויר קיצוני",
+      "icon": "🌊",
+      "call": [],
+      "steps": [
+        {"id": "water", "text": "לא ללכת, לשחות או לנסוע במי שיטפון. פנה/י לאחור!", "source": "readygov_floods"},
+        {"id": "higher", "text": "עלה/י לקרקע גבוהה או לקומה גבוהה.", "source": "readygov_floods"},
+        {"id": "evacuate", "text": "קיבלת הוראת פינוי? התפנה/י מיד. לא לעקוף מחסומים בכביש.", "source": "readygov_floods"}
+      ]
+    },
+    {
+      "id": "power_outage",
+      "title": "הפסקת חשמל / תקשורת",
+      "icon": "🔦",
+      "call": [],
+      "steps": [
+        {"id": "fridge", "text": "השאר/י מקרר ומקפיא סגורים.", "source": "readygov_power"},
+        {"id": "generator", "text": "גנרטור - רק בחוץ, הרחק מחלונות ודלתות (לפחות כ-6 מטר). לעולם לא בפנים.", "source": "readygov_power"},
+        {"id": "no_stove", "text": "לא לחמם את הבית בכיריים או בתנור גז - סכנת הרעלת פחמן חד-חמצני.", "source": "readygov_power"},
+        {"id": "offline", "text": "LifeGuard פועל גם בלי אינטרנט: התוכנית, ההנחיות ואנשי הקשר זמינים. התראות שלא נשלחו מסומנות בבירור.", "source": "lifeguard_app"}
+      ]
+    }
+  ],
+  "preparedness": [
+    {
+      "id": "emergency_kit",
+      "title": "תיק / ערכת חירום",
+      "items": [
+        {"id": "water", "text": "מים: כ-4 ליטר לאדם ליום, לכמה ימים (שתייה והיגיינה)", "source": "readygov_kit"},
+        {"id": "food", "text": "מזון שאינו מתקלקל לכמה ימים + פותחן ידני", "source": "readygov_kit"},
+        {"id": "radio", "text": "רדיו על סוללות או עם מחולל ידני", "source": "readygov_kit"},
+        {"id": "flashlight", "text": "פנס וסוללות רזרביות", "source": "readygov_kit"},
+        {"id": "first_aid", "text": "ערכת עזרה ראשונה", "source": "readygov_kit"},
+        {"id": "whistle", "text": "משרוקית לאיתות", "source": "readygov_kit"},
+        {"id": "phone", "text": "מטען טלפון וסוללה ניידת", "source": "readygov_kit"},
+        {"id": "meds", "text": "תרופות קבועות ותרופות בסיסיות ללא מרשם", "source": "readygov_kit"},
+        {"id": "docs", "text": "העתקי מסמכים חשובים במעטפה אטומה למים או בגיבוי דיגיטלי", "source": "readygov_kit"},
+        {"id": "pets", "text": "מזון ומים לחיות מחמד", "source": "readygov_kit"}
+      ]
+    },
+    {
+      "id": "home_equipment",
+      "title": "ציוד בטיחות בבית",
+      "items": [
+        {"id": "smoke", "text": "גלאי עשן בכל קומה בבית", "source": "readygov_fires"},
+        {"id": "smoke_replace", "text": "החלפת גלאי העשן כל 10 שנים (או לפי היצרן)", "source": "readygov_fires"},
+        {"id": "co", "text": "גלאי פחמן חד-חמצני בכל קומה", "source": "readygov_power"},
+        {"id": "two_exits", "text": "זוהו שתי דרכי יציאה מכל חדר", "source": "readygov_fires"},
+        {"id": "drill", "text": "תרגול יציאה מהבית בשריפה - פעמיים בשנה", "source": "readygov_fires"}
+      ]
+    },
+    {
+      "id": "first_aid_prep",
+      "title": "הכנה לעזרה ראשונה",
+      "items": [
+        {"id": "course", "text": "השתתפות בקורס עזרה ראשונה והחייאה", "source": "redcross_first_aid"},
+        {"id": "kit", "text": "ערכת עזרה ראשונה בבית וברכב", "source": "readygov_kit"},
+        {"id": "medical_info", "text": "מידע רפואי (תרופות, אלרגיות) נשמר בתוכנית האישית", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "family_plan",
+      "title": "תוכנית חירום משפחתית",
+      "items": [
+        {"id": "plan", "text": "תוכנית חירום משפחתית נקבעה ונדונה עם בני הבית", "source": "readygov_plan"},
+        {"id": "meeting", "text": "הוגדרו נקודות מפגש ויעדים חלופיים בתוכנית האישית", "source": "lifeguard_app"},
+        {"id": "paper", "text": "רשימת טלפונים חשובים כתובה גם על נייר", "source": "lifeguard_app"},
+        {"id": "protected_space", "text": "ישראל: ידוע המרחב המוגן הקרוב וזמן ההגעה אליו באזורך", "source": "oref"}
+      ]
+    },
+    {
+      "id": "contact_procedures",
+      "title": "נוהל אנשי קשר לחירום",
+      "items": [
+        {"id": "contacts", "text": "הוגדרו לפחות שני אנשי קשר לחירום", "source": "lifeguard_app"},
+        {"id": "informed", "text": "אנשי הקשר יודעים שהם עשויים לקבל ממני התראות, ומה לעשות כשזה קורה", "source": "lifeguard_app"},
+        {"id": "test", "text": "בוצעה 'בדיקת שליחה' והתוצאה נבדקה במסך תקינות המערכת", "source": "lifeguard_app"},
+        {"id": "numbers", "text": "ידוע מספר החירום המקומי (מוצג במסך הראשי)", "source": "lifeguard_app"}
+      ]
+    },
+    {
+      "id": "power_comm",
+      "title": "הפסקות חשמל ותקשורת",
+      "items": [
+        {"id": "flashlight", "text": "פנס זמין במקום ידוע", "source": "readygov_kit"},
+        {"id": "battery", "text": "סוללה ניידת טעונה", "source": "readygov_kit"},
+        {"id": "generator_rule", "text": "כל בני הבית יודעים: גנרטור רק בחוץ ורחוק מחלונות", "source": "readygov_power"},
+        {"id": "offline_plan", "text": "התוכנית האישית ב-LifeGuard מעודכנת (זמינה גם בלי אינטרנט)", "source": "lifeguard_app"}
+      ]
+    }
+  ]
+}

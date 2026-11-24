@@ -1,0 +1,461 @@
+{
+ "machine_before": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:15:32",
+  "cpu_percent_busy": 24.8,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 18.4,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    803
+   ],
+   [
+    "python.exe",
+    68
+   ],
+   [
+    "msedgewebview2.exe",
+    22
+   ],
+   [
+    "System",
+    20
+   ],
+   [
+    "Code.exe",
+    16
+   ]
+  ]
+ },
+ "reps": [
+  {
+   "rep": 0,
+   "params": {
+    "incidents": 20,
+    "contacts": 3,
+    "silent": 4,
+    "vols": 8,
+    "duration": 15.0,
+    "ring": 5.0,
+    "ack": 8.0,
+    "move_interval": 2.0,
+    "no_move": false,
+    "reps": 1,
+    "synchronous": "",
+    "indexes": false,
+    "tag": "smoke_storm"
+   },
+   "posts_ok": 24,
+   "posts_status": {
+    "200": 24
+   },
+   "post_incident_latency": {
+    "n": 24,
+    "p50": 859.3,
+    "p95": 1325.9,
+    "p99": 1356.1,
+    "max": 1361.5,
+    "mean": 891.4,
+    "unit": "ms"
+   },
+   "location_update_latency": {
+    "n": 72,
+    "p50": 34.0,
+    "p95": 181.0,
+    "p99": 233.2,
+    "max": 235.1,
+    "mean": 57.6,
+    "unit": "ms"
+   },
+   "presence_updates": 64,
+   "presence_latency": {
+    "n": 64,
+    "p50": 9.5,
+    "p95": 93.2,
+    "p99": 97.6,
+    "max": 98.5,
+    "mean": 20.5,
+    "unit": "ms"
+   },
+   "alert_latency_first_contact_longpoll": {
+    "n": 20,
+    "p50": 790.8,
+    "p95": 1194.2,
+    "p99": 1230.7,
+    "max": 1239.9,
+    "mean": 693.1,
+    "unit": "ms"
+   },
+   "alert_latency_first_contact_db": {
+    "n": 20,
+    "p50": 215.5,
+    "p95": 373.9,
+    "p99": 387.8,
+    "max": 391.3,
+    "mean": 223.3,
+    "unit": "ms"
+   },
+   "incidents_with_contacts_alerted": "20/20",
+   "first_volunteer_latency_loud": {
+    "n": 9,
+    "p50": 562.5,
+    "p95": 10735.8,
+    "p99": 13359.1,
+    "max": 14014.9,
+    "mean": 2934.7,
+    "unit": "ms"
+   },
+   "first_volunteer_latency_silent_nocontact": {
+    "n": 4,
+    "p50": 831.4,
+    "p95": 1325.1,
+    "p99": 1329.7,
+    "max": 1330.9,
+    "mean": 835.1,
+    "unit": "ms"
+   },
+   "silent_nocontact_reached": "4/4",
+   "tick": {
+    "tick:_expire_invitations": {
+     "n": 13,
+     "p50": 0.5,
+     "p95": 8.2,
+     "p99": 16.7,
+     "max": 18.8,
+     "mean": 1.9,
+     "unit": "ms",
+     "total_s": 0.025
+    },
+    "tick:_ring_tick": {
+     "n": 13,
+     "p50": 1.2,
+     "p95": 457.8,
+     "p99": 537.8,
+     "max": 557.8,
+     "mean": 103.9,
+     "unit": "ms",
+     "total_s": 1.35
+    },
+    "tick:signal_tick": {
+     "n": 13,
+     "p50": 1.0,
+     "p95": 4.4,
+     "p99": 4.5,
+     "max": 4.5,
+     "mean": 1.7,
+     "unit": "ms",
+     "total_s": 0.023
+    },
+    "tick:owner_abuse": {
+     "n": 298,
+     "p50": 0.2,
+     "p95": 2.6,
+     "p99": 7.5,
+     "max": 17.4,
+     "mean": 0.6,
+     "unit": "ms",
+     "total_s": 0.189
+    },
+    "tick:_view_for": {
+     "n": 18,
+     "p50": 12.2,
+     "p95": 66.8,
+     "p99": 185.8,
+     "max": 215.5,
+     "mean": 27.0,
+     "unit": "ms",
+     "total_s": 0.485
+    },
+    "tick:_notify": {
+     "n": 48,
+     "p50": 3.7,
+     "p95": 8.0,
+     "p99": 12.0,
+     "max": 12.4,
+     "mean": 4.3,
+     "unit": "ms",
+     "total_s": 0.204
+    },
+    "tick:_dispatch_next_volunteer": {
+     "n": 51,
+     "p50": 1.4,
+     "p95": 26.9,
+     "p99": 35.0,
+     "max": 38.1,
+     "mean": 5.4,
+     "unit": "ms",
+     "total_s": 0.277
+    },
+    "tick:run_dispatch_queue": {
+     "n": 14,
+     "p50": 24.6,
+     "p95": 258.0,
+     "p99": 431.2,
+     "max": 474.5,
+     "mean": 67.6,
+     "unit": "ms",
+     "total_s": 0.946
+    },
+    "tick:features_tick": {
+     "n": 13,
+     "p50": 0.1,
+     "p95": 0.5,
+     "p99": 0.6,
+     "max": 0.6,
+     "mean": 0.2,
+     "unit": "ms",
+     "total_s": 0.002
+    },
+    "TICK_TOTAL": {
+     "n": 13,
+     "p50": 105.5,
+     "p95": 531.7,
+     "p99": 593.7,
+     "max": 609.2,
+     "mean": 179.7,
+     "unit": "ms",
+     "total_s": 2.337
+    }
+   },
+   "req_timings": {
+    "req:update_presence": {
+     "n": 64,
+     "p50": 5.9,
+     "p95": 40.1,
+     "p99": 61.0,
+     "max": 85.3,
+     "mean": 11.3,
+     "unit": "ms",
+     "total_s": 0.724
+    },
+    "req:owner_abuse": {
+     "n": 425,
+     "p50": 0.2,
+     "p95": 7.6,
+     "p99": 14.4,
+     "max": 23.6,
+     "mean": 1.3,
+     "unit": "ms",
+     "total_s": 0.571
+    },
+    "req:_view_for": {
+     "n": 106,
+     "p50": 6.0,
+     "p95": 51.5,
+     "p99": 69.2,
+     "max": 72.1,
+     "mean": 14.5,
+     "unit": "ms",
+     "total_s": 1.535
+    },
+    "req:_notify": {
+     "n": 326,
+     "p50": 3.0,
+     "p95": 16.3,
+     "p99": 33.2,
+     "max": 40.6,
+     "mean": 5.2,
+     "unit": "ms",
+     "total_s": 1.708
+    },
+    "req:get_incident": {
+     "n": 24,
+     "p50": 9.8,
+     "p95": 31.0,
+     "p99": 35.1,
+     "max": 36.3,
+     "mean": 12.8,
+     "unit": "ms",
+     "total_s": 0.307
+    },
+    "req:create_incident": {
+     "n": 24,
+     "p50": 466.1,
+     "p95": 616.3,
+     "p99": 629.7,
+     "max": 633.5,
+     "mean": 417.9,
+     "unit": "ms",
+     "total_s": 10.03
+    },
+    "req:_dispatch_next_volunteer": {
+     "n": 45,
+     "p50": 11.7,
+     "p95": 52.1,
+     "p99": 71.4,
+     "max": 75.5,
+     "mean": 17.7,
+     "unit": "ms",
+     "total_s": 0.795
+    },
+    "req:run_dispatch_queue": {
+     "n": 19,
+     "p50": 232.6,
+     "p95": 482.9,
+     "p99": 499.3,
+     "max": 503.4,
+     "mean": 263.8,
+     "unit": "ms",
+     "total_s": 5.012
+    },
+    "req:update_location": {
+     "n": 48,
+     "p50": 44.8,
+     "p95": 164.1,
+     "p99": 222.3,
+     "max": 226.4,
+     "mean": 62.7,
+     "unit": "ms",
+     "total_s": 3.008
+    }
+   },
+   "lock": {
+    "acquisitions": 10893,
+    "elapsed_s": 15.24,
+    "hold_utilization": 0.304,
+    "wait_total_s": 16.779,
+    "hold_total_s": 4.626,
+    "wait": {
+     "n": 10893,
+     "p50": 0.0,
+     "p95": 7.6,
+     "p99": 22.8,
+     "max": 163.7,
+     "mean": 1.5,
+     "unit": "ms"
+    },
+    "hold": {
+     "n": 10893,
+     "p50": 0.1,
+     "p95": 2.2,
+     "p99": 4.2,
+     "max": 74.0,
+     "mean": 0.4,
+     "unit": "ms"
+    }
+   },
+   "server": {
+    "threads_os": 127,
+    "rss_mb": 46.5,
+    "handles": 1150,
+    "db_mb": 4.4
+   },
+   "tick_samples": [
+    {
+     "t": 5.0,
+     "tick_n": 4,
+     "tick_p50": 37.5,
+     "tick_max": 480.0,
+     "threads": 130,
+     "rss_mb": 44.9,
+     "lock_util": 0.384
+    },
+    {
+     "t": 10.1,
+     "tick_n": 9,
+     "tick_p50": 52.0,
+     "tick_max": 480.0,
+     "threads": 127,
+     "rss_mb": 45.7,
+     "lock_util": 0.316
+    },
+    {
+     "t": 15.2,
+     "tick_n": 13,
+     "tick_p50": 105.5,
+     "tick_max": 609.2,
+     "threads": 127,
+     "rss_mb": 45.7,
+     "lock_util": 0.304
+    }
+   ],
+   "invariants": {
+    "volunteer_busy_in_more_than_one_active": [],
+    "volunteer_accepted_more_than_one": [],
+    "silent_nocontact_without_any_volunteer": [],
+    "free_volunteers_at_end": 0,
+    "loud_incidents_without_accepted_volunteer": 6,
+    "ring_stuck_ringing_too_long": 0,
+    "contacts_rung_per_incident": [
+     {
+      "n": 1,
+      "incidents": 10
+     },
+     {
+      "n": 2,
+      "incidents": 4
+     },
+     {
+      "n": 3,
+      "incidents": 6
+     }
+    ],
+    "volunteer_states": [
+     {
+      "state": "accepted",
+      "n": 6
+     },
+     {
+      "state": "declined",
+      "n": 5
+     },
+     {
+      "state": "delivered",
+      "n": 2
+     },
+     {
+      "state": "expired",
+      "n": 2
+     },
+     {
+      "state": "reassigned",
+      "n": 2
+     }
+    ]
+   },
+   "poller_stats": {
+    "ack_200": 354,
+    "respond_accept_200": 23,
+    "respond_decline_200": 5,
+    "respond_accept_404": 1
+   },
+   "server_errors": []
+  }
+ ],
+ "machine_after": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:15:59",
+  "cpu_percent_busy": 54.4,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 18.0,
+  "top_processes_cpu_percent": [
+   [
+    "java.exe",
+    323
+   ],
+   [
+    "System Idle Process",
+    273
+   ],
+   [
+    "python.exe",
+    81
+   ],
+   [
+    "python.exe",
+    42
+   ],
+   [
+    "Code.exe",
+    39
+   ]
+  ]
+ }
+}

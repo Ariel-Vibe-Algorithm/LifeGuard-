@@ -1,0 +1,1154 @@
+{
+ "created": "2026-11-15",
+ "model_version": "hazard_audio_v1",
+ "window_s": 1.5,
+ "datasets": {
+  "gunshot_fit": {
+   "n": 847,
+   "excluded_fsd_overlap": 0,
+   "errors": 0,
+   "recall": {
+    "gunshot": {
+     "n": 847,
+     "hit": 225,
+     "rate": 0.26564344746162927,
+     "ci": [
+      0.23700471538464876,
+      0.2963984468490737
+     ],
+     "any_points_or_distress": 0.4769775678866588
+    },
+    "gunshot | other_mic": {
+     "n": 455,
+     "hit": 129,
+     "rate": 0.2835164835164835,
+     "ci": [
+      0.24404932086249614,
+      0.32660861425062343
+     ],
+     "any_points_or_distress": 0.4153846153846154
+    },
+    "gunshot | phone": {
+     "n": 392,
+     "hit": 96,
+     "rate": 0.24489795918367346,
+     "ci": [
+      0.20493802169853595,
+      0.28980937220852176
+     ],
+     "any_points_or_distress": 0.548469387755102
+    }
+   },
+   "hard_negative": {},
+   "background": {}
+  },
+  "nonspeech7k": {
+   "n": 725,
+   "excluded_fsd_overlap": 304,
+   "errors": 0,
+   "recall": {
+    "distress": {
+     "n": 212,
+     "hit": 61,
+     "rate": 0.28773584905660377,
+     "ci": [
+      0.231000031009449,
+      0.35202752252981323
+     ],
+     "any_points_or_distress": 0.3113207547169811
+    },
+    "distress | crying": {
+     "n": 177,
+     "hit": 57,
+     "rate": 0.3220338983050847,
+     "ci": [
+      0.257607277226287,
+      0.39402155153877577
+     ],
+     "any_points_or_distress": 0.327683615819209
+    },
+    "distress | screaming": {
+     "n": 35,
+     "hit": 4,
+     "rate": 0.11428571428571428,
+     "ci": [
+      0.0453510585448975,
+      0.2595179478812023
+     ],
+     "any_points_or_distress": 0.22857142857142856
+    },
+    "scream": {
+     "n": 35,
+     "hit": 8,
+     "rate": 0.22857142857142856,
+     "ci": [
+      0.120657367461791,
+      0.39017637780102
+     ],
+     "any_points_or_distress": 0.22857142857142856
+    }
+   },
+   "hard_negative": {
+    "all": {
+     "n": 209,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.018049103182836437
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.018049103182836437
+     ]
+    },
+    "breath": {
+     "n": 124,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.030049686487027695
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.030049686487027695
+     ]
+    },
+    "cough": {
+     "n": 27,
+     "points_rate": 0.0,
+     "points_ci": [
+      1.2149183920775522e-17,
+      0.1245590371446358
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      1.2149183920775522e-17,
+      0.1245590371446358
+     ]
+    },
+    "laugh": {
+     "n": 27,
+     "points_rate": 0.0,
+     "points_ci": [
+      1.2149183920775522e-17,
+      0.1245590371446358
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      1.2149183920775522e-17,
+      0.1245590371446358
+     ]
+    },
+    "yawm": {
+     "n": 21,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.15464382326420195
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.15464382326420195
+     ]
+    }
+   },
+   "background": {}
+  },
+  "esc50": {
+   "n": 1880,
+   "excluded_fsd_overlap": 598,
+   "errors": 0,
+   "recall": {
+    "alarm": {
+     "n": 14,
+     "hit": 7,
+     "rate": 0.5,
+     "ci": [
+      0.2679886791947528,
+      0.7320113208052473
+     ],
+     "any_points_or_distress": 0.5
+    },
+    "distress": {
+     "n": 28,
+     "hit": 14,
+     "rate": 0.5,
+     "ci": [
+      0.32632846832446344,
+      0.6736715316755366
+     ],
+     "any_points_or_distress": 0.5357142857142857
+    },
+    "fireworks": {
+     "n": 38,
+     "hit": 31,
+     "rate": 0.8157894736842105,
+     "ci": [
+      0.6658083165848865,
+      0.9077835154674251
+     ],
+     "any_points_or_distress": 0.868421052631579
+    },
+    "glass_break": {
+     "n": 2,
+     "hit": 1,
+     "rate": 0.5,
+     "ci": [
+      0.09452865480086611,
+      0.905471345199134
+     ],
+     "any_points_or_distress": 0.5
+    },
+    "siren": {
+     "n": 28,
+     "hit": 17,
+     "rate": 0.6071428571428571,
+     "ci": [
+      0.42408726034906297,
+      0.7643454817241996
+     ],
+     "any_points_or_distress": 0.14285714285714285
+    }
+   },
+   "hard_negative": {
+    "all": {
+     "n": 1172,
+     "points_rate": 0.005119453924914676,
+     "points_ci": [
+      0.0023483085209961008,
+      0.01112425445007075
+     ],
+     "distress_rate": 0.0034129692832764505,
+     "distress_ci": [
+      0.0013279917148611637,
+      0.008742752507830057
+     ]
+    },
+    "airplane": {
+     "n": 30,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11351709139047801
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11351709139047801
+     ]
+    },
+    "breathing": {
+     "n": 22,
+     "points_rate": 0.0,
+     "points_ci": [
+      1.1814722454179233e-17,
+      0.14865952572596122
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      1.1814722454179233e-17,
+      0.14865952572596122
+     ]
+    },
+    "brushing_teeth": {
+     "n": 34,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.10151790621961015
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.10151790621961015
+     ]
+    },
+    "can_opening": {
+     "n": 40,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.08762453925039232
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.08762453925039232
+     ]
+    },
+    "car_horn": {
+     "n": 17,
+     "points_rate": 0.17647058823529413,
+     "points_ci": [
+      0.06191013712548989,
+      0.41029929017375777
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.18432366037156456
+     ]
+    },
+    "cat": {
+     "n": 17,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.18432366037156456
+     ],
+     "distress_rate": 0.11764705882352941,
+     "distress_ci": [
+      0.03287908001292091,
+      0.3433684249770991
+     ]
+    },
+    "chainsaw": {
+     "n": 31,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11025900073475385
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11025900073475385
+     ]
+    },
+    "chirping_birds": {
+     "n": 34,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.10151790621961015
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.10151790621961015
+     ]
+    },
+    "clapping": {
+     "n": 21,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.15464382326420195
+     ],
+     "distress_rate": 0.047619047619047616,
+     "distress_ci": [
+      0.008455769471923294,
+      0.22669816586235464
+     ]
+    },
+    "clock_tick": {
+     "n": 23,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.14312112541726274
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.14312112541726274
+     ]
+    },
+    "cow": {
+     "n": 29,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11697359446555587
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11697359446555587
+     ]
+    },
+    "crackling_fire": {
+     "n": 26,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.12873304380462175
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.12873304380462175
+     ]
+    },
+    "crickets": {
+     "n": 30,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11351709139047801
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11351709139047801
+     ]
+    },
+    "crow": {
+     "n": 29,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11697359446555587
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11697359446555587
+     ]
+    },
+    "dog": {
+     "n": 21,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.15464382326420195
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.15464382326420195
+     ]
+    },
+    "door_wood_creaks": {
+     "n": 36,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.09642183044857634
+     ],
+     "distress_rate": 0.027777777777777776,
+     "distress_ci": [
+      0.004920280295569678,
+      0.14170033735030801
+     ]
+    },
+    "drinking_sipping": {
+     "n": 39,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.08966985360023902
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.08966985360023902
+     ]
+    },
+    "engine": {
+     "n": 24,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.13798057582897535
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.13798057582897535
+     ]
+    },
+    "footsteps": {
+     "n": 34,
+     "points_rate": 0.058823529411764705,
+     "points_ci": [
+      0.01628231306384244,
+      0.1909393688946371
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.10151790621961015
+     ]
+    },
+    "frog": {
+     "n": 38,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.09181293258383999
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.09181293258383999
+     ]
+    },
+    "hand_saw": {
+     "n": 29,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11697359446555587
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11697359446555587
+     ]
+    },
+    "helicopter": {
+     "n": 34,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.10151790621961015
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.10151790621961015
+     ]
+    },
+    "hen": {
+     "n": 28,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.12064720365810762
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.12064720365810762
+     ]
+    },
+    "insects": {
+     "n": 28,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.12064720365810762
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.12064720365810762
+     ]
+    },
+    "keyboard_typing": {
+     "n": 22,
+     "points_rate": 0.0,
+     "points_ci": [
+      1.1814722454179233e-17,
+      0.14865952572596122
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      1.1814722454179233e-17,
+      0.14865952572596122
+     ]
+    },
+    "laughing": {
+     "n": 15,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.20388926630434784
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.20388926630434784
+     ]
+    },
+    "mouse_click": {
+     "n": 39,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.08966985360023902
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.08966985360023902
+     ]
+    },
+    "pig": {
+     "n": 28,
+     "points_rate": 0.03571428571428571,
+     "points_ci": [
+      0.006332356497541882,
+      0.17712576118498663
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.12064720365810762
+     ]
+    },
+    "pouring_water": {
+     "n": 30,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11351709139047801
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11351709139047801
+     ]
+    },
+    "rain": {
+     "n": 34,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.10151790621961015
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.10151790621961015
+     ]
+    },
+    "rooster": {
+     "n": 19,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.16818436536845052
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.16818436536845052
+     ]
+    },
+    "sea_waves": {
+     "n": 39,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.08966985360023902
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.08966985360023902
+     ]
+    },
+    "sheep": {
+     "n": 29,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.11697359446555587
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.11697359446555587
+     ]
+    },
+    "snoring": {
+     "n": 36,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.09642183044857634
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.09642183044857634
+     ]
+    },
+    "train": {
+     "n": 40,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.08762453925039232
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.08762453925039232
+     ]
+    },
+    "vacuum_cleaner": {
+     "n": 28,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.12064720365810762
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.12064720365810762
+     ]
+    },
+    "washing_machine": {
+     "n": 38,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.09181293258383999
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.09181293258383999
+     ]
+    },
+    "water_drops": {
+     "n": 24,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.13798057582897535
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.13798057582897535
+     ]
+    },
+    "wind": {
+     "n": 40,
+     "points_rate": 0.0,
+     "points_ci": [
+      0.0,
+      0.08762453925039232
+     ],
+     "distress_rate": 0.0,
+     "distress_ci": [
+      0.0,
+      0.08762453925039232
+     ]
+    }
+   },
+   "background": {}
+  },
+  "sonyc_ust": {
+   "n": 1797,
+   "excluded_fsd_overlap": 0,
+   "errors": 0,
+   "recall": {
+    "alarm": {
+     "n": 2,
+     "hit": 0,
+     "rate": 0.0,
+     "ci": [
+      0.0,
+      0.6576280471103807
+     ],
+     "any_points_or_distress": 0.0
+    },
+    "distress": {
+     "n": 44,
+     "hit": 0,
+     "rate": 0.0,
+     "ci": [
+      6.381712396155606e-18,
+      0.08029831778201396
+     ],
+     "any_points_or_distress": 0.022727272727272728
+    },
+    "distress | crowd_majority": {
+     "n": 34,
+     "hit": 0,
+     "rate": 0.0,
+     "ci": [
+      0.0,
+      0.10151790621961015
+     ],
+     "any_points_or_distress": 0.029411764705882353
+    },
+    "impact": {
+     "n": 75,
+     "hit": 0,
+     "rate": 0.0,
+     "ci": [
+      0.0,
+      0.04872554590470005
+     ],
+     "any_points_or_distress": 0.0
+    },
+    "impact | crowd_majority": {
+     "n": 40,
+     "hit": 0,
+     "rate": 0.0,
+     "ci": [
+      0.0,
+      0.08762453925039232
+     ],
+     "any_points_or_distress": 0.0
+    },
+    "impact | verified": {
+     "n": 35,
+     "hit": 0,
+     "rate": 0.0,
+     "ci": [
+      0.0,
+      0.09890426758938868
+     ],
+     "any_points_or_distress": 0.0
+    },
+    "siren": {
+     "n": 75,
+     "hit": 51,
+     "rate": 0.68,
+     "ci": [
+      0.5678872410148672,
+      0.7745715624594409
+     ],
+     "any_points_or_distress": 0.013333333333333334
+    },
+    "siren | crowd_majority": {
+     "n": 65,
+     "hit": 45,
+     "rate": 0.6923076923076923,
+     "ci": [
+      0.5720212794770566,
+      0.7911312329572853
+     ],
+     "any_points_or_distress": 0.015384615384615385
+    }
+   },
+   "hard_negative": {},
+   "background": {
+    "all": {
+     "windows": 9630,
+     "hours": 4.0125,
+     "any_event": 0.0023883696780893043,
+     "points": 0.0,
+     "points_ci": [
+      0.0,
+      0.0003987609677950279
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      0.0,
+      0.0003987609677950279
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.0,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.0023883696780893043
+     }
+    }
+   }
+  },
+  "tau2020_mobile": {
+   "n": 6513,
+   "excluded_fsd_overlap": 0,
+   "errors": 0,
+   "recall": {},
+   "hard_negative": {},
+   "background": {
+    "all": {
+     "windows": 39078,
+     "hours": 16.2825,
+     "any_event": 0.00028148830544040126,
+     "points": 0.00010235938379650955,
+     "points_ci": [
+      3.980561889309905e-05,
+      0.00026318931469263045
+     ],
+     "distress": 2.5589845949127387e-05,
+     "distress_ci": [
+      4.51713425416742e-06,
+      0.00014495381595816854
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 2.5589845949127387e-05,
+      "explosion": 7.676953784738216e-05,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.0001791289216438917
+     }
+    },
+    "airport": {
+     "windows": 6444,
+     "hours": 2.685,
+     "any_event": 0.00015518311607697082,
+     "points": 0.0,
+     "points_ci": [
+      0.0,
+      0.0005957962739035027
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      0.0,
+      0.0005957962739035027
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.0,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.00015518311607697082
+     }
+    },
+    "bus": {
+     "windows": 6912,
+     "hours": 2.88,
+     "any_event": 0.0,
+     "points": 0.0,
+     "points_ci": [
+      5.417999608478458e-20,
+      0.000555478309393321
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      5.417999608478458e-20,
+      0.000555478309393321
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.0,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.0
+     }
+    },
+    "metro": {
+     "windows": 6132,
+     "hours": 2.555,
+     "any_event": 0.00032615786040443573,
+     "points": 0.00032615786040443573,
+     "points_ci": [
+      8.944693435458701e-05,
+      0.0011885521587119616
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      0.0,
+      0.0006260917817695945
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.00032615786040443573,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.0
+     }
+    },
+    "park": {
+     "windows": 4122,
+     "hours": 1.7175,
+     "any_event": 0.000727802037845706,
+     "points": 0.0,
+     "points_ci": [
+      5.415963321259412e-20,
+      0.0009311070012964143
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      5.415963321259412e-20,
+      0.0009311070012964143
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.0,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.000727802037845706
+     }
+    },
+    "public_square": {
+     "windows": 2454,
+     "hours": 1.0225,
+     "any_event": 0.00040749796251018743,
+     "points": 0.00040749796251018743,
+     "points_ci": [
+      7.193516806728967e-05,
+      0.0023047843080779592
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      0.0,
+      0.0015629973876266072
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.00040749796251018743,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.0
+     }
+    },
+    "street_pedestrian": {
+     "windows": 7848,
+     "hours": 3.27,
+     "any_event": 0.00025484199796126404,
+     "points": 0.00012742099898063202,
+     "points_ci": [
+      2.2492710669646213e-05,
+      0.0007214856192039467
+     ],
+     "distress": 0.00012742099898063202,
+     "distress_ci": [
+      2.2492710669646213e-05,
+      0.0007214856192039467
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.00012742099898063202,
+      "explosion": 0.0,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.00012742099898063202
+     }
+    },
+    "street_traffic": {
+     "windows": 5166,
+     "hours": 2.1525,
+     "any_event": 0.00038714672861014324,
+     "points": 0.0,
+     "points_ci": [
+      0.0,
+      0.0007430788595147674
+     ],
+     "distress": 0.0,
+     "distress_ci": [
+      0.0,
+      0.0007430788595147674
+     ],
+     "unavailable_input": 0.0,
+     "per_category": {
+      "alarm": 0.0,
+      "explosion": 0.0,
+      "fireworks": 0.0,
+      "glass_break": 0.0,
+      "gunshot": 0.0,
+      "impact": 0.0,
+      "scream": 0.0,
+      "siren": 0.00038714672861014324
+     }
+    }
+   }
+  }
+ },
+ "fsd50k_eval_recall": {
+  "alarm": 0.1780821917808219,
+  "explosion": 0.35714285714285715,
+  "fireworks": 0.5671641791044776,
+  "glass_break": 0.4583333333333333,
+  "gunshot": 0.3805970149253731,
+  "impact": 0.06868131868131869,
+  "scream": 0.34959349593495936,
+  "siren": 0.5272727272727272
+ },
+ "scoring_categories": [
+  "alarm",
+  "explosion",
+  "glass_break",
+  "gunshot",
+  "scream"
+ ],
+ "demote_rule": 0.01,
+ "decision": {
+  "alarm": {
+   "windows": 48708,
+   "false_windows": 1,
+   "rate": 2.0530508335386383e-05,
+   "ci": [
+    3.6240548173295416e-06,
+    0.00011629750446118477
+   ],
+   "recommend_demote": false
+  },
+  "explosion": {
+   "windows": 48708,
+   "false_windows": 3,
+   "rate": 6.159152500615915e-05,
+   "ci": [
+    2.0946513675508896e-05,
+    0.00018109060249051182
+   ],
+   "recommend_demote": false
+  },
+  "glass_break": {
+   "windows": 48708,
+   "false_windows": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    7.886378083476113e-05
+   ],
+   "recommend_demote": false
+  },
+  "gunshot": {
+   "windows": 48708,
+   "false_windows": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    7.886378083476113e-05
+   ],
+   "recommend_demote": false
+  },
+  "scream": {
+   "windows": 48708,
+   "false_windows": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    7.886378083476113e-05
+   ],
+   "recommend_demote": false
+  },
+  "distress": {
+   "windows": 48708,
+   "false_windows": 1,
+   "rate": 2.0530508335386383e-05,
+   "ci": [
+    3.6240548173295416e-06,
+    0.00011629750446118477
+   ],
+   "recommend_demote": false
+  }
+ }
+}

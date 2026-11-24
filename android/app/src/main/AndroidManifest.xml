@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- רשת: חיבור לשרת LifeGuard (HTTPS בלבד, חוץ משרת מקומי לבדיקות - network_security_config) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- שירות חזית "LifeGuard מחובר": קבלת קריאות חירום כשהאפליקציה סגורה -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <!-- הקלטה בחירום (SOS ידני / חירום מאושר בלבד, לפי מדיניות השרת; ההרשאה מתבקשת מראש רק כשמפעילים).
+         אין הפעלה מרחוק ואין האזנה חיה - אין לזה שום מסלול בקוד.
+         "זיהוי סכנה ברקע" (רק אם המשתמש/ת הפעיל/ה בהגדרות; כבוי כברירת מחדל): המיקרופון מנותח במכשיר בחלונות של
+         1.5 שנ' ע"י YAMNet - האודיו לא נשמר ולא נשלח, ושום זיהוי לא מפעיל SOS או פונה לאיש בעצמו. -->
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- מסך מלא לקריאה נכנסת / "הכל בסדר?" גם על מסך נעול -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- בקשת החרגה מחיסכון סוללה (המשתמש/ת מאשר/ת במסך מערכת) -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- מיקום: ב-SOS, בליווי, ונוכחות גסה כל 5 דק' (לצלצול לאיש הקשר הקרוב) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- SMS ישיר לאנשי הקשר כשה-SOS לא מגיע לשרת (אין אינטרנט) -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+
+    <application
+        android:name=".LifeGuardApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LifeGuard">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.LoginActivity" android:exported="false" />
+        <activity android:name=".ui.ChatActivity" android:exported="false" android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.SettingsActivity" android:exported="false" />
+        <activity android:name=".ui.DiagnosticsActivity" android:exported="false" />
+        <activity android:name=".ui.EvidenceActivity" android:exported="false" />
+        <activity android:name=".ui.NationalActivity" android:exported="false" />
+        <activity android:name=".ui.RideActivity" android:exported="false" android:launchMode="singleTop" />
+        <activity android:name=".ui.LocationSharingActivity" android:exported="false" />
+        <activity android:name=".ui.ContactLocationActivity" android:exported="false" />
+        <activity android:name=".ui.GuardianActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.PrivacyHistoryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <!-- עזרה ראשונה: אופליין לגמרי (תוכן ב-assets), בלי התחברות ובלי שרת -->
+        <activity android:name=".ui.FirstAidActivity" android:exported="false" android:label="@string/first_aid_title"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <activity
+            android:name=".ui.IncomingAlertActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:excludeFromRecents="true"
+            android:taskAffinity="org.lifeguard.app.alert"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:theme="@style/Theme.LifeGuard.Alert" />
+
+        <!-- בקשה למתנדב/ת תמיכה מרחוק / הזעקת רשויות (server/helpers.py). הזעקה מצלצלת - גם על מסך נעול -->
+        <activity
+            android:name=".ui.HelperActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true" />
+        <!-- "צריך/ה לדבר עם מישהו?" (לא חירום) והגדרות התנדבות -->
+        <activity android:name=".ui.SupportActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.VolunteerRolesActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- צילום ת"ז / סלפי לאימות זהות מתנדב/ת דרך אפליקציית המצלמה (בלי הרשאת CAMERA לאפליקציה):
+             קובץ זמני ב-cache/identity שנמחק מיד אחרי ההקטנה והקידוד מחדש -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.identityphotos"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/identity_paths" />
+        </provider>
+
+        <!-- "LifeGuard זיהה סכנה אפשרית" (זיהוי צליל במכשיר): פעולות רק בלחיצה + אישור; לעולם לא SOS אוטומטי -->
+        <activity
+            android:name=".ui.HazardAlertActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:excludeFromRecents="true"
+            android:taskAffinity="org.lifeguard.app.hazard"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:theme="@style/Theme.LifeGuard.Hazard" />
+
+        <activity
+            android:name=".ui.WellnessCheckActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:excludeFromRecents="true"
+            android:taskAffinity="org.lifeguard.app.wellness"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:theme="@style/Theme.LifeGuard.Check" />
+
+        <service
+            android:name=".service.LifeGuardService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse|location|microphone">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Personal safety: keeps a connection open to receive emergency alerts from trusted contacts and to deliver the user's SOS" />
+        </service>
+
+        <receiver android:name=".service.BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".service.SmsResultReceiver" android:exported="false" />
+
+        <!-- FCM - השכמה בלבד (בלי תוכן). Firebase מאותחל ידנית ב-LifeGuardApp רק כשיש firebase.properties בבנייה;
+             לכן: בלי auto-init, בלי Analytics, ובלי FirebaseInitProvider (שהיה מנסה לאתחל מ-google-services.json). -->
+        <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false" />
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="${applicationId}.firebaseinitprovider"
+            tools:node="remove" />
+
+        <!-- שעון Wear OS: SOS / נפילה מהשעון (Wearable Data Layer) -> אותו מסלול כמו כפתור ה-SOS (WearSosListenerService) -->
+        <service
+            android:name=".wear.WearSosListenerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/lifeguard/sos" />
+            </intent-filter>
+        </service>
+
+        <!-- "קבלה" מהשעון על קריאה נכנסת (פעולה בהתראה המגושרת לשעון) - בלי לפתוח מסך בטלפון -->
+        <receiver android:name=".alert.AlertActionReceiver" android:exported="false" />
+
+        <service
+            android:name=".fcm.LifeGuardMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

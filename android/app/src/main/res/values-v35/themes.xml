@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 15 (targetSdk 35) forces edge-to-edge, which ignores statusBarColor and lets content slide under the
+     status bar. Until every screen handles insets, keep the classic window so the SOS / alert screens are never
+     covered by system bars. -->
+<resources>
+    <style name="Platform.LifeGuard" parent="Theme.Material3.DayNight">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+    <style name="Platform.LifeGuard.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+</resources>

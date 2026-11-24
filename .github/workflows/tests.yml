@@ -1,0 +1,62 @@
+# בדיקות אוטומטיות בכל push / pull request.
+# - python: שרת + אפליקציית Windows + כלי מחקר (Windows, כי יש תלות ב-DPAPI / Tk / winotify).
+#   בדיקות שדורשות מודלים/נתונים שאינם במאגר מדלגות בעצמן (importorskip / קבצים חסרים).
+# - android: בדיקות JVM + בניית APK debug (בלי firebase.properties - FCM כבוי, כמו בברירת המחדל).
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements-windows.txt
+            research/requirements-research.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-windows.txt
+          pip install -r research/requirements-research.txt
+          pip install pytest==9.2.0
+      - name: Run tests
+        env:
+          PYTHONUTF8: "1"
+        run: python -m pytest -q -p no:cacheprovider --ignore=android -rEfs tests
+
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+      - uses: android-actions/setup-android@v3
+      - name: Unit tests and debug APK
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon testDebugUnitTest assembleDebug
+      - name: Upload test reports on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-test-reports
+          path: android/app/build/reports/tests/

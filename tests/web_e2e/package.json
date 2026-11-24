@@ -1,0 +1,13 @@
+{
+  "name": "lifeguard-web-e2e",
+  "private": true,
+  "version": "1.0.0",
+  "description": "End-to-end tests of the LifeGuard PWA (server/web) against a real LifeGuard server, in installed Chrome",
+  "type": "module",
+  "scripts": {
+    "test": "node run_e2e.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "25.14.0"
+  }
+}

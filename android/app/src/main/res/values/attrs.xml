@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LifeGuard button styles for buttons built in code: MaterialButton(ctx, null, R.attr.lgTonalButtonStyle) -->
+    <attr name="lgTonalButtonStyle" format="reference" />
+    <attr name="lgRowButtonStyle" format="reference" />
+    <attr name="lgSosButtonStyle" format="reference" />
+</resources>

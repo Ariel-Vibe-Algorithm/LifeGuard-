@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>LifeGuard</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A4485"/><stop offset="1" stop-color="#0A1F44"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M256 100 L376 146 V250 C376 330 324 384 256 412 C188 384 136 330 136 250 V146 Z" fill="#ffffff"/>
+  <rect x="234" y="180" width="44" height="152" rx="8" fill="#D70015"/>
+  <rect x="180" y="234" width="152" height="44" rx="8" fill="#D70015"/>
+</svg>

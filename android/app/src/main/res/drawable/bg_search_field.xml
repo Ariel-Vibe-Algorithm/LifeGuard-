@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- first-aid search bar: always visibly a field - it is the screen's only entry point -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/lg_surface" />
+    <corners android:radius="@dimen/lg_radius_control" />
+    <stroke android:width="2dp" android:color="@color/lg_accent" />
+</shape>

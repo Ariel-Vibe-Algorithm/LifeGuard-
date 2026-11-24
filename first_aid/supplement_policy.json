@@ -1,0 +1,38 @@
+{
+  "_about": "מדיניות הטמעה לחבילות הרחבה (לא תוכן רפואי): מיפוי דחיפות, סיווג נהלי בטיחות, ומדריכים שתוכנם משתנה ומחייב מקור רשמי. התוכן עצמו נשאר בחבילה כפי שהגיע.",
+  "urgency_map": {"critical": "critical", "urgent": "high", "high": "high", "medium": "medium", "routine": "low", "low": "low"},
+  "default_review_status": "pending_medical_review",
+  "packages": {
+    "lifeguard_first_aid_supplement_02": {
+      "category_medical": "עזרה ראשונה (חבילת הרחבה 02)",
+      "category_safety": "נוהל בטיחות (לא טיפול רפואי)",
+      "safety_procedures": ["gas_leak_home", "home_fire_escape", "active_attack_safety", "israel_rocket_alert_shelter",
+                            "flash_flood_wadi"],
+      "official_dynamic": {
+        "israel_rocket_alert_shelter": {
+          "authority": "פיקוד העורף",
+          "text": "ההנחיות המחייבות וזמני ההתגוננות לאזור שלכם: אפליקציית פיקוד העורף, oref.org.il או 104. הזמנים משתנים לפי אזור ולכן לא מוצגים כאן."
+        }
+      },
+      "authority_review": {
+        "gas_leak_home": "כבאות והצלה לישראל",
+        "home_fire_escape": "כבאות והצלה לישראל",
+        "active_attack_safety": "משטרת ישראל",
+        "israel_rocket_alert_shelter": "פיקוד העורף",
+        "flash_flood_wadi": "רשות הטבע והגנים / יחידות חילוץ"
+      },
+      "overlaps_with_base": {
+        "animal_bite_rabies_israel": "animal_bite",
+        "eye_injury_foreign_body": "eye_injury",
+        "chemical_eye_exposure": "chemical_exposure",
+        "imminent_unplanned_birth": "birth_emergency",
+        "newborn_immediate_care_unexpected_birth": "birth_emergency",
+        "infant_fever_under_two_months": "child_fever",
+        "infant_serious_illness_red_flags": "child_fever",
+        "concussion_sports": "head_spine_injury",
+        "multiple_bee_wasp_stings": "insect_sting",
+        "smoke_inhalation": "burns_thermal"
+      }
+    }
+  }
+}

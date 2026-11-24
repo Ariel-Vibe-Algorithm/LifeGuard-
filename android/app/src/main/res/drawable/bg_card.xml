@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- card: white (navy in dark) surface, 16dp corners -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/lg_surface" />
+    <corners android:radius="@dimen/lg_radius_card" />
+</shape>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <title>ניהול LifeGuard</title>
+  <link rel="icon" href="/app/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>ניהול LifeGuard</h1>
+    <div class="bar-actions" id="barActions" hidden>
+      <button type="button" class="btn-plain" id="refreshBtn">רענון</button>
+      <button type="button" class="btn-plain danger" id="logoutBtn">התנתקות</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- כניסה -->
+    <section id="loginView" class="login" hidden>
+      <form id="loginForm" class="card login-card" autocomplete="off" novalidate>
+        <h2>כניסת מנהל/ת</h2>
+        <p class="muted">הדף מיועד לצוות התפעול בלבד. כל כניסה וכל ניסיון כושל נרשמים ביומן הביקורת.</p>
+        <label class="field">
+          <span>שם משתמש</span>
+          <input id="loginUser" name="username" type="text" autocomplete="username" autocapitalize="off"
+                 spellcheck="false" required maxlength="32">
+        </label>
+        <label class="field">
+          <span>סיסמה</span>
+          <input id="loginPass" name="password" type="password" autocomplete="current-password" required maxlength="256">
+        </label>
+        <p id="loginError" class="error" role="alert" hidden></p>
+        <button type="submit" class="btn-fill" id="loginBtn">כניסה</button>
+        <p class="muted small">אחרי 5 ניסיונות כושלים הכניסה ננעלת ל-15 דקות. ההתחברות תקפה 8 שעות ונשמרת רק בלשונית
+          הזו (sessionStorage).</p>
+      </form>
+    </section>
+
+    <!-- הלוח -->
+    <section id="dashView" hidden>
+      <p class="banner" id="privacyNote"></p>
+      <nav class="segmented" role="tablist" aria-label="אזורי הלוח">
+        <button type="button" role="tab" data-tab="stats" aria-selected="true">סטטיסטיקות</button>
+        <button type="button" role="tab" data-tab="health" aria-selected="false">תקינות</button>
+        <button type="button" role="tab" data-tab="data" aria-selected="false">מאגרי מידע</button>
+        <button type="button" role="tab" data-tab="engine" aria-selected="false">איך המנוע עובד</button>
+        <button type="button" role="tab" data-tab="improve" aria-selected="false">הערות לשיפור</button>
+      </nav>
+      <p class="muted small meta" id="metaLine"></p>
+      <div id="tab-stats" class="tab" role="tabpanel"></div>
+      <div id="tab-health" class="tab" role="tabpanel" hidden></div>
+      <div id="tab-data" class="tab" role="tabpanel" hidden></div>
+      <div id="tab-engine" class="tab" role="tabpanel" hidden></div>
+      <div id="tab-improve" class="tab" role="tabpanel" hidden></div>
+    </section>
+
+    <p id="loading" class="muted center" hidden>טוען…</p>
+  </main>
+</body>
+</html>

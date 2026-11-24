@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Watch colours = design/tokens.json (fills + dark-mode tokens). Kotlin mirror: WatchColors in WatchUi.kt. -->
+<resources>
+    <color name="sos_red">#D70015</color>
+    <color name="sos_red_dark">#A50011</color>
+    <color name="ok_green">#1E7F3B</color>
+    <color name="neutral">#26375A</color>
+    <color name="warn_amber">#FFB547</color>
+    <color name="lg_brand_navy">#0A1F44</color>
+    <color name="lg_accent">#4C93FF</color>
+</resources>

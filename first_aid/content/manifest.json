@@ -1,0 +1,17 @@
+{
+  "package": "LifeGuard Offline First Aid",
+  "version": "1.0.0",
+  "created": "2026-11-07",
+  "guide_count": 39,
+  "language": "he-IL",
+  "country": "IL",
+  "medical_review_required": true,
+  "files": [
+    "README.md",
+    "CLAUDE_IMPLEMENTATION_PROMPT.md",
+    "SOURCES_AND_REVIEW.md",
+    "content/first_aid_guides_he.json",
+    "content/search_index_he.json",
+    "content/first_aid_guides_he.md"
+  ]
+}

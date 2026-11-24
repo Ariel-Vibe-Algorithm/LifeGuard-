@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <title>אימות זהות מתנדבים - LifeGuard</title>
+  <link rel="icon" href="/app/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script src="/admin/identity.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>אימות זהות מתנדבים</h1>
+    <div class="bar-actions">
+      <a class="btn-plain" href="/admin/">לוח הבקרה</a>
+      <button type="button" class="btn-plain danger" id="forgetBtn" hidden>שכח/י טוקן</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="tokenView" class="login">
+      <form id="tokenForm" class="card login-card" autocomplete="off" novalidate>
+        <h2>טוקן הניהול של השרת</h2>
+        <p class="muted">צילומי ת"ז הם המידע הרגיש ביותר במערכת, ולכן הדף הזה דורש את <b>LIFEGUARD_ADMIN_TOKEN</b>
+          של השרת - לא את סיסמת לוח הבקרה. הטוקן נשמר רק בזיכרון של הלשונית (לא נשמר בדפדפן), וכל צפייה
+          ב-תמונות נרשמת ביומן הביקורת.</p>
+        <label class="field"><span>טוקן</span><input id="tokenInput" type="password" required></label>
+        <button type="submit" class="btn">המשך</button>
+        <p id="tokenErr" class="error" role="alert"></p>
+      </form>
+    </section>
+    <section id="queueView" hidden>
+      <div class="card">
+        <h2>בקשות ממתינות</h2>
+        <p class="muted">השוו את הסלפי לתמונה בתעודה ואת השם לשם בחשבון. אחרי אישור או דחייה התמונות
+          <b>נמחקות מהשרת</b>. אין כאן זיהוי פנים אוטומטי ואין בדיקה מול משרד הפנים.</p>
+        <ul id="queue" class="list"></ul>
+        <p id="queueEmpty" class="muted" hidden>אין בקשות ממתינות.</p>
+      </div>
+      <div class="card" id="review" hidden>
+        <h2 id="reviewTitle"></h2>
+        <p class="muted" id="reviewMeta"></p>
+        <div class="id-images">
+          <figure><img id="idImg" alt="צילום תעודת הזהות"><figcaption>תעודת זהות</figcaption></figure>
+          <figure><img id="selfieImg" alt="סלפי"><figcaption>סלפי</figcaption></figure>
+        </div>
+        <label class="field"><span>הערה (תוצג למתנדב/ת בדחייה)</span><input id="note" maxlength="200"></label>
+        <div class="bar-actions">
+          <button type="button" class="btn" id="approveBtn">אישור זהות</button>
+          <button type="button" class="btn danger" id="rejectBtn">דחייה</button>
+        </div>
+        <p id="reviewMsg" class="muted" role="status"></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- solid white text on the fixed-red alert screen (5.4:1); faded only when disabled -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="@color/lg_on_fill" android:alpha="0.45" />
+    <item android:color="@color/lg_on_fill" />
+</selector>

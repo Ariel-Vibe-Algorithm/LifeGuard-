@@ -1,0 +1,590 @@
+{
+ "machine_before": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:57:27",
+  "cpu_percent_busy": 9.2,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 18.2,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    992
+   ],
+   [
+    "python.exe",
+    71
+   ],
+   [
+    "Code.exe",
+    23
+   ],
+   [
+    "msedgewebview2.exe",
+    20
+   ],
+   [
+    "dwm.exe",
+    18
+   ]
+  ]
+ },
+ "reps": [
+  {
+   "rep": 0,
+   "params": {
+    "incidents": 200,
+    "contacts": 3,
+    "silent": 20,
+    "vols": 50,
+    "duration": 75,
+    "ring": 15,
+    "ack": 30,
+    "move_interval": 2.0,
+    "no_move": false,
+    "reps": 1,
+    "synchronous": "",
+    "indexes": false,
+    "tag": "after_fix"
+   },
+   "posts_ok": 220,
+   "posts_status": {
+    "200": 220
+   },
+   "post_incident_latency": {
+    "n": 220,
+    "p50": 2264.3,
+    "p95": 6929.7,
+    "p99": 7007.4,
+    "max": 7017.6,
+    "mean": 2928.7,
+    "unit": "ms"
+   },
+   "location_update_latency": {
+    "n": 3270,
+    "p50": 152.3,
+    "p95": 656.6,
+    "p99": 1048.6,
+    "max": 1509.9,
+    "mean": 215.9,
+    "unit": "ms"
+   },
+   "presence_updates": 1925,
+   "presence_latency": {
+    "n": 1925,
+    "p50": 3.2,
+    "p95": 121.2,
+    "p99": 239.8,
+    "max": 571.5,
+    "mean": 23.5,
+    "unit": "ms"
+   },
+   "alert_latency_first_contact_longpoll": {
+    "n": 200,
+    "p50": 1090.3,
+    "p95": 1994.8,
+    "p99": 2082.5,
+    "max": 5822.1,
+    "mean": 1137.7,
+    "unit": "ms"
+   },
+   "alert_latency_first_contact_db": {
+    "n": 200,
+    "p50": 972.8,
+    "p95": 1815.4,
+    "p99": 1902.1,
+    "max": 5679.5,
+    "mean": 1012.9,
+    "unit": "ms"
+   },
+   "incidents_with_contacts_alerted": "200/200",
+   "first_volunteer_latency_loud": {
+    "n": 40,
+    "p50": 2451.0,
+    "p95": 5671.6,
+    "p99": 30642.8,
+    "max": 46316.1,
+    "mean": 3965.5,
+    "unit": "ms"
+   },
+   "first_volunteer_latency_silent_nocontact": {
+    "n": 20,
+    "p50": 2636.6,
+    "p95": 2687.8,
+    "p99": 2694.4,
+    "max": 2696.0,
+    "mean": 2607.8,
+    "unit": "ms"
+   },
+   "silent_nocontact_reached": "20/20",
+   "tick": {
+    "tick:_expire_invitations": {
+     "n": 71,
+     "p50": 0.6,
+     "p95": 117.2,
+     "p99": 208.2,
+     "max": 251.7,
+     "mean": 21.4,
+     "unit": "ms",
+     "total_s": 1.517
+    },
+    "tick:_ring_tick": {
+     "n": 71,
+     "p50": 0.3,
+     "p95": 489.1,
+     "p99": 741.0,
+     "max": 964.7,
+     "mean": 49.7,
+     "unit": "ms",
+     "total_s": 3.526
+    },
+    "tick:signal_tick": {
+     "n": 71,
+     "p50": 5.4,
+     "p95": 54.4,
+     "p99": 88.4,
+     "max": 94.7,
+     "mean": 11.0,
+     "unit": "ms",
+     "total_s": 0.784
+    },
+    "tick:features_tick": {
+     "n": 71,
+     "p50": 0.4,
+     "p95": 52.1,
+     "p99": 83.0,
+     "max": 99.0,
+     "mean": 9.9,
+     "unit": "ms",
+     "total_s": 0.704
+    },
+    "TICK_TOTAL": {
+     "n": 71,
+     "p50": 9.2,
+     "p95": 565.6,
+     "p99": 790.5,
+     "max": 978.4,
+     "mean": 106.3,
+     "unit": "ms",
+     "total_s": 7.55
+    },
+    "tick:_notify": {
+     "n": 354,
+     "p50": 0.5,
+     "p95": 4.3,
+     "p99": 11.9,
+     "max": 79.7,
+     "mean": 1.5,
+     "unit": "ms",
+     "total_s": 0.545
+    },
+    "tick:owner_abuse": {
+     "n": 263,
+     "p50": 0.4,
+     "p95": 4.3,
+     "p99": 12.6,
+     "max": 26.2,
+     "mean": 1.2,
+     "unit": "ms",
+     "total_s": 0.316
+    },
+    "tick:_view_for": {
+     "n": 152,
+     "p50": 6.9,
+     "p95": 29.1,
+     "p99": 44.0,
+     "max": 79.6,
+     "mean": 10.6,
+     "unit": "ms",
+     "total_s": 1.614
+    },
+    "tick:_dispatch_next_volunteer": {
+     "n": 20,
+     "p50": 6.7,
+     "p95": 28.6,
+     "p99": 68.3,
+     "max": 78.2,
+     "mean": 12.2,
+     "unit": "ms",
+     "total_s": 0.245
+    }
+   },
+   "req_timings": {
+    "req:update_presence": {
+     "n": 1900,
+     "p50": 0.4,
+     "p95": 47.0,
+     "p99": 105.2,
+     "max": 397.7,
+     "mean": 7.6,
+     "unit": "ms",
+     "total_s": 14.488
+    },
+    "req:owner_abuse": {
+     "n": 7550,
+     "p50": 0.1,
+     "p95": 3.1,
+     "p99": 29.6,
+     "max": 330.0,
+     "mean": 1.4,
+     "unit": "ms",
+     "total_s": 10.662
+    },
+    "req:_view_for": {
+     "n": 974,
+     "p50": 5.9,
+     "p95": 51.6,
+     "p99": 223.5,
+     "max": 553.8,
+     "mean": 16.7,
+     "unit": "ms",
+     "total_s": 16.229
+    },
+    "req:_notify": {
+     "n": 10289,
+     "p50": 1.0,
+     "p95": 87.4,
+     "p99": 143.6,
+     "max": 396.8,
+     "mean": 19.0,
+     "unit": "ms",
+     "total_s": 195.096
+    },
+    "req:get_incident": {
+     "n": 220,
+     "p50": 4.6,
+     "p95": 16.5,
+     "p99": 32.0,
+     "max": 60.5,
+     "mean": 6.3,
+     "unit": "ms",
+     "total_s": 1.392
+    },
+    "req:create_incident": {
+     "n": 220,
+     "p50": 2205.0,
+     "p95": 6739.4,
+     "p99": 6826.9,
+     "max": 6845.3,
+     "mean": 2811.9,
+     "unit": "ms",
+     "total_s": 618.623
+    },
+    "req:_dispatch_next_volunteer": {
+     "n": 3818,
+     "p50": 0.2,
+     "p95": 4.5,
+     "p99": 28.2,
+     "max": 270.0,
+     "mean": 1.8,
+     "unit": "ms",
+     "total_s": 6.731
+    },
+    "req:run_dispatch_queue": {
+     "n": 53,
+     "p50": 98.3,
+     "p95": 2277.7,
+     "p99": 3029.4,
+     "max": 3552.0,
+     "mean": 470.5,
+     "unit": "ms",
+     "total_s": 24.934
+    },
+    "req:update_location": {
+     "n": 3050,
+     "p50": 68.1,
+     "p95": 479.2,
+     "p99": 609.0,
+     "max": 947.2,
+     "mean": 144.9,
+     "unit": "ms",
+     "total_s": 441.967
+    }
+   },
+   "lock": {
+    "acquisitions": 190473,
+    "elapsed_s": 79.64,
+    "hold_utilization": 0.373,
+    "wait_total_s": 1793.091,
+    "hold_total_s": 29.684,
+    "wait": {
+     "n": 190473,
+     "p50": 0.0,
+     "p95": 53.8,
+     "p99": 117.4,
+     "max": 512.5,
+     "mean": 9.4,
+     "unit": "ms"
+    },
+    "hold": {
+     "n": 190472,
+     "p50": 0.1,
+     "p95": 0.5,
+     "p99": 1.2,
+     "max": 387.3,
+     "mean": 0.2,
+     "unit": "ms"
+    }
+   },
+   "server": {
+    "threads_os": 1087,
+    "rss_mb": 112.2,
+    "handles": 8438,
+    "db_mb": 8.64
+   },
+   "tick_samples": [
+    {
+     "t": 5.2,
+     "tick_n": 5,
+     "tick_p50": 8.4,
+     "tick_max": 25.5,
+     "threads": 1098,
+     "rss_mb": 93.2,
+     "lock_util": 0.673
+    },
+    {
+     "t": 10.3,
+     "tick_n": 10,
+     "tick_p50": 6.4,
+     "tick_max": 25.5,
+     "threads": 1088,
+     "rss_mb": 95.6,
+     "lock_util": 0.58
+    },
+    {
+     "t": 15.4,
+     "tick_n": 15,
+     "tick_p50": 6.8,
+     "tick_max": 25.5,
+     "threads": 1088,
+     "rss_mb": 97.2,
+     "lock_util": 0.457
+    },
+    {
+     "t": 20.6,
+     "tick_n": 18,
+     "tick_p50": 7.1,
+     "tick_max": 978.4,
+     "threads": 1092,
+     "rss_mb": 98.4,
+     "lock_util": 0.444
+    },
+    {
+     "t": 25.8,
+     "tick_n": 23,
+     "tick_p50": 7.4,
+     "tick_max": 978.4,
+     "threads": 1089,
+     "rss_mb": 100.0,
+     "lock_util": 0.429
+    },
+    {
+     "t": 31.0,
+     "tick_n": 28,
+     "tick_p50": 7.1,
+     "tick_max": 978.4,
+     "threads": 1093,
+     "rss_mb": 101.7,
+     "lock_util": 0.408
+    },
+    {
+     "t": 36.3,
+     "tick_n": 32,
+     "tick_p50": 8.3,
+     "tick_max": 978.4,
+     "threads": 1091,
+     "rss_mb": 104.3,
+     "lock_util": 0.404
+    },
+    {
+     "t": 41.6,
+     "tick_n": 37,
+     "tick_p50": 8.2,
+     "tick_max": 978.4,
+     "threads": 1090,
+     "rss_mb": 105.5,
+     "lock_util": 0.398
+    },
+    {
+     "t": 47.0,
+     "tick_n": 42,
+     "tick_p50": 7.8,
+     "tick_max": 978.4,
+     "threads": 1090,
+     "rss_mb": 104.9,
+     "lock_util": 0.391
+    },
+    {
+     "t": 52.3,
+     "tick_n": 46,
+     "tick_p50": 8.3,
+     "tick_max": 978.4,
+     "threads": 1090,
+     "rss_mb": 107.4,
+     "lock_util": 0.387
+    },
+    {
+     "t": 57.7,
+     "tick_n": 51,
+     "tick_p50": 8.5,
+     "tick_max": 978.4,
+     "threads": 1087,
+     "rss_mb": 107.6,
+     "lock_util": 0.384
+    },
+    {
+     "t": 63.1,
+     "tick_n": 56,
+     "tick_p50": 8.4,
+     "tick_max": 978.4,
+     "threads": 1088,
+     "rss_mb": 108.3,
+     "lock_util": 0.377
+    },
+    {
+     "t": 68.6,
+     "tick_n": 61,
+     "tick_p50": 8.5,
+     "tick_max": 978.4,
+     "threads": 1089,
+     "rss_mb": 110.0,
+     "lock_util": 0.376
+    },
+    {
+     "t": 74.1,
+     "tick_n": 66,
+     "tick_p50": 9.1,
+     "tick_max": 978.4,
+     "threads": 1087,
+     "rss_mb": 110.3,
+     "lock_util": 0.373
+    },
+    {
+     "t": 79.6,
+     "tick_n": 71,
+     "tick_p50": 9.2,
+     "tick_max": 978.4,
+     "threads": 1087,
+     "rss_mb": 111.4,
+     "lock_util": 0.37
+    }
+   ],
+   "invariants": {
+    "volunteer_busy_in_more_than_one_active": [],
+    "volunteer_accepted_more_than_one": [],
+    "silent_nocontact_without_any_volunteer": [],
+    "free_volunteers_at_end": 0,
+    "loud_incidents_without_accepted_volunteer": 74,
+    "ring_stuck_ringing_too_long": 0,
+    "contacts_rung_per_incident": [
+     {
+      "n": 1,
+      "incidents": 98
+     },
+     {
+      "n": 2,
+      "incidents": 53
+     },
+     {
+      "n": 3,
+      "incidents": 49
+     }
+    ],
+    "volunteer_states": [
+     {
+      "state": "accepted",
+      "n": 49
+     },
+     {
+      "state": "declined",
+      "n": 18
+     },
+     {
+      "state": "delivered",
+      "n": 1
+     },
+     {
+      "state": "expired",
+      "n": 12
+     },
+     {
+      "state": "reassigned",
+      "n": 2
+     }
+    ]
+   },
+   "poller_stats": {
+    "ack_200": 10561,
+    "respond_accept_200": 224,
+    "respond_decline_404": 1,
+    "respond_decline_200": 18
+   },
+   "server_errors": [
+    "    self.finish_request(request, client_address)",
+    "  File \"C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py\", line 2609, in finish_request",
+    "    super().finish_request(request, client_address)",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\socketserver.py\", line 361, in finish_request",
+    "    self.RequestHandlerClass(request, client_address, self)",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\socketserver.py\", line 755, in __init__",
+    "    self.handle()",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\http\\server.py\", line 431, in handle",
+    "    self.handle_one_request()",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\http\\server.py\", line 419, in handle_one_request",
+    "    method()",
+    "  File \"C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py\", line 2087, in do_POST",
+    "    self._dispatch(\"POST\")",
+    "  File \"C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\tools\\loadtest\\lt_server.py\", line 209, in dispatch",
+    "    return orig_dispatch(self, method)",
+    "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "  File \"C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py\", line 2057, in _dispatch",
+    "    self._route(method)",
+    "  File \"C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py\", line 2078, in _route",
+    "    self._send(500, {\"error\": \"internal\", \"message\": \"שגיאת שרת\"})",
+    "  File \"C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py\", line 1977, in _send",
+    "    self.end_headers()",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\http\\server.py\", line 533, in end_headers",
+    "    self.flush_headers()",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\http\\server.py\", line 537, in flush_headers",
+    "    self.wfile.write(b\"\".join(self._headers_buffer))",
+    "  File \"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\socketserver.py\", line 834, in write",
+    "    self._sock.sendall(b)",
+    "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+    "----------------------------------------"
+   ]
+  }
+ ],
+ "machine_after": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:59:01",
+  "cpu_percent_busy": 11.0,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 18.3,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    1012
+   ],
+   [
+    "python.exe",
+    70
+   ],
+   [
+    "Code.exe",
+    52
+   ],
+   [
+    "Code.exe",
+    23
+   ],
+   [
+    "msedgewebview2.exe",
+    15
+   ]
+  ]
+ }
+}

@@ -1,0 +1,404 @@
+{
+ "version": "audio_anomaly_v1",
+ "created": "2026-11-15",
+ "seed": 7,
+ "budget_fa_per_hour": 1.0,
+ "sets": {
+  "known": [
+   "Alarm",
+   "Boom",
+   "Explosion",
+   "Fireworks",
+   "Gunshot_and_gunfire",
+   "Screaming",
+   "Shatter",
+   "Siren",
+   "Slam",
+   "Thump_and_thud"
+  ],
+  "novel": [
+   "Crack",
+   "Crushing",
+   "Crying_and_sobbing",
+   "Fire",
+   "Growling",
+   "Screech",
+   "Shout",
+   "Yell"
+  ],
+  "ambiguous": [
+   "Bell",
+   "Breaking",
+   "Church_bell",
+   "Crash_cymbal",
+   "Doorbell",
+   "Gasp",
+   "Glass",
+   "Ringtone",
+   "Telephone",
+   "Thunder",
+   "Thunderstorm",
+   "Vehicle_horn_and_car_horn_and_honking"
+  ]
+ },
+ "counts": {
+  "dev_A_everyday": 17593,
+  "dev_B_everyday": 16638,
+  "dev_B_known": 1761,
+  "eval_everyday": 7616,
+  "eval_known": 1377,
+  "eval_novel": 524,
+  "eval_everyday_hours": 20.358
+ },
+ "tuning": [
+  {
+   "method": "mahalanobis",
+   "dims": 16,
+   "auc_known_devB": 0.5952837176365836
+  },
+  {
+   "method": "knn",
+   "dims": 16,
+   "k": 1,
+   "auc_known_devB": 0.6366000799057514
+  },
+  {
+   "method": "knn",
+   "dims": 16,
+   "k": 5,
+   "auc_known_devB": 0.6422698660093998
+  },
+  {
+   "method": "knn",
+   "dims": 16,
+   "k": 20,
+   "auc_known_devB": 0.6395654187894831
+  },
+  {
+   "method": "mahalanobis",
+   "dims": 32,
+   "auc_known_devB": 0.5722605914540984
+  },
+  {
+   "method": "knn",
+   "dims": 32,
+   "k": 1,
+   "auc_known_devB": 0.6356107120943082
+  },
+  {
+   "method": "knn",
+   "dims": 32,
+   "k": 5,
+   "auc_known_devB": 0.6409663462723175
+  },
+  {
+   "method": "knn",
+   "dims": 32,
+   "k": 20,
+   "auc_known_devB": 0.6337265002106861
+  },
+  {
+   "method": "mahalanobis",
+   "dims": 64,
+   "auc_known_devB": 0.5670562225631152
+  },
+  {
+   "method": "knn",
+   "dims": 64,
+   "k": 1,
+   "auc_known_devB": 0.6446386592434729
+  },
+  {
+   "method": "knn",
+   "dims": 64,
+   "k": 5,
+   "auc_known_devB": 0.6485175626438633
+  },
+  {
+   "method": "knn",
+   "dims": 64,
+   "k": 20,
+   "auc_known_devB": 0.6388417891379646
+  },
+  {
+   "method": "mahalanobis",
+   "dims": 128,
+   "auc_known_devB": 0.599481175765417
+  },
+  {
+   "method": "knn",
+   "dims": 128,
+   "k": 1,
+   "auc_known_devB": 0.6550679605036506
+  },
+  {
+   "method": "knn",
+   "dims": 128,
+   "k": 5,
+   "auc_known_devB": 0.658131833431526
+  },
+  {
+   "method": "knn",
+   "dims": 128,
+   "k": 20,
+   "auc_known_devB": 0.6482166191266354
+  }
+ ],
+ "results": {
+  "mahalanobis": {
+   "novel": {
+    "auc": 0.48428028176919624,
+    "recall": 0.0019083969465648854,
+    "recall_ci": [
+     0.00033694972334340066,
+     0.010730006727228134
+    ],
+    "n_pos": 524,
+    "fa_per_hour": 1.3262599469496021,
+    "fa_ci": [
+     0.8740136620377624,
+     1.9296385914707779
+    ],
+    "neg_hours": 20.358
+   },
+   "known": {
+    "auc": 0.5519103134173059,
+    "recall": 0.002904865649963689,
+    "recall_ci": [
+     0.0011301893484369232,
+     0.007445450319429398
+    ],
+    "n_pos": 1377,
+    "fa_per_hour": 1.3262599469496021,
+    "fa_ci": [
+     0.8740136620377624,
+     1.9296385914707779
+    ],
+    "neg_hours": 20.358
+   },
+   "hp": {
+    "dims": 128
+   },
+   "threshold": 1752.1334228525625,
+   "auc_known_devB": 0.599481175765417
+  },
+  "knn": {
+   "novel": {
+    "auc": 0.4962576275739303,
+    "recall": 0.003816793893129771,
+    "recall_ci": [
+     0.0010473054121823567,
+     0.013808666530915725
+    ],
+    "n_pos": 524,
+    "fa_per_hour": 1.3753806857255133,
+    "fa_ci": [
+     0.9139304772500977,
+     1.987808033366155
+    ],
+    "neg_hours": 20.358
+   },
+   "known": {
+    "auc": 0.6135898872076063,
+    "recall": 0.021060275962236745,
+    "recall_ci": [
+     0.014702944534824314,
+     0.030082496460000867
+    ],
+    "n_pos": 1377,
+    "fa_per_hour": 1.3753806857255133,
+    "fa_ci": [
+     0.9139304772500977,
+     1.987808033366155
+    ],
+    "neg_hours": 20.358
+   },
+   "hp": {
+    "dims": 128,
+    "k": 5
+   },
+   "threshold": 25.784378052757813,
+   "auc_known_devB": 0.658131833431526
+  },
+  "known_detectors": {
+   "novel": {
+    "auc": 0.5834253369763936,
+    "recall": 0.03244274809160305,
+    "n_pos": 524,
+    "recall_ci": [
+     0.020352521260662112,
+     0.05133868307033416
+    ],
+    "fa_per_hour": 6.090971608212987,
+    "fa_ci": [
+     5.066155050155601,
+     7.262221931888845
+    ]
+   }
+  },
+  "combined_fa_everyday": {
+   "any_detector": 6.090971608212987,
+   "any_detector_ci": [
+    5.066155050155601,
+    7.262221931888845
+   ],
+   "scoring_detectors": 4.322625012280184,
+   "scoring_detectors_ci": [
+    3.466871660826054,
+    5.325594913176848
+   ],
+   "assessment_window_s": 1.5,
+   "p_scoring_per_assessment": 0.001282148494854173
+  }
+ },
+ "per_label": {
+  "Crack": {
+   "n": 68,
+   "mahalanobis": {
+    "auc": 0.4274669426594167,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.4627255313890262,
+    "recall": 0.0
+   },
+   "known_detectors": {
+    "auc": 0.634755970402867,
+    "recall": 0.0
+   }
+  },
+  "Crushing": {
+   "n": 70,
+   "mahalanobis": {
+    "auc": 0.4769489045618247,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.49962860144057625,
+    "recall": 0.0
+   },
+   "known_detectors": {
+    "auc": 0.7438203406362545,
+    "recall": 0.02857142857142857
+   }
+  },
+  "Crying_and_sobbing": {
+   "n": 38,
+   "mahalanobis": {
+    "auc": 0.6309258900928792,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.6752784995577178,
+    "recall": 0.02631578947368421
+   },
+   "known_detectors": {
+    "auc": 0.58546930285272,
+    "recall": 0.05263157894736842
+   }
+  },
+  "Fire": {
+   "n": 118,
+   "mahalanobis": {
+    "auc": 0.4203038206808147,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.48134391468451787,
+    "recall": 0.0
+   },
+   "known_detectors": {
+    "auc": 0.6281484786711294,
+    "recall": 0.025423728813559324
+   }
+  },
+  "Growling": {
+   "n": 51,
+   "mahalanobis": {
+    "auc": 0.6885529947273027,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.6544426594167079,
+    "recall": 0.0
+   },
+   "known_detectors": {
+    "auc": 0.4626508691711979,
+    "recall": 0.0196078431372549
+   }
+  },
+  "Screech": {
+   "n": 53,
+   "mahalanobis": {
+    "auc": 0.5092382471856667,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.6146939908038688,
+    "recall": 0.0
+   },
+   "known_detectors": {
+    "auc": 0.7219309893768828,
+    "recall": 0.09433962264150944
+   }
+  },
+  "Shout": {
+   "n": 149,
+   "mahalanobis": {
+    "auc": 0.4537418574812475,
+    "recall": 0.006711409395973154
+   },
+   "knn": {
+    "auc": 0.39256017004117083,
+    "recall": 0.006711409395973154
+   },
+   "known_detectors": {
+    "auc": 0.4599267349557273,
+    "recall": 0.026845637583892617
+   }
+  },
+  "Yell": {
+   "n": 53,
+   "mahalanobis": {
+    "auc": 0.29796258125891867,
+    "recall": 0.0
+   },
+   "knn": {
+    "auc": 0.2951977960995719,
+    "recall": 0.0
+   },
+   "known_detectors": {
+    "auc": 0.36240610631044873,
+    "recall": 0.018867924528301886
+   }
+  }
+ },
+ "champion": "knn",
+ "only_ood_share_of_novel": 0.003816793893129771,
+ "accept": {
+  "novel_auc_min": 0.75,
+  "novel_recall_min": 0.2,
+  "eval_fa_max": 3.0,
+  "only_ood_share_min": 0.1
+ },
+ "checks": {
+  "novel_auc": {
+   "value": 0.4962576275739303,
+   "pass": false
+  },
+  "novel_recall": {
+   "value": 0.003816793893129771,
+   "pass": false
+  },
+  "eval_fa": {
+   "value": 1.3753806857255133,
+   "pass": true
+  },
+  "only_ood_share": {
+   "value": 0.003816793893129771,
+   "pass": false
+  }
+ },
+ "accepted": false,
+ "uploader_overlap": 0
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Safe ride / escort: form (grouped cards) or active ride (big countdown). Ids used by RideActivity. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/lg_bg" android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="@dimen/lg_page_padding" android:paddingEnd="@dimen/lg_page_padding"
+        android:paddingTop="8dp" android:paddingBottom="32dp">
+
+        <!-- ===== start form ===== -->
+        <LinearLayout
+            android:id="@+id/form" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="4dp"
+                android:paddingEnd="4dp" android:text="@string/ride_explain"
+                android:textAppearance="@style/TextAppearance.LifeGuard.Subhead" />
+
+            <TextView
+                style="@style/LifeGuard.SectionHeader" android:layout_marginTop="16dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ride_type" />
+            <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingTop="4dp" android:paddingBottom="4dp">
+                <Spinner
+                    android:id="@+id/rideType" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="48dp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LifeGuard.SectionHeader"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ride_destination" />
+            <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/destLabel" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:hint="@string/ride_destination_hint" android:inputType="textPostalAddress"
+                            android:importantForAutofill="no" android:maxLength="80" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Button
+                        android:id="@+id/geocodeBtn" style="@style/Widget.LifeGuard.Button.Tonal"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                        android:text="@string/ride_find" app:icon="@drawable/ic_search" app:iconGravity="textStart" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/destPoint" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="@string/ride_point_hint" android:inputType="textUri" android:textDirection="ltr"
+                        android:importantForAutofill="no" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/destStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote"
+                    android:accessibilityLiveRegion="polite" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LifeGuard.SectionHeader"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ride_minutes" />
+            <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="120dp" android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/minutes" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="number" android:text="30" android:importantForAutofill="no"
+                        android:hint="@string/escort_minutes" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/LifeGuard.SectionHeader"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ride_vehicle" />
+            <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/plate" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="@string/ride_plate" android:inputType="textCapCharacters" android:maxLength="60"
+                        android:importantForAutofill="no" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vehicleDesc" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="@string/ride_vehicle_desc" android:inputType="text" android:maxLength="60"
+                        android:importantForAutofill="no" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/driver" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="@string/ride_driver" android:inputType="textPersonName" android:maxLength="60"
+                        android:importantForAutofill="no" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:paddingTop="4dp" android:paddingBottom="4dp">
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/silentSwitch" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/ride_silent" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/startBtn" style="@style/Widget.LifeGuard.Button"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/ride_start" />
+        </LinearLayout>
+
+        <!-- ===== active ride ===== -->
+        <LinearLayout
+            android:id="@+id/active" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_horizontal" android:paddingTop="20dp" android:paddingBottom="20dp">
+                <TextView
+                    android:id="@+id/rideTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:textAppearance="@style/TextAppearance.LifeGuard.Headline" />
+                <TextView
+                    android:id="@+id/countdown" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.LifeGuard.LargeTitle" android:textSize="44sp"
+                    android:fontFeatureSettings="tnum" />
+                <TextView
+                    android:id="@+id/rideStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:gravity="center" android:lineSpacingMultiplier="1.15"
+                    android:textAppearance="@style/TextAppearance.LifeGuard.Subhead" />
+                <TextView
+                    android:id="@+id/queueStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote"
+                    android:textColor="@color/lg_warning" />
+            </LinearLayout>
+
+            <!-- anomaly banner (neutral in a silent ride) -->
+            <LinearLayout
+                android:id="@+id/anomalyCard" style="@style/LifeGuard.Card"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:background="@drawable/bg_card_alert" android:visibility="gone">
+                <TextView
+                    android:id="@+id/anomalyText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.LifeGuard.Headline" android:accessibilityLiveRegion="assertive" />
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+                    <Button
+                        android:id="@+id/anomalyOk" style="@style/Widget.LifeGuard.Button"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="@string/wellness_ok" />
+                    <Button
+                        android:id="@+id/anomalyHelp" style="@style/Widget.LifeGuard.Button.Outlined"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+                        android:layout_height="wrap_content" android:text="@string/ride_need_help" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/arrivedBtn" style="@style/Widget.LifeGuard.Button.Success"
+                android:layout_width="match_parent" android:layout_height="72dp"
+                android:layout_marginTop="16dp" android:text="@string/ride_arrived" android:textSize="18sp"
+                app:cornerRadius="@dimen/lg_radius_card" />
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <Button
+                    android:id="@+id/extendBtn" style="@style/Widget.LifeGuard.Button.Outlined"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:text="@string/ride_extend" />
+                <Button
+                    android:id="@+id/cancelBtn" style="@style/Widget.LifeGuard.Button.Text"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+                    android:layout_height="wrap_content" android:text="@string/ride_cancel" />
+            </LinearLayout>
+
+            <!-- discreet SOS: small, neutral, hold -->
+            <org.lifeguard.app.ui.HoldButton
+                android:id="@+id/discreetSos" android:layout_width="72dp" android:layout_height="72dp"
+                android:layout_gravity="end" android:layout_marginTop="24dp"
+                android:contentDescription="@string/ride_discreet_sos_desc" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+woken tick ms 1191.3
+view_for 0 {'n': 30, 'p50': 0.5, 'p95': 1.2, 'p99': 1.4, 'max': 1.4, 'mean': 0.6, 'unit': 'ms'}
+view_for 10000 {'n': 30, 'p50': 17.5, 'p95': 27.9, 'p99': 31.5, 'max': 32.5, 'mean': 18.6, 'unit': 'ms'}
+view_for 50000 {'n': 30, 'p50': 118.7, 'p95': 168.5, 'p99': 197.2, 'max': 205.9, 'mean': 126.4, 'unit': 'ms'}
+history: {'historical_location_and_event_rows': 0, 'proposed_indexes': False, 'active_incidents': 20, 'tick_ms_p50': 11.2, 'get_incident_ms_p50': 0.2}
+history: {'historical_location_and_event_rows': 0, 'proposed_indexes': True, 'active_incidents': 20, 'tick_ms_p50': 11.8, 'get_incident_ms_p50': 0.1}
+history: {'historical_location_and_event_rows': 100000, 'proposed_indexes': False, 'active_incidents': 20, 'tick_ms_p50': 408.6, 'get_incident_ms_p50': 9.6}
+history: {'historical_location_and_event_rows': 100000, 'proposed_indexes': True, 'active_incidents': 20, 'tick_ms_p50': 15.4, 'get_incident_ms_p50': 0.2}
+history: {'historical_location_and_event_rows': 400000, 'proposed_indexes': False, 'active_incidents': 20, 'tick_ms_p50': 1577.2, 'get_incident_ms_p50': 39.1}
+history: {'historical_location_and_event_rows': 400000, 'proposed_indexes': True, 'active_incidents': 20, 'tick_ms_p50': 25.3, 'get_incident_ms_p50': 0.1}
+saved: C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\results\profile_hotpaths_20261107_114534.json

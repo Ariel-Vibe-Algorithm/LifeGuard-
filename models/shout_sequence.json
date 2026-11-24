@@ -1,0 +1,10 @@
+{
+ "version": "shout_sequence_v1",
+ "k": 3,
+ "window_s": 1.5,
+ "span_s": 9.0,
+ "t_low": 3.1462000000000003,
+ "s_low": 0.24051702003343164,
+ "created": "2026-11-15",
+ "report": "research/shout_sequence_v1.md"
+}

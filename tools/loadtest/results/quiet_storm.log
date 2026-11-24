@@ -1,0 +1,81 @@
+{'cpu_count': 12, 'python': '3.11.0', 'platform': 'win32', 'time': '2026-11-07 11:24:11', 'cpu_percent_busy': 44.9, 'cpu_physical': 6, 'mem_total_gb': 31.5, 'mem_available_gb': 17.6, 'top_processes_cpu_percent': [('System Idle Process', 713), ('python.exe', 79), ('msedgewebview2.exe', 66), ('MsMpEng.exe', 65), ('python.exe', 54)]}
+rep 0: 850 long-polls parked; server threads=857 rss=74.8MB
+   {'t': 5.1, 'tick_n': None, 'tick_p50': None, 'tick_max': None, 'threads': 1083, 'rss_mb': 87.6, 'lock_util': 0.846}
+   {'t': 10.2, 'tick_n': None, 'tick_p50': None, 'tick_max': None, 'threads': 1088, 'rss_mb': 90.1, 'lock_util': 0.842}
+   {'t': 15.3, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1094, 'rss_mb': 92.3, 'lock_util': 0.842}
+   {'t': 20.4, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1090, 'rss_mb': 94.2, 'lock_util': 0.843}
+   {'t': 26.0, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1089, 'rss_mb': 96.2, 'lock_util': 0.83}
+   {'t': 31.3, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1092, 'rss_mb': 99.3, 'lock_util': 0.814}
+   {'t': 36.8, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1091, 'rss_mb': 101.3, 'lock_util': 0.808}
+   {'t': 42.3, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1091, 'rss_mb': 103.9, 'lock_util': 0.806}
+   {'t': 47.7, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1091, 'rss_mb': 102.7, 'lock_util': 0.802}
+   {'t': 53.4, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1091, 'rss_mb': 104.3, 'lock_util': 0.803}
+   {'t': 58.9, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1088, 'rss_mb': 105.3, 'lock_util': 0.799}
+   {'t': 64.4, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1088, 'rss_mb': 106.6, 'lock_util': 0.794}
+   {'t': 69.8, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1081, 'rss_mb': 108.9, 'lock_util': 0.795}
+   {'t': 75.3, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1081, 'rss_mb': 110.6, 'lock_util': 0.794}
+   {'t': 81.4, 'tick_n': 1, 'tick_p50': 13048.8, 'tick_max': 13048.8, 'threads': 1081, 'rss_mb': 109.9, 'lock_util': 0.792}
+   {'t': 87.1, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1079, 'rss_mb': 111.2, 'lock_util': 0.789}
+   {'t': 92.6, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1080, 'rss_mb': 111.3, 'lock_util': 0.794}
+   {'t': 98.2, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1080, 'rss_mb': 111.7, 'lock_util': 0.793}
+   {'t': 103.7, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1079, 'rss_mb': 110.9, 'lock_util': 0.792}
+   {'t': 109.3, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1088, 'rss_mb': 112.0, 'lock_util': 0.793}
+   {'t': 115.1, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1083, 'rss_mb': 112.0, 'lock_util': 0.795}
+   {'t': 120.7, 'tick_n': 2, 'tick_p50': 42280.7, 'tick_max': 71512.6, 'threads': 1127, 'rss_mb': 114.4, 'lock_util': 0.797}
+  posts_ok: 213
+  post_incident_latency: {'n': 213, 'p50': 29223.7, 'p95': 125142.3, 'p99': 125939.5, 'max': 126186.4, 'mean': 50035.4, 'unit': 'ms'}
+  alert_latency_first_contact_longpoll: {'n': 196, 'p50': 10104.4, 'p95': 47058.3, 'p99': 52385.8, 'max': 66166.5, 'mean': 13768.4, 'unit': 'ms'}
+  alert_latency_first_contact_db: {'n': 196, 'p50': 9513.2, 'p95': 44954.8, 'p99': 50260.9, 'max': 63551.5, 'mean': 12952.4, 'unit': 'ms'}
+  incidents_with_contacts_alerted: 196/200
+  first_volunteer_latency_loud: {'n': 45, 'p50': 3500.6, 'p95': 12731.7, 'p99': 12894.3, 'max': 12932.9, 'mean': 6429.7, 'unit': 'ms'}
+  first_volunteer_latency_silent_nocontact: {'n': 15, 'p50': 14148.8, 'p95': 102663.0, 'p99': 102750.1, 'max': 102771.9, 'mean': 45568.2, 'unit': 'ms'}
+  silent_nocontact_reached: 15/17
+  location_update_latency: {'n': 2823, 'p50': 440.4, 'p95': 1539.8, 'p99': 2081.1, 'max': 3493.1, 'mean': 537.9, 'unit': 'ms'}
+  presence_updates: 2450
+  presence_latency: {'n': 2450, 'p50': 53.8, 'p95': 358.7, 'p99': 564.5, 'max': 1950.2, 'mean': 105.3, 'unit': 'ms'}
+  lock: {'acquisitions': 281474, 'elapsed_s': 120.81, 'hold_utilization': 0.798, 'wait_total_s': 4284.457, 'hold_total_s': 96.426, 'wait': {'n': 200000, 'p50': 0.0, 'p95': 43.0, 'p99': 95.2, 'max': 572.1, 'mean': 5.9, 'unit': 'ms'}, 'hold': {'n': 200000, 'p50': 0.0, 'p95': 1.8, 'p99': 3.3, 'max': 487.0, 'mean': 0.3, 'unit': 'ms'}}
+  server: {'threads_os': 1130, 'rss_mb': 114.6, 'handles': 8639, 'db_mb': 7.36}
+  TICK: {'tick:_expire_invitations': (15.5, 103.8, 113.6, 3), 'tick:_ring_tick': (0.1, 0.1, 0.1, 2), 'tick:signal_tick': (0.5, 0.8, 0.9, 2), 'tick:owner_abuse': (0.1, 8.5, 428.4, 944), 'tick:_view_for': (15.7, 1085.6, 2078.7, 110), 'tick:_notify': (3.4, 107.1, 741.1, 245), 'tick:_dispatch_next_volunteer': (43.2, 262.7, 582.7, 36), 'tick:run_dispatch_queue': (42266.4, 68576.7, 71500.1, 2), 'tick:features_tick': (0.3, 0.4, 0.4, 2), 'TICK_TOTAL': (42280.7, 68589.4, 71512.6, 2)}
+  invariants: {'volunteer_busy_in_more_than_one_active': [], 'volunteer_accepted_more_than_one': [], 'silent_nocontact_without_any_volunteer': [{'id': 'inc_f8a68569b62c4ddfa6dc85c2f836af29'}, {'id': 'inc_7455e1cdba7e4e009ee1d7f5b9ea26db'}], 'free_volunteers_at_end': 0, 'loud_incidents_without_accepted_volunteer': 63, 'ring_stuck_ringing_too_long': 20, 'contacts_rung_per_incident': [{'n': 1, 'incidents': 102}, {'n': 2, 'incidents': 94}], 'volunteer_states': [{'state': 'accepted', 'n': 46}, {'state': 'declined', 'n': 11}, {'state': 'delivered', 'n': 4}, {'state': 'expired', 'n': 12}]}
+  pollers: {'poll_errors': 5, 'ack_200': 8040, 'respond_accept_200': 179, 'respond_err': 9} errors: ['    self.wfile.write(b"".join(self._headers_buffer))', '  File "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\socketserver.py", line 834, in write', '    self._sock.sendall(b)', 'ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine', '----------------------------------------']
+rep 1: 850 long-polls parked; server threads=857 rss=74.8MB
+   {'t': 5.1, 'tick_n': None, 'tick_p50': None, 'tick_max': None, 'threads': 1085, 'rss_mb': 87.9, 'lock_util': 0.852}
+   {'t': 10.1, 'tick_n': None, 'tick_p50': None, 'tick_max': None, 'threads': 1089, 'rss_mb': 90.9, 'lock_util': 0.847}
+   {'t': 15.3, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1093, 'rss_mb': 93.2, 'lock_util': 0.848}
+   {'t': 20.4, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1091, 'rss_mb': 94.8, 'lock_util': 0.836}
+   {'t': 25.5, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1091, 'rss_mb': 97.9, 'lock_util': 0.835}
+   {'t': 30.6, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1095, 'rss_mb': 100.6, 'lock_util': 0.835}
+   {'t': 36.0, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1093, 'rss_mb': 102.9, 'lock_util': 0.832}
+   {'t': 41.7, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1093, 'rss_mb': 103.3, 'lock_util': 0.824}
+   {'t': 47.0, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1082, 'rss_mb': 106.7, 'lock_util': 0.824}
+   {'t': 52.5, 'tick_n': 1, 'tick_p50': 10082.8, 'tick_max': 10082.8, 'threads': 1081, 'rss_mb': 109.6, 'lock_util': 0.82}
+   {'t': 57.8, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1082, 'rss_mb': 109.7, 'lock_util': 0.815}
+   {'t': 63.2, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1078, 'rss_mb': 109.7, 'lock_util': 0.818}
+   {'t': 68.4, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1081, 'rss_mb': 110.7, 'lock_util': 0.82}
+   {'t': 73.8, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1082, 'rss_mb': 111.0, 'lock_util': 0.824}
+   {'t': 79.2, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1081, 'rss_mb': 111.0, 'lock_util': 0.822}
+   {'t': 84.5, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1082, 'rss_mb': 111.9, 'lock_util': 0.821}
+   {'t': 89.8, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1082, 'rss_mb': 112.2, 'lock_util': 0.82}
+   {'t': 95.2, 'tick_n': 2, 'tick_p50': 26956.8, 'tick_max': 43830.8, 'threads': 1082, 'rss_mb': 112.7, 'lock_util': 0.82}
+   {'t': 100.7, 'tick_n': 3, 'tick_p50': 43364.3, 'tick_max': 43830.8, 'threads': 1078, 'rss_mb': 112.9, 'lock_util': 0.821}
+   {'t': 106.0, 'tick_n': 3, 'tick_p50': 43364.3, 'tick_max': 43830.8, 'threads': 1080, 'rss_mb': 113.0, 'lock_util': 0.82}
+   {'t': 111.4, 'tick_n': 3, 'tick_p50': 43364.3, 'tick_max': 43830.8, 'threads': 1080, 'rss_mb': 113.9, 'lock_util': 0.821}
+   {'t': 117.0, 'tick_n': 3, 'tick_p50': 43364.3, 'tick_max': 43830.8, 'threads': 1082, 'rss_mb': 113.9, 'lock_util': 0.822}
+   {'t': 122.5, 'tick_n': 3, 'tick_p50': 43364.3, 'tick_max': 43830.8, 'threads': 1108, 'rss_mb': 113.8, 'lock_util': 0.823}
+  posts_ok: 211
+  post_incident_latency: {'n': 211, 'p50': 21947.8, 'p95': 93195.4, 'p99': 93900.5, 'max': 93976.3, 'mean': 36994.7, 'unit': 'ms'}
+  alert_latency_first_contact_longpoll: {'n': 192, 'p50': 10325.0, 'p95': 23300.0, 'p99': 35271.6, 'max': 94478.4, 'mean': 11176.5, 'unit': 'ms'}
+  alert_latency_first_contact_db: {'n': 192, 'p50': 9502.1, 'p95': 21680.5, 'p99': 33164.5, 'max': 92375.4, 'mean': 10335.9, 'unit': 'ms'}
+  incidents_with_contacts_alerted: 192/200
+  first_volunteer_latency_loud: {'n': 58, 'p50': 5346.5, 'p95': 67075.8, 'p99': 67435.2, 'max': 67547.2, 'mean': 18908.1, 'unit': 'ms'}
+  first_volunteer_latency_silent_nocontact: {'n': 13, 'p50': 9948.6, 'p95': 79051.7, 'p99': 81982.9, 'max': 82715.7, 'mean': 29996.3, 'unit': 'ms'}
+  silent_nocontact_reached: 13/19
+  location_update_latency: {'n': 3478, 'p50': 262.6, 'p95': 767.7, 'p99': 1002.2, 'max': 1417.9, 'mean': 302.5, 'unit': 'ms'}
+  presence_updates: 2675
+  presence_latency: {'n': 2675, 'p50': 37.2, 'p95': 225.1, 'p99': 368.5, 'max': 1036.7, 'mean': 66.0, 'unit': 'ms'}
+  lock: {'acquisitions': 360382, 'elapsed_s': 122.56, 'hold_utilization': 0.822, 'wait_total_s': 3528.367, 'hold_total_s': 100.687, 'wait': {'n': 200000, 'p50': 0.0, 'p95': 14.3, 'p99': 54.3, 'max': 548.1, 'mean': 2.6, 'unit': 'ms'}, 'hold': {'n': 200000, 'p50': 0.0, 'p95': 1.6, 'p99': 2.8, 'max': 548.8, 'mean': 0.2, 'unit': 'ms'}}
+  server: {'threads_os': 1107, 'rss_mb': 114.6, 'handles': 8547, 'db_mb': 8.0}
+  TICK: {'tick:_expire_invitations': (5.2, 28.6, 32.3, 4), 'tick:_ring_tick': (3.7, 14278.1, 15864.1, 3), 'tick:signal_tick': (3.3, 3.8, 3.9, 3), 'tick:owner_abuse': (0.1, 5.9, 375.2, 1768), 'tick:_view_for': (26.5, 701.1, 866.1, 145), 'tick:_notify': (3.8, 88.2, 219.5, 309), 'tick:_dispatch_next_volunteer': (7.1, 78.4, 1396.1, 86), 'tick:run_dispatch_queue': (27361.3, 42177.7, 43824.0, 3), 'tick:features_tick': (0.1, 0.1, 0.1, 3), 'TICK_TOTAL': (43364.3, 43784.2, 43830.8, 3)}
+  invariants: {'volunteer_busy_in_more_than_one_active': [], 'volunteer_accepted_more_than_one': [], 'silent_nocontact_without_any_volunteer': [{'id': 'inc_cd32cd4b463141c0a7310b66f914a5d4'}, {'id': 'inc_38afc1095d9d4599b71614499a5a2343'}, {'id': 'inc_5945575e83ce4351952c3900dd71b8ac'}, {'id': 'inc_886a1490ffbd41b18616be176b7821c8'}, {'id': 'inc_40990dea586641c3904aebe2d0e948f7'}, {'id': 'inc_14d5c0f022114f19a8ce784389a5ef66'}], 'free_volunteers_at_end': 0, 'loud_incidents_without_accepted_volunteer': 53, 'ring_stuck_ringing_too_long': 1, 'contacts_rung_per_incident': [{'n': 1, 'incidents': 106}, {'n': 2, 'incidents': 45}, {'n': 3, 'incidents': 41}], 'volunteer_states': [{'state': 'accepted', 'n': 48}, {'state': 'declined', 'n': 18}, {'state': 'expired', 'n': 17}, {'state': 'notified', 'n': 2}, {'state': 'reassigned', 'n': 3}]}
+  pollers: {'ack_200': 10622, 'respond_accept_200': 217, 'respond_decline_200': 16, 'respond_err': 1} errors: ['    self.wfile.write(b"".join(self._headers_buffer))', '  File "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\socketserver.py", line 834, in write', '    self._sock.sendall(b)', 'ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine', '----------------------------------------']
+saved: C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\results\quiet_storm_20261107_112847.json

@@ -1,0 +1,33 @@
+commits: {'create_incident(loud, 3 contacts, 30 vols)': {'BEGIN': 15, 'COMMIT': 15, 'total': 151}, 'update_location': {'BEGIN': 4, 'COMMIT': 4, 'total': 17}, 'add_message': {'BEGIN': 4, 'COMMIT': 4, 'total': 18}, 'respond(accept) by ringing contact': {'BEGIN': 11, 'COMMIT': 11, 'total': 100}, 'get_incident (read only)': {'BEGIN': 0, 'COMMIT': 0, 'total': 16}, 'run_escalation_tick (1 active incident)': {'BEGIN': 0, 'COMMIT': 0, 'total': 12}}
+sync {'synchronous': 'FULL', 'rep': 0, 'create_incident_ms': 26.58, 'add_message_ms': 5.61, 'update_location_ms': 5.34}
+sync {'synchronous': 'FULL', 'rep': 1, 'create_incident_ms': 26.99, 'add_message_ms': 6.0, 'update_location_ms': 7.13}
+sync {'synchronous': 'FULL', 'rep': 2, 'create_incident_ms': 31.73, 'add_message_ms': 6.6, 'update_location_ms': 6.61}
+sync {'synchronous': 'NORMAL', 'rep': 0, 'create_incident_ms': 6.15, 'add_message_ms': 0.8, 'update_location_ms': 0.41}
+sync {'synchronous': 'NORMAL', 'rep': 1, 'create_incident_ms': 6.12, 'add_message_ms': 0.44, 'update_location_ms': 0.27}
+sync {'synchronous': 'NORMAL', 'rep': 2, 'create_incident_ms': 10.47, 'add_message_ms': 0.39, 'update_location_ms': 0.3}
+tick: {'waiting_incidents': 50, 'volunteers': 50, 'verified': False, 'tick_backoff_ms': 3.7, 'tick_after_wake_ms': 3.6, 'create_incident_ms': 20.1, 'recipients_rows': 50}
+tick: {'waiting_incidents': 50, 'volunteers': 50, 'verified': True, 'tick_backoff_ms': 3.9, 'tick_after_wake_ms': 3.9, 'create_incident_ms': 16.6, 'recipients_rows': 50}
+tick: {'waiting_incidents': 100, 'volunteers': 50, 'verified': False, 'tick_backoff_ms': 5.7, 'tick_after_wake_ms': 300.5, 'create_incident_ms': 335.0, 'recipients_rows': 50}
+tick: {'waiting_incidents': 100, 'volunteers': 50, 'verified': True, 'tick_backoff_ms': 4.3, 'tick_after_wake_ms': 338.0, 'create_incident_ms': 475.5, 'recipients_rows': 50}
+tick: {'waiting_incidents': 200, 'volunteers': 50, 'verified': False, 'tick_backoff_ms': 10.9, 'tick_after_wake_ms': 966.4, 'create_incident_ms': 978.5, 'recipients_rows': 50}
+tick: {'waiting_incidents': 200, 'volunteers': 50, 'verified': True, 'tick_backoff_ms': 7.6, 'tick_after_wake_ms': 961.4, 'create_incident_ms': 920.2, 'recipients_rows': 50}
+tick: {'waiting_incidents': 400, 'volunteers': 50, 'verified': False, 'tick_backoff_ms': 34.1, 'tick_after_wake_ms': 3490.6, 'create_incident_ms': 2852.9, 'recipients_rows': 50}
+tick: {'waiting_incidents': 400, 'volunteers': 50, 'verified': True, 'tick_backoff_ms': 44.2, 'tick_after_wake_ms': 2345.1, 'create_incident_ms': 2223.4, 'recipients_rows': 50}
+woken tick ms 1596.8
+view_for 0 {'n': 30, 'p50': 0.3, 'p95': 0.6, 'p99': 0.7, 'max': 0.7, 'mean': 0.4, 'unit': 'ms'}
+view_for 10000 {'n': 30, 'p50': 24.8, 'p95': 42.3, 'p99': 44.0, 'max': 44.3, 'mean': 28.1, 'unit': 'ms'}
+view_for 50000 {'n': 30, 'p50': 166.5, 'p95': 204.7, 'p99': 214.4, 'max': 218.2, 'mean': 170.3, 'unit': 'ms'}
+history: {'historical_location_and_event_rows': 0, 'proposed_indexes': False, 'active_incidents': 20, 'tick_ms_p50': 17.0, 'get_incident_ms_p50': 0.2}
+history: {'historical_location_and_event_rows': 0, 'proposed_indexes': True, 'active_incidents': 20, 'tick_ms_p50': 16.2, 'get_incident_ms_p50': 0.2}
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\profile_hotpaths.py", line 258, in <module>
+    part5_history_growth()
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\profile_hotpaths.py", line 224, in part5_history_growth
+    svc._tx(lambda con: con.executemany(
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\server\lifeguard_server.py", line 570, in _tx
+    return fn(self._con)
+           ^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\profile_hotpaths.py", line 224, in <lambda>
+    svc._tx(lambda con: con.executemany(
+                        ^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: FOREIGN KEY constraint failed

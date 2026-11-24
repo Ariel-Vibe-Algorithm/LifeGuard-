@@ -1,0 +1,10 @@
+# תלויות מחקר בלבד (לא נדרשות להרצת LifeGuard)
+# הרצת YAMNet (TFLite) בלי TensorFlow מלא - אומת על Windows, Python 3.11
+ai-edge-litert==2.3.0
+numpy
+# resample איכותי (polyphase) לפני YAMNet
+scipy==1.14.1
+# סיווג רחובות מסרטון / Mapillary: CLIP (ONNX, MIT) + YuNet לטשטוש פנים (MIT)
+onnxruntime==1.20.1
+tokenizers==0.21.0
+opencv-python

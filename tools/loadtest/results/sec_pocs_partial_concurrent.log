@@ -1,0 +1,61 @@
+
+[CONFIRMED] (High) ring_queued_contact_learns_active_sos_on_disconnect
+    {"recipients_before": [{"username": "mom", "state": "queued", "ring_status": "queued"}, {"username": "sis", "state": "notified", "ring_status": "ringing"}], "mom_GET_incident_status_while_queued": 404, "mom_notifications_before_disconnect": 0, "mom_notifications_for_incident_after_disconnect": [{"id": 2, "username": "mom", "incident_id": "inc_4b5713ae83d74fb6a5a7cac6970c1283", "type": "incident_closed", "payload": {"incident_id": "inc_4b5713ae83d74fb6a5a7cac6970c1283", "reason": "disconnected"}, "created_at": 1794043661.35022, "received_at": null}], "mom_notifications_for_incident_after_owner_resolved": [{"id": 2, "username": "mom", "incident_id": "inc_4b5713ae83d74fb6a5a7cac6970c1283", "type": "incident_closed", "payload": {"incident_id": "inc_4b5713ae83d74fb6a5a7cac6970c1283", "reason": "disconnected"}, "created_at": 1794043661.35022, "received_at": null}, {"id": 5, "username": "mom", "incident_id": "inc_4b5713ae83d74fb6a5a7cac6970c1283", "type": "incident_closed", "payload": {"incident_id": "inc_4b5713ae83d74fb6a5a7cac6970c1283", "reason": "resolved", "text": "האירוע של Dana Cohen הסתיים. מומלץ לוודא שהוא/היא בטוח/ה."}, "created_at": 1794043661.366591, "received_at": null}], "where": "server/lifeguard_server.py:937-945 (disconnect() includes state='queued'), 1529-1532"}
+
+[CONFIRMED] (High (safety: silent SOS reaches nobody)) ring_chain_stalls_when_ringing_contact_disconnects
+    {"before": [{"username": "mom", "state": "queued", "ring_status": "queued"}, {"username": "sis", "state": "notified", "ring_status": "ringing"}], "after_8s": [{"username": "mom", "role": "trusted", "state": "queued", "ring_status": "queued"}, {"username": "sis", "role": "trusted", "state": "revoked", "ring_status": "ringing"}], "mom_got_incident_new": false, "volunteer_got_incident_new": false, "control_incident_after_1s_(no_disconnect)": [{"username": "mom", "role": "trusted", "state": "notified", "ring_status": "ringing"}], "where": "_ring_tick lifeguard_server.py:1114-1121 only advances rows with state IN (notified,delivered); disconnect() sets state='revoked' and leaves ring_status='ringing' (937-941); _needs_volunteers/run_dispatch_queue see queued contacts -> no volunteers (1130-1138, 1245-1248)"}
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\sec_pocs.py", line 711, in <module>
+    ALL[n]()
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\sec_pocs.py", line 135, in poc_volunteer_identity_on_close
+    record("volunteer_before_accept_gets_owner_name_on_close", "CONFIRMED" if leak else "NOT REPRODUCED",
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\sec_pocs.py", line 33, in record
+    print(f"\n[{verdict}] ({severity}) {name}\n    " + json.dumps(detail, ensure_ascii=False, default=str)[:1500],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1255.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 611-612: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\sec_pocs.py", line 711, in <module>
+    ALL[n]()
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\sec_pocs.py", line 161, in poc_escort_after_disconnect
+    record("escort_updates_continue_after_disconnect", "CONFIRMED" if leaked else "NOT REPRODUCED", "Medium",
+  File "C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\sec_pocs.py", line 33, in record
+    print(f"\n[{verdict}] ({severity}) {name}\n    " + json.dumps(detail, ensure_ascii=False, default=str)[:1500],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1255.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 543: character maps to <undefined>
+
+[NOT VULNERABLE (checks hold)] (Info) chat_role_checks_and_queued_access
+    {"owner_sends_responder_quick": 400, "volunteer_msg_before_accept": 403, "volunteer_read_before_accept": 403, "queued_mom GET": 404, "queued_mom/messages": 404, "queued_mom/messages/read": 404, "queued_mom/respond": 404, "xss_stored_status": 200, "volunteer_sees_responders": ["Volunteer"], "volunteer_sees_read_by": [["Sis"]], "stored_text_raw": "<img src=x onerror=alert(1)><script>alert(2)</script>", "msg_codes_same_incident": {"200": 19, "429": 6}, "msg_codes_new_incident_after_limit": {"200": 20}, "owner_silent_incident_message_payload_quiet": []}
+
+[CONFIRMED] (Low) chat_read_receipts_reveal_family_names_to_volunteer
+    {"responders_list": ["Volunteer"], "read_by": [["Sis"]], "where": "_messages_view lifeguard_server.py:1640-1660"}
+
+[CONFIRMED] (Low) chat_rate_limit_resets_per_new_incident
+    {"same": {"200": 19, "429": 6}, "new_incident": {"200": 20}, "where": "add_message 1597-1600 (per incident+sender only; create_incident has no rate limit)"}
+
+[CONFIRMED] (Medium) password_change_old_password_bruteforce_unthrottled
+    {"statuses_40_wrong_guesses": {"403": 40}, "per_guess_ms": {"n": 40, "p50": 145.8, "p95": 207.3, "p99": 224.2, "max": 226.4, "mean": 155.1, "unit": "ms"}, "where": "change_password lifeguard_server.py:438-443"}
+
+[CONFIRMED] (Medium-Low) stolen_token_can_revoke_all_other_sessions_without_reauth
+    {"sessions_listed": 2, "revoke_result": {"revoked": 1}, "alice_phone_after": 401, "where": "revoke_sessions 462-472 (no password, no notification)"}
+
+[NOT VULNERABLE] (Info) session_id_prefix_cross_user_revoke
+    {"bob_revoke_alice_sid": {"revoked": 0}, "alice_session_after": 200, "note": "id = sha256(token)[:16] (64 bits), scoped by username=?"}
+
+[CONFIRMED (conditional)] (Medium) login_lockout_and_xff
+    {"no_proxy_31_fails_spoofed_xff": {"401": 30, "429": 1}, "no_proxy_victim_correct_password_same_ip": 429, "counter_never_decays_then_correct_pw": 429, "proxy_env_direct_60_guesses_rotating_xff": {"401": 60}, "proxy_env_guess_rate_per_s": 6.8, "proxy_env_last_xff_hop_used_(same_last_hop)": {"401": 4, "429": 4}, "where": "_client_ip lifeguard_server.py:1935-1941; login 400-417; _login_failed 391-398 (dict cleared at 50k keys => lockouts can be flushed by an attacker with many IPs/IPv6 /64)"}
+
+[CONFIRMED] (Medium (enables Sybil bypass of every per-account abuse control; PBKDF2 CPU cost)) registration_unlimited_no_rate_limit
+    {"statuses": {"200": 40}, "latency": {"n": 40, "p50": 154.0, "p95": 216.5, "p99": 283.0, "max": 289.8, "mean": 166.4, "unit": "ms"}, "where": "register lifeguard_server.py:369-381, route 1929-1932"}
+
+[CONFIRMED] (High) abuse_sybil_accounts_capture_all_volunteers
+    {"volunteers": 6, "attacker_accounts": 4, "volunteers_held_by_attacker": 6, "victim_volunteer_recipients_after_3s": [], "victim_events": ["created", "no_volunteer"], "note": "MAX_ACTIVE_WITH_VOLUNTEERS=2 and the hourly cap are per account; registration is free; victim cannot preempt (attacker priority >= victim + PREEMPT_MARGIN)", "where": "abuse.py:26, lifeguard_server.py:1250-1255, 1299-1308"}
+
+[CONFIRMED] (Low-Medium) abuse_quick_cancel_counter_bypassed_by_resolving
+    {"owner_abuse": {"res": {"limited": false, "capped": false, "reasons": [], "remaining_this_hour": 12}, "can": {"limited": true, "capped": false, "reasons": ["3 אירועים בוטלו תוך דקות אחרי שהוזעקו מתנדבים (7 ימים)"], "remaining_this_hour": 12}}, "where": "owner_abuse lifeguard_server.py:1173-1176 counts only status='cancelled' within 120 s; 'resolved' or cancel at 121 s is never counted"}
+
+[CONFIRMED] (Low) contact_notification_spam_unlimited (test/escort_started/incident_new are Web-Push types)
+    {"trusted_notify": {"200": 100}, "escorts_started": 20, "incidents_created": 30, "sis_notifications_by_type": {"test": 100}, "where": "notify_trusted 998-1004, start_escort features.py:169-195, create_incident 1023 - none rate-limited"}

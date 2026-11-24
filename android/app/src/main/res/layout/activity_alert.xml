@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Incoming emergency (full screen, also on the lock screen). Same deep red in light and dark (lg_fill_sos),
+  white text (5.4:1). Clarity under stress: who / what / how far, then one big "accept". No decorative motion.
+  Ids are used by IncomingAlertActivity - keep them.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp"
+    android:paddingTop="24dp" android:paddingBottom="24dp" android:background="@color/lg_fill_sos"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="24dp" android:background="@drawable/bg_pill_alert"
+        android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+        android:drawableStart="@drawable/ic_bell" android:drawableTint="@color/lg_on_fill" android:drawablePadding="6dp"
+        android:gravity="center_vertical" android:text="@string/alert_eyebrow"
+        android:textAppearance="@style/TextAppearance.LifeGuard.Footnote" android:textColor="@color/lg_on_fill" />
+    <TextView
+        android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" android:gravity="center"
+        android:textAppearance="@style/TextAppearance.LifeGuard.LargeTitle" android:textColor="@color/lg_on_fill"
+        android:accessibilityHeading="true" />
+    <TextView
+        android:id="@+id/type" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:gravity="center"
+        android:textAppearance="@style/TextAppearance.LifeGuard.Title3" android:textColor="@color/lg_on_fill" />
+    <TextView
+        android:id="@+id/distance" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:gravity="center"
+        android:textAppearance="@style/TextAppearance.LifeGuard.Headline" android:textColor="@color/lg_on_fill" />
+    <TextView
+        android:id="@+id/note" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:gravity="center" android:lineSpacingMultiplier="1.15"
+        android:textAppearance="@style/TextAppearance.LifeGuard.Callout" android:textColor="@color/lg_on_fill" />
+    <TextView
+        android:id="@+id/ringState" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:gravity="center" android:background="@drawable/bg_pill_alert"
+        android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+        android:textAppearance="@style/TextAppearance.LifeGuard.Subhead" android:textColor="@color/lg_on_fill"
+        android:textStyle="bold" android:accessibilityLiveRegion="polite" />
+
+    <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/acceptBtn" style="@style/Widget.LifeGuard.Button.Success"
+        android:layout_width="match_parent" android:layout_height="80dp"
+        android:text="@string/alert_accept" android:textSize="22sp" app:cornerRadius="@dimen/lg_radius_card" />
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <Button
+            android:id="@+id/navigateBtn" style="@style/Widget.LifeGuard.Button.Outlined"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="64dp"
+            android:text="@string/alert_navigate" app:icon="@drawable/ic_navigate" app:iconGravity="textStart"
+            app:backgroundTint="@android:color/transparent" app:strokeColor="@color/lg_on_fill_translucent"
+            android:textColor="@color/lg_on_fill_state" app:iconTint="@color/lg_on_fill_state"
+            app:rippleColor="#33FFFFFF" />
+        <Button
+            android:id="@+id/chatBtn" style="@style/Widget.LifeGuard.Button.Outlined"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_height="64dp"
+            android:text="@string/open_chat" app:icon="@drawable/ic_chat" app:iconGravity="textStart"
+            app:backgroundTint="@android:color/transparent" app:strokeColor="@color/lg_on_fill_translucent"
+            android:textColor="@color/lg_on_fill_state" app:iconTint="@color/lg_on_fill_state"
+            app:rippleColor="#33FFFFFF" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <Button
+            android:id="@+id/declineBtn" style="@style/Widget.LifeGuard.Button.Text"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="64dp"
+            android:text="@string/alert_decline" android:textColor="@color/lg_on_fill_state"
+            app:rippleColor="#33FFFFFF" />
+        <!-- silence: white pill with red text - findable at a glance while the phone is ringing -->
+        <Button
+            android:id="@+id/silenceBtn" style="@style/Widget.LifeGuard.Button"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_height="64dp"
+            android:text="@string/alert_silence" app:backgroundTint="@color/lg_on_fill"
+            android:textColor="@color/lg_fill_sos" app:rippleColor="#33D70015" />
+    </LinearLayout>
+</LinearLayout>

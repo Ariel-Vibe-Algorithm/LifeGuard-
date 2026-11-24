@@ -1,0 +1,4289 @@
+{
+ "generated_by": "tools/build_safe_places_parity.py (map_module._choose, offline path: walk=False, no cache)",
+ "radius_m": 5000,
+ "categories": [
+  {
+   "id": "police",
+   "label": "תחנת משטרה"
+  },
+  {
+   "id": "hospital",
+   "label": "בית חולים"
+  },
+  {
+   "id": "fire_station",
+   "label": "תחנת כיבוי אש"
+  },
+  {
+   "id": "synagogue",
+   "label": "בית כנסת"
+  },
+  {
+   "id": "mosque",
+   "label": "מסגד"
+  },
+  {
+   "id": "church",
+   "label": "כנסייה"
+  },
+  {
+   "id": "community_centre",
+   "label": "מתנ\"ס / מרכז קהילתי"
+  },
+  {
+   "id": "pharmacy",
+   "label": "בית מרקחת"
+  },
+  {
+   "id": "fuel",
+   "label": "תחנת דלק (פתוחה 24/7 לרוב)"
+  },
+  {
+   "id": "supermarket",
+   "label": "סופרמרקט"
+  }
+ ],
+ "worship_ids": [
+  "church",
+  "mosque",
+  "synagogue"
+ ],
+ "worship_options": [
+  {
+   "id": "synagogue",
+   "label": "בית כנסת"
+  },
+  {
+   "id": "mosque",
+   "label": "מסגד"
+  },
+  {
+   "id": "church",
+   "label": "כנסייה"
+  },
+  {
+   "id": "any",
+   "label": "כל מקום תפילה"
+  },
+  {
+   "id": "none",
+   "label": "לא להפנות למקומות תפילה"
+  }
+ ],
+ "worship_default": "synagogue",
+ "worship_categories": {
+  "synagogue": [
+   "police",
+   "hospital",
+   "fire_station",
+   "synagogue",
+   "community_centre",
+   "pharmacy",
+   "fuel",
+   "supermarket"
+  ],
+  "mosque": [
+   "police",
+   "hospital",
+   "fire_station",
+   "mosque",
+   "community_centre",
+   "pharmacy",
+   "fuel",
+   "supermarket"
+  ],
+  "church": [
+   "police",
+   "hospital",
+   "fire_station",
+   "church",
+   "community_centre",
+   "pharmacy",
+   "fuel",
+   "supermarket"
+  ],
+  "any": [
+   "police",
+   "hospital",
+   "fire_station",
+   "synagogue",
+   "mosque",
+   "church",
+   "community_centre",
+   "pharmacy",
+   "fuel",
+   "supermarket"
+  ],
+  "none": [
+   "police",
+   "hospital",
+   "fire_station",
+   "community_centre",
+   "pharmacy",
+   "fuel",
+   "supermarket"
+  ]
+ },
+ "official_ids": [
+  "police",
+  "hospital",
+  "fire_station"
+ ],
+ "official_preferred_m": 2000,
+ "public_radius_m": 1200,
+ "walk_factor": 1.3,
+ "bundled_usable": 322,
+ "cases": [
+  {
+   "id": "tel_aviv_center",
+   "lat": 32.0809,
+   "lon": 34.7806,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.080479,
+    "lon": 34.789309,
+    "source": "bundled_osm",
+    "distance_m": 821.8577140383387,
+    "walk_m": 1068,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "tel_aviv_south",
+   "lat": 32.055,
+   "lon": 34.77,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.054924,
+    "lon": 34.769468,
+    "source": "bundled_osm",
+    "distance_m": 50.844011814660604,
+    "walk_m": 66,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "jaffa",
+   "lat": 32.05,
+   "lon": 34.755,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.05464,
+    "lon": 34.751655,
+    "source": "bundled_osm",
+    "distance_m": 604.632553923456,
+    "walk_m": 786,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "jerusalem_center",
+   "lat": 31.78,
+   "lon": 35.22,
+   "expected": {
+    "name": "משטרת מחוז ציון",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.781748,
+    "lon": 35.221876,
+    "source": "bundled_osm",
+    "distance_m": 263.1038165100071,
+    "walk_m": 342,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "jerusalem_old_city",
+   "lat": 31.7767,
+   "lon": 35.2345,
+   "expected": {
+    "name": "Western Wall Police Station",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.776728,
+    "lon": 35.233465,
+    "source": "bundled_osm",
+    "distance_m": 97.88555405904198,
+    "walk_m": 127,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "jerusalem_ein_karem",
+   "lat": 31.765,
+   "lon": 35.16,
+   "expected": {
+    "name": "הדסה עין כרם",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 31.764985,
+    "lon": 35.14995,
+    "source": "bundled_osm",
+    "distance_m": 950.1238327635402,
+    "walk_m": 1235,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "haifa_downtown",
+   "lat": 32.815,
+   "lon": 34.998,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.81925,
+    "lon": 34.998107,
+    "source": "bundled_osm",
+    "distance_m": 472.68420809295566,
+    "walk_m": 614,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "haifa_carmel",
+   "lat": 32.794,
+   "lon": 34.989,
+   "expected": {
+    "name": "תחנת כיבוי והצלה כרמל",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.799714,
+    "lon": 34.983751,
+    "source": "bundled_official",
+    "distance_m": 802.748048821726,
+    "walk_m": 1044,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "beer_sheva",
+   "lat": 31.252,
+   "lon": 34.791,
+   "expected": {
+    "name": "מחוז דרום",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.246248,
+    "lon": 34.78139,
+    "source": "bundled_osm",
+    "distance_m": 1115.1943881379575,
+    "walk_m": 1450,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "eilat",
+   "lat": 29.5577,
+   "lon": 34.9519,
+   "expected": {
+    "name": "משטרת אילת",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 29.557901,
+    "lon": 34.955157,
+    "source": "bundled_osm",
+    "distance_m": 315.82141934447293,
+    "walk_m": 411,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "netanya",
+   "lat": 32.3215,
+   "lon": 34.8532,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.330136,
+    "lon": 34.851983,
+    "source": "bundled_osm",
+    "distance_m": 967.0640288972924,
+    "walk_m": 1257,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "herzliya",
+   "lat": 32.1663,
+   "lon": 34.8436,
+   "expected": {
+    "name": "מרכז שיטור קהילתי והפעלת מתנדבים מרכז הרצליה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.167639,
+    "lon": 34.840635,
+    "source": "bundled_osm",
+    "distance_m": 316.31750179041074,
+    "walk_m": 411,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "rishon_lezion",
+   "lat": 31.973,
+   "lon": 34.7925,
+   "expected": {
+    "name": "משטרת ראשון לציון",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.974581,
+    "lon": 34.797383,
+    "source": "bundled_osm",
+    "distance_m": 493.0012282643674,
+    "walk_m": 641,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "petah_tikva",
+   "lat": 32.087,
+   "lon": 34.887,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.089599,
+    "lon": 34.885194,
+    "source": "bundled_osm",
+    "distance_m": 335.35920396009914,
+    "walk_m": 436,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "ashdod",
+   "lat": 31.8044,
+   "lon": 34.6553,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אשדוד",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.807734,
+    "lon": 34.661247,
+    "source": "bundled_official",
+    "distance_m": 673.2416152090968,
+    "walk_m": 875,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "ashkelon",
+   "lat": 31.6688,
+   "lon": 34.5743,
+   "expected": {
+    "name": "מרכז הדרכה לבטיחות בדרכים",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.667172,
+    "lon": 34.562273,
+    "source": "bundled_osm",
+    "distance_m": 1152.5228754996451,
+    "walk_m": 1498,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "holon",
+   "lat": 32.0158,
+   "lon": 34.7874,
+   "expected": {
+    "name": "משטרת מרחב איילון",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.014453,
+    "lon": 34.774897,
+    "source": "bundled_osm",
+    "distance_m": 1188.2987293609863,
+    "walk_m": 1545,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "bat_yam",
+   "lat": 32.0171,
+   "lon": 34.7454,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.015789,
+    "lon": 34.750226,
+    "source": "bundled_osm",
+    "distance_m": 477.7856263291807,
+    "walk_m": 621,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "ramat_gan_sheba",
+   "lat": 32.046,
+   "lon": 34.842,
+   "expected": {
+    "name": "בית חולים תל השומר",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.047096,
+    "lon": 34.845467,
+    "source": "bundled_osm",
+    "distance_m": 348.7536320640112,
+    "walk_m": 453,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "kfar_saba",
+   "lat": 32.175,
+   "lon": 34.907,
+   "expected": {
+    "name": "תחנת כיבוי והצלה השרון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.180733,
+    "lon": 34.896814,
+    "source": "bundled_official",
+    "distance_m": 1151.2631440461826,
+    "walk_m": 1497,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "hadera",
+   "lat": 32.434,
+   "lon": 34.9196,
+   "expected": {
+    "name": "משטרת חדרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.437259,
+    "lon": 34.911513,
+    "source": "bundled_osm",
+    "distance_m": 841.0258799776096,
+    "walk_m": 1093,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "afula",
+   "lat": 32.608,
+   "lon": 35.289,
+   "expected": {
+    "name": "משטרת עפולה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.609434,
+    "lon": 35.290516,
+    "source": "bundled_osm",
+    "distance_m": 213.51657512835519,
+    "walk_m": 278,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "nazareth",
+   "lat": 32.7019,
+   "lon": 35.2972,
+   "expected": {
+    "name": "בית החולים הצרפתי",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.69971,
+    "lon": 35.293959,
+    "source": "bundled_osm",
+    "distance_m": 388.93324407724117,
+    "walk_m": 506,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "tiberias",
+   "lat": 32.7922,
+   "lon": 35.5312,
+   "expected": {
+    "name": "משטרת טבריה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.794408,
+    "lon": 35.525659,
+    "source": "bundled_osm",
+    "distance_m": 573.1834629411126,
+    "walk_m": 745,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "safed",
+   "lat": 32.9646,
+   "lon": 35.496,
+   "expected": {
+    "name": "משמר אזרחי",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.965217,
+    "lon": 35.496113,
+    "source": "bundled_osm",
+    "distance_m": 69.41248800062569,
+    "walk_m": 90,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "nahariya",
+   "lat": 33.0058,
+   "lon": 35.094,
+   "expected": {
+    "name": "משטרת נהריה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 33.006074,
+    "lon": 35.100874,
+    "source": "bundled_osm",
+    "distance_m": 641.7216686039627,
+    "walk_m": 834,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "kiryat_shmona",
+   "lat": 33.2073,
+   "lon": 35.5702,
+   "expected": {
+    "name": "משטרת קריית שמונה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 33.212727,
+    "lon": 35.568047,
+    "source": "bundled_osm",
+    "distance_m": 635.82870977195,
+    "walk_m": 827,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "dimona",
+   "lat": 31.07,
+   "lon": 35.033,
+   "expected": {
+    "name": "תחנת משטרה דימונה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.067464,
+    "lon": 35.034234,
+    "source": "bundled_osm",
+    "distance_m": 305.50298507547086,
+    "walk_m": 397,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "mitzpe_ramon",
+   "lat": 30.61,
+   "lon": 34.801,
+   "expected": {
+    "name": "תחנת כיבוי והצלה מצפה רמון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 30.61101,
+    "lon": 34.804063,
+    "source": "bundled_official",
+    "distance_m": 313.90617264672255,
+    "walk_m": 408,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "arava_desert",
+   "lat": 30.3,
+   "lon": 35.15,
+   "expected": null
+  },
+  {
+   "id": "negev_open",
+   "lat": 30.9,
+   "lon": 34.6,
+   "expected": null
+  },
+  {
+   "id": "mediterranean_sea",
+   "lat": 32.3,
+   "lon": 34.3,
+   "expected": null
+  },
+  {
+   "id": "dead_sea_ein_bokek",
+   "lat": 31.2,
+   "lon": 35.363,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.194781,
+    "lon": 35.362493,
+    "source": "bundled_osm",
+    "distance_m": 582.3264694640941,
+    "walk_m": 757,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "golan_katzrin",
+   "lat": 32.993,
+   "lon": 35.69,
+   "expected": {
+    "name": "משטרת קצרין",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.991532,
+    "lon": 35.693237,
+    "source": "bundled_osm",
+    "distance_m": 343.20036554658816,
+    "walk_m": 446,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "modiin",
+   "lat": 31.898,
+   "lon": 35.01,
+   "expected": {
+    "name": "תחנת משטרת מודיעין",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.906361,
+    "lon": 35.005606,
+    "source": "bundled_osm",
+    "distance_m": 1018.0343917409858,
+    "walk_m": 1323,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "rehovot",
+   "lat": 31.894,
+   "lon": 34.811,
+   "expected": {
+    "name": "משטרת רחובות",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.899833,
+    "lon": 34.810363,
+    "source": "bundled_osm",
+    "distance_m": 651.381814394173,
+    "walk_m": 847,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "umm_al_fahm",
+   "lat": 32.519,
+   "lon": 35.153,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אום אל פחם",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.534919,
+    "lon": 35.149706,
+    "source": "bundled_official",
+    "distance_m": 1796.8492793115126,
+    "walk_m": 2336,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "ofakim",
+   "lat": 31.314,
+   "lon": 34.62,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אופקים",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.318879,
+    "lon": 34.617177,
+    "source": "bundled_official",
+    "distance_m": 605.1805398188347,
+    "walk_m": 787,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "beit_shemesh",
+   "lat": 31.747,
+   "lon": 34.988,
+   "expected": {
+    "name": "תחנת כיבוי והצלה בית שמש",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.749877,
+    "lon": 34.979757,
+    "source": "bundled_official",
+    "distance_m": 842.5261163902632,
+    "walk_m": 1095,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "sderot",
+   "lat": 31.525,
+   "lon": 34.596,
+   "expected": {
+    "name": "תחנת כיבוי והצלה שדרות",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.529782,
+    "lon": 34.599888,
+    "source": "bundled_official",
+    "distance_m": 646.9475170821382,
+    "walk_m": 841,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_0_fire_station",
+   "lat": 31.789414,
+   "lon": 35.234374,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אגוז (ואדי גוז)",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.785414,
+    "lon": 35.237374,
+    "source": "bundled_official",
+    "distance_m": 527.4746614352827,
+    "walk_m": 686,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_1_fire_station",
+   "lat": 31.811734,
+   "lon": 34.658247,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אשדוד",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.807734,
+    "lon": 34.661247,
+    "source": "bundled_official",
+    "distance_m": 527.437854886141,
+    "walk_m": 686,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_2_fire_station",
+   "lat": 31.753877,
+   "lon": 34.976757,
+   "expected": {
+    "name": "תחנת כיבוי והצלה בית שמש",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.749877,
+    "lon": 34.979757,
+    "source": "bundled_official",
+    "distance_m": 527.5332286257565,
+    "walk_m": 686,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_3_fire_station",
+   "lat": 32.074845,
+   "lon": 34.810145,
+   "expected": {
+    "name": "תחנת כיבוי והצלה גבעתיים",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.070845,
+    "lon": 34.813145,
+    "source": "bundled_official",
+    "distance_m": 527.0027137389199,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_4_fire_station",
+   "lat": 31.733246,
+   "lon": 35.078832,
+   "expected": {
+    "name": "תחנת כיבוי והצלה הרים",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.729246,
+    "lon": 35.081832,
+    "source": "bundled_official",
+    "distance_m": 527.5672102138786,
+    "walk_m": 686,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_5_fire_station",
+   "lat": 32.989612,
+   "lon": 35.549748,
+   "expected": {
+    "name": "תחנת כיבוי והצלה חצור הגלילית",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.985612,
+    "lon": 35.552748,
+    "source": "bundled_official",
+    "distance_m": 525.47212241928,
+    "walk_m": 683,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_6_fire_station",
+   "lat": 32.670219,
+   "lon": 35.103238,
+   "expected": {
+    "name": "תחנת כיבוי והצלה יקנעם",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.666219,
+    "lon": 35.106238,
+    "source": "bundled_official",
+    "distance_m": 526.0096125559227,
+    "walk_m": 684,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_7_fire_station",
+   "lat": 32.824491,
+   "lon": 34.987107,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.824525,
+    "lon": 34.989543,
+    "source": "bundled_osm",
+    "distance_m": 227.65359237232246,
+    "walk_m": 296,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_8_fire_station",
+   "lat": 32.703172,
+   "lon": 35.306252,
+   "expected": {
+    "name": "בית החולים האיטלקי",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.704944,
+    "lon": 35.310706,
+    "source": "bundled_osm",
+    "distance_m": 460.98146814701096,
+    "walk_m": 599,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_9_fire_station",
+   "lat": 32.858782,
+   "lon": 35.322053,
+   "expected": {
+    "name": "תחנת כיבוי והצלה עראבה",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.854782,
+    "lon": 35.325053,
+    "source": "bundled_official",
+    "distance_m": 525.692683601796,
+    "walk_m": 683,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_10_fire_station",
+   "lat": 32.70807,
+   "lon": 35.586873,
+   "expected": {
+    "name": "תחנת כיבוי והצלה צמח",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.70407,
+    "lon": 35.589873,
+    "source": "bundled_official",
+    "distance_m": 525.9460857384045,
+    "walk_m": 684,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_11_fire_station",
+   "lat": 32.179164,
+   "lon": 35.094471,
+   "expected": {
+    "name": "תחנת כיבוי והצלה קרני שומרון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.175164,
+    "lon": 35.097471,
+    "source": "bundled_official",
+    "distance_m": 526.8295484441659,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_12_fire_station",
+   "lat": 32.107845,
+   "lon": 35.165432,
+   "expected": {
+    "name": "תחנת כיבוי והצלה שומרון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.103845,
+    "lon": 35.168432,
+    "source": "bundled_official",
+    "distance_m": 526.9479741369488,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_13_police",
+   "lat": 32.093588,
+   "lon": 34.816679,
+   "expected": {
+    "name": "משטרת רמת גן",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.089588,
+    "lon": 34.819679,
+    "source": "bundled_osm",
+    "distance_m": 526.9716277443586,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_14_police",
+   "lat": 31.788082,
+   "lon": 35.226073,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.784082,
+    "lon": 35.229073,
+    "source": "bundled_osm",
+    "distance_m": 527.4768574233318,
+    "walk_m": 686,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_15_police",
+   "lat": 32.613434,
+   "lon": 35.287516,
+   "expected": {
+    "name": "תחנת כיבוי והצלה עפולה (יזרעאל)",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.616753,
+    "lon": 35.28838,
+    "source": "bundled_official",
+    "distance_m": 377.8237713549425,
+    "walk_m": 491,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_16_police",
+   "lat": 32.82325,
+   "lon": 34.995107,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.81925,
+    "lon": 34.998107,
+    "source": "bundled_osm",
+    "distance_m": 525.7524914508717,
+    "walk_m": 683,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_17_police",
+   "lat": 32.110272,
+   "lon": 34.89508,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.106272,
+    "lon": 34.89808,
+    "source": "bundled_osm",
+    "distance_m": 526.9439468602538,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_18_police",
+   "lat": 31.936489,
+   "lon": 34.881966,
+   "expected": {
+    "name": "תחנת כיבוי והצלה איילון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.937214,
+    "lon": 34.887063,
+    "source": "bundled_official",
+    "distance_m": 487.6802431077116,
+    "walk_m": 634,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_19_police",
+   "lat": 31.407166,
+   "lon": 34.752286,
+   "expected": {
+    "name": "תחנת כיבוי והצלה רהט",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.403636,
+    "lon": 34.755227,
+    "source": "bundled_official",
+    "distance_m": 481.63893723397615,
+    "walk_m": 626,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_20_police",
+   "lat": 32.822816,
+   "lon": 35.118932,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.818816,
+    "lon": 35.121932,
+    "source": "bundled_osm",
+    "distance_m": 525.7532217149833,
+    "walk_m": 683,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_21_police",
+   "lat": 32.026941,
+   "lon": 34.748559,
+   "expected": {
+    "name": "מרכז שיטור קהילתי - רמת יוסף",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.022941,
+    "lon": 34.751559,
+    "source": "bundled_osm",
+    "distance_m": 527.0821112521554,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_22_police",
+   "lat": 32.298734,
+   "lon": 34.851387,
+   "expected": {
+    "name": "משטרת נתניה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.294734,
+    "lon": 34.854387,
+    "source": "bundled_osm",
+    "distance_m": 526.630624327696,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_23_hospital",
+   "lat": 32.756213,
+   "lon": 35.537487,
+   "expected": {
+    "name": "בית חולים פוריה",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.752213,
+    "lon": 35.540487,
+    "source": "bundled_osm",
+    "distance_m": 525.8652188617094,
+    "walk_m": 684,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_24_police",
+   "lat": 32.8089,
+   "lon": 35.007302,
+   "expected": {
+    "name": "מטה מחוז חוף",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.8049,
+    "lon": 35.010302,
+    "source": "bundled_osm",
+    "distance_m": 525.7766340861067,
+    "walk_m": 684,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_25_police",
+   "lat": 32.019789,
+   "lon": 34.747226,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.015789,
+    "lon": 34.750226,
+    "source": "bundled_osm",
+    "distance_m": 527.0939586291029,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_26_hospital",
+   "lat": 32.185693,
+   "lon": 34.89263,
+   "expected": {
+    "name": "מרכז רפואי מאיר",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.181693,
+    "lon": 34.89563,
+    "source": "bundled_osm",
+    "distance_m": 526.818698576091,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_27_police",
+   "lat": 31.765549,
+   "lon": 34.991295,
+   "expected": {
+    "name": "משטרת בית שמש",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.761549,
+    "lon": 34.994295,
+    "source": "bundled_osm",
+    "distance_m": 527.5139971481858,
+    "walk_m": 686,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_28_police",
+   "lat": 32.701778,
+   "lon": 35.052672,
+   "expected": {
+    "name": "השיטור העירוני",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.697778,
+    "lon": 35.055672,
+    "source": "bundled_osm",
+    "distance_m": 525.9566490458034,
+    "walk_m": 684,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_29_police",
+   "lat": 32.461601,
+   "lon": 35.054324,
+   "expected": {
+    "name": "תחנת כיבוי והצלה חריש",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.46311,
+    "lon": 35.056106,
+    "source": "bundled_official",
+    "distance_m": 236.86739365644064,
+    "walk_m": 308,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_30_police",
+   "lat": 32.973795,
+   "lon": 35.546141,
+   "expected": {
+    "name": "תחנת משטרה ראש פינה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.969795,
+    "lon": 35.549141,
+    "source": "bundled_osm",
+    "distance_m": 525.4988165802596,
+    "walk_m": 683,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_31_police",
+   "lat": 32.035853,
+   "lon": 34.885279,
+   "expected": {
+    "name": "שיטור עירוני",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.031853,
+    "lon": 34.888279,
+    "source": "bundled_osm",
+    "distance_m": 527.0673460277401,
+    "walk_m": 685,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "near_32_police",
+   "lat": 31.952767,
+   "lon": 34.894713,
+   "expected": {
+    "name": "משטרת לוד",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.951698,
+    "lon": 34.893908,
+    "source": "bundled_osm",
+    "distance_m": 141.0597213234299,
+    "walk_m": 183,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "random_0",
+   "lat": 33.251006,
+   "lon": 34.993442,
+   "expected": null
+  },
+  {
+   "id": "random_1",
+   "lat": 30.347742,
+   "lon": 34.742035,
+   "expected": null
+  },
+  {
+   "id": "random_2",
+   "lat": 31.606582,
+   "lon": 35.155428,
+   "expected": null
+  },
+  {
+   "id": "random_3",
+   "lat": 32.046053,
+   "lon": 34.951611,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אלעד",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.053336,
+    "lon": 34.944679,
+    "source": "bundled_official",
+    "distance_m": 1040.5098602356466,
+    "walk_m": 1353,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "random_4",
+   "lat": 32.746121,
+   "lon": 35.404606,
+   "expected": {
+    "name": "תחנת כיבוי והצלה כדורי",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.70576,
+    "lon": 35.407433,
+    "source": "bundled_official",
+    "distance_m": 4495.723009644712,
+    "walk_m": 5844,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "random_5",
+   "lat": 29.914771,
+   "lon": 34.866266,
+   "expected": null
+  },
+  {
+   "id": "random_6",
+   "lat": 32.039584,
+   "lon": 35.551948,
+   "expected": null
+  },
+  {
+   "id": "random_7",
+   "lat": 32.904254,
+   "lon": 34.684662,
+   "expected": null
+  },
+  {
+   "id": "random_8",
+   "lat": 30.923538,
+   "lon": 35.390339,
+   "expected": null
+  },
+  {
+   "id": "random_9",
+   "lat": 32.939786,
+   "lon": 34.951654,
+   "expected": null
+  },
+  {
+   "id": "random_10",
+   "lat": 31.649416,
+   "lon": 34.583375,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אשקלון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.659795,
+    "lon": 34.589168,
+    "source": "bundled_official",
+    "distance_m": 1277.7258479477807,
+    "walk_m": 1661,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "random_11",
+   "lat": 30.989844,
+   "lon": 35.327363,
+   "expected": null
+  },
+  {
+   "id": "random_12",
+   "lat": 33.137598,
+   "lon": 34.552984,
+   "expected": null
+  },
+  {
+   "id": "random_13",
+   "lat": 32.430152,
+   "lon": 34.909875,
+   "expected": {
+    "name": "משטרת חדרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.437259,
+    "lon": 34.911513,
+    "source": "bundled_osm",
+    "distance_m": 805.0753408958825,
+    "walk_m": 1047,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "random_14",
+   "lat": 32.116574,
+   "lon": 35.074489,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אלקנה",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.111448,
+    "lon": 35.035678,
+    "source": "bundled_official",
+    "distance_m": 3699.4403218934517,
+    "walk_m": 4809,
+    "walk_measured": false
+   }
+  }
+ ],
+ "synthetic": [
+  {
+   "id": "official_close_beats_public",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.01348981518953,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00179864202527,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "סופר",
+     "type": "supermarket",
+     "type_label": "סופרמרקט"
+    }
+   ],
+   "expected": {
+    "name": "תחנה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.01348981518953,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 1499.9990104484384,
+    "walk_m": 1950,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "public_when_official_far",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.035972840505416,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית מרקחת",
+     "type": "pharmacy",
+     "type_label": "בית מרקחת"
+    }
+   ],
+   "expected": {
+    "name": "בית מרקחת",
+    "type": "pharmacy",
+    "type_label": "בית מרקחת",
+    "lat": 32.004496605063174,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 499.9996701492161,
+    "walk_m": 650,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "public_too_far_official_far",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.035972840505416,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.01169117316426,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "דלק",
+     "type": "fuel",
+     "type_label": "תחנת דלק (פתוחה 24/7 לרוב)"
+    }
+   ],
+   "expected": {
+    "name": "תחנה רחוקה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.035972840505416,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 3999.9973611960995,
+    "walk_m": 5200,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "only_public_far",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.01169117316426,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "דלק",
+     "type": "fuel",
+     "type_label": "תחנת דלק (פתוחה 24/7 לרוב)"
+    }
+   ],
+   "expected": null
+  },
+  {
+   "id": "only_public_near",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.00809388911372,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מתנ\"ס",
+     "type": "community_centre",
+     "type_label": "מתנ\"ס / מרכז קהילתי"
+    }
+   ],
+   "expected": {
+    "name": "מתנ\"ס",
+    "type": "community_centre",
+    "type_label": "מתנ\"ס / מרכז קהילתי",
+    "lat": 32.00809388911372,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 899.9994062689051,
+    "walk_m": 1170,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "nothing_in_radius",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.05395926075813,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "רחוק",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": null
+  },
+  {
+   "id": "non_er_hospital_skipped",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.00089932101263,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מרכז לבריאות הנפש",
+     "type": "hospital",
+     "type_label": "בית חולים"
+    },
+    {
+     "lat": 32.01618777822744,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כיבוי",
+     "type": "fire_station",
+     "type_label": "תחנת כיבוי אש"
+    }
+   ],
+   "expected": {
+    "name": "כיבוי",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.01618777822744,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 1799.9988125386003,
+    "walk_m": 2340,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "er_by_tag",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0026979630379,
+     "lon": 34.8,
+     "emergency": "yes",
+     "source": "synthetic",
+     "name": "בית חולים כלשהו",
+     "type": "hospital",
+     "type_label": "בית חולים"
+    },
+    {
+     "lat": 32.00179864202527,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית חולים בלי תג",
+     "type": "hospital",
+     "type_label": "בית חולים"
+    }
+   ],
+   "expected": {
+    "name": "בית חולים כלשהו",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.0026979630379,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 299.99980208937166,
+    "walk_m": 390,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "er_tag_no_overrides_name",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0026979630379,
+     "lon": 34.8,
+     "emergency": "no",
+     "source": "synthetic",
+     "name": "שיבא",
+     "type": "hospital",
+     "type_label": "בית חולים"
+    },
+    {
+     "lat": 32.022483025315886,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כיבוי",
+     "type": "fire_station",
+     "type_label": "תחנת כיבוי אש"
+    }
+   ],
+   "expected": {
+    "name": "כיבוי",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.022483025315886,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 2499.998350747661,
+    "walk_m": 3250,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "er_by_name",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.006295247088445,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "המרכז הרפואי סורוקה",
+     "type": "hospital",
+     "type_label": "בית חולים"
+    },
+    {
+     "lat": 32.00539592607581,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "משטרה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.00539592607581,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 599.9996041795334,
+    "walk_m": 780,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "duplicates_removed",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "א",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00450020234723,
+     "lon": 34.80000318137974,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ב",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.007194568101085,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ג",
+     "type": "fire_station",
+     "type_label": "תחנת כיבוי אש"
+    }
+   ],
+   "expected": {
+    "name": "א",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.004496605063174,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 499.9996701492161,
+    "walk_m": 650,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "unknown_type_ignored",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.00044966050632,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "?",
+     "type": "nightclub",
+     "type_label": "nightclub"
+    },
+    {
+     "lat": 32.008993210126356,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "תחנה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.008993210126356,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 999.9993402992222,
+    "walk_m": 1300,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "seven_officials_shortlist",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0026979630379,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת0",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00359728405054,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת1",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת2",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00539592607581,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת3",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.006295247088445,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת4",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.007194568101085,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת5",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00809388911372,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת6",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.008993210126356,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ת7",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "ת0",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.0026979630379,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 299.99980208937166,
+    "walk_m": 390,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "tie_keeps_input_order",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0,
+     "lon": 34.81060459915789,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מזרח",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.0,
+     "lon": 34.7893954008421,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מערב",
+     "type": "fire_station",
+     "type_label": "תחנת כיבוי אש"
+    }
+   ],
+   "expected": {
+    "name": "מזרח",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.0,
+    "lon": 34.81060459915789,
+    "source": "synthetic",
+    "distance_m": 999.9993398982004,
+    "walk_m": 1300,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "official_exactly_2000",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.01798642025271,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "גבול",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00539592607581,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "סופר",
+     "type": "supermarket",
+     "type_label": "סופרמרקט"
+    }
+   ],
+   "expected": {
+    "name": "גבול",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.01798642025271,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 1999.9986805984445,
+    "walk_m": 2600,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "empty",
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [],
+   "expected": null
+  }
+ ],
+ "worship_synthetic": [
+  {
+   "id": "worship_only_when_nothing_else",
+   "worship": "synagogue",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "בית כנסת קרוב",
+    "type": "synagogue",
+    "type_label": "בית כנסת",
+    "lat": 32.0019785062278,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 219.99985486606596,
+    "walk_m": 286,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "public_beats_worship",
+   "worship": "synagogue",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.006025450784655,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית מרקחת",
+     "type": "pharmacy",
+     "type_label": "בית מרקחת"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "בית מרקחת",
+    "type": "pharmacy",
+    "type_label": "בית מרקחת",
+    "lat": 32.006025450784655,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 669.9995580001234,
+    "walk_m": 871,
+    "walk_measured": false,
+    "fallback_note": null
+   }
+  },
+  {
+   "id": "official_beats_worship",
+   "worship": "synagogue",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.00989253113899,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "משטרה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.00989253113899,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 1099.9992743287494,
+    "walk_m": 1430,
+    "walk_measured": false,
+    "fallback_note": null
+   }
+  },
+  {
+   "id": "pref_mosque",
+   "worship": "mosque",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "מסגד קרוב",
+    "type": "mosque",
+    "type_label": "מסגד",
+    "lat": 32.0029677593417,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 329.9997822990989,
+    "walk_m": 429,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "pref_church",
+   "worship": "church",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "כנסייה קרובה",
+    "type": "church",
+    "type_label": "כנסייה",
+    "lat": 32.003957012455594,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 439.9997097313418,
+    "walk_m": 572,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "pref_any_nearest",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "בית כנסת קרוב",
+    "type": "synagogue",
+    "type_label": "בית כנסת",
+    "lat": 32.0019785062278,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 219.99985486606596,
+    "walk_m": 286,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "pref_none_official_far",
+   "worship": "none",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "תחנה רחוקה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.02967759341697,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 3299.997822987039,
+    "walk_m": 4290,
+    "walk_measured": false,
+    "fallback_note": null
+   }
+  },
+  {
+   "id": "pref_default",
+   "worship": null,
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "בית כנסת קרוב",
+    "type": "synagogue",
+    "type_label": "בית כנסת",
+    "lat": 32.0019785062278,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 219.99985486606596,
+    "walk_m": 286,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "pref_unknown_is_default",
+   "worship": "sector_x",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "בית כנסת קרוב",
+    "type": "synagogue",
+    "type_label": "בית כנסת",
+    "lat": 32.0019785062278,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 219.99985486606596,
+    "walk_m": 286,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "other_kind_only_none",
+   "worship": "synagogue",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0029677593417,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד קרוב",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": null
+  },
+  {
+   "id": "pref_none_only_worship",
+   "worship": "none",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0019785062278,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת קרוב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.003957012455594,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה קרובה",
+     "type": "church",
+     "type_label": "כנסייה"
+    }
+   ],
+   "expected": null
+  },
+  {
+   "id": "worship_beyond_public_radius",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.01169117316426,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד רחוק",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "תחנה רחוקה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.02967759341697,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 3299.997822987039,
+    "walk_m": 4290,
+    "walk_measured": false,
+    "fallback_note": null
+   }
+  },
+  {
+   "id": "worship_only_far",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.01169117316426,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד רחוק",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": null
+  },
+  {
+   "id": "worship_shortlist_3",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0026979630379,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מ0",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.00359728405054,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מ1",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מ2",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.00539592607581,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מ3",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    },
+    {
+     "lat": 32.006295247088445,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מ4",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": {
+    "name": "מ0",
+    "type": "synagogue",
+    "type_label": "בית כנסת",
+    "lat": 32.0026979630379,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 299.99980208937166,
+    "walk_m": 390,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "worship_dupes_same_type",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "א",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.00450020234723,
+     "lon": 34.80000318137974,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ב",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "ג",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": {
+    "name": "א",
+    "type": "church",
+    "type_label": "כנסייה",
+    "lat": 32.004496605063174,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 499.9996701492161,
+    "walk_m": 650,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "non_er_hospital_then_worship",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.00089932101263,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מרכז לבריאות הנפש",
+     "type": "hospital",
+     "type_label": "בית חולים"
+    },
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה",
+     "type": "church",
+     "type_label": "כנסייה"
+    }
+   ],
+   "expected": {
+    "name": "כנסייה",
+    "type": "church",
+    "type_label": "כנסייה",
+    "lat": 32.004496605063174,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 499.9996701492161,
+    "walk_m": 650,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "public_too_far_worship_near",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.01169117316426,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "דלק",
+     "type": "fuel",
+     "type_label": "תחנת דלק (פתוחה 24/7 לרוב)"
+    },
+    {
+     "lat": 32.007194568101085,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.02967759341697,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "תחנה רחוקה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "מסגד",
+    "type": "mosque",
+    "type_label": "מסגד",
+    "lat": 32.007194568101085,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 799.9994722393778,
+    "walk_m": 1040,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "worship_tie_keeps_input_order",
+   "worship": "any",
+   "walk": false,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.0,
+     "lon": 34.80636275949473,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מזרח",
+     "type": "mosque",
+     "type_label": "מסגד"
+    },
+    {
+     "lat": 32.0,
+     "lon": 34.79363724050526,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מערב",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    }
+   ],
+   "expected": {
+    "name": "מזרח",
+    "type": "mosque",
+    "type_label": "מסגד",
+    "lat": 32.0,
+    "lon": 34.80636275949473,
+    "source": "synthetic",
+    "distance_m": 599.9996040927017,
+    "walk_m": 780,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "walk_worship_too_far_else_branch",
+   "worship": "any",
+   "walk": true,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.00809388911372,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": {
+    "name": "מסגד",
+    "type": "mosque",
+    "type_label": "מסגד",
+    "lat": 32.00809388911372,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 899.9994062689051,
+    "walk_m": 2340,
+    "walk_measured": true,
+    "walk_s": 1733,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "walk_worship_too_far_official_far",
+   "worship": "any",
+   "walk": true,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.02697963037907,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "משטרה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    },
+    {
+     "lat": 32.00809388911372,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": {
+    "name": "משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.02697963037907,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 2999.998020897667,
+    "walk_m": 7800,
+    "walk_measured": true,
+    "walk_s": 5778,
+    "fallback_note": null
+   }
+  },
+  {
+   "id": "walk_public_too_far_worship_near",
+   "worship": "synagogue",
+   "walk": true,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.008993210126356,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית מרקחת",
+     "type": "pharmacy",
+     "type_label": "בית מרקחת"
+    },
+    {
+     "lat": 32.0026979630379,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "בית כנסת",
+     "type": "synagogue",
+     "type_label": "בית כנסת"
+    }
+   ],
+   "expected": {
+    "name": "בית כנסת",
+    "type": "synagogue",
+    "type_label": "בית כנסת",
+    "lat": 32.0026979630379,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 299.99980208937166,
+    "walk_m": 540,
+    "walk_measured": true,
+    "walk_s": 400,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "walk_worship_unmeasured",
+   "worship": "any",
+   "walk": true,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.00989253113899,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "דלק",
+     "type": "fuel",
+     "type_label": "תחנת דלק (פתוחה 24/7 לרוב)"
+    },
+    {
+     "lat": 32.004496605063174,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "כנסייה",
+     "type": "church",
+     "type_label": "כנסייה"
+    },
+    {
+     "lat": 32.022483025315886,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "משטרה",
+     "type": "police",
+     "type_label": "תחנת משטרה"
+    }
+   ],
+   "expected": {
+    "name": "כנסייה",
+    "type": "church",
+    "type_label": "כנסייה",
+    "lat": 32.004496605063174,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 499.9996701492161,
+    "walk_m": 650,
+    "walk_measured": false,
+    "fallback_note": "אין מקום בטוח אחר בקרבת מקום - מקום תפילה לפי ההעדפה שלך"
+   }
+  },
+  {
+   "id": "walk_public_and_worship_too_far",
+   "worship": "any",
+   "walk": true,
+   "lat": 32.0,
+   "lon": 34.8,
+   "radius_m": 5000,
+   "candidates": [
+    {
+     "lat": 32.008993210126356,
+     "lon": 34.8,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "דלק",
+     "type": "fuel",
+     "type_label": "תחנת דלק (פתוחה 24/7 לרוב)"
+    },
+    {
+     "lat": 32.0,
+     "lon": 34.81060459915789,
+     "emergency": null,
+     "source": "synthetic",
+     "name": "מסגד",
+     "type": "mosque",
+     "type_label": "מסגד"
+    }
+   ],
+   "expected": {
+    "name": "דלק",
+    "type": "fuel",
+    "type_label": "תחנת דלק (פתוחה 24/7 לרוב)",
+    "lat": 32.008993210126356,
+    "lon": 34.8,
+    "source": "synthetic",
+    "distance_m": 999.9993402992222,
+    "walk_m": 2600,
+    "walk_measured": true,
+    "walk_s": 1926,
+    "fallback_note": null
+   }
+  }
+ ],
+ "walk_cases": [
+  {
+   "id": "tel_aviv_center",
+   "lat": 32.0809,
+   "lon": 34.7806,
+   "expected": {
+    "name": "תחנת כיבוי והצלה שרונה",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.072612,
+    "lon": 34.784945,
+    "source": "bundled_official",
+    "distance_m": 1008.4204076905671,
+    "walk_m": 1311,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "tel_aviv_south",
+   "lat": 32.055,
+   "lon": 34.77,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.054924,
+    "lon": 34.769468,
+    "source": "bundled_osm",
+    "distance_m": 50.844011814660604,
+    "walk_m": 132,
+    "walk_measured": true,
+    "walk_s": 98
+   }
+  },
+  {
+   "id": "jaffa",
+   "lat": 32.05,
+   "lon": 34.755,
+   "expected": {
+    "name": "משטרת ישראל - מחוז תל אביב",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.053748,
+    "lon": 34.762301,
+    "source": "bundled_osm",
+    "distance_m": 804.4552078609753,
+    "walk_m": 1046,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "jerusalem_center",
+   "lat": 31.78,
+   "lon": 35.22,
+   "expected": {
+    "name": "משטרת מחוז ציון",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.781748,
+    "lon": 35.221876,
+    "source": "bundled_osm",
+    "distance_m": 263.1038165100071,
+    "walk_m": 684,
+    "walk_measured": true,
+    "walk_s": 507
+   }
+  },
+  {
+   "id": "jerusalem_old_city",
+   "lat": 31.7767,
+   "lon": 35.2345,
+   "expected": {
+    "name": "Western Wall Police Station",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.776728,
+    "lon": 35.233465,
+    "source": "bundled_osm",
+    "distance_m": 97.88555405904198,
+    "walk_m": 255,
+    "walk_measured": true,
+    "walk_s": 189
+   }
+  },
+  {
+   "id": "jerusalem_ein_karem",
+   "lat": 31.765,
+   "lon": 35.16,
+   "expected": {
+    "name": "תחנת כיבוי והצלה משואה (אורה)",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.755307,
+    "lon": 35.160398,
+    "source": "bundled_official",
+    "distance_m": 1078.4690726310978,
+    "walk_m": 1402,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "haifa_downtown",
+   "lat": 32.815,
+   "lon": 34.998,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.81925,
+    "lon": 34.998107,
+    "source": "bundled_osm",
+    "distance_m": 472.68420809295566,
+    "walk_m": 1229,
+    "walk_measured": true,
+    "walk_s": 910
+   }
+  },
+  {
+   "id": "haifa_carmel",
+   "lat": 32.794,
+   "lon": 34.989,
+   "expected": {
+    "name": "מרכז רפואי בני ציון",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.806173,
+    "lon": 34.992527,
+    "source": "bundled_osm",
+    "distance_m": 1393.140774013302,
+    "walk_m": 1811,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "beer_sheva",
+   "lat": 31.252,
+   "lon": 34.791,
+   "expected": {
+    "name": "בית חולים סורוקה",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 31.258279,
+    "lon": 34.80211,
+    "source": "bundled_osm",
+    "distance_m": 1266.0086630865583,
+    "walk_m": 1646,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "eilat",
+   "lat": 29.5577,
+   "lon": 34.9519,
+   "expected": {
+    "name": "משטרת אילת",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 29.557901,
+    "lon": 34.955157,
+    "source": "bundled_osm",
+    "distance_m": 315.82141934447293,
+    "walk_m": 821,
+    "walk_measured": true,
+    "walk_s": 608
+   }
+  },
+  {
+   "id": "netanya",
+   "lat": 32.3215,
+   "lon": 34.8532,
+   "expected": {
+    "name": "תחנת כיבוי והצלה נתניה",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.321542,
+    "lon": 34.867655,
+    "source": "bundled_official",
+    "distance_m": 1358.293829314566,
+    "walk_m": 2445,
+    "walk_measured": true,
+    "walk_s": 1811
+   }
+  },
+  {
+   "id": "herzliya",
+   "lat": 32.1663,
+   "lon": 34.8436,
+   "expected": {
+    "name": "מרכז שיטור קהילתי והפעלת מתנדבים מרכז הרצליה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.167639,
+    "lon": 34.840635,
+    "source": "bundled_osm",
+    "distance_m": 316.31750179041074,
+    "walk_m": 822,
+    "walk_measured": true,
+    "walk_s": 609
+   }
+  },
+  {
+   "id": "rishon_lezion",
+   "lat": 31.973,
+   "lon": 34.7925,
+   "expected": {
+    "name": "תחנת כיבוי והצלה ראשון לציון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.97835,
+    "lon": 34.791257,
+    "source": "bundled_official",
+    "distance_m": 606.3363243284662,
+    "walk_m": 1091,
+    "walk_measured": true,
+    "walk_s": 808
+   }
+  },
+  {
+   "id": "petah_tikva",
+   "lat": 32.087,
+   "lon": 34.887,
+   "expected": {
+    "name": "משטרת פתח תקווה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.092826,
+    "lon": 34.887962,
+    "source": "bundled_osm",
+    "distance_m": 654.1299521911232,
+    "walk_m": 850,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "ashdod",
+   "lat": 31.8044,
+   "lon": 34.6553,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אשדוד",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.807734,
+    "lon": 34.661247,
+    "source": "bundled_official",
+    "distance_m": 673.2416152090968,
+    "walk_m": 1750,
+    "walk_measured": true,
+    "walk_s": 1297
+   }
+  },
+  {
+   "id": "ashkelon",
+   "lat": 31.6688,
+   "lon": 34.5743,
+   "expected": {
+    "name": "מרכז רפואי ברזילי",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 31.662301,
+    "lon": 34.559185,
+    "source": "bundled_osm",
+    "distance_m": 1602.6720545624307,
+    "walk_m": 2083,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "holon",
+   "lat": 32.0158,
+   "lon": 34.7874,
+   "expected": {
+    "name": "תחנת כיבוי והצלה חולון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.00962,
+    "lon": 34.798239,
+    "source": "bundled_official",
+    "distance_m": 1231.5143809294354,
+    "walk_m": 2217,
+    "walk_measured": true,
+    "walk_s": 1642
+   }
+  },
+  {
+   "id": "bat_yam",
+   "lat": 32.0171,
+   "lon": 34.7454,
+   "expected": {
+    "name": "מרכז שיטור קהילתי - רמת יוסף",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.022941,
+    "lon": 34.751559,
+    "source": "bundled_osm",
+    "distance_m": 871.2066375356825,
+    "walk_m": 1133,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "ramat_gan_sheba",
+   "lat": 32.046,
+   "lon": 34.842,
+   "expected": {
+    "name": "בית חולים תל השומר",
+    "type": "hospital",
+    "type_label": "בית חולים",
+    "lat": 32.047096,
+    "lon": 34.845467,
+    "source": "bundled_osm",
+    "distance_m": 348.7536320640112,
+    "walk_m": 907,
+    "walk_measured": true,
+    "walk_s": 672
+   }
+  },
+  {
+   "id": "kfar_saba",
+   "lat": 32.175,
+   "lon": 34.907,
+   "expected": {
+    "name": "משטרת כפר סבא",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.175269,
+    "lon": 34.892766,
+    "source": "bundled_osm",
+    "distance_m": 1340.0108166644263,
+    "walk_m": 1742,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "hadera",
+   "lat": 32.434,
+   "lon": 34.9196,
+   "expected": {
+    "name": "שיטור עירוני",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.437946,
+    "lon": 34.906168,
+    "source": "bundled_osm",
+    "distance_m": 1334.741954395534,
+    "walk_m": 1735,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "afula",
+   "lat": 32.608,
+   "lon": 35.289,
+   "expected": {
+    "name": "משטרת עפולה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.609434,
+    "lon": 35.290516,
+    "source": "bundled_osm",
+    "distance_m": 213.51657512835519,
+    "walk_m": 555,
+    "walk_measured": true,
+    "walk_s": 411
+   }
+  },
+  {
+   "id": "nazareth",
+   "lat": 32.7019,
+   "lon": 35.2972,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.706251,
+    "lon": 35.300251,
+    "source": "bundled_osm",
+    "distance_m": 561.753372590528,
+    "walk_m": 730,
+    "walk_measured": false
+   }
+  },
+  {
+   "id": "tiberias",
+   "lat": 32.7922,
+   "lon": 35.5312,
+   "expected": {
+    "name": "משטרת טבריה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.794408,
+    "lon": 35.525659,
+    "source": "bundled_osm",
+    "distance_m": 573.1834629411126,
+    "walk_m": 1490,
+    "walk_measured": true,
+    "walk_s": 1104
+   }
+  },
+  {
+   "id": "safed",
+   "lat": 32.9646,
+   "lon": 35.496,
+   "expected": {
+    "name": "משמר אזרחי",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.965217,
+    "lon": 35.496113,
+    "source": "bundled_osm",
+    "distance_m": 69.41248800062569,
+    "walk_m": 180,
+    "walk_measured": true,
+    "walk_s": 134
+   }
+  },
+  {
+   "id": "nahariya",
+   "lat": 33.0058,
+   "lon": 35.094,
+   "expected": {
+    "name": "משטרת נהריה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 33.006074,
+    "lon": 35.100874,
+    "source": "bundled_osm",
+    "distance_m": 641.7216686039627,
+    "walk_m": 1668,
+    "walk_measured": true,
+    "walk_s": 1236
+   }
+  },
+  {
+   "id": "kiryat_shmona",
+   "lat": 33.2073,
+   "lon": 35.5702,
+   "expected": {
+    "name": "משטרת קריית שמונה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 33.212727,
+    "lon": 35.568047,
+    "source": "bundled_osm",
+    "distance_m": 635.82870977195,
+    "walk_m": 1653,
+    "walk_measured": true,
+    "walk_s": 1225
+   }
+  },
+  {
+   "id": "dimona",
+   "lat": 31.07,
+   "lon": 35.033,
+   "expected": {
+    "name": "תחנת משטרה דימונה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.067464,
+    "lon": 35.034234,
+    "source": "bundled_osm",
+    "distance_m": 305.50298507547086,
+    "walk_m": 794,
+    "walk_measured": true,
+    "walk_s": 588
+   }
+  },
+  {
+   "id": "mitzpe_ramon",
+   "lat": 30.61,
+   "lon": 34.801,
+   "expected": {
+    "name": "תחנת כיבוי והצלה מצפה רמון",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 30.61101,
+    "lon": 34.804063,
+    "source": "bundled_official",
+    "distance_m": 313.90617264672255,
+    "walk_m": 816,
+    "walk_measured": true,
+    "walk_s": 605
+   }
+  },
+  {
+   "id": "arava_desert",
+   "lat": 30.3,
+   "lon": 35.15,
+   "expected": null
+  },
+  {
+   "id": "negev_open",
+   "lat": 30.9,
+   "lon": 34.6,
+   "expected": null
+  },
+  {
+   "id": "mediterranean_sea",
+   "lat": 32.3,
+   "lon": 34.3,
+   "expected": null
+  },
+  {
+   "id": "dead_sea_ein_bokek",
+   "lat": 31.2,
+   "lon": 35.363,
+   "expected": {
+    "name": "תחנת משטרה",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.194781,
+    "lon": 35.362493,
+    "source": "bundled_osm",
+    "distance_m": 582.3264694640941,
+    "walk_m": 1514,
+    "walk_measured": true,
+    "walk_s": 1122
+   }
+  },
+  {
+   "id": "golan_katzrin",
+   "lat": 32.993,
+   "lon": 35.69,
+   "expected": {
+    "name": "משטרת קצרין",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 32.991532,
+    "lon": 35.693237,
+    "source": "bundled_osm",
+    "distance_m": 343.20036554658816,
+    "walk_m": 892,
+    "walk_measured": true,
+    "walk_s": 661
+   }
+  },
+  {
+   "id": "modiin",
+   "lat": 31.898,
+   "lon": 35.01,
+   "expected": {
+    "name": "תחנת משטרת מודיעין",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.906361,
+    "lon": 35.005606,
+    "source": "bundled_osm",
+    "distance_m": 1018.0343917409858,
+    "walk_m": 2647,
+    "walk_measured": true,
+    "walk_s": 1961
+   }
+  },
+  {
+   "id": "rehovot",
+   "lat": 31.894,
+   "lon": 34.811,
+   "expected": {
+    "name": "משטרת רחובות",
+    "type": "police",
+    "type_label": "תחנת משטרה",
+    "lat": 31.899833,
+    "lon": 34.810363,
+    "source": "bundled_osm",
+    "distance_m": 651.381814394173,
+    "walk_m": 1694,
+    "walk_measured": true,
+    "walk_s": 1255
+   }
+  },
+  {
+   "id": "umm_al_fahm",
+   "lat": 32.519,
+   "lon": 35.153,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אום אל פחם",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 32.534919,
+    "lon": 35.149706,
+    "source": "bundled_official",
+    "distance_m": 1796.8492793115126,
+    "walk_m": 4672,
+    "walk_measured": true,
+    "walk_s": 3461
+   }
+  },
+  {
+   "id": "ofakim",
+   "lat": 31.314,
+   "lon": 34.62,
+   "expected": {
+    "name": "תחנת כיבוי והצלה אופקים",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.318879,
+    "lon": 34.617177,
+    "source": "bundled_official",
+    "distance_m": 605.1805398188347,
+    "walk_m": 1573,
+    "walk_measured": true,
+    "walk_s": 1166
+   }
+  },
+  {
+   "id": "beit_shemesh",
+   "lat": 31.747,
+   "lon": 34.988,
+   "expected": {
+    "name": "תחנת כיבוי והצלה בית שמש",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.749877,
+    "lon": 34.979757,
+    "source": "bundled_official",
+    "distance_m": 842.5261163902632,
+    "walk_m": 2191,
+    "walk_measured": true,
+    "walk_s": 1623
+   }
+  },
+  {
+   "id": "sderot",
+   "lat": 31.525,
+   "lon": 34.596,
+   "expected": {
+    "name": "תחנת כיבוי והצלה שדרות",
+    "type": "fire_station",
+    "type_label": "תחנת כיבוי אש",
+    "lat": 31.529782,
+    "lon": 34.599888,
+    "source": "bundled_official",
+    "distance_m": 646.9475170821382,
+    "walk_m": 1682,
+    "walk_measured": true,
+    "walk_s": 1246
+   }
+  }
+ ],
+ "is_er_hospital": [
+  {
+   "name": "אל-מקאסד",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "אל-מקאסד",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "אל-מקאסד",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בי\"ח איכילוב",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בי\"ח איכילוב",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בי\"ח איכילוב",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית החולים האיטלקי",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית החולים האיטלקי",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית החולים האיטלקי",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית החולים הדסה הר הצופים",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית החולים הדסה הר הצופים",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית החולים הדסה הר הצופים",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית החולים הצרפתי",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית החולים הצרפתי",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית החולים הצרפתי",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית החולים יוספטל",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית החולים יוספטל",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית החולים יוספטל",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "בית חולים",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים אסותא אשדוד",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים אסותא אשדוד",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים אסותא אשדוד",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים הלל יפה",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים הלל יפה",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים הלל יפה",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים העמק",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים העמק",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים העמק",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים לניאדו",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים לניאדו",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים לניאדו",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים מעייני הישועה",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים מעייני הישועה",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים מעייני הישועה",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים נצרת",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים נצרת",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים נצרת",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים סורוקה",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים סורוקה",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים סורוקה",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים סנט ג'וזף",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים סנט ג'וזף",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים סנט ג'וזף",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים פוריה",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים פוריה",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים פוריה",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים קפלן",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים קפלן",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים קפלן",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים שערי צדק",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים שערי צדק",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים שערי צדק",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים תל השומר",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בית חולים תל השומר",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בית חולים תל השומר",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בניין המיון",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "בניין המיון",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "בניין המיון",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "הדסה עין כרם",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "הדסה עין כרם",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "הדסה עין כרם",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "המרכז הרפואי זיו",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "המרכז הרפואי זיו",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "המרכז הרפואי זיו",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "המרכז הרפואי לגליל",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "המרכז הרפואי לגליל",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "המרכז הרפואי לגליל",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "כרמל",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "כרמל",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "כרמל",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי בני ציון",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי בני ציון",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי בני ציון",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי ברזילי",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי ברזילי",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי ברזילי",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי וולפסון",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי וולפסון",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי וולפסון",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי יצחק שמיר – קמפוס אסף הרופא",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי יצחק שמיר – קמפוס אסף הרופא",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי יצחק שמיר – קמפוס אסף הרופא",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי מאיר",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי מאיר",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי מאיר",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי רבין – קמפוס ביילינסון",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי רבין – קמפוס ביילינסון",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי רבין – קמפוס ביילינסון",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז רפואי רבין – קמפוס השרון",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי רבין – קמפוס השרון",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מרכז רפואי רבין – קמפוס השרון",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "רמב\"ם - הקריה הרפואית לבריאות האדם",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "רמב\"ם - הקריה הרפואית לבריאות האדם",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "רמב\"ם - הקריה הרפואית לבריאות האדם",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "שערי צדק",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "שערי צדק",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "שערי צדק",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מרכז לבריאות הנפש",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "מרכז לבריאות הנפש",
+   "emergency": "yes",
+   "expected": false
+  },
+  {
+   "name": "מרכז לבריאות הנפש",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "בית חולים גריאטרי",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "בית חולים גריאטרי",
+   "emergency": "yes",
+   "expected": false
+  },
+  {
+   "name": "בית חולים גריאטרי",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "Eye Hospital",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "Eye Hospital",
+   "emergency": "yes",
+   "expected": false
+  },
+  {
+   "name": "Eye Hospital",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "שיבא",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "שיבא",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "שיבא",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "מיון",
+   "emergency": null,
+   "expected": true
+  },
+  {
+   "name": "מיון",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "מיון",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "קופת חולים מכבי",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "קופת חולים מכבי",
+   "emergency": "yes",
+   "expected": false
+  },
+  {
+   "name": "קופת חולים מכבי",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": "",
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": "",
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": "",
+   "emergency": "no",
+   "expected": false
+  },
+  {
+   "name": null,
+   "emergency": null,
+   "expected": false
+  },
+  {
+   "name": null,
+   "emergency": "yes",
+   "expected": true
+  },
+  {
+   "name": null,
+   "emergency": "no",
+   "expected": false
+  }
+ ]
+}

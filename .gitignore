@@ -37,3 +37,6 @@ deploy/secrets/
 
 # גורמי סיכון סביבתיים (research_tools/risk_factors.py) - נגזר משכבות OSM/עירוניות/משטרה; לבנות מקומית
 models/risk_factors_*.json.gz
+
+# דשבורד הקורס: הנתונים הנקיים חייבים להיכנס למאגר (data/ למעלה מתעלם מכל תיקיית data)
+!dashboard/data/

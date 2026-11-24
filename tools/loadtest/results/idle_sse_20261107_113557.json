@@ -1,0 +1,190 @@
+{
+ "machine_before": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:34:39",
+  "cpu_percent_busy": 20.7,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 17.8,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    787
+   ],
+   [
+    "BackgroundDownload.exe",
+    71
+   ],
+   [
+    "python.exe",
+    66
+   ],
+   [
+    "EpicGamesLauncher.exe",
+    33
+   ],
+   [
+    "Code.exe",
+    16
+   ]
+  ]
+ },
+ "levels": [
+  {
+   "mode": "sse",
+   "n": 100,
+   "ramp_s": 2.0,
+   "connected": 100,
+   "connect_errors": {},
+   "hold_errors": {},
+   "polls": {},
+   "sse_ok": 100,
+   "sse_closed": 0,
+   "server_threads_before": 7,
+   "server_threads_parked": 107,
+   "server_rss_mb_before": 38.0,
+   "server_rss_mb_parked": 42.1,
+   "server_handles_parked": 1050,
+   "probe_keepalive_circle": {
+    "n": 100,
+    "p50": 0.7,
+    "p95": 2.3,
+    "p99": 3.7,
+    "max": 3.7,
+    "mean": 0.9,
+    "unit": "ms"
+   },
+   "probe_errors": {},
+   "probe_new_connection_health": {
+    "n": 30,
+    "p50": 17.0,
+    "p95": 30.4,
+    "p99": 37.5,
+    "max": 40.3,
+    "mean": 17.8,
+    "unit": "ms"
+   },
+   "sos_post_ms": 24.4,
+   "sos_status": 200,
+   "lock_util_while_parked": 0.005,
+   "lock_acq_per_s_while_parked": 78.5,
+   "rep": 0
+  },
+  {
+   "mode": "sse",
+   "n": 300,
+   "ramp_s": 2.5,
+   "connected": 299,
+   "connect_errors": {
+    "ConnectionRefusedError": 1
+   },
+   "hold_errors": {},
+   "polls": {},
+   "sse_ok": 299,
+   "sse_closed": 0,
+   "server_threads_before": 7,
+   "server_threads_parked": 306,
+   "server_rss_mb_before": 38.2,
+   "server_rss_mb_parked": 50.8,
+   "server_handles_parked": 2642,
+   "probe_keepalive_circle": {
+    "n": 100,
+    "p50": 0.6,
+    "p95": 1.5,
+    "p99": 2.7,
+    "max": 21.7,
+    "mean": 1.0,
+    "unit": "ms"
+   },
+   "probe_errors": {},
+   "probe_new_connection_health": {
+    "n": 30,
+    "p50": 22.4,
+    "p95": 30.6,
+    "p99": 32.0,
+    "max": 32.0,
+    "mean": 17.8,
+    "unit": "ms"
+   },
+   "sos_post_ms": 27.7,
+   "sos_status": 200,
+   "lock_util_while_parked": 0.006,
+   "lock_acq_per_s_while_parked": 104.4,
+   "rep": 0
+  },
+  {
+   "mode": "sse",
+   "n": 1000,
+   "ramp_s": 2.0,
+   "connected": 1000,
+   "connect_errors": {},
+   "hold_errors": {},
+   "polls": {},
+   "sse_ok": 1000,
+   "sse_closed": 0,
+   "server_threads_before": 7,
+   "server_threads_parked": 1007,
+   "server_rss_mb_before": 38.7,
+   "server_rss_mb_parked": 80.5,
+   "server_handles_parked": 8250,
+   "probe_keepalive_circle": {
+    "n": 100,
+    "p50": 0.7,
+    "p95": 2.3,
+    "p99": 3.3,
+    "max": 14.9,
+    "mean": 1.1,
+    "unit": "ms"
+   },
+   "probe_errors": {},
+   "probe_new_connection_health": {
+    "n": 30,
+    "p50": 19.6,
+    "p95": 30.1,
+    "p99": 32.3,
+    "max": 33.1,
+    "mean": 17.2,
+    "unit": "ms"
+   },
+   "sos_post_ms": 23.1,
+   "sos_status": 200,
+   "lock_util_while_parked": 0.011,
+   "lock_acq_per_s_while_parked": 193.2,
+   "rep": 0
+  }
+ ],
+ "machine_after": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:35:52",
+  "cpu_percent_busy": 35.0,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 17.8,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    847
+   ],
+   [
+    "python.exe",
+    65
+   ],
+   [
+    "BackgroundDownload.exe",
+    54
+   ],
+   [
+    "Code.exe",
+    20
+   ],
+   [
+    "System",
+    14
+   ]
+  ]
+ }
+}

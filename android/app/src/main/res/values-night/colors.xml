@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LifeGuard design tokens, dark (design/tokens.json, color.dark). The fixed "*_fill" colours live only in values/. -->
+<resources>
+    <color name="lg_brand_navy">#8DB4FF</color>
+    <color name="lg_brand_navy_2">#B7CEFF</color>
+    <color name="lg_bg">#060D1A</color>
+    <color name="lg_surface">#0F1B2E</color>
+    <color name="lg_surface_2">#16243B</color>
+    <color name="lg_fill">#1E2E48</color>
+    <color name="lg_separator">#26375A</color>
+    <color name="lg_label">#EEF2F8</color>
+    <color name="lg_label_secondary">#B2BDD0</color>
+    <color name="lg_label_tertiary">#97A3B8</color>
+    <color name="lg_accent">#4C93FF</color>
+    <color name="lg_accent_pressed">#2F7BF0</color>
+    <color name="lg_accent_tint">#13294D</color>
+    <color name="lg_on_accent">#06101F</color>
+    <color name="lg_sos">#FF4F45</color>
+    <color name="lg_sos_pressed">#E0382F</color>
+    <color name="lg_sos_tint">#3A1416</color>
+    <color name="lg_success">#4ADE80</color>
+    <color name="lg_success_tint">#123222</color>
+    <color name="lg_warning">#FFB547</color>
+    <color name="lg_warning_tint">#3A2710</color>
+    <color name="lg_focus">#8DB4FF</color>
+    <color name="lg_map_layer_low">#1A2B47</color>
+    <color name="lg_map_layer_mid">#3E6BB8</color>
+    <color name="lg_map_layer_high">#B7CEFF</color>
+    <color name="lg_neutral_fill">#3A4A66</color>
+    <color name="lg_card_shadow">#00000000</color>
+</resources>

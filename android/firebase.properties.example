@@ -1,0 +1,29 @@
+# הגדרת FCM (השכמה) לאפליקציית LifeGuard לאנדרואיד - רשות.
+#
+# בלי הקובץ firebase.properties האפליקציה נבנית ועובדת כרגיל (קבלת קריאות דרך החיבור הפתוח של השירות),
+# ובבדיקת המוכנות מופיע "FCM לא מוגדר".
+#
+# איך מגדירים:
+#  1. https://console.firebase.google.com -> Add project (אפשר בלי Google Analytics).
+#  2. Project settings (גלגל השיניים) -> General -> Your apps -> Add app -> Android,
+#     Android package name: org.lifeguard.app  (אין צורך להוריד את google-services.json - הפרויקט לא משתמש בו).
+#  3. מאותו מסך (Project settings -> General):
+#       fcm.projectId = Project ID              (למשל lifeguard-12345)
+#       fcm.senderId  = Project number          (ספרות בלבד; מופיע גם ב-Cloud Messaging -> Sender ID)
+#     ומתחת ל-Your apps -> האפליקציה org.lifeguard.app:
+#       fcm.appId     = App ID                  (בפורמט 1:<Project number>:android:<hex>)
+#     ו-Web API key (ב-General; או בקובץ google-services.json כ-current_key):
+#       fcm.apiKey    = API key                 (מתחיל ב-AIza)
+#  4. להעתיק את הקובץ הזה ל-android/firebase.properties (הקובץ ב-.gitignore) ולמלא את הערכים.
+#  5. לבנות מחדש: android/build_local.sh assembleDebug
+#
+# אלה מזהים ציבוריים של האפליקציה (נכנסים ל-APK), לא סודות. הסוד הוא חשבון השירות של השרת:
+# Project settings -> Service accounts -> Generate new private key -> קובץ JSON לשרת בלבד, דרך
+# משתנה הסביבה LIFEGUARD_FCM_SERVICE_ACCOUNT=<נתיב לקובץ>. לעולם לא לשים אותו כאן או באפליקציה.
+#
+# ערך שמכיל REPLACE נחשב "לא מוגדר".
+
+fcm.apiKey=REPLACE_WITH_WEB_API_KEY
+fcm.appId=REPLACE_WITH_APP_ID
+fcm.projectId=REPLACE_WITH_PROJECT_ID
+fcm.senderId=REPLACE_WITH_PROJECT_NUMBER

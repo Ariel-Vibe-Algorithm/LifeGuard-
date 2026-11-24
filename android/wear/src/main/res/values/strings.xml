@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeGuard</string>
+    <string name="tile_label">LifeGuard SOS</string>
+    <string name="sos_hold">SOS\nהחזק/י 2 שנ\'</string>
+    <string name="sos_desc">כפתור חירום. החזק/י שתי שניות כדי לשלוח קריאת חירום דרך הטלפון</string>
+    <string name="cancel">ביטול</string>
+    <string name="sending_in">שולח בעוד %1$d</string>
+    <string name="cancelled">בוטל - לא נשלח כלום</string>
+    <string name="call_100">התקשר/י 100</string>
+    <string name="call_101">101 מד\"א</string>
+    <string name="retry">נסה/י שוב</string>
+    <string name="no_dialer">אין חייגן בשעון (שעון בלי סים?). התקשר/י 100 מהטלפון או מכל טלפון זמין.</string>
+    <string name="fall_setting">זיהוי נפילה</string>
+    <string name="fall_mode_wakeup">פעיל. חיישן "מעורר" עם אצווה - חיסכון בסוללה.</string>
+    <string name="fall_mode_wakelock">פעיל. אין חיישן "מעורר" בשעון: המעבד נשאר ער בזמן הניטור - צריכת סוללה גבוהה יותר.</string>
+    <string name="fall_mode_off">כבוי. אין דגימת חיישנים.</string>
+    <string name="fall_no_sensor">אין חיישן תאוצה בשעון - זיהוי נפילה לא זמין.</string>
+    <string name="fall_title">הכל בסדר?</string>
+    <string name="fall_detected">זוהתה נפילה</string>
+    <string name="fall_ok">אני בסדר</string>
+    <string name="fall_help">צריך/ה עזרה</string>
+    <string name="fall_countdown">בלי תשובה - נשלח לטלפון בעוד %1$d</string>
+    <string name="fall_dismissed">טוב לשמוע. לא נשלח כלום.</string>
+    <string name="ch_fall">\"הכל בסדר?\" אחרי נפילה</string>
+    <string name="ch_monitor">זיהוי נפילה פעיל</string>
+    <string name="ch_status">מצב קריאת החירום</string>
+    <string name="monitor_text">זיהוי נפילה פעיל</string>
+    <string name="notif_permission_note">בלי הרשאת התראות לא תופיע התראה על נפילה כשהמסך כבוי.</string>
+</resources>

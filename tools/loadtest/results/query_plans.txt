@@ -1,0 +1,13 @@
+_latest_location                     -> SCAN incident_locations
+dispatch EXISTS location             -> SCAN i | CORRELATED SCALAR SUBQUERY 1 | SCAN l
+timeline                             -> SCAN incident_events
+messages view                        -> SCAN messages
+message rate limit                   -> SCAN messages
+_volunteer_eligible                  -> SCAN recipients
+inbox                                -> SCAN r USING COVERING INDEX sqlite_autoindex_recipients_1 | SEARCH i USING INDEX sqlite_autoindex_incidents_1 (id=?)
+_expire_invitations (every tick)     -> SCAN invitations
+escalation (every tick)              -> SCAN r | SEARCH i USING INDEX sqlite_autoindex_incidents_1 (id=?)
+_view_for all volunteers             -> SCAN volunteers
+walk quota                           -> SCAN street_observations
+escort_tick                          -> SCAN escorts
+cursor unreceived                    -> SEARCH n USING INDEX idx_notif_user (username=?)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Temporary camera captures for volunteer identity verification (ID photo / selfie).
+     Deleted right after they are downscaled/re-encoded in memory, and when the screen closes. -->
+<paths>
+    <cache-path name="identity" path="identity/" />
+</paths>

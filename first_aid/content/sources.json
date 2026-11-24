@@ -1,0 +1,107 @@
+{
+ "generated_from": "SOURCES_AND_REVIEW.md",
+ "sources": [
+  {
+   "id": "AHA_ADULT_2025",
+   "title": "American Heart Association – 2025 Adult Basic Life Support Guidelines",
+   "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+   "description": "החייאת מבוגרים, זיהוי דום לב, AED, קצב ועומק לחיצות והנחיות חנק."
+  },
+  {
+   "id": "AHA_PED_2025",
+   "title": "American Heart Association / American Academy of Pediatrics – 2025 Pediatric Basic Life Support Guidelines",
+   "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+   "description": "החייאת ילדים ותינוקות, חנק בתינוקות וילדים, AED וטכניקות לחיצות חזה."
+  },
+  {
+   "id": "AHA_FIRST_AID_2024",
+   "title": "AHA / American Red Cross – 2024 First Aid Guidelines",
+   "url": "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines",
+   "description": "הנחיות עזרה ראשונה מבוססות ראיות."
+  },
+  {
+   "id": "RED_CROSS_LEARN",
+   "title": "American Red Cross – Learn First Aid",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid",
+   "description": "מאגר נושאים: חנק, דימום, כוויות, התייבשות, חום, אלרגיה, הרעלה, שבץ ועוד."
+  },
+  {
+   "id": "RED_CROSS_GUIDELINES",
+   "title": "American Red Cross – First Aid Guidelines Resource Center",
+   "url": "https://www.redcross.org/take-a-class/resources/guidelines",
+   "description": "עדכוני הנחיות עזרה ראשונה וסקירות מדעיות."
+  },
+  {
+   "id": "RED_CROSS_CHOKING_ADULT",
+   "title": "American Red Cross – Adult/Child Choking",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/adult-child-choking",
+   "description": "חנק במבוגרים וילדים: 5 טפיחות גב ו-5 לחיצות בטן בחסימה חמורה."
+  },
+  {
+   "id": "RED_CROSS_CHOKING_INFANT",
+   "title": "American Red Cross – Infant Choking",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/infant-choking",
+   "description": "חנק בתינוק: 5 טפיחות גב ו-5 לחיצות חזה; אין לחיצות בטן."
+  },
+  {
+   "id": "RED_CROSS_BLEEDING",
+   "title": "American Red Cross – Life-Threatening External Bleeding",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/bleeding-life-threatening-external",
+   "description": "לחץ ישיר, חוסם עורקים מסחרי, חבישת פצע וחפץ תקוע."
+  },
+  {
+   "id": "RED_CROSS_BURNS",
+   "title": "American Red Cross – Burns",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/burns",
+   "description": "קירור כוויות, כיסוי והפניה לטיפול."
+  },
+  {
+   "id": "RED_CROSS_SEIZURE",
+   "title": "American Red Cross – Seizures",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/seizures",
+   "description": "הגנה מפציעה בזמן פרכוס ומתי להזעיק עזרה."
+  },
+  {
+   "id": "RED_CROSS_STROKE",
+   "title": "American Red Cross – Stroke",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/stroke",
+   "description": "זיהוי סימני שבץ ותגובה מהירה."
+  },
+  {
+   "id": "RED_CROSS_OPIOID",
+   "title": "American Red Cross – Opioid Overdose",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/opioid-overdose",
+   "description": "מנת יתר אופיואידית, החייאה ונלוקסון."
+  },
+  {
+   "id": "RED_CROSS_POISON",
+   "title": "American Red Cross – Poison Exposure",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/poison-exposure",
+   "description": "חשד להרעלה, איסוף פרטים, אי-גרימת הקאה והימנעות מאוכל/שתייה ללא הנחיה."
+  },
+  {
+   "id": "RED_CROSS_SNAKE",
+   "title": "American Red Cross – Venomous Snake Bites",
+   "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/venomous-snake-bites",
+   "description": "הכשת נחש: מנוחה, קיבוע, הימנעות מחיתוך/מציצה/קרח/חוסם עורקים."
+  },
+  {
+   "id": "ISRAEL_MOH_POISON",
+   "title": "משרד הבריאות – מניעת הרעלה בילדים",
+   "url": "https://me.health.gov.il/parenting/raising-children/safe-environment/home-safety/pesticides/",
+   "description": "בישראל: פנייה למכון הארצי למידע בהרעלות, שטיפת עור/עיניים, אין לגרום להקאה."
+  },
+  {
+   "id": "RAMBAM_POISON",
+   "title": "הקריה הרפואית רמב״ם – המכון הארצי למידע בהרעלות",
+   "url": "https://www.rambam.org.il/departmentsandclinics/laboratories-division/clinical-pharmacology-and-toxicology/national-center-for-the-treatment-of-poisoning/",
+   "description": "קו ייעוץ להרעלות חריפות 04-7771900, 24 שעות ביממה."
+  },
+  {
+   "id": "NHS_HEAT",
+   "title": "NHS – Heat exhaustion and heatstroke",
+   "url": "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/",
+   "description": "סימני מכת חום וקירור מיידי."
+  }
+ ]
+}

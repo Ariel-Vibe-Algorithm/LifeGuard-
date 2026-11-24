@@ -1,0 +1,73 @@
+{
+ "rows": [
+  {
+   "lang": "he_il",
+   "clips": 792,
+   "hours": 2.0507,
+   "old_any": 7,
+   "old_med": 0,
+   "new_any": 7,
+   "new_med": 0
+  },
+  {
+   "lang": "ar_eg",
+   "clips": 428,
+   "hours": 1.3015008333333342,
+   "old_any": 2,
+   "old_med": 0,
+   "new_any": 2,
+   "new_med": 0
+  },
+  {
+   "lang": "ru_ru",
+   "clips": 775,
+   "hours": 2.4982833333333327,
+   "old_any": 14,
+   "old_med": 0,
+   "new_any": 8,
+   "new_med": 0
+  },
+  {
+   "lang": "en_us",
+   "clips": 647,
+   "hours": 1.7744166666666663,
+   "old_any": 9,
+   "old_med": 1,
+   "new_any": 9,
+   "new_med": 0
+  },
+  {
+   "lang": "am_et",
+   "clips": 516,
+   "hours": 1.6126999999999978,
+   "old_any": 2,
+   "old_med": 0,
+   "new_any": 3,
+   "new_med": 0
+  }
+ ],
+ "total": {
+  "old_any": 34,
+  "old_med": 1,
+  "new_any": 29,
+  "new_med": 0
+ },
+ "hours": 9.237600833333332,
+ "words": {
+  "old": {
+   "עזרה": 5,
+   "משטרה": 5,
+   "police": 10,
+   "help": 6,
+   "stop": 9
+  },
+  "new": {
+   "עזרה": 5,
+   "משטרה": 5,
+   "police": 10,
+   "help": 6,
+   "stop it": 1,
+   "הצילו": 2
+  }
+ }
+}

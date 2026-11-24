@@ -1,0 +1,89 @@
+machine: {'cpu_count': 12, 'python': '3.11.0', 'platform': 'win32', 'time': '2026-11-07 11:07:13', 'cpu_percent_busy': 25.8, 'cpu_physical': 6, 'mem_total_gb': 31.5, 'mem_available_gb': 18.7, 'top_processes_cpu_percent': [('System Idle Process', 1050), ('python.exe', 60), ('dwm.exe', 12), ('msedgewebview2.exe', 8), ('Code.exe', 8)]}
+rep 1/3  server pid=28336
+  POST /auth/login             c=1        8.4 ok/s  p50=117.3 p95=130.5 p99=142.3 ms  cpu=0.97 lock=0.025 {200: 41}
+  POST /auth/login             c=16      11.2 ok/s  p50=1355.4 p95=1846.9 p99=2099.5 ms  cpu=10.25 lock=0.074 {200: 64}
+  POST /auth/login             c=64      21.0 ok/s  p50=1697.9 p95=3257.2 p99=4137.0 ms  cpu=10.72 lock=0.174 {200: 134, -2: 1}
+  GET /circle                  c=1     1371.8 ok/s  p50=0.6 p95=1.4 p99=2.3 ms  cpu=0.74 lock=0.292 {200: 6816}
+  GET /circle                  c=16    1108.0 ok/s  p50=12.3 p95=31.1 p99=44.6 ms  cpu=1.22 lock=0.617 {200: 5438}
+  GET /circle                  c=64    1152.1 ok/s  p50=44.5 p95=119.5 p99=175.0 ms  cpu=1.29 lock=0.621 {200: 5732}
+  POST /incidents              c=1       27.4 ok/s  p50=35.8 p95=41.9 p99=55.2 ms  cpu=0.52 lock=0.853 {200: 135}
+  POST /incidents              c=16      21.1 ok/s  p50=639.8 p95=1359.6 p99=1378.8 ms  cpu=0.58 lock=0.876 {200: 112}
+  POST /incidents              c=64      19.7 ok/s  p50=2824.8 p95=3412.1 p99=4083.9 ms  cpu=0.69 lock=0.863 {200: 128}
+  (64 active incidents for the next tests)
+  POST /incidents/{id}/location c=1      113.0 ok/s  p50=7.9 p95=13.1 p99=19.8 ms  cpu=0.34 lock=0.844 {200: 551}
+  POST /incidents/{id}/location c=16     124.9 ok/s  p50=119.4 p95=215.6 p99=284.8 ms  cpu=0.43 lock=0.91 {200: 631}
+  POST /incidents/{id}/location c=64     142.2 ok/s  p50=394.6 p95=852.6 p99=1034.4 ms  cpu=0.49 lock=0.91 {200: 762}
+  GET /incidents/{id} (owner)  c=1      345.8 ok/s  p50=2.0 p95=7.1 p99=11.1 ms  cpu=0.93 lock=0.519 {200: 1723}
+  GET /incidents/{id} (owner)  c=16     497.8 ok/s  p50=28.5 p95=57.8 p99=76.8 ms  cpu=1.22 lock=0.623 {200: 2478}
+  GET /incidents/{id} (owner)  c=64     370.9 ok/s  p50=109.8 p95=403.2 p99=658.2 ms  cpu=1.09 lock=0.596 {200: 1819}
+  GET /incidents/{id} (contact) c=1      606.3 ok/s  p50=1.0 p95=4.1 p99=7.6 ms  cpu=0.9 lock=0.463 {200: 3001}
+  GET /incidents/{id} (contact) c=16     398.7 ok/s  p50=37.1 p95=62.8 p99=74.7 ms  cpu=1.18 lock=0.571 {200: 1859}
+  GET /incidents/{id} (contact) c=64     387.4 ok/s  p50=156.1 p95=247.6 p99=615.6 ms  cpu=1.2 lock=0.571 {200: 1757}
+  POST /incidents/{id}/messages c=1       67.2 ok/s  p50=8.5 p95=18.2 p99=23.9 ms  cpu=0.53 lock=0.799 {200: 332}
+  POST /incidents/{id}/messages c=16      61.5 ok/s  p50=171.3 p95=270.1 p99=381.0 ms  cpu=0.6 lock=0.861 {200: 359, 429: 18}
+  POST /incidents/{id}/messages c=64      69.8 ok/s  p50=534.0 p95=1605.4 p99=2013.4 ms  cpu=0.51 lock=0.842 {429: 283, 200: 400}
+  GET /notifications wait=0    c=1      834.0 ok/s  p50=0.8 p95=2.9 p99=4.5 ms  cpu=0.79 lock=0.224 {200: 4160}
+  GET /notifications wait=0    c=16     268.5 ok/s  p50=47.3 p95=142.5 p99=211.3 ms  cpu=1.0 lock=0.354 {200: 1348}
+  GET /notifications wait=0    c=64     146.5 ok/s  p50=331.8 p95=1190.0 p99=1951.6 ms  cpu=0.77 lock=0.307 {200: 795}
+  long-poll delivery c=1: {'n': 8, 'p50': 19.9, 'p95': 88.8, 'p99': 97.4, 'max': 99.5, 'mean': 34.1, 'unit': 'ms'}
+  long-poll delivery c=16: {'n': 128, 'p50': 21.4, 'p95': 59.3, 'p99': 84.3, 'max': 92.7, 'mean': 25.9, 'unit': 'ms'}
+  long-poll delivery c=64: {'n': 512, 'p50': 75.8, 'p95': 222.6, 'p99': 345.2, 'max': 487.4, 'mean': 97.2, 'unit': 'ms'}
+rep 2/3  server pid=31220
+  POST /auth/login             c=1        3.8 ok/s  p50=268.2 p95=300.9 p99=302.4 ms  cpu=0.98 lock=0.014 {200: 19}
+  POST /auth/login             c=16      12.7 ok/s  p50=1092.8 p95=2452.2 p99=2672.7 ms  cpu=6.82 lock=0.088 {200: 74}
+  POST /auth/login             c=64      10.8 ok/s  p50=1332.2 p95=4665.1 p99=5794.1 ms  cpu=5.33 lock=0.09 {200: 75}
+  GET /circle                  c=1      420.2 ok/s  p50=1.7 p95=5.8 p99=8.2 ms  cpu=0.72 lock=0.286 {200: 2090}
+  GET /circle                  c=16     737.1 ok/s  p50=18.7 p95=45.4 p99=58.2 ms  cpu=1.23 lock=0.609 {200: 3606}
+  GET /circle                  c=64     792.4 ok/s  p50=66.1 p95=164.4 p99=219.9 ms  cpu=1.32 lock=0.621 {200: 3982}
+  POST /incidents              c=1       21.0 ok/s  p50=45.6 p95=67.0 p99=78.4 ms  cpu=0.62 lock=0.798 {200: 103}
+  POST /incidents              c=16      14.8 ok/s  p50=1056.0 p95=1286.8 p99=1309.3 ms  cpu=0.78 lock=0.809 {200: 80}
+  POST /incidents              c=64      14.0 ok/s  p50=4020.8 p95=5149.2 p99=5239.2 ms  cpu=0.75 lock=0.814 {200: 120}
+  (64 active incidents for the next tests)
+  POST /incidents/{id}/location c=1       79.1 ok/s  p50=11.5 p95=19.2 p99=26.3 ms  cpu=0.51 lock=0.761 {200: 376}
+  POST /incidents/{id}/location c=16      73.3 ok/s  p50=156.1 p95=603.6 p99=1071.1 ms  cpu=0.46 lock=0.858 {200: 376}
+  POST /incidents/{id}/location c=64      73.3 ok/s  p50=752.9 p95=1576.5 p99=2116.6 ms  cpu=0.6 lock=0.842 {200: 396}
+  GET /incidents/{id} (owner)  c=1      161.4 ok/s  p50=5.1 p95=13.0 p99=15.2 ms  cpu=1.02 lock=0.598 {200: 805}
+  GET /incidents/{id} (owner)  c=16     254.5 ok/s  p50=56.8 p95=94.0 p99=185.9 ms  cpu=1.1 lock=0.611 {200: 1259}
+  GET /incidents/{id} (owner)  c=64     415.3 ok/s  p50=137.8 p95=275.7 p99=741.1 ms  cpu=1.15 lock=0.615 {200: 2081}
+  GET /incidents/{id} (contact) c=1      730.7 ok/s  p50=0.9 p95=3.1 p99=5.0 ms  cpu=0.92 lock=0.435 {200: 3613}
+  GET /incidents/{id} (contact) c=16     601.9 ok/s  p50=24.3 p95=47.6 p99=62.9 ms  cpu=1.21 lock=0.573 {200: 2839}
+  GET /incidents/{id} (contact) c=64     554.1 ok/s  p50=98.5 p95=214.5 p99=583.8 ms  cpu=1.22 lock=0.583 {200: 2282}
+  POST /incidents/{id}/messages c=1       86.6 ok/s  p50=6.9 p95=16.9 p99=27.5 ms  cpu=0.43 lock=0.803 {200: 438}
+  POST /incidents/{id}/messages c=16      94.5 ok/s  p50=74.9 p95=256.0 p99=429.1 ms  cpu=0.52 lock=0.91 {200: 516, 429: 18}
+  POST /incidents/{id}/messages c=64      88.1 ok/s  p50=427.1 p95=957.6 p99=1281.3 ms  cpu=0.52 lock=0.891 {429: 289, 200: 518}
+  GET /notifications wait=0    c=1     1987.9 ok/s  p50=0.4 p95=1.0 p99=2.0 ms  cpu=0.71 lock=0.192 {200: 9871}
+  GET /notifications wait=0    c=16     582.6 ok/s  p50=22.3 p95=56.1 p99=80.6 ms  cpu=1.15 lock=0.375 {200: 2902}
+  GET /notifications wait=0    c=64     819.3 ok/s  p50=65.4 p95=168.0 p99=268.6 ms  cpu=1.16 lock=0.387 {200: 4146}
+  long-poll delivery c=1: {'n': 8, 'p50': 11.4, 'p95': 14.2, 'p99': 14.6, 'max': 14.7, 'mean': 11.2, 'unit': 'ms'}
+  long-poll delivery c=16: {'n': 128, 'p50': 12.1, 'p95': 35.5, 'p99': 56.3, 'max': 62.5, 'mean': 14.9, 'unit': 'ms'}
+  long-poll delivery c=64: {'n': 512, 'p50': 24.6, 'p95': 80.0, 'p99': 118.2, 'max': 168.0, 'mean': 31.7, 'unit': 'ms'}
+rep 3/3  server pid=40808
+  POST /auth/login             c=1        7.1 ok/s  p50=120.5 p95=222.8 p99=315.4 ms  cpu=0.96 lock=0.016 {200: 35}
+  POST /auth/login             c=16      18.3 ok/s  p50=806.3 p95=1173.3 p99=1232.9 ms  cpu=9.84 lock=0.078 {200: 99}
+  POST /auth/login             c=64      19.6 ok/s  p50=1704.2 p95=3432.2 p99=4320.3 ms  cpu=10.28 lock=0.128 {200: 132, -2: 3}
+  GET /circle                  c=1      733.1 ok/s  p50=0.8 p95=3.8 p99=6.1 ms  cpu=0.69 lock=0.282 {200: 3641}
+  GET /circle                  c=16     846.5 ok/s  p50=16.0 p95=40.1 p99=53.7 ms  cpu=1.23 lock=0.62 {200: 4147}
+  GET /circle                  c=64     766.1 ok/s  p50=70.4 p95=168.8 p99=222.0 ms  cpu=1.3 lock=0.626 {200: 3815}
+  POST /incidents              c=1       20.6 ok/s  p50=44.5 p95=71.5 p99=83.8 ms  cpu=0.64 lock=0.792 {200: 101}
+  POST /incidents              c=16      16.7 ok/s  p50=908.7 p95=1106.9 p99=1203.3 ms  cpu=0.75 lock=0.823 {200: 96}
+  POST /incidents              c=64      15.2 ok/s  p50=3397.3 p95=4894.3 p99=4950.1 ms  cpu=0.71 lock=0.832 {200: 121}
+  (64 active incidents for the next tests)
+  POST /incidents/{id}/location c=1      103.9 ok/s  p50=8.9 p95=14.6 p99=19.7 ms  cpu=0.41 lock=0.828 {200: 488}
+  POST /incidents/{id}/location c=16     108.7 ok/s  p50=138.1 p95=249.3 p99=321.8 ms  cpu=0.45 lock=0.911 {200: 550}
+  POST /incidents/{id}/location c=64     128.8 ok/s  p50=439.5 p95=913.2 p99=1387.7 ms  cpu=0.49 lock=0.909 {200: 693}
+  GET /incidents/{id} (owner)  c=1      605.0 ok/s  p50=1.1 p95=4.1 p99=6.2 ms  cpu=0.84 lock=0.435 {200: 3009}
+  GET /incidents/{id} (owner)  c=16     647.9 ok/s  p50=22.1 p95=45.6 p99=61.8 ms  cpu=1.22 lock=0.603 {200: 3205}
+  GET /incidents/{id} (owner)  c=64     553.3 ok/s  p50=101.9 p95=201.5 p99=291.9 ms  cpu=1.21 lock=0.611 {200: 2784}
+  GET /incidents/{id} (contact) c=1      382.3 ok/s  p50=1.5 p95=7.0 p99=14.3 ms  cpu=0.94 lock=0.479 {200: 1882}
+  GET /incidents/{id} (contact) c=16     353.5 ok/s  p50=41.3 p95=74.2 p99=87.8 ms  cpu=1.19 lock=0.571 {200: 1688}
+  GET /incidents/{id} (contact) c=64     235.1 ok/s  p50=217.5 p95=571.2 p99=742.3 ms  cpu=1.08 lock=0.552 {200: 1111}
+  POST /incidents/{id}/messages c=1       59.1 ok/s  p50=10.7 p95=23.7 p99=29.7 ms  cpu=0.6 lock=0.838 {200: 288}
+  POST /incidents/{id}/messages c=16      65.9 ok/s  p50=169.1 p95=250.8 p99=309.8 ms  cpu=0.6 lock=0.866 {200: 356, 429: 18}
+  POST /incidents/{id}/messages c=64      66.7 ok/s  p50=642.0 p95=1173.9 p99=1732.0 ms  cpu=0.64 lock=0.849 {429: 286, 200: 379}
+  GET /notifications wait=0    c=1      344.3 ok/s  p50=1.8 p95=7.0 p99=9.5 ms  cpu=0.81 lock=0.266 {200: 1710}
+  GET /notifications wait=0    c=16     192.6 ok/s  p50=75.4 p95=142.3 p99=208.5 ms  cpu=1.02 lock=0.368 {200: 961}
+  GET /notifications wait=0    c=64     260.8 ok/s  p50=227.1 p95=355.2 p99=1336.6 ms  cpu=1.12 lock=0.406 {200: 1375}
+  long-poll delivery c=1: {'n': 8, 'p50': 10.4, 'p95': 18.0, 'p99': 18.9, 'max': 19.1, 'mean': 11.5, 'unit': 'ms'}
+  long-poll delivery c=16: {'n': 128, 'p50': 24.5, 'p95': 107.9, 'p99': 181.0, 'max': 191.8, 'mean': 40.1, 'unit': 'ms'}
+  long-poll delivery c=64: {'n': 512, 'p50': 44.6, 'p95': 154.8, 'p99': 211.3, 'max': 297.2, 'mean': 59.0, 'unit': 'ms'}
+saved: C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\results\quiet_baseline_20261107_111528.json

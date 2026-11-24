@@ -1,0 +1,132 @@
+{
+ "machine": {
+  "cpu_count": 12,
+  "python": "3.11.0",
+  "platform": "win32",
+  "time": "2026-11-07 11:44:37",
+  "cpu_percent_busy": 13.2,
+  "cpu_physical": 6,
+  "mem_total_gb": 31.5,
+  "mem_available_gb": 18.2,
+  "top_processes_cpu_percent": [
+   [
+    "System Idle Process",
+    1094
+   ],
+   [
+    "python.exe",
+    65
+   ],
+   [
+    "dwm.exe",
+    11
+   ],
+   [
+    "msedgewebview2.exe",
+    8
+   ],
+   [
+    "Code.exe",
+    6
+   ]
+  ]
+ },
+ "3a_profile_woken_tick_200_waiting_50_unverified_vols": {
+  "ms": 1191.3,
+  "profile": "         516001 function calls in 1.191 seconds\n\n   Ordered by: cumulative time\n   List reduced from 51 to 35 due to restriction <35>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.000    0.000    1.191    1.191 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\tools\\loadtest\\profile_hotpaths.py:158(<lambda>)\n        1    0.000    0.000    1.191    1.191 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1350(run_escalation_tick)\n        1    0.004    0.004    1.188    1.188 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1231(run_dispatch_queue)\n      150    0.043    0.000    1.152    0.008 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1277(_dispatch_next_volunteer)\n    55157    0.124    0.000    0.936    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:321(_q)\n     7800    0.025    0.000    0.621    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1190(_incident_priority)\n     7850    0.033    0.000    0.484    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1169(owner_abuse)\n    55157    0.484    0.000    0.484    0.000 {method 'execute' of 'sqlite3.Connection' objects}\n    55157    0.237    0.000    0.237    0.000 {method 'fetchall' of 'sqlite3.Cursor' objects}\n     7500    0.017    0.000    0.204    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\features.py:375(_volunteer_eligible)\n     7650    0.008    0.000    0.180    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1147(_incident_row)\n    55157    0.081    0.000    0.081    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:325(<listcomp>)\n     7500    0.031    0.000    0.045    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:229(haversine_km)\n     7800    0.021    0.000    0.043    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\dispatch.py:56(priority)\n      150    0.003    0.000    0.023    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1219(_busy_volunteers)\n     7850    0.011    0.000    0.014    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:30(assess)\n     7800    0.012    0.000    0.012    0.000 {built-in method builtins.round}\n    55158    0.011    0.000    0.011    0.000 {method '__exit__' of '_thread.RLock' objects}\n     8000    0.006    0.000    0.008    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1186(_effective_level)\n    39000    0.008    0.000    0.008    0.000 {method 'get' of 'dict' objects}\n     7500    0.004    0.000    0.005    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\features.py:39(_now)\n    15800    0.005    0.000    0.005    0.000 {built-in method builtins.max}\n    15500    0.005    0.000    0.005    0.000 {built-in method builtins.min}\n    30000    0.005    0.000    0.005    0.000 {built-in method math.radians}\n      150    0.000    0.000    0.004    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1150(_latest_location)\n    15000    0.003    0.000    0.003    0.000 {built-in method math.sin}\n    15000    0.003    0.000    0.003    0.000 {built-in method math.cos}\n        1    0.000    0.000    0.003    0.003 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\signal_watch.py:28(signal_tick)\n     7500    0.002    0.000    0.002    0.000 {built-in method math.sqrt}\n     7501    0.002    0.000    0.002    0.000 {built-in method time.time}\n     7500    0.002    0.000    0.002    0.000 {built-in method math.asin}\n     8000    0.002    0.000    0.002    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:59(effective_level)\n        1    0.000    0.000    0.001    0.001 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\dispatch.py:81(plan)\n        1    0.000    0.000    0.000    0.000 {built-in method builtins.sorted}\n      200    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:50(allowed_slots)\n\n\n"
+ },
+ "3a2_profile_woken_tick_tottime": {
+  "ms": 7.6,
+  "profile": "         2401 function calls in 0.008 seconds\n\n   Ordered by: internal time\n   List reduced from 33 to 25 due to restriction <25>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n      257    0.003    0.000    0.003    0.000 {method 'execute' of 'sqlite3.Connection' objects}\n      257    0.002    0.000    0.002    0.000 {method 'fetchall' of 'sqlite3.Cursor' objects}\n      257    0.001    0.000    0.001    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:325(<listcomp>)\n      257    0.001    0.000    0.007    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:321(_q)\n        1    0.000    0.000    0.007    0.007 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1231(run_dispatch_queue)\n       50    0.000    0.000    0.003    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1169(owner_abuse)\n      450    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}\n       50    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:30(assess)\n        1    0.000    0.000    0.001    0.001 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\signal_watch.py:28(signal_tick)\n      258    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}\n       50    0.000    0.000    0.000    0.000 {built-in method builtins.sum}\n        1    0.000    0.000    0.008    0.008 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1350(run_escalation_tick)\n       50    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1186(_effective_level)\n      100    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1259(<genexpr>)\n       50    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:50(allowed_slots)\n       50    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\dispatch.py:70(fanout)\n       50    0.000    0.000    0.000    0.000 {built-in method builtins.max}\n       50    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1199(_note_abuse)\n       50    0.000    0.000    0.000    0.000 {built-in method builtins.min}\n       50    0.000    0.000    0.000    0.000 {built-in method builtins.len}\n       50    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:59(effective_level)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\dispatch.py:81(plan)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:667(_expire_invitations)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:225(_now)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\features.py:135(features_tick)\n\n\n"
+ },
+ "3b_profile_create_incident_with_200_waiting": {
+  "ms": 1672.6,
+  "profile": "         519595 function calls in 1.673 seconds\n\n   Ordered by: cumulative time\n   List reduced from 97 to 30 due to restriction <30>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.000    0.000    1.673    1.673 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\tools\\loadtest\\profile_hotpaths.py:164(<lambda>)\n        1    0.000    0.000    1.672    1.672 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1023(create_incident)\n        1    0.006    0.006    1.664    1.664 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1231(run_dispatch_queue)\n      151    0.067    0.000    1.637    0.011 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1277(_dispatch_next_volunteer)\n    55532    0.172    0.000    1.291    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:321(_q)\n     7852    0.036    0.000    0.869    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1190(_incident_priority)\n    55538    0.681    0.000    0.681    0.000 {method 'execute' of 'sqlite3.Connection' objects}\n     7902    0.045    0.000    0.665    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1169(owner_abuse)\n    55532    0.314    0.000    0.314    0.000 {method 'fetchall' of 'sqlite3.Cursor' objects}\n     7550    0.025    0.000    0.291    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\features.py:375(_volunteer_eligible)\n     7704    0.011    0.000    0.254    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1147(_incident_row)\n    55532    0.111    0.000    0.111    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:325(<listcomp>)\n     7852    0.031    0.000    0.063    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\dispatch.py:56(priority)\n     7550    0.044    0.000    0.063    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:229(haversine_km)\n      151    0.005    0.000    0.034    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1219(_busy_volunteers)\n     7902    0.015    0.000    0.020    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:30(assess)\n     7852    0.019    0.000    0.019    0.000 {built-in method builtins.round}\n    55541    0.014    0.000    0.014    0.000 {method '__exit__' of '_thread.RLock' objects}\n        6    0.000    0.000    0.012    0.002 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:328(_x)\n        6    0.011    0.002    0.011    0.002 {method '__exit__' of 'sqlite3.Connection' objects}\n    39266    0.011    0.000    0.011    0.000 {method 'get' of 'dict' objects}\n     8053    0.009    0.000    0.011    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1186(_effective_level)\n     7550    0.006    0.000    0.008    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\features.py:39(_now)\n    15905    0.008    0.000    0.008    0.000 {built-in method builtins.max}\n    15603    0.007    0.000    0.007    0.000 {built-in method builtins.min}\n    30200    0.006    0.000    0.006    0.000 {built-in method math.radians}\n      153    0.000    0.000    0.006    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1150(_latest_location)\n    15100    0.005    0.000    0.005    0.000 {built-in method math.sin}\n    15100    0.004    0.000    0.004    0.000 {built-in method math.cos}\n        2    0.000    0.000    0.003    0.002 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:364(_event)\n\n\n"
+ },
+ "3c_get_incident_vs_volunteer_table_size": [
+  {
+   "volunteer_rows": 10,
+   "get_incident_ms": {
+    "n": 30,
+    "p50": 0.5,
+    "p95": 1.2,
+    "p99": 1.4,
+    "max": 1.4,
+    "mean": 0.6,
+    "unit": "ms"
+   }
+  },
+  {
+   "volunteer_rows": 10010,
+   "get_incident_ms": {
+    "n": 30,
+    "p50": 17.5,
+    "p95": 27.9,
+    "p99": 31.5,
+    "max": 32.5,
+    "mean": 18.6,
+    "unit": "ms"
+   }
+  },
+  {
+   "volunteer_rows": 50010,
+   "get_incident_ms": {
+    "n": 30,
+    "p50": 118.7,
+    "p95": 168.5,
+    "p99": 197.2,
+    "max": 205.9,
+    "mean": 126.4,
+    "unit": "ms"
+   }
+  }
+ ],
+ "3d_profile_get_incident_50k_volunteers": {
+  "ms": 133.6,
+  "profile": "         210 function calls in 0.134 seconds\n\n   Ordered by: internal time\n   List reduced from 42 to 20 due to restriction <20>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n       22    0.066    0.003    0.066    0.003 {method 'fetchall' of 'sqlite3.Cursor' objects}\n       22    0.042    0.002    0.042    0.002 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:325(<listcomp>)\n        1    0.013    0.013    0.013    0.013 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1441(<dictcomp>)\n       22    0.007    0.000    0.116    0.005 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:321(_q)\n        1    0.004    0.004    0.134    0.134 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1466(get_incident)\n       22    0.001    0.000    0.001    0.000 {method 'execute' of 'sqlite3.Connection' objects}\n        1    0.000    0.000    0.129    0.129 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1388(_view_for)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1642(_messages_view)\n        2    0.000    0.000    0.000    0.000 C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\decoder.py:332(decode)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1169(owner_abuse)\n       22    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\dispatch.py:56(priority)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1190(_incident_priority)\n        2    0.000    0.000    0.000    0.000 C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py:299(loads)\n        6    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:489(_display)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\lifeguard_server.py:1375(_access)\n       24    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\features.py:440(get_medical)\n        1    0.000    0.000    0.000    0.000 C:\\Users\\admin\\Downloads\\LifeGuard_Windows_Refresh\\lifeguard\\server\\abuse.py:30(assess)\n        4    0.000    0.000    0.000    0.000 {method 'match' of 're.Pattern' objects}\n\n\n"
+ },
+ "5_history_growth": [
+  {
+   "historical_location_and_event_rows": 0,
+   "proposed_indexes": false,
+   "active_incidents": 20,
+   "tick_ms_p50": 11.2,
+   "get_incident_ms_p50": 0.2
+  },
+  {
+   "historical_location_and_event_rows": 0,
+   "proposed_indexes": true,
+   "active_incidents": 20,
+   "tick_ms_p50": 11.8,
+   "get_incident_ms_p50": 0.1
+  },
+  {
+   "historical_location_and_event_rows": 100000,
+   "proposed_indexes": false,
+   "active_incidents": 20,
+   "tick_ms_p50": 408.6,
+   "get_incident_ms_p50": 9.6
+  },
+  {
+   "historical_location_and_event_rows": 100000,
+   "proposed_indexes": true,
+   "active_incidents": 20,
+   "tick_ms_p50": 15.4,
+   "get_incident_ms_p50": 0.2
+  },
+  {
+   "historical_location_and_event_rows": 400000,
+   "proposed_indexes": false,
+   "active_incidents": 20,
+   "tick_ms_p50": 1577.2,
+   "get_incident_ms_p50": 39.1
+  },
+  {
+   "historical_location_and_event_rows": 400000,
+   "proposed_indexes": true,
+   "active_incidents": 20,
+   "tick_ms_p50": 25.3,
+   "get_incident_ms_p50": 0.1
+  }
+ ]
+}

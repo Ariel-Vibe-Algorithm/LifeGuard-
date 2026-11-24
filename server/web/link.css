@@ -1,0 +1,67 @@
+/* Styles for the server-rendered SMS location page (/l/<token>). No JavaScript on that page.
+   Same look as the app: navy / white / blue tokens (design/tokens.json), system font, rounded card; text >= 4.5:1. */
+/* tokens: design/tokens.json (navy / white / blue) */
+:root {
+  --bg: #F4F6FA; --card: #FFFFFF; --text: #0B1426; --text2: #47546A; --sep: #D5DCE7; --brand: #0A1F44;
+  --tint-text: #0B63E5; --tint-fill: #0B63E5; --on-tint: #FFFFFF; --red: #D70015; --red-text: #D70015; --red-soft: #FFE9EA;
+  --focus: #0B63E5;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #060D1A; --card: #0F1B2E; --text: #EEF2F8; --text2: #B2BDD0; --sep: #26375A; --brand: #8DB4FF;
+    --tint-text: #4C93FF; --tint-fill: #4C93FF; --on-tint: #06101F; --red: #FF4F45; --red-text: #FF4F45; --red-soft: #3A1416;
+    --focus: #8DB4FF;
+  }
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Arial Hebrew", Arial, "Noto Sans Hebrew", sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  direction: rtl;
+  text-align: right;
+}
+body { min-height: 100vh; min-height: 100dvh; padding: 16px 16px 24px; }
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(10, 31, 68, .06), 0 4px 16px rgba(10, 31, 68, .06);
+}
+h1 { font-size: 28px; font-weight: 700; line-height: 1.2; margin: 0 0 12px; color: var(--red-text); }
+h2 { font-size: 20px; font-weight: 600; margin: 22px 0 8px; color: var(--text); }
+p { margin: 10px 0; }
+b { font-weight: 600; }
+ul { list-style: none; margin: 6px 0; padding: 0; }
+li { padding: 10px 0; border-bottom: .5px solid var(--sep); }
+li:last-child { border-bottom: none; }
+a { color: var(--tint-text); font-weight: 600; text-decoration: none; }
+.warn {
+  background: var(--red-soft);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: var(--red-text);
+  box-shadow: inset 0 0 0 1.5px var(--red);
+}
+.btn {
+  display: inline-block;
+  min-height: 50px;
+  padding: 13px 22px;
+  margin: 4px 0 4px 10px;
+  background: var(--tint-fill);
+  color: var(--on-tint);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+}
+.btn:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }

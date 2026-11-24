@@ -1,0 +1,66 @@
+
+[CONFIRMED] (High) ring_queued_contact_learns_active_sos_on_disconnect
+    {"recipients_before": [{"username": "mom", "state": "queued", "ring_status": "queued"}, {"username": "sis", "state": "notified", "ring_status": "ringing"}], "mom_GET_incident_status_while_queued": 404, "mom_notifications_before_disconnect": 0, "mom_notifications_for_incident_after_disconnect": [{"id": 2, "username": "mom", "incident_id": "inc_5d84669a507d4b7199fa07314ff8c21a", "type": "incident_closed", "payload": {"incident_id": "inc_5d84669a507d4b7199fa07314ff8c21a", "reason": "disconnected"}, "created_at": 1794044294.6048522, "received_at": null}], "mom_notifications_for_incident_after_owner_resolved": [{"id": 2, "username": "mom", "incident_id": "inc_5d84669a507d4b7199fa07314ff8c21a", "type": "incident_closed", "payload": {"incident_id": "inc_5d84669a507d4b7199fa07314ff8c21a", "reason": "disconnected"}, "created_at": 1794044294.6048522, "received_at": null}, {"id": 5, "username": "mom", "incident_id": "inc_5d84669a507d4b7199fa07314ff8c21a", "type": "incident_closed", "payload": {"incident_id": "inc_5d84669a507d4b7199fa07314ff8c21a", "reason": "resolved", "text": "האירוע של Dana Cohen הסתיים. מומלץ לוודא שהוא/היא בטוח/ה."}, "created_at": 1794044294.62844, "received_at": null}], "where": "server/lifeguard_server.py:937-945 (disconnect() includes state='queued'), 1529-1532"}
+
+[CONFIRMED] (High (safety: silent SOS reaches nobody)) ring_chain_stalls_when_ringing_contact_disconnects
+    {"before": [{"username": "mom", "state": "queued", "ring_status": "queued"}, {"username": "sis", "state": "notified", "ring_status": "ringing"}], "after_8s": [{"username": "mom", "role": "trusted", "state": "queued", "ring_status": "queued"}, {"username": "sis", "role": "trusted", "state": "revoked", "ring_status": "ringing"}], "mom_got_incident_new": false, "volunteer_got_incident_new": false, "control_incident_after_1s_(no_disconnect)": [{"username": "mom", "role": "trusted", "state": "notified", "ring_status": "ringing"}], "where": "_ring_tick lifeguard_server.py:1114-1121 only advances rows with state IN (notified,delivered); disconnect() sets state='revoked' and leaves ring_status='ringing' (937-941); _needs_volunteers/run_dispatch_queue see queued contacts -> no volunteers (1130-1138, 1245-1248)"}
+
+[CONFIRMED] (Medium (regression of previous finding #14)) volunteer_before_accept_gets_owner_name_on_close
+    {"owner_display_shown_to_volunteer_before_accept": "מישהו בקרבת מקום", "incident_closed_payloads": {"v1": [{"incident_id": "inc_9b691a0d3eaf40df9a6e51cdda431783", "reason": "cancelled", "text": "האירוע של Dana Cohen בוטל ע\"י המשתמש. מומלץ לוודא שהוא/היא בטוח/ה."}], "v2": [{"incident_id": "inc_9b691a0d3eaf40df9a6e51cdda431783", "reason": "cancelled", "text": "האירוע של Dana Cohen בוטל ע\"י המשתמש. מומלץ לוודא שהוא/היא בטוח/ה."}]}, "web_push_lock_screen": {"type": "incident_closed", "title": "ℹ️ האירוע הסתיים", "body": "האירוע של Dana Cohen בוטל ע\"י המשתמש. מומלץ לוודא שהוא/היא בטוח/ה.", "url": "/app/#home", "tag": "inc_9b691a0d3eaf40df9a6e51cdda431783"}, "where": "update_incident lifeguard_server.py:1529-1532 (loops all non-queued recipients incl. declined/expired/notified volunteers, text has owner display name)"}
+
+[CONFIRMED] (Medium) escort_updates_continue_after_disconnect
+    {"mom_GET_escort_status_after_disconnect": 404, "mom_notifications_after_disconnect": [{"id": 5, "username": "mom", "incident_id": null, "type": "escort_update", "payload": {"escort_id": "esc_ca84e176e98631bbdd9355b118ccd365", "event": "location"}, "created_at": 1794044308.472529, "received_at": null}, {"id": 7, "username": "mom", "incident_id": null, "type": "escort_update", "payload": {"escort_id": "esc_ca84e176e98631bbdd9355b118ccd365", "event": "arrived", "text": "✅ Dana Cohen הגיע/ה בשלום"}, "created_at": 1794044308.4787467, "received_at": null}], "where": "features.py:250-251, 281-282, 318-320 and signal_watch.py:39-41, 61-63 notify all escort_watchers rows without re-checking the relationship; disconnect() never deletes them"}
+
+[NOT VULNERABLE (checks hold)] (Info) chat_role_checks_and_queued_access
+    {"owner_sends_responder_quick": 400, "volunteer_msg_before_accept": 403, "volunteer_read_before_accept": 403, "queued_mom GET": 404, "queued_mom/messages": 404, "queued_mom/messages/read": 404, "queued_mom/respond": 404, "xss_stored_status": 200, "volunteer_sees_responders": ["Volunteer"], "volunteer_sees_read_by": [["Sis"]], "stored_text_raw": "<img src=x onerror=alert(1)><script>alert(2)</script>", "msg_codes_same_incident": {"200": 19, "429": 6}, "msg_codes_new_incident_after_limit": {"200": 20}, "owner_silent_incident_message_payload_quiet": []}
+
+[CONFIRMED] (Low) chat_read_receipts_reveal_family_names_to_volunteer
+    {"responders_list": ["Volunteer"], "read_by": [["Sis"]], "where": "_messages_view lifeguard_server.py:1640-1660"}
+
+[CONFIRMED] (Low) chat_rate_limit_resets_per_new_incident
+    {"same": {"200": 19, "429": 6}, "new_incident": {"200": 20}, "where": "add_message 1597-1600 (per incident+sender only; create_incident has no rate limit)"}
+
+[CONFIRMED] (Medium) password_change_old_password_bruteforce_unthrottled
+    {"statuses_40_wrong_guesses": {"403": 40}, "per_guess_ms": {"n": 40, "p50": 149.9, "p95": 163.8, "p99": 186.3, "max": 197.3, "mean": 150.5, "unit": "ms"}, "where": "change_password lifeguard_server.py:438-443"}
+
+[CONFIRMED] (Medium-Low) stolen_token_can_revoke_all_other_sessions_without_reauth
+    {"sessions_listed": 2, "revoke_result": {"revoked": 1}, "alice_phone_after": 401, "where": "revoke_sessions 462-472 (no password, no notification)"}
+
+[NOT VULNERABLE] (Info) session_id_prefix_cross_user_revoke
+    {"bob_revoke_alice_sid": {"revoked": 0}, "alice_session_after": 200, "note": "id = sha256(token)[:16] (64 bits), scoped by username=?"}
+
+[CONFIRMED (conditional)] (Medium) login_lockout_and_xff
+    {"no_proxy_31_fails_spoofed_xff": {"401": 30, "429": 1}, "no_proxy_victim_correct_password_same_ip": 429, "counter_never_decays_then_correct_pw": 429, "proxy_env_direct_60_guesses_rotating_xff": {"401": 60}, "proxy_env_guess_rate_per_s": 7.7, "proxy_env_last_xff_hop_used_(same_last_hop)": {"401": 4, "429": 4}, "where": "_client_ip lifeguard_server.py:1935-1941; login 400-417; _login_failed 391-398 (dict cleared at 50k keys => lockouts can be flushed by an attacker with many IPs/IPv6 /64)"}
+
+[CONFIRMED] (Medium (enables Sybil bypass of every per-account abuse control; PBKDF2 CPU cost)) registration_unlimited_no_rate_limit
+    {"statuses": {"200": 40}, "latency": {"n": 40, "p50": 125.0, "p95": 147.7, "p99": 169.1, "max": 177.8, "mean": 128.8, "unit": "ms"}, "where": "register lifeguard_server.py:369-381, route 1929-1932"}
+
+[CONFIRMED] (High) abuse_sybil_accounts_capture_all_volunteers
+    {"volunteers": 6, "attacker_accounts": 4, "volunteers_held_by_attacker": 6, "victim_volunteer_recipients_after_3s": [], "victim_events": ["created", "no_volunteer"], "note": "MAX_ACTIVE_WITH_VOLUNTEERS=2 and the hourly cap are per account; registration is free; victim cannot preempt (attacker priority >= victim + PREEMPT_MARGIN)", "where": "abuse.py:26, lifeguard_server.py:1250-1255, 1299-1308"}
+
+[CONFIRMED] (Low-Medium) abuse_quick_cancel_counter_bypassed_by_resolving
+    {"owner_abuse": {"res": {"limited": false, "capped": false, "reasons": [], "remaining_this_hour": 12}, "can": {"limited": true, "capped": false, "reasons": ["3 אירועים בוטלו תוך דקות אחרי שהוזעקו מתנדבים (7 ימים)"], "remaining_this_hour": 12}}, "where": "owner_abuse lifeguard_server.py:1173-1176 counts only status='cancelled' within 120 s; 'resolved' or cancel at 121 s is never counted"}
+
+[CONFIRMED] (Low) contact_notification_spam_unlimited (test/escort_started/incident_new are Web-Push types)
+    {"trusted_notify": {"200": 100}, "escorts_started": 20, "incidents_created": 30, "sis_notifications_by_type": {"escort_started": 20, "escort_update": 20, "incident_new": 30, "test": 100}, "where": "notify_trusted 998-1004, start_escort features.py:169-195, create_incident 1023 - none rate-limited"}
+
+[CONFIRMED] (Medium (DoS)) unlimited_concurrent_streams_per_user
+    {"sse_opened_with_one_token": 300, "server_threads_before": 7, "after": 307, "rss_mb": 50.2, "where": "_stream 2154-2180 / ThreadingHTTPServer: no per-user or global connection cap, 300 s per stream"}
+
+[CONFIRMED] (Medium (availability)) osrm_slow_or_down_blocks_dispatch_and_sos_creation
+    {"8_concurrent_POST_incidents_ms": {"n": 8, "p50": 4704.6, "p95": 4706.3, "p99": 4706.4, "max": 4706.5, "mean": 4701.2, "unit": "ms"}, "unrelated_GET_circle_ms": 20.2, "tick": {"n": 5, "p50": 2.8, "p95": 3115.8, "p99": 3737.3, "max": 3892.6, "mean": 781.2, "unit": "ms", "total_s": 3.906}, "dispatch_calls": {"n": 8, "p50": 6.6, "p95": 1535.8, "p99": 1536.5, "max": 1536.7, "mean": 578.0, "unit": "ms", "total_s": 4.624}, "ssrf": "base URL only from LIFEGUARD_OSRM_URL env (routing.py:36); user input reaches only float-formatted coordinates -> no SSRF from users", "where": "routing.py:19,59 (1.5 s timeout, no circuit breaker) called from _dispatch_next_volunteer 1328 under _dispatch_lock"}
+
+[CONFIRMED] (Medium-High (delays SOS lock-screen alerts for everyone)) web_push_single_worker_starved_by_one_user
+    {"attacker_subscriptions": 300, "queued_pushes_before_sos": 900, "victim_sos_push_delay_s(sim_30ms_rtt)": 29.2, "where": "features.py:95-133 one LG-WebPush thread, FIFO, no per-user subscription cap (push_subscribe 144-158); real push RTT 50-300 ms makes it worse"}
+
+[CONFIRMED] (Low-Medium) invitation_create_cancel_churn_unbounded
+    {"created_and_cancelled": 3000, "seconds": 26.2, "rows": 3000, "tick_expire_invitations_ms_before": {"n": 3, "p50": 0.3, "p95": 0.5, "p99": 0.5, "max": 0.5, "mean": 0.3, "unit": "ms", "total_s": 0.001}, "after": {"n": 3, "p50": 1.5, "p95": 1.9, "p99": 1.9, "max": 1.9, "mean": 1.6, "unit": "ms", "total_s": 0.005}, "query_plan": [{"id": 2, "parent": 0, "notused": 0, "detail": "SCAN invitations"}], "where": "create_invitation 675-684 caps only *pending*; _expire_invitations 667-673 runs every tick without an index on status"}
+    {'rows_total': 50000, 'walk_post': {'n': 50, 'p50': 34.5, 'p95': 62.0, 'p99': 66.0, 'max': 67.0, 'mean': 39.0, 'unit': 'ms'}, 'last_status': 429, 'GET_health_ms(unauth, PRAGMA quick_check)': 144.6, 'GET_my_walks_ms': 79.2}
+    {'rows_total': 100000, 'walk_post': {'n': 50, 'p50': 56.8, 'p95': 95.5, 'p99': 104.1, 'max': 106.3, 'mean': 64.1, 'unit': 'ms'}, 'last_status': 429, 'GET_health_ms(unauth, PRAGMA quick_check)': 292.6, 'GET_my_walks_ms': 99.8}
+    {'rows_total': 150000, 'walk_post': {'n': 50, 'p50': 93.7, 'p95': 161.2, 'p99': 183.9, 'max': 191.9, 'mean': 105.0, 'unit': 'ms'}, 'last_status': 429, 'GET_health_ms(unauth, PRAGMA quick_check)': 438.2, 'GET_my_walks_ms': 120.2}
+    {'rows_total': 200000, 'walk_post': {'n': 50, 'p50': 105.7, 'p95': 148.7, 'p99': 172.6, 'max': 191.2, 'mean': 114.4, 'unit': 'ms'}, 'last_status': 429, 'GET_health_ms(unauth, PRAGMA quick_check)': 581.1, 'GET_my_walks_ms': 146.4}
+
+[CONFIRMED] (Medium) walks_quota_per_account_and_unindexed_scans
+    {"statuses": {"200": 1000, "429": 4}, "curve": [{"rows_total": 50000, "walk_post": {"n": 50, "p50": 34.5, "p95": 62.0, "p99": 66.0, "max": 67.0, "mean": 39.0, "unit": "ms"}, "last_status": 429, "GET_health_ms(unauth, PRAGMA quick_check)": 144.6, "GET_my_walks_ms": 79.2}, {"rows_total": 100000, "walk_post": {"n": 50, "p50": 56.8, "p95": 95.5, "p99": 104.1, "max": 106.3, "mean": 64.1, "unit": "ms"}, "last_status": 429, "GET_health_ms(unauth, PRAGMA quick_check)": 292.6, "GET_my_walks_ms": 99.8}, {"rows_total": 150000, "walk_post": {"n": 50, "p50": 93.7, "p95": 161.2, "p99": 183.9, "max": 191.9, "mean": 105.0, "unit": "ms"}, "last_status": 429, "GET_health_ms(unauth, PRAGMA quick_check)": 438.2, "GET_my_walks_ms": 120.2}, {"rows_total": 200000, "walk_post": {"n": 50, "p50": 105.7, "p95": 148.7, "p99": 172.6, "max": 191.2, "mean": 114.4, "unit": "ms"}, "last_status": 429, "GET_health_ms(unauth, PRAGMA quick_check)": 581.1, "GET_my_walks_ms": 146.4}], "invalid_attribute_status": 500, "query_plan_quota_count": [{"id": 3, "parent": 0, "notused": 0, "detail": "SCAN street_observations"}], "db_mb": 74.96, "where": "submit_walk 1719-1726 (COUNT + json_extract without index, under the global lock); health 1774-1777 + storage.sqlite_health (PRAGMA quick_check on every unauthenticated call)"}
+
+saved: C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\results\sec_pocs_queued_leak_ring_stall_vol_identity_escort_chat_sessions_lockout_register_sybil_quick_cancel_spam_streams_osrm_push_invites_walks_20261107_114211.json

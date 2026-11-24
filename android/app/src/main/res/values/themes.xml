@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  LifeGuard theme: Material 3 DayNight (material 1.12, already a dependency) driven by the shared tokens
+  (design/tokens.json -> values/colors.xml + values-night/colors.xml). Native Android components, Apple-HIG calm:
+  grouped background, white/navy surfaces, one blue accent, red only for SOS.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Platform layer: values-v35 adds the edge-to-edge opt-out so status-bar colours keep working on Android 15 -->
+    <style name="Platform.LifeGuard" parent="Theme.Material3.DayNight" />
+    <style name="Platform.LifeGuard.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.LifeGuard" parent="Platform.LifeGuard">
+        <item name="colorPrimary">@color/lg_accent</item>
+        <item name="colorOnPrimary">@color/lg_on_accent</item>
+        <item name="colorPrimaryContainer">@color/lg_accent_tint</item>
+        <item name="colorOnPrimaryContainer">@color/lg_brand_navy</item>
+        <item name="colorPrimaryInverse">@color/lg_accent_tint</item>
+        <item name="colorSecondary">@color/lg_brand_navy_2</item>
+        <item name="colorOnSecondary">@color/lg_on_accent</item>
+        <item name="colorSecondaryContainer">@color/lg_accent_tint</item>
+        <item name="colorOnSecondaryContainer">@color/lg_brand_navy</item>
+        <item name="colorTertiary">@color/lg_brand_navy</item>
+        <item name="colorError">@color/lg_sos</item>
+        <item name="colorOnError">@color/lg_on_accent</item>
+        <item name="colorErrorContainer">@color/lg_sos_tint</item>
+        <item name="colorOnErrorContainer">@color/lg_sos</item>
+        <item name="android:colorBackground">@color/lg_bg</item>
+        <item name="colorOnBackground">@color/lg_label</item>
+        <item name="colorSurface">@color/lg_surface</item>
+        <item name="colorOnSurface">@color/lg_label</item>
+        <item name="colorSurfaceVariant">@color/lg_surface_2</item>
+        <item name="colorOnSurfaceVariant">@color/lg_label_secondary</item>
+        <item name="colorSurfaceContainerLowest">@color/lg_surface</item>
+        <item name="colorSurfaceContainerLow">@color/lg_surface</item>
+        <item name="colorSurfaceContainer">@color/lg_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/lg_surface</item>
+        <item name="colorSurfaceContainerHighest">@color/lg_surface_2</item>
+        <item name="colorOutline">@color/lg_separator</item>
+        <item name="colorOutlineVariant">@color/lg_separator</item>
+        <item name="android:textColorPrimary">@color/lg_label</item>
+        <item name="android:textColorSecondary">@color/lg_label_secondary</item>
+        <item name="android:textColorHint">@color/lg_label_tertiary</item>
+        <item name="android:textColorLink">@color/lg_accent</item>
+
+        <item name="android:windowBackground">@color/lg_bg</item>
+        <item name="android:statusBarColor">@color/lg_bg</item>
+        <item name="android:windowLightStatusBar">@bool/lg_light_bars</item>
+        <item name="android:navigationBarColor">@color/lg_bg</item>
+
+        <!-- typography (tokens.type.scale_pt) -->
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.LifeGuard.LargeTitle</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.LifeGuard.Title1</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.LifeGuard.Title2</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.LifeGuard.Title3</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.LifeGuard.Headline</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.LifeGuard.Body</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.LifeGuard.Callout</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.LifeGuard.Footnote</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.LifeGuard.Button</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.LifeGuard.Caption</item>
+
+        <!-- components -->
+        <item name="actionBarStyle">@style/Widget.LifeGuard.ActionBar</item>
+        <item name="materialButtonStyle">@style/Widget.LifeGuard.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.LifeGuard.Button.Outlined</item>
+        <item name="borderlessButtonStyle">@style/Widget.LifeGuard.Button.Text</item>
+        <item name="lgTonalButtonStyle">@style/Widget.LifeGuard.Button.Tonal</item>
+        <item name="lgRowButtonStyle">@style/Widget.LifeGuard.Button.Row</item>
+        <item name="lgSosButtonStyle">@style/Widget.LifeGuard.Button.Sos</item>
+        <item name="textInputStyle">@style/Widget.LifeGuard.TextInput</item>
+        <item name="materialSwitchStyle">@style/Widget.LifeGuard.Switch</item>
+    </style>
+
+    <!-- full-screen incoming emergency: the same deep red in both modes, white text -->
+    <style name="Theme.LifeGuard.Alert" parent="Platform.LifeGuard.NoActionBar">
+        <item name="colorPrimary">@color/lg_fill_sos</item>
+        <item name="colorOnPrimary">@color/lg_on_fill</item>
+        <item name="android:colorBackground">@color/lg_fill_sos</item>
+        <item name="android:windowBackground">@color/lg_fill_sos</item>
+        <item name="android:statusBarColor">@color/lg_fill_sos</item>
+        <item name="android:navigationBarColor">@color/lg_fill_sos</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/lg_on_fill</item>
+        <item name="materialButtonStyle">@style/Widget.LifeGuard.Button</item>
+    </style>
+
+    <!-- AI hazard alert ("LifeGuard detected a potential danger"): app navy header, white/blue body, follows light/dark -->
+    <style name="Theme.LifeGuard.Hazard" parent="Theme.LifeGuard">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/lg_fill_navy</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- "are you OK?" check (full screen, lock screen): calm warm surface, follows light/dark -->
+    <style name="Theme.LifeGuard.Check" parent="Theme.LifeGuard">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/lg_warning_tint</item>
+        <item name="android:statusBarColor">@color/lg_warning_tint</item>
+        <item name="android:navigationBarColor">@color/lg_warning_tint</item>
+    </style>
+
+    <!-- ===================== typography ===================== -->
+    <style name="TextAppearance.LifeGuard.LargeTitle" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_brand_navy</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Title1" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Title2" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Title3" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Headline" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Callout" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Subhead" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label_secondary</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Footnote" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label_secondary</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Caption" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/lg_label_secondary</item>
+    </style>
+    <!-- grouped-list section header (Apple "Settings" style), above a card -->
+    <style name="TextAppearance.LifeGuard.Section" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/lg_label_secondary</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="TextAppearance.LifeGuard.NavTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/lg_brand_navy</item>
+    </style>
+
+    <!-- ===================== components ===================== -->
+    <style name="Widget.LifeGuard.ActionBar" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">@color/lg_bg</item>
+        <item name="elevation">0dp</item>
+        <item name="titleTextStyle">@style/TextAppearance.LifeGuard.NavTitle</item>
+    </style>
+
+    <!-- primary: filled accent, 12dp corners, 48dp visible / 56dp touch -->
+    <style name="Widget.LifeGuard.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">@dimen/lg_radius_control</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Button</item>
+        <item name="android:stateListAnimator">@animator/lg_press_scale</item>
+    </style>
+    <style name="Widget.LifeGuard.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="cornerRadius">@dimen/lg_radius_control</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Button</item>
+        <item name="android:stateListAnimator">@animator/lg_press_scale</item>
+    </style>
+    <style name="Widget.LifeGuard.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/lg_radius_control</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="backgroundTint">@color/lg_surface</item>
+        <item name="strokeColor">@color/lg_separator</item>
+        <item name="android:textColor">@color/lg_button_text_accent</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Button</item>
+        <item name="android:stateListAnimator">@animator/lg_press_scale</item>
+    </style>
+    <style name="Widget.LifeGuard.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColor">@color/lg_button_text_accent</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Button</item>
+    </style>
+    <!-- SOS / dial emergency: fixed deep red in both modes -->
+    <style name="Widget.LifeGuard.Button.Sos" parent="Widget.LifeGuard.Button">
+        <item name="backgroundTint">@color/lg_button_bg_sos</item>
+        <item name="android:textColor">@color/lg_on_fill</item>
+        <item name="iconTint">@color/lg_on_fill</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+    <style name="Widget.LifeGuard.Button.Success" parent="Widget.LifeGuard.Button">
+        <item name="backgroundTint">@color/lg_fill_success</item>
+        <item name="android:textColor">@color/lg_on_fill</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+    <!-- dashboard tile: white card, accent icon on top, 16dp corners -->
+    <style name="Widget.LifeGuard.Button.Tile" parent="Widget.Material3.Button">
+        <item name="cornerRadius">@dimen/lg_radius_card</item>
+        <item name="android:minHeight">@dimen/lg_tile_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="backgroundTint">@color/lg_surface</item>
+        <item name="android:textColor">@color/lg_label</item>
+        <item name="iconTint">@color/lg_accent</item>
+        <item name="iconGravity">top</item>
+        <item name="iconSize">28dp</item>
+        <item name="iconPadding">8dp</item>
+        <item name="rippleColor">@color/lg_ripple_accent</item>
+        <item name="elevation">@dimen/lg_card_elevation</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Button</item>
+        <item name="android:stateListAnimator">@animator/lg_press_scale</item>
+    </style>
+    <!-- grouped-list row (settings links, inbox): text at start, chevron at end -->
+    <style name="Widget.LifeGuard.Button.Row" parent="Widget.Material3.Button">
+        <item name="cornerRadius">@dimen/lg_radius_control</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">2dp</item>
+        <item name="android:insetBottom">2dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="backgroundTint">@color/lg_surface</item>
+        <item name="android:textColor">@color/lg_label</item>
+        <item name="icon">@drawable/ic_chevron_end</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/lg_label_tertiary</item>
+        <item name="iconSize">20dp</item>
+        <item name="rippleColor">@color/lg_ripple_accent</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Callout</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="Widget.LifeGuard.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/lg_radius_control</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/lg_radius_control</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/lg_radius_control</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/lg_radius_control</item>
+        <item name="boxBackgroundColor">@color/lg_surface</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeColor">@color/lg_accent</item>
+    </style>
+    <style name="Widget.LifeGuard.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Callout</item>
+    </style>
+
+    <!-- containers -->
+    <style name="LifeGuard.Card" parent="">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:elevation">@dimen/lg_card_elevation</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="LifeGuard.SectionHeader" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.LifeGuard.Section</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:accessibilityHeading" tools:targetApi="28">true</item>
+    </style>
+</resources>

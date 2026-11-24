@@ -1,0 +1,15 @@
+# HTTPS אוטומטי (Let's Encrypt) לדומיין שהוגדר ב-LIFEGUARD_DOMAIN.
+{$LIFEGUARD_DOMAIN} {
+	encode gzip
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		-Server
+	}
+	reverse_proxy lifeguard:8765 {
+		# זרם ההתראות (SSE) והמתנה ארוכה: בלי באפר, בלי ניתוק מוקדם
+		flush_interval -1
+		transport http {
+			read_timeout 6m
+		}
+	}
+}

@@ -1,0 +1,602 @@
+{
+ "generated_by": "first_aid/library.py (Python reference)",
+ "guides": 82,
+ "cases": [
+  {
+   "query": "חנק",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "choking_adult_child",
+    "choking_infant"
+   ],
+   "top": "choking_adult_child"
+  },
+  {
+   "query": "נחנק",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "choking_adult_child",
+    "choking_infant"
+   ],
+   "top": "choking_adult_child"
+  },
+  {
+   "query": "תינוק נחנק",
+   "age": "infant",
+   "ambiguous": false,
+   "ids": [
+    "choking_infant"
+   ],
+   "top": "choking_infant"
+  },
+  {
+   "query": "ילד בן 3 נחנק",
+   "age": "child",
+   "ambiguous": false,
+   "ids": [
+    "choking_adult_child"
+   ],
+   "top": "choking_adult_child"
+  },
+  {
+   "query": "לא נושם",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "cpr_adult",
+    "cpr_child_infant",
+    "choking_infant",
+    "newborn_immediate_care_unexpected_birth"
+   ],
+   "top": "cpr_adult"
+  },
+  {
+   "query": "תינוק לא נושם",
+   "age": "infant",
+   "ambiguous": false,
+   "ids": [
+    "cpr_child_infant",
+    "choking_infant",
+    "newborn_immediate_care_unexpected_birth"
+   ],
+   "top": "cpr_child_infant"
+  },
+  {
+   "query": "מבוגר לא נושם",
+   "age": "adult",
+   "ambiguous": false,
+   "ids": [
+    "cpr_adult"
+   ],
+   "top": "cpr_adult"
+  },
+  {
+   "query": "החיאה",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "cpr_adult",
+    "cpr_child_infant"
+   ],
+   "top": "cpr_adult"
+  },
+  {
+   "query": "דימום",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "severe_bleeding",
+    "shock_internal_bleeding",
+    "pregnancy_bleeding_emergency",
+    "postpartum_hemorrhage",
+    "gastrointestinal_bleeding",
+    "nosebleed",
+    "road_crash_scene",
+    "crush_injury"
+   ],
+   "top": "severe_bleeding"
+  },
+  {
+   "query": "יורד לו דם מהאף",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "nosebleed",
+    "postpartum_hemorrhage",
+    "severe_bleeding",
+    "gastrointestinal_bleeding",
+    "shock_internal_bleeding",
+    "sepsis_red_flags",
+    "wilderness_lost_person",
+    "asthma_attack"
+   ],
+   "top": "nosebleed"
+  },
+  {
+   "query": "כויה",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "burns_thermal",
+    "frostbite",
+    "smoke_inhalation",
+    "electric_shock",
+    "lightning_strike"
+   ],
+   "top": "burns_thermal"
+  },
+  {
+   "query": "כווייה מים רותחים",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "burns_thermal",
+    "frostbite"
+   ],
+   "top": "burns_thermal"
+  },
+  {
+   "query": "נשרף ביד",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "burns_thermal"
+   ],
+   "top": "burns_thermal"
+  },
+  {
+   "query": "מכת חום",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "heatstroke"
+   ],
+   "top": "heatstroke"
+  },
+  {
+   "query": "שבץ",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "stroke"
+   ],
+   "top": "stroke"
+  },
+  {
+   "query": "פה עקום",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "stroke",
+    "fracture_sprain",
+    "israel_rocket_alert_shelter",
+    "animal_bite_rabies_israel"
+   ],
+   "top": "stroke"
+  },
+  {
+   "query": "התעלף",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "fainting",
+    "cpr_adult"
+   ],
+   "top": "fainting"
+  },
+  {
+   "query": "קיבל מכה בראש",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "head_spine_injury",
+    "concussion_sports",
+    "carbon_monoxide_exposure",
+    "meningitis_warning",
+    "altitude_sickness",
+    "permanent_tooth_avulsion"
+   ],
+   "top": "head_spine_injury"
+  },
+  {
+   "query": "בלע כדורים",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "poison_ingestion",
+    "drug_overdose_opioid",
+    "button_battery_ingestion",
+    "multiple_magnet_ingestion"
+   ],
+   "top": "poison_ingestion"
+  },
+  {
+   "query": "אקונומיקה",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "chemical_eye_exposure",
+    "toxic_cleaner_fumes",
+    "poison_ingestion",
+    "chemical_exposure"
+   ],
+   "top": "chemical_eye_exposure"
+  },
+  {
+   "query": "נשך אותו כלב",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "animal_bite",
+    "animal_bite_rabies_israel",
+    "spider_bite_red_flags_israel",
+    "snakebite"
+   ],
+   "top": "animal_bite"
+  },
+  {
+   "query": "דבורה עקצה",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "insect_sting",
+    "multiple_bee_wasp_stings",
+    "anaphylaxis",
+    "scorpion_sting_israel"
+   ],
+   "top": "insect_sting"
+  },
+  {
+   "query": "סוכר נמוך",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "hypoglycemia",
+    "diabetic_ketoacidosis"
+   ],
+   "top": "hypoglycemia"
+  },
+  {
+   "query": "choking",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "choking_adult_child",
+    "choking_infant"
+   ],
+   "top": "choking_adult_child"
+  },
+  {
+   "query": "bleeding",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "severe_bleeding",
+    "shock_internal_bleeding",
+    "pregnancy_bleeding_emergency",
+    "postpartum_hemorrhage",
+    "gastrointestinal_bleeding",
+    "nosebleed"
+   ],
+   "top": "severe_bleeding"
+  },
+  {
+   "query": "نزيف",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "severe_bleeding",
+    "shock_internal_bleeding",
+    "pregnancy_bleeding_emergency",
+    "postpartum_hemorrhage",
+    "gastrointestinal_bleeding",
+    "nosebleed",
+    "road_crash_scene",
+    "crush_injury"
+   ],
+   "top": "severe_bleeding"
+  },
+  {
+   "query": "اختناق",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "choking_adult_child",
+    "choking_infant"
+   ],
+   "top": "choking_adult_child"
+  },
+  {
+   "query": "حروق",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "burns_thermal",
+    "frostbite",
+    "smoke_inhalation",
+    "electric_shock",
+    "lightning_strike"
+   ],
+   "top": "burns_thermal"
+  },
+  {
+   "query": "לידה",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "birth_emergency",
+    "postpartum_hemorrhage",
+    "imminent_unplanned_birth",
+    "gas_leak_home",
+    "newborn_immediate_care_unexpected_birth",
+    "crush_injury",
+    "avalanche_burial"
+   ],
+   "top": "birth_emergency"
+  },
+  {
+   "query": "צירים",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "birth_emergency",
+    "imminent_unplanned_birth",
+    "postpartum_hemorrhage",
+    "gas_leak_home",
+    "newborn_immediate_care_unexpected_birth",
+    "avalanche_burial"
+   ],
+   "top": "birth_emergency"
+  },
+  {
+   "query": "פרכוס",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "seizure",
+    "infant_serious_illness_red_flags"
+   ],
+   "top": "seizure"
+  },
+  {
+   "query": "מפרכס",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "seizure",
+    "infant_serious_illness_red_flags"
+   ],
+   "top": "seizure"
+  },
+  {
+   "query": "אסטמה",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "asthma_attack"
+   ],
+   "top": "asthma_attack"
+  },
+  {
+   "query": "קוצר נשימה",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "asthma_attack",
+    "diving_decompression_emergency",
+    "heart_attack",
+    "anaphylaxis",
+    "altitude_sickness",
+    "smoke_inhalation",
+    "unresponsive_breathing",
+    "newborn_immediate_care_unexpected_birth"
+   ],
+   "top": "asthma_attack"
+  },
+  {
+   "query": "חום לתינוק",
+   "age": "infant",
+   "ambiguous": false,
+   "ids": [
+    "child_fever",
+    "heatstroke",
+    "hypothermia",
+    "infant_fever_under_two_months",
+    "newborn_immediate_care_unexpected_birth",
+    "heat_exhaustion",
+    "burns_thermal",
+    "sepsis_red_flags"
+   ],
+   "top": "child_fever"
+  },
+  {
+   "query": "xyzqq",
+   "age": null,
+   "ambiguous": false,
+   "ids": [],
+   "top": null
+  },
+  {
+   "query": "אני עצוב",
+   "age": null,
+   "ambiguous": false,
+   "ids": [],
+   "top": null
+  },
+  {
+   "query": "התחשמל",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "electric_shock"
+   ],
+   "top": "electric_shock"
+  },
+  {
+   "query": "עקרב",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "scorpion_sting_israel",
+    "multiple_bee_wasp_stings",
+    "anaphylaxis"
+   ],
+   "top": "scorpion_sting_israel"
+  },
+  {
+   "query": "ריח גז",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "gas_leak_home"
+   ],
+   "top": "gas_leak_home"
+  },
+  {
+   "query": "צבע אדום",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "israel_rocket_alert_shelter"
+   ],
+   "top": "israel_rocket_alert_shelter"
+  },
+  {
+   "query": "אזעקה",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "israel_rocket_alert_shelter"
+   ],
+   "top": "israel_rocket_alert_shelter"
+  },
+  {
+   "query": "מקלט",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "israel_rocket_alert_shelter"
+   ],
+   "top": "israel_rocket_alert_shelter"
+  },
+  {
+   "query": "בלע סוללה",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "button_battery_ingestion",
+    "multiple_magnet_ingestion",
+    "poison_ingestion"
+   ],
+   "top": "button_battery_ingestion"
+  },
+  {
+   "query": "מגנט",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "multiple_magnet_ingestion"
+   ],
+   "top": "multiple_magnet_ingestion"
+  },
+  {
+   "query": "קרציה",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "tick_bite_removal"
+   ],
+   "top": "tick_bite_removal"
+  },
+  {
+   "query": "שיטפון",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "flash_flood_wadi"
+   ],
+   "top": "flash_flood_wadi"
+  },
+  {
+   "query": "זרם סחף",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "rip_current"
+   ],
+   "top": "rip_current"
+  },
+  {
+   "query": "מחבל",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "active_attack_safety",
+    "mass_casualty_scene",
+    "penetrating_wound_chest",
+    "israel_rocket_alert_shelter"
+   ],
+   "top": "active_attack_safety"
+  },
+  {
+   "query": "שן נפלה",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "permanent_tooth_avulsion"
+   ],
+   "top": "permanent_tooth_avulsion"
+  },
+  {
+   "query": "סוכר גבוה",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "diabetic_ketoacidosis"
+   ],
+   "top": "diabetic_ketoacidosis"
+  },
+  {
+   "query": "כלבת",
+   "age": null,
+   "ambiguous": true,
+   "ids": [
+    "animal_bite_rabies_israel",
+    "animal_bite"
+   ],
+   "top": "animal_bite_rabies_israel"
+  },
+  {
+   "query": "gas leak",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "gas_leak_home",
+    "diving_decompression_emergency",
+    "carbon_monoxide_exposure",
+    "toxic_cleaner_fumes"
+   ],
+   "top": "gas_leak_home"
+  },
+  {
+   "query": "عقرب",
+   "age": null,
+   "ambiguous": false,
+   "ids": [
+    "scorpion_sting_israel"
+   ],
+   "top": "scorpion_sting_israel"
+  }
+ ],
+ "normalize": {
+  "כְּוִויָּה": "כויה",
+  "כוויה": "כויה",
+  "מד״א": "מדא",
+  "מד\"א": "מדא",
+  "חום!!": "חומ",
+  "והילדים": "והילדימ",
+  "אִשָּׁה": "אשה"
+ }
+}

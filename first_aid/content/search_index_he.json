@@ -1,0 +1,608 @@
+{
+ "schema_version": "1.0.0",
+ "language": "he-IL",
+ "updated": "2026-11-07",
+ "items": [
+  {
+   "id": "choking_adult_child",
+   "title": "חנק במבוגר או בילד מעל גיל שנה",
+   "category": "נשימה ודרכי אוויר",
+   "urgency": "critical",
+   "search_terms": [
+    "חנק",
+    "נחנק",
+    "נחנקת",
+    "אוכל תקוע",
+    "משהו תקוע בגרון",
+    "לא מצליח לנשום",
+    "לא יכול לדבר",
+    "חסימת דרכי נשימה",
+    "choking",
+    "food stuck",
+    "airway obstruction"
+   ]
+  },
+  {
+   "id": "choking_infant",
+   "title": "חנק בתינוק מתחת לגיל שנה",
+   "category": "נשימה ודרכי אוויר",
+   "urgency": "critical",
+   "search_terms": [
+    "תינוק נחנק",
+    "חנק תינוק",
+    "תינוק לא נושם",
+    "משהו תקוע לתינוק",
+    "infant choking",
+    "baby choking"
+   ]
+  },
+  {
+   "id": "cpr_adult",
+   "title": "דום לב והחייאה במבוגר",
+   "category": "החייאה",
+   "urgency": "critical",
+   "search_terms": [
+    "החייאה",
+    "דום לב",
+    "לא נושם",
+    "לא מגיב",
+    "התעלף ולא מתעורר",
+    "אין נשימה",
+    "CPR",
+    "cardiac arrest",
+    "AED",
+    "דפיברילטור"
+   ]
+  },
+  {
+   "id": "cpr_child_infant",
+   "title": "החייאה בילד או בתינוק",
+   "category": "החייאה",
+   "urgency": "critical",
+   "search_terms": [
+    "החייאת תינוק",
+    "החייאת ילד",
+    "תינוק לא נושם",
+    "ילד לא מגיב",
+    "CPR infant",
+    "child CPR"
+   ]
+  },
+  {
+   "id": "unresponsive_breathing",
+   "title": "חוסר הכרה עם נשימה תקינה",
+   "category": "הכרה ונשימה",
+   "urgency": "critical",
+   "search_terms": [
+    "מחוסר הכרה",
+    "לא מתעורר",
+    "מעולף",
+    "נושם אבל לא מגיב",
+    "unconscious breathing",
+    "recovery position",
+    "תנוחת התאוששות"
+   ]
+  },
+  {
+   "id": "drowning",
+   "title": "טביעה או כמעט טביעה",
+   "category": "מים וטביעה",
+   "urgency": "critical",
+   "search_terms": [
+    "טביעה",
+    "כמעט טביעה",
+    "נמשה מהמים",
+    "נבלע מים",
+    "drowning",
+    "near drowning"
+   ]
+  },
+  {
+   "id": "severe_bleeding",
+   "title": "דימום חמור או מסכן חיים",
+   "category": "דימום ופציעות",
+   "urgency": "critical",
+   "search_terms": [
+    "דימום חזק",
+    "דם לא מפסיק",
+    "חתך עמוק",
+    "פצע מדמם",
+    "דם פורץ",
+    "פציעה",
+    "severe bleeding",
+    "hemorrhage"
+   ]
+  },
+  {
+   "id": "shock_internal_bleeding",
+   "title": "הלם או חשד לדימום פנימי",
+   "category": "דימום ופציעות",
+   "urgency": "critical",
+   "search_terms": [
+    "הלם",
+    "שוק",
+    "דימום פנימי",
+    "חיוור",
+    "קר ולח",
+    "סחרחורת אחרי פציעה",
+    "shock",
+    "internal bleeding"
+   ]
+  },
+  {
+   "id": "heart_attack",
+   "title": "חשד להתקף לב או כאב בחזה",
+   "category": "לב וכלי דם",
+   "urgency": "critical",
+   "search_terms": [
+    "התקף לב",
+    "כאב בחזה",
+    "לחץ בחזה",
+    "כאב ביד שמאל",
+    "כאב בלסת",
+    "קוצר נשימה",
+    "heart attack",
+    "chest pain"
+   ]
+  },
+  {
+   "id": "stroke",
+   "title": "חשד לשבץ מוחי",
+   "category": "מוח ומערכת עצבים",
+   "urgency": "critical",
+   "search_terms": [
+    "שבץ",
+    "אירוע מוחי",
+    "צניחת פנים",
+    "דיבור משובש",
+    "חולשה ביד",
+    "FAST",
+    "BE FAST",
+    "stroke"
+   ]
+  },
+  {
+   "id": "seizure",
+   "title": "פרכוס",
+   "category": "מוח ומערכת עצבים",
+   "urgency": "critical",
+   "search_terms": [
+    "פרכוס",
+    "אפילפסיה",
+    "רעידות לא רצוניות",
+    "התקף",
+    "seizure",
+    "convulsion"
+   ]
+  },
+  {
+   "id": "anaphylaxis",
+   "title": "תגובה אלרגית קשה (אנפילקסיס)",
+   "category": "אלרגיה ונשימה",
+   "urgency": "critical",
+   "search_terms": [
+    "אנפילקסיס",
+    "אלרגיה קשה",
+    "נפיחות בלשון",
+    "נפיחות בגרון",
+    "עקיצה וקוצר נשימה",
+    "תגובה אלרגית",
+    "anaphylaxis",
+    "severe allergy",
+    "epipen",
+    "אפיפן"
+   ]
+  },
+  {
+   "id": "asthma_attack",
+   "title": "התקף אסתמה או קוצר נשימה",
+   "category": "נשימה ודרכי אוויר",
+   "urgency": "high",
+   "search_terms": [
+    "אסתמה",
+    "התקף אסטמה",
+    "צפצופים",
+    "קוצר נשימה",
+    "משאף",
+    "asthma attack",
+    "wheezing",
+    "shortness of breath"
+   ]
+  },
+  {
+   "id": "hypoglycemia",
+   "title": "נפילת סוכר (היפוגליקמיה)",
+   "category": "סוכרת וחילוף חומרים",
+   "urgency": "high",
+   "search_terms": [
+    "נפילת סוכר",
+    "סוכר נמוך",
+    "היפוגליקמיה",
+    "רועד ומזיע",
+    "בלבול סוכרתי",
+    "hypoglycemia",
+    "low blood sugar"
+   ]
+  },
+  {
+   "id": "dehydration",
+   "title": "התייבשות",
+   "category": "חום, קור ונוזלים",
+   "urgency": "medium",
+   "search_terms": [
+    "התייבשות",
+    "צמא",
+    "יובש בפה",
+    "שתן כהה",
+    "מעט שתן",
+    "סחרחורת מחום",
+    "dehydration"
+   ]
+  },
+  {
+   "id": "heat_exhaustion",
+   "title": "תשישות חום",
+   "category": "חום, קור ונוזלים",
+   "urgency": "high",
+   "search_terms": [
+    "תשישות חום",
+    "עייפות בחום",
+    "סחרחורת בשמש",
+    "התכווצויות חום",
+    "heat exhaustion"
+   ]
+  },
+  {
+   "id": "heatstroke",
+   "title": "מכת חום",
+   "category": "חום, קור ונוזלים",
+   "urgency": "critical",
+   "search_terms": [
+    "מכת חום",
+    "חום גוף גבוה",
+    "התחממות יתר",
+    "בלבול בשמש",
+    "קריסה בחום",
+    "heat stroke",
+    "hyperthermia"
+   ]
+  },
+  {
+   "id": "alcohol_poisoning",
+   "title": "הרעלת אלכוהול ושכרות מסוכנת",
+   "category": "חומרים והרעלות",
+   "urgency": "critical",
+   "search_terms": [
+    "שכרות",
+    "שיכור",
+    "הרעלת אלכוהול",
+    "שתה יותר מדי",
+    "הקאות מאלכוהול",
+    "אלכוהול וסמים",
+    "alcohol poisoning",
+    "drunk unconscious"
+   ]
+  },
+  {
+   "id": "drug_overdose_opioid",
+   "title": "מנת יתר מסמים או תרופות – חשד לאופיואידים",
+   "category": "חומרים והרעלות",
+   "urgency": "critical",
+   "search_terms": [
+    "מנת יתר",
+    "אוברדוז",
+    "סמים",
+    "הרעלת סמים",
+    "חשד לאופיואידים",
+    "פנטניל",
+    "הרואין",
+    "נלוקסון",
+    "נרקן",
+    "naloxone",
+    "opioid overdose",
+    "drug overdose"
+   ]
+  },
+  {
+   "id": "stimulant_overdose",
+   "title": "מנת יתר או תגובה חריפה לממריצים/סמים לא מזוהים",
+   "category": "חומרים והרעלות",
+   "urgency": "critical",
+   "search_terms": [
+    "קוקאין",
+    "MDMA",
+    "אקסטזי",
+    "אמפטמינים",
+    "סמים ממריצים",
+    "דופק מהיר מסמים",
+    "התחממות מסמים",
+    "חומר לא מזוהה",
+    "stimulant overdose",
+    "drug reaction"
+   ]
+  },
+  {
+   "id": "poison_ingestion",
+   "title": "בליעת תרופה, חומר ניקוי או רעל",
+   "category": "חומרים והרעלות",
+   "urgency": "high",
+   "search_terms": [
+    "הרעלה",
+    "בלע חומר ניקוי",
+    "בליעת תרופות",
+    "כדורים בטעות",
+    "אקונומיקה",
+    "חומר הדברה",
+    "רעל",
+    "poisoning",
+    "ingestion",
+    "cleaning product"
+   ]
+  },
+  {
+   "id": "chemical_exposure",
+   "title": "חשיפה לחומר כימי בעור, בעיניים או בשאיפה",
+   "category": "חומרים והרעלות",
+   "urgency": "high",
+   "search_terms": [
+    "חומר כימי בעין",
+    "נשפך אקונומיקה",
+    "נחשף לגז",
+    "שאיפת אדים",
+    "חומר הדברה על העור",
+    "chemical exposure",
+    "chemical burn",
+    "fume inhalation"
+   ]
+  },
+  {
+   "id": "burns_thermal",
+   "title": "כווייה מחום, מים רותחים או אש",
+   "category": "כוויות ופציעות",
+   "urgency": "high",
+   "search_terms": [
+    "כווייה",
+    "מים רותחים",
+    "נשרף",
+    "כוויה משמן",
+    "אש",
+    "burn",
+    "scald"
+   ]
+  },
+  {
+   "id": "electric_shock",
+   "title": "התחשמלות או פגיעת ברק",
+   "category": "חשמל וטראומה",
+   "urgency": "critical",
+   "search_terms": [
+    "התחשמלות",
+    "מכת חשמל",
+    "כבל חשמל",
+    "ברק פגע",
+    "electrocution",
+    "electric shock",
+    "lightning"
+   ]
+  },
+  {
+   "id": "fracture_sprain",
+   "title": "חשד לשבר, נקע או פריקה",
+   "category": "עצמות ומפרקים",
+   "urgency": "medium",
+   "search_terms": [
+    "שבר",
+    "עצם שבורה",
+    "נקע",
+    "פריקה",
+    "יד עקומה",
+    "קרסול נפוח",
+    "fracture",
+    "sprain",
+    "dislocation"
+   ]
+  },
+  {
+   "id": "head_spine_injury",
+   "title": "חבלת ראש, צוואר או עמוד שדרה",
+   "category": "עצמות ומפרקים",
+   "urgency": "critical",
+   "search_terms": [
+    "חבלת ראש",
+    "זעזוע מוח",
+    "פגיעה בצוואר",
+    "עמוד שדרה",
+    "נפל מגובה",
+    "תאונת דרכים",
+    "head injury",
+    "spinal injury",
+    "concussion"
+   ]
+  },
+  {
+   "id": "fainting",
+   "title": "התעלפות או עילפון",
+   "category": "הכרה ונשימה",
+   "urgency": "high",
+   "search_terms": [
+    "התעלפות",
+    "עילפון",
+    "כמעט מתעלף",
+    "סחרחורת פתאומית",
+    "fainting",
+    "syncope"
+   ]
+  },
+  {
+   "id": "nosebleed",
+   "title": "דימום מהאף",
+   "category": "דימום ופציעות",
+   "urgency": "low",
+   "search_terms": [
+    "דימום מהאף",
+    "אף מדמם",
+    "nosebleed",
+    "epistaxis"
+   ]
+  },
+  {
+   "id": "hypothermia",
+   "title": "היפותרמיה – ירידה מסוכנת בחום הגוף",
+   "category": "חום, קור ונוזלים",
+   "urgency": "critical",
+   "search_terms": [
+    "היפותרמיה",
+    "קור קיצוני",
+    "רועד מקור",
+    "בלבול מקור",
+    "hypothermia"
+   ]
+  },
+  {
+   "id": "frostbite",
+   "title": "כוויית קור",
+   "category": "חום, קור ונוזלים",
+   "urgency": "high",
+   "search_terms": [
+    "כוויית קור",
+    "אצבעות קפואות",
+    "עור לבן מקור",
+    "frostbite"
+   ]
+  },
+  {
+   "id": "snakebite",
+   "title": "הכשת נחש",
+   "category": "בעלי חיים ועקיצות",
+   "urgency": "critical",
+   "search_terms": [
+    "הכשת נחש",
+    "נחש הכיש",
+    "נשיכת נחש",
+    "snake bite",
+    "snakebite"
+   ]
+  },
+  {
+   "id": "animal_bite",
+   "title": "נשיכת כלב, חתול או בעל חיים",
+   "category": "בעלי חיים ועקיצות",
+   "urgency": "medium",
+   "search_terms": [
+    "נשיכת כלב",
+    "נשיכת חתול",
+    "נשיכת בעל חיים",
+    "כלב נשך",
+    "cat bite",
+    "dog bite",
+    "animal bite",
+    "כלבת",
+    "rabies"
+   ]
+  },
+  {
+   "id": "insect_sting",
+   "title": "עקיצת דבורה, צרעה או חרק",
+   "category": "בעלי חיים ועקיצות",
+   "urgency": "medium",
+   "search_terms": [
+    "עקיצת דבורה",
+    "עקיצת צרעה",
+    "עקיצת חרק",
+    "עוקץ",
+    "bee sting",
+    "wasp sting",
+    "insect sting"
+   ]
+  },
+  {
+   "id": "eye_injury",
+   "title": "פגיעה בעין או גוף זר בעין",
+   "category": "עיניים וחושים",
+   "urgency": "high",
+   "search_terms": [
+    "משהו נכנס לעין",
+    "פגיעה בעין",
+    "חומר בעין",
+    "אבק בעין",
+    "עין כואבת",
+    "eye injury",
+    "foreign body eye",
+    "chemical in eye"
+   ]
+  },
+  {
+   "id": "wound_embedded_object",
+   "title": "פצע עמוק או חפץ תקוע בגוף",
+   "category": "דימום ופציעות",
+   "urgency": "high",
+   "search_terms": [
+    "פצע דקירה",
+    "חפץ תקוע",
+    "סכין בגוף",
+    "רסיס",
+    "חתך עמוק",
+    "wound",
+    "embedded object",
+    "impaled object"
+   ]
+  },
+  {
+   "id": "vomiting_diarrhea",
+   "title": "הקאות או שלשולים – מניעת התייבשות",
+   "category": "חום, קור ונוזלים",
+   "urgency": "medium",
+   "search_terms": [
+    "הקאות",
+    "שלשול",
+    "שלשולים",
+    "קלקול קיבה",
+    "הקאה חוזרת",
+    "vomiting",
+    "diarrhea"
+   ]
+  },
+  {
+   "id": "panic_hyperventilation",
+   "title": "התקף חרדה או נשימת יתר – לאחר שלילת חירום",
+   "category": "תמיכה נפשית ונשימה",
+   "urgency": "medium",
+   "search_terms": [
+    "התקף חרדה",
+    "פאניקה",
+    "נשימת יתר",
+    "היפרוונטילציה",
+    "hyperventilation",
+    "panic attack"
+   ]
+  },
+  {
+   "id": "child_fever",
+   "title": "חום בילדים ותינוקות",
+   "category": "ילדים ותינוקות",
+   "urgency": "high",
+   "search_terms": [
+    "חום אצל תינוק",
+    "תינוק עם חום",
+    "ילד עם חום",
+    "חום גבוה",
+    "fever infant",
+    "child fever"
+   ]
+  },
+  {
+   "id": "birth_emergency",
+   "title": "לידה בלתי צפויה לפני הגעה לבית חולים",
+   "category": "הריון ולידה",
+   "urgency": "critical",
+   "search_terms": [
+    "לידה בדרך",
+    "לידה פתאומית",
+    "צירים חזקים",
+    "תינוק נולד בבית",
+    "childbirth emergency",
+    "birth"
+   ]
+  }
+ ]
+}

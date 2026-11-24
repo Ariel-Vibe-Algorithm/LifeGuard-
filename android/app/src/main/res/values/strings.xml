@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeGuard</string>
+
+    <!-- שירות רקע -->
+    <string name="service_connected">LifeGuard מחובר</string>
+    <string name="service_connected_text">מוכן לקבל התראות חירום מאנשי הקשר שלך</string>
+    <string name="service_offline_text">אין חיבור לשרת - מנסה שוב…</string>
+    <string name="service_sos_active">קריאת חירום פעילה - המיקום נשלח</string>
+
+    <!-- ערוצי התראות -->
+    <string name="ch_service">חיבור ברקע</string>
+    <string name="ch_ring">צלצול חירום</string>
+    <string name="ch_ring_desc">קריאת חירום מאיש/אשת קשר - מסך מלא ואזעקה</string>
+    <string name="ch_alerts">התראות חירום</string>
+    <string name="ch_info">עדכונים</string>
+    <string name="ch_chat">הודעות באירוע</string>
+    <string name="ch_quiet">עדכונים שקטים</string>
+
+    <!-- התחברות -->
+    <string name="login_title">התחברות ל-LifeGuard</string>
+    <string name="server_url">כתובת שרת</string>
+    <string name="server_url_hint">https://lifeguard.example.org</string>
+    <string name="username">שם משתמש</string>
+    <string name="password">סיסמה</string>
+    <string name="display_name">שם לתצוגה (להרשמה)</string>
+    <string name="login">התחבר/י</string>
+    <string name="register">הרשמה</string>
+    <string name="login_https_note">החיבור לשרת חייב להיות מוצפן (HTTPS). חיבור לא מוצפן מותר רק לשרת מקומי לבדיקות (10.0.2.2 / localhost).</string>
+    <string name="registered_now_login">נרשמת בהצלחה - מתחבר/ת…</string>
+    <string name="network_error">אין חיבור לשרת. בדוק/י את הכתובת והרשת.</string>
+
+    <!-- מסך ראשי -->
+    <string name="sos_hold">SOS\nהחזק/י 2 שניות</string>
+    <string name="sos_desc">כפתור חירום. החזק/י שתי שניות כדי לשלוח קריאה לאנשי הקשר עם המיקום שלך</string>
+    <string name="silent_hold">החזק/י: מצב שקט</string>
+    <string name="silent_desc">שליחת מצוקה שקטה - בלי צליל ובלי מסך מבהיל</string>
+    <string name="status_online">מחובר לשרת</string>
+    <string name="status_offline">אין חיבור לשרת</string>
+    <string name="active_loud_title">קריאת חירום פעילה</string>
+    <string name="active_silent_title">הבקשה נשלחה</string>
+    <string name="sos_pending">ממתין לרשת - מנסה לשלוח שוב…</string>
+    <string name="sos_sent">נשלח לשרת. המיקום מתעדכן כל 15 שניות.</string>
+    <string name="sms_sent">נשלח גם SMS ישיר לאנשי הקשר</string>
+    <string name="sms_sending">שולח SMS ישיר לאנשי הקשר…</string>
+    <string name="sms_failed">שליחת SMS נכשלה - מנסה שוב</string>
+    <string name="im_safe">אני בטוח/ה</string>
+    <string name="finish">סיום</string>
+    <string name="open_chat">צ\'אט</string>
+    <string name="mute_siren">השתק סירנה</string>
+    <string name="inbox_title">קריאות שאני מגיב/ה אליהן</string>
+    <string name="inbox_empty">אין קריאות פעילות</string>
+    <string name="setup_title">כדי שההתראות יגיעו</string>
+    <string name="perm_notifications">אפשר התראות</string>
+    <string name="perm_location">אפשר מיקום</string>
+    <string name="perm_background_location">אפשר מיקום גם ברקע</string>
+    <string name="perm_fullscreen">אפשר התראה במסך מלא</string>
+    <string name="perm_battery">החרגה מחיסכון בסוללה</string>
+    <string name="perm_sms_numbers">מספרי SMS לחירום ללא קליטה</string>
+    <string name="battery_explain">כדי שקריאת חירום מאיש/אשת קשר תגיע גם כשהמסך כבוי, LifeGuard צריך להישאר מחובר ברקע. מערכת חיסכון הסוללה עלולה לנתק אותו. לאשר החרגה?</string>
+    <string name="location_explain">המיקום נשלח רק בזמן קריאת חירום/ליווי, ועדכון גס כל 5 דקות כדי שהשרת יצלצל קודם לאיש הקשר הקרוב אלייך.</string>
+    <string name="fullscreen_explain">כדי שקריאת חירום תופיע על כל המסך גם כשהטלפון נעול, יש לאשר \"התראות במסך מלא\" בהגדרות.</string>
+    <string name="menu_settings">הגדרות</string>
+    <string name="menu_logout">התנתקות</string>
+    <string name="refresh">רענון</string>
+
+    <!-- ליווי -->
+    <string name="escort_title">ליווי הביתה</string>
+    <string name="escort_minutes">דקות</string>
+    <string name="escort_destination">יעד (לא חובה)</string>
+    <string name="escort_start">התחל ליווי</string>
+    <string name="escort_arrived">הגעתי</string>
+    <string name="escort_cancel">בטל ליווי</string>
+    <string name="escort_active">ליווי פעיל - נותרו %1$s</string>
+    <string name="escort_needs_network">התחלת ליווי דורשת חיבור לשרת</string>
+
+    <!-- קריאה נכנסת -->
+    <string name="alert_title">%1$s צריך/ה עזרה</string>
+    <string name="alert_accept">אני מטפל/ת</string>
+    <string name="alert_decline">לא יכול/ה</string>
+    <string name="alert_navigate">ניווט</string>
+    <string name="alert_silence">השתק</string>
+    <string name="alert_ring_stopped">הצלצול הסתיים - עדיין אפשר להגיב</string>
+    <string name="alert_silent_mode">מצוקה שקטה: ייתכן שהוא/היא לא יכול/ה לדבר. אל תתקשר/י - כתוב/כתבי בצ\'אט.</string>
+    <string name="alert_someone_handling">מישהו כבר מטפל באירוע - לעדכונך</string>
+    <string name="alert_distance">מרחק: %1$s</string>
+    <string name="alert_closed">האירוע הסתיים</string>
+
+    <!-- צ'אט -->
+    <string name="chat_title">צ\'אט אירוע</string>
+    <string name="chat_hint">כתוב/כתבי הודעה…</string>
+    <string name="chat_send">שלח</string>
+    <string name="chat_read_by">נקרא ע\"י: %1$s</string>
+    <string name="action_on_my_way">אני בדרך</string>
+    <string name="action_arrived">הגעתי</string>
+
+    <!-- הכל בסדר? -->
+    <string name="wellness_title">הכל בסדר?</string>
+    <string name="wellness_ok">אני בסדר</string>
+    <string name="wellness_help">אני צריך/ה עזרה</string>
+    <string name="wellness_countdown">קריאת חירום תישלח אוטומטית בעוד %1$d שניות</string>
+
+    <!-- הגדרות -->
+    <string name="settings_title">הגדרות</string>
+    <string name="sms_numbers_title">SMS ישיר כשאין אינטרנט</string>
+    <string name="sms_numbers_explain">אם קריאת חירום לא מצליחה להגיע לשרת (אין אינטרנט), הטלפון ישלח SMS ישיר עם המיקום שלך למספרים האלה. מספר בכל שורה. נשמר מוצפן במכשיר בלבד. נדרשת הרשאת שליחת SMS.</string>
+    <string name="sms_numbers_hint">050-1234567</string>
+    <string name="save">שמור</string>
+    <string name="sms_test">שלח SMS בדיקה</string>
+    <string name="sms_saved">נשמרו %1$d מספרים</string>
+    <string name="sms_invalid">מספרים לא תקינים: %1$s</string>
+    <string name="fall_detection">זיהוי נפילה / מכה / מאבק (חיישני תנועה). שואל \"הכל בסדר?\" רק כשיש לפחות 2 סימנים מאששים</string>
+    <string name="motion_monitoring">זיהוי עצירה פתאומית גם בלי ליווי (GPS - צורך סוללה)</string>
+    <string name="local_siren">סירנה בטלפון שלי בקריאה גלויה</string>
+    <string name="change_server">שינוי שרת (מחייב התחברות מחדש)</string>
+
+    <!-- נסיעה בטוחה -->
+    <string name="ride_title">נסיעה בטוחה</string>
+    <string name="ride_open">נסיעה בטוחה (מונית / אוטובוס / טרמפ…)</string>
+    <string name="ride_explain">אנשי הקשר שלך יראו את הנסיעה. המיקום נשלח כל 15 שניות; אם הרכב סוטה מהמסלול, עוצר זמן רב או מאחר - תישאל/י \"הכל בסדר?\", ובלי תשובה אנשי הקשר יקבלו קריאת חירום.</string>
+    <string name="ride_type">סוג נסיעה</string>
+    <string name="ride_destination">יעד</string>
+    <string name="ride_destination_hint">כתובת / שם המקום</string>
+    <string name="ride_find">חפש</string>
+    <string name="ride_point_hint">או הדבק/י קישור מפה (geo:, Google Maps, Waze, OSM) או lat,lon</string>
+    <string name="ride_geocoder_unavailable">חיפוש כתובות לא זמין במכשיר הזה (אין ספק Geocoder). כדי שהשרת יוכל לזהות סטייה מהמסלול - הדבק/י קישור מפה או קואורדינטות של היעד.</string>
+    <string name="ride_geocoder_failed">שירות חיפוש הכתובות לא זמין כרגע (אין רשת?). אפשר להדביק קישור מפה.</string>
+    <string name="ride_geocoder_not_found">הכתובת לא נמצאה. נסה/י ניסוח אחר או הדבק/י קישור מפה.</string>
+    <string name="ride_enter_address">כתוב/כתבי כתובת לחיפוש</string>
+    <string name="ride_point_found">נמצא</string>
+    <string name="ride_point_from_link">מהקישור</string>
+    <string name="ride_point_invalid">לא נמצאו קואורדינטות בקישור</string>
+    <string name="ride_no_point_note">הנסיעה התחילה בלי נקודת יעד - השרת יבדוק רק זמן ועצירות, לא סטייה מהמסלול</string>
+    <string name="ride_minutes">זמן נסיעה משוער (דקות)</string>
+    <string name="ride_vehicle">פרטי הרכב (לא חובה, עד 60 תווים)</string>
+    <string name="ride_plate">מספר רכב</string>
+    <string name="ride_vehicle_desc">תיאור (צבע, דגם, קו)</string>
+    <string name="ride_driver">שם הנהג/ת</string>
+    <string name="ride_silent">מצב שקט (בלי צלילים ומסכים בולטים)</string>
+    <string name="ride_start">התחל נסיעה</string>
+    <string name="ride_active_title">נסיעה פעילה: %1$s</string>
+    <string name="ride_loading">טוען מצב נסיעה…</string>
+    <string name="ride_queued">%1$d עדכונים ממתינים לשליחה (אין קליטה)</string>
+    <string name="ride_need_help">צריך/ה עזרה</string>
+    <string name="ride_arrived">הגעתי בשלום</string>
+    <string name="ride_arrived_ok">אנשי הקשר עודכנו שהגעת</string>
+    <string name="ride_extend">הארך ב-10 דקות</string>
+    <string name="ride_cancel">בטל נסיעה</string>
+    <string name="ride_cancel_confirm">לבטל את מעקב הנסיעה?</string>
+    <string name="ride_discreet_sos">החזק/י</string>
+    <string name="ride_discreet_sos_desc">קריאת חירום דיסקרטית - החזק/י שתי שניות</string>
+    <string name="ride_check_title">הכל בסדר בנסיעה?</string>
+    <string name="ride_check_ok_neutral">אישור</string>
+    <string name="ride_check_help_neutral">דיווח</string>
+    <string name="ride_check_countdown">בלי תשובה תוך %1$d שניות - אנשי הקשר יקבלו קריאת חירום</string>
+    <string name="ride_check_countdown_neutral">נא לאשר (%1$d)</string>
+    <string name="ride_checkin_queued">אין קליטה - התשובה תישלח כשהקליטה תחזור</string>
+    <string name="ride_sos_fallback">אין קשר לשרת - נשלחת קריאת חירום רגילה (עם SMS ישיר אם הוגדרו מספרים)</string>
+    <string name="ride_help_sent">נפתחה קריאת חירום לאנשי הקשר</string>
+
+    <!-- מצב ארצי -->
+    <string name="national_title">מצב ארצי ומקלטים</string>
+    <string name="national_loading">טוען…</string>
+    <string name="national_offline">אין חיבור לשרת - המידע לא זמין</string>
+    <string name="national_official">המקור המחייב: אפליקציית פיקוד העורף / oref.org.il / 104</string>
+    <string name="national_alerts">התרעות פיקוד העורף</string>
+    <string name="national_no_alert">אין התרעה פעילה כרגע (לפי השרת)</string>
+    <string name="national_shelters">מקלטים ציבוריים קרובים</string>
+    <string name="national_no_location">אין מיקום ידוע - לא ניתן לחפש מקלטים קרובים</string>
+    <string name="national_numbers">מספרי חירום</string>
+
+    <!-- תיעוד מקומי (ראיות) -->
+    <string name="evidence_title">תיעוד מקומי</string>
+    <string name="evidence_explain">לכל קריאת חירום נשמר במכשיר יומן מוצפן (מיקומים, זיהויי תנועה, שליחה/SMS, תגובות שהתקבלו, הודעות ששלחת, ושמע אם הופעל). כל רשומה מכילה hash של הקודמת - שינוי או מחיקה מתגלים באימות. צפייה וייצוא דורשים את נעילת המסך ונרשמים ביומן.</string>
+    <string name="evidence_empty">אין תיעוד שמור.</string>
+    <string name="evidence_view">הצג ואמת</string>
+    <string name="evidence_export">ייצוא</string>
+    <string name="evidence_delete">מחק</string>
+    <string name="evidence_keep">שמור</string>
+    <string name="evidence_error">שגיאה: %1$s</string>
+    <string name="evidence_exported">הקובץ נשמר</string>
+    <string name="evidence_verify_problems">שים/י לב: האימות מצא בעיות (מפורט ב-manifest.json)</string>
+    <string name="evidence_active_no_delete">אי אפשר למחוק תיעוד של אירוע פעיל</string>
+    <string name="evidence_delete_confirm">למחוק לצמיתות את התיעוד המקומי של האירוע? (הרשומה בשרת לא נמחקת)</string>
+    <string name="evidence_false_alarm_delete">האירוע סומן כאזעקת שווא. למחוק את התיעוד המקומי שלו מהמכשיר?</string>
+    <string name="false_alarm">אזעקת שווא</string>
+    <string name="false_alarm_confirm">לסגור את הקריאה כאזעקת שווא? אנשי הקשר יקבלו הודעה שהקריאה בוטלה.</string>
+    <string name="audio_evidence">הקלטה בחירום (SOS ידני / חירום מאושר בלבד)</string>
+    <string name="audio_evidence_note">ההגדרה נשמרת בשרת. ההקלטה מתבצעת רק בזמן SOS ידני או חירום מאושר - לעולם לא ברקע ולא מרחוק. כל קטע נשמר מוצפן במכשיר ומועלה מוצפן רק לאנשי קשר שקיבלו ממך הרשאת הקלטות. באנדרואיד 12+ מופיע סמן מיקרופון בזמן הקלטה - גם בקריאה שקטה. אם ה-SOS נפתח כשהאפליקציה ברקע, אנדרואיד עלול לחסום את המיקרופון (יירשם ביומן).</string>
+    <string name="open_evidence">תיעוד מקומי (ראיות)…</string>
+
+    <!-- בדיקת מוכנות -->
+    <string name="diag_title">בדיקת מוכנות</string>
+    <string name="diag_refresh">בדוק שוב</string>
+    <string name="diag_checking">בודק מול השרת…</string>
+    <string name="diag_checked_at">נבדק מול השרת ב-%1$s</string>
+    <string name="diag_fix">תקן</string>
+    <string name="diag_relogin_confirm">להתנתק ולהתחבר מחדש?</string>
+    <string name="bg_location_explain">רשות: כך המיקום יישלח בקריאת חירום גם אחרי הפעלה מחדש של הטלפון, לפני שפתחת את האפליקציה. באנדרואיד 11 ומעלה יש לבחור \"לאפשר כל הזמן\" במסך ההגדרות שייפתח.</string>
+    <string name="audio_evidence_explain">הקלטה בחירום: רק בזמן SOS ידני או חירום מאושר, בקטעים של דקה. כל קטע מוצפן במכשיר, ומועלה (מוצפן) רק לאנשי הקשר שאפשרת להם גישה להקלטות. אין האזנה חיה ואין הפעלה מרחוק. נדרשת הרשאת מיקרופון - מבקשים אותה עכשיו, מראש, כי בזמן חירום אין זמן לאשר.</string>
+
+
+    <!-- הפעלה לפי ביטחון -->
+    <string name="low_confidence_info">זיהוי אוטומטי בביטחון נמוך - לא נשלחה קריאה. אם את/ה צריך/ה עזרה, לחצו על כפתור ה-SOS.</string>
+    <string name="confirm_title">זוהה מצב חירום אפשרי</string>
+    <string name="confirm_text">אנשי הקשר שלך קיבלו התראה. מתנדבים לא נשלחו עד שתאשר/י. זה מצב חירום?</string>
+    <string name="confirm_yes">כן, זה חירום</string>
+    <string name="confirm_ok">אני בסדר</string>
+    <string name="confirm_pending">האישור יישלח לשרת כשתחזור קליטה</string>
+    <string name="confirm_sent">אישרת שזה חירום - נשלחים גם מתנדבים</string>
+    <string name="confirm_ok_question">לסגור את הקריאה כאזעקת שווא? אנשי הקשר יקבלו הודעה שהקריאה בוטלה.</string>
+
+    <!-- פרטיות -->
+    <string name="privacy_section">פרטיות ושיתוף</string>
+    <string name="location_sharing_title">שיתוף מיקום והרשאות</string>
+    <string name="contacts_location_title">מיקום של אנשי קשר</string>
+    <string name="guardian_title">הורה וילד</string>
+    <string name="privacy_history_title">היסטוריית פרטיות</string>
+    <string name="pause_all">השהיית כל שיתוף המיקום</string>
+    <string name="pause_explain">השהיה עוצרת מיד את המיקום החי לכל אנשי הקשר ומוחקת מהשרת את המיקום החי האחרון. התראות חירום ממשיכות לעבוד כרגיל.</string>
+    <string name="paused_offline">מושהה במכשיר - יישלח לשרת כשתחזור קליטה</string>
+    <string name="unavailable_offline">לא זמין - אין חיבור לשרת</string>
+    <string name="recording_access">גישה להקלטות</string>
+    <string name="export_signed">ייצוא דוח חתום</string>
+    <string name="filters">סינון</string>
+    <string name="apply">החל</string>
+    <string name="clear">נקה</string>
+
+    <!-- עזרה ראשונה (אופליין) -->
+    <string name="first_aid_title">עזרה ראשונה</string>
+    <string name="first_aid_open">🩹 עזרה ראשונה - עובד גם בלי אינטרנט</string>
+    <string name="first_aid_open_desc">פתיחת מדריכי עזרה ראשונה. שמורים במכשיר ועובדים בלי אינטרנט</string>
+    <string name="first_aid_active">🩹 עזרה ראשונה</string>
+    <string name="first_aid_login">🩹 עזרה ראשונה - בלי התחברות ובלי אינטרנט</string>
+    <!-- מתנדבים שלא חייבים להיות מד"א (server/helpers.py) - נוסח כמו ב-Windows -->
+    <string name="helpers_more">🙋 עוד סוגי עזרה</string>
+    <string name="helpers_liaison">👮 שמישהו יזעיק משטרה בשבילי</string>
+    <string name="helpers_talk">💬 מישהו לדבר איתו עכשיו</string>
+    <string name="support_open">💬 צריך/ה לדבר עם מישהו?</string>
+    <string name="volunteer_roles_title">🙋 התנדבות: איך תרצה/י לעזור</string>
+    <string name="safe_place_navigate">🧭 ניווט ברגל למקום הבטוח</string>
+    <!-- Wear OS -->
+    <string name="ch_ring_alert">קריאה נכנסת (צלצול)</string>
+    <string name="ch_ring_alert_desc">קריאת חירום מאיש/אשת קשר. רוטט חזק - גם בשעון המחובר</string>
+    <string name="watch_action_accept">קבלה</string>
+    <string name="watch_action_open_phone">פתיחה בטלפון</string>
+    <string name="watch_accept_ok_title">קיבלת את הקריאה</string>
+    <string name="watch_accept_ok_text">השרת אישר שקיבלת את הקריאה של %1$s. פתח/י בטלפון לצ\'אט ולניווט.</string>
+    <string name="watch_accept_failed_title">הקבלה לא נשלחה</string>
+    <string name="watch_accept_failed_text">לא הצלחנו לשלוח "קבלה" לשרת (אין רשת?). פתח/י את הקריאה בטלפון.</string>
+    <!-- עיצוב (design/DESIGN_SYSTEM_HE.md) -->
+    <string name="sos_hint">נשלח לאנשי הקשר שלך, עם המיקום</string>
+    <string name="home_section_help">עזרה ותמיכה</string>
+    <string name="home_tile_first_aid">עזרה ראשונה</string>
+    <string name="home_tile_first_aid_sub">עובד גם בלי אינטרנט</string>
+    <string name="home_tile_support">מישהו לדבר איתו</string>
+    <string name="home_tile_support_sub">לא חירום · אנונימי</string>
+    <string name="login_subtitle">אנשי קשר, מתנדבים ועזרה ראשונה - במקום אחד</string>
+    <string name="login_account_section">חשבון</string>
+    <string name="login_server_section">שרת</string>
+    <string name="alert_eyebrow">קריאת חירום</string>
+    <string name="settings_section_safety">זיהוי והתראות</string>
+    <string name="diag_section_checks">בדיקות</string>
+    <!-- מקום תפילה כמפלט אחרון (WorshipPref) - נשמר רק במכשיר, מוצפן -->
+    <string name="worship_title">מקום תפילה בסכנה (רשות)</string>
+    <string name="worship_saved">נשמר במכשיר הזה (מוצפן)</string>
+    <!-- אימות זהות מתנדב/ת -->
+    <string name="identity_title">🪪 אימות זהות מתנדב/ת</string>
+    <!-- התראות סכנה מ-AI (זיהוי צליל במכשיר) -->
+    <string name="ch_hazard">התראות סכנה מ-AI</string>
+    <string name="ch_hazard_desc">צליל שעשוי להעיד על סכנה (ירי, פיצוץ, שבירה, צרחה...). זיהוי של צליל בלבד - לא אישור לסכנה. הצליל והרטט נקבעים בהגדרות LifeGuard.</string>
+    <string name="hazard_section">התראות סכנה מ-AI</string>
+</resources>

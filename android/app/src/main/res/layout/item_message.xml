@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One chat message. "bubble" is the full-width row (its gravity puts the message at start / end);
+     "bubbleBody" is the rounded bubble itself. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bubble" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:layout_marginTop="3dp" android:layout_marginBottom="3dp">
+    <LinearLayout
+        android:id="@+id/bubbleBody" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:minWidth="96dp" android:background="@drawable/bg_bubble_other"
+        android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="8dp" android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/meta" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.LifeGuard.Caption" android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" android:textAppearance="@style/TextAppearance.LifeGuard.Body"
+            android:textIsSelectable="true" />
+        <TextView
+            android:id="@+id/readBy" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" android:textAppearance="@style/TextAppearance.LifeGuard.Caption"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+ "client_crypto_plain_key_fallback_and_partial_wipe": {
+  "verdict": "CONFIRMED (conditional)",
+  "severity": "Medium",
+  "detail": {
+   "pywin32_in_this_venv": true,
+   "pywin32_in_requirements": false,
+   "cryptography_in_client_requirements": false,
+   "vault_key_file_prefix": "PLAIN",
+   "vault_decrypted_with_key_from_disk": true,
+   "kws_decrypted_with_key_from_disk": true,
+   "wipe_10MiB_file_bytes_unchanged_after_4MiB": true,
+   "wipe_first_4MiB_overwritten": true,
+   "PLAIN_key_accepted_on_windows_with_dpapi": true,
+   "nonce/AAD": "AES-256-GCM, random 96-bit nonce per file, per-event/per-store key, AAD=event/name -> OK",
+   "where": "evidence_vault.py:29-41 (PLAIN), 44-57 (_wipe 4 MiB), 87-96 (key race, no O_EXCL); personal_kws.py:40-50 reuses the same fallback"
+  }
+ },
+ "route_walk_trim_endpoints_home_reconstructable": {
+  "verdict": "CONFIRMED",
+  "severity": "Medium (privacy)",
+  "detail": {
+   "walks_simulated": 200,
+   "home_estimate_error_m": {
+    "n": 200,
+    "p50": 26.5,
+    "p95": 76.9,
+    "p99": 102.5,
+    "max": 110.4,
+    "mean": 32.2,
+    "unit": "m"
+   },
+   "share_within_50m": 0.82,
+   "share_within_100m": 0.98,
+   "why": "fixed public 150 m radius around the exact first/last fix + full-resolution track and observed_at timestamps; multiple walks from the same door intersect even more tightly",
+   "where": "route_walk_ui.py:33-44, 275-278; server keeps lat/lon/observed_at (lifeguard_server.py:1750)"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+# הגדרת Firebase מקומית לאפליקציה (FCM) - לא נכנסת ל-git. תבנית: firebase.properties.example
+firebase.properties
+# לא בשימוש (אין תוסף google-services), אבל שלא ייכנס בטעות
+app/google-services.json

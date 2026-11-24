@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Home dashboard (Apple Health-like): status + readiness at the top, then either the large SOS (idle) or the
+  emergency card (active), then clean tiles and grouped sections. All view ids are used by MainActivity - keep them.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/lg_bg" android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="@dimen/lg_page_padding"
+        android:paddingEnd="@dimen/lg_page_padding" android:paddingTop="8dp" android:paddingBottom="32dp">
+
+        <!-- connection status pill (dot tinted in code) -->
+        <TextView
+            android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:minHeight="32dp" android:gravity="center_vertical"
+            android:background="@drawable/bg_pill" android:paddingStart="12dp" android:paddingEnd="14dp"
+            android:drawableStart="@drawable/ic_dot" android:drawablePadding="8dp"
+            android:textAppearance="@style/TextAppearance.LifeGuard.Footnote" />
+
+        <!-- readiness row -> diagnostics screen -->
+        <TextView
+            android:id="@+id/readiness" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:minHeight="56dp" android:gravity="center_vertical|start"
+            android:paddingStart="16dp" android:paddingEnd="12dp" android:paddingTop="10dp" android:paddingBottom="10dp"
+            android:background="@drawable/bg_card" android:elevation="@dimen/lg_card_elevation"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableEnd="@drawable/ic_chevron_end" android:drawableTint="@color/lg_label_tertiary"
+            android:drawablePadding="8dp" android:textAppearance="@style/TextAppearance.LifeGuard.Callout"
+            android:clickable="true" android:focusable="true" />
+
+        <!-- ===== my active event (replaces the SOS button while active) ===== -->
+        <LinearLayout
+            android:id="@+id/activeCard" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp" android:background="@drawable/bg_card_alert"
+            android:visibility="gone" android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/activeTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.LifeGuard.Title1" android:accessibilityHeading="true"
+                android:accessibilityLiveRegion="polite" />
+            <TextView
+                android:id="@+id/activeDetail" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:lineSpacingMultiplier="1.15"
+                android:textAppearance="@style/TextAppearance.LifeGuard.Callout"
+                android:accessibilityLiveRegion="polite" />
+            <!-- automatic detection with medium confidence (activation=unconfirmed): the owner decides -->
+            <LinearLayout
+                android:id="@+id/confirmBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="12dp" android:padding="12dp"
+                android:background="@drawable/bg_card" android:visibility="gone">
+                <TextView
+                    android:id="@+id/confirmText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/confirm_text" android:textAppearance="@style/TextAppearance.LifeGuard.Headline" />
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="8dp">
+                    <Button
+                        android:id="@+id/confirmYes" style="@style/Widget.LifeGuard.Button.Sos"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="@string/confirm_yes" />
+                    <Button
+                        android:id="@+id/confirmOk" style="@style/Widget.LifeGuard.Button.Outlined"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+                        android:layout_height="wrap_content" android:text="@string/confirm_ok" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="12dp">
+                <Button
+                    android:id="@+id/safeBtn" style="@style/Widget.LifeGuard.Button"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:text="@string/im_safe" />
+                <Button
+                    android:id="@+id/chatBtn" style="@style/Widget.LifeGuard.Button.Tonal"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+                    android:layout_height="wrap_content" android:text="@string/open_chat"
+                    app:icon="@drawable/ic_chat" app:iconGravity="textStart" />
+            </LinearLayout>
+            <!-- nearest safe place: instant from the bundled list (no network); OSRM refines. Loud SOS only. -->
+            <LinearLayout
+                android:id="@+id/safePlaceBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="12dp" android:padding="14dp"
+                android:background="@drawable/bg_card" android:visibility="gone">
+                <TextView
+                    android:id="@+id/safePlaceText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_place" android:drawableTint="@color/lg_accent"
+                    android:drawablePadding="10dp" android:gravity="center_vertical|start"
+                    android:lineSpacingMultiplier="1.15" android:textAppearance="@style/TextAppearance.LifeGuard.Callout" />
+                <TextView
+                    android:id="@+id/safePlaceNote" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote"
+                    android:textColor="@color/lg_warning" android:visibility="gone" />
+                <Button
+                    android:id="@+id/safePlaceNav" style="@style/Widget.LifeGuard.Button"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="@string/safe_place_navigate" />
+            </LinearLayout>
+            <!-- help that does not come physically (server/helpers.py) -->
+            <LinearLayout
+                android:id="@+id/helpersBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="12dp">
+                <TextView
+                    style="@style/LifeGuard.SectionHeader" android:layout_marginTop="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/helpers_more" />
+                <Button
+                    android:id="@+id/liaisonBtn" style="@style/Widget.LifeGuard.Button.Tonal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/helpers_liaison" />
+                <Button
+                    android:id="@+id/talkBtn" style="@style/Widget.LifeGuard.Button.Outlined"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/helpers_talk" />
+                <TextView
+                    android:id="@+id/helpersStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:textAppearance="@style/TextAppearance.LifeGuard.Subhead"
+                    android:accessibilityLiveRegion="polite" android:visibility="gone" />
+            </LinearLayout>
+            <!-- first aid during an event (loud only - never in silent distress) -->
+            <Button
+                android:id="@+id/firstAidActiveBtn" style="@style/Widget.LifeGuard.Button.Tonal"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                android:text="@string/first_aid_active" android:contentDescription="@string/first_aid_open_desc" />
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <Button
+                    android:id="@+id/muteBtn" style="@style/Widget.LifeGuard.Button.Text"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mute_siren" />
+                <Button
+                    android:id="@+id/falseAlarmBtn" style="@style/Widget.LifeGuard.Button.Text"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/false_alarm" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== SOS (idle) ===== -->
+        <LinearLayout
+            android:id="@+id/sosHero" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal" android:layout_marginTop="16dp">
+            <org.lifeguard.app.ui.HoldButton
+                android:id="@+id/sosBtn" android:layout_width="@dimen/lg_sos_size" android:layout_height="@dimen/lg_sos_size"
+                android:contentDescription="@string/sos_desc" />
+            <TextView
+                android:id="@+id/sosHint" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:gravity="center" android:text="@string/sos_hint"
+                android:textAppearance="@style/TextAppearance.LifeGuard.Footnote" />
+            <org.lifeguard.app.ui.HoldButton
+                android:id="@+id/silentBtn" android:layout_width="@dimen/lg_silent_size" android:layout_height="@dimen/lg_silent_size"
+                android:layout_marginTop="16dp" android:contentDescription="@string/silent_desc" />
+        </LinearLayout>
+
+        <!-- ===== tiles ===== -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/home_section_help" />
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:baselineAligned="false">
+            <!-- first aid: offline, no server -->
+            <Button
+                android:id="@+id/firstAidBtn" style="@style/Widget.LifeGuard.Button.Tile"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="@string/home_tile_first_aid" app:icon="@drawable/ic_first_aid"
+                android:contentDescription="@string/first_aid_open_desc" />
+            <!-- "need to talk to someone?" - not an emergency -->
+            <Button
+                android:id="@+id/supportBtn" style="@style/Widget.LifeGuard.Button.Tile"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" android:text="@string/home_tile_support" app:icon="@drawable/ic_support" />
+        </LinearLayout>
+
+        <!-- ===== escort ===== -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/escort_title" />
+        <LinearLayout style="@style/LifeGuard.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/rideBtn" style="@style/Widget.LifeGuard.Button.Row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:backgroundTint="@color/lg_surface_2" android:text="@string/ride_open" />
+            <LinearLayout
+                android:id="@+id/escortForm" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="96dp" android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/escortMinutes" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:hint="@string/escort_minutes" android:inputType="number" android:text="20"
+                            android:importantForAutofill="no" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/escortDest" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:hint="@string/escort_destination" android:inputType="text"
+                            android:importantForAutofill="no" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/escortStart" style="@style/Widget.LifeGuard.Button"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="@string/escort_start"
+                    app:icon="@drawable/ic_walk" app:iconGravity="textStart" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/escortActive" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone">
+                <TextView
+                    android:id="@+id/escortStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:textAppearance="@style/TextAppearance.LifeGuard.Headline"
+                    android:accessibilityLiveRegion="polite" />
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+                    <Button
+                        android:id="@+id/escortArrived" style="@style/Widget.LifeGuard.Button.Success"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="@string/escort_arrived" />
+                    <Button
+                        android:id="@+id/escortCancel" style="@style/Widget.LifeGuard.Button.Outlined"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+                        android:layout_height="wrap_content" android:text="@string/escort_cancel" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== incoming calls I respond to (rows built in MainActivity.renderInbox) ===== -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/inbox_title" />
+        <LinearLayout
+            android:id="@+id/inbox" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <!-- ===== missing permissions ===== -->
+        <LinearLayout
+            android:id="@+id/setupCard" style="@style/LifeGuard.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:background="@drawable/bg_card_warning" android:elevation="0dp">
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/setup_title" android:textAppearance="@style/TextAppearance.LifeGuard.Headline"
+                android:accessibilityHeading="true" />
+            <Button android:id="@+id/permNotif" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/perm_notifications" />
+            <Button android:id="@+id/permLocation" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/perm_location" />
+            <Button android:id="@+id/permBgLocation" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/perm_background_location" />
+            <Button android:id="@+id/permFullScreen" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/perm_fullscreen" />
+            <Button android:id="@+id/permBattery" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/perm_battery" />
+            <Button android:id="@+id/permSms" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/perm_sms_numbers" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

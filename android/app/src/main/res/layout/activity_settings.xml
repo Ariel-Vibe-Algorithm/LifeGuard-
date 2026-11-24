@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings: grouped cards (Apple Settings style) with native Material switches. Ids used by SettingsActivity. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/lg_bg" android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="@dimen/lg_page_padding" android:paddingEnd="@dimen/lg_page_padding"
+        android:paddingBottom="32dp">
+
+        <!-- emergency SMS numbers -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader" android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sms_numbers_title" />
+        <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/sms_numbers_explain" android:textAppearance="@style/TextAppearance.LifeGuard.Subhead" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numbers" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minLines="3" android:gravity="top|start" android:inputType="textMultiLine|phone"
+                    android:hint="@string/sms_numbers_hint" android:textDirection="ltr" android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/numbersMsg" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote"
+                android:accessibilityLiveRegion="polite" />
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button
+                    android:id="@+id/saveNumbers" style="@style/Widget.LifeGuard.Button"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:text="@string/save" />
+                <Button
+                    android:id="@+id/testSms" style="@style/Widget.LifeGuard.Button.Outlined"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+                    android:layout_height="wrap_content" android:text="@string/sms_test" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- detection + alerts -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_section_safety" />
+        <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="4dp" android:paddingBottom="8dp">
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/fallSwitch" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/fall_detection" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/lg_separator" />
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/motionSwitch" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/motion_monitoring" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/lg_separator" />
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sirenSwitch" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/local_siren" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/lg_separator" />
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/audioSwitch" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/audio_evidence" />
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/audio_evidence_note" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote" />
+            <TextView
+                android:id="@+id/recordingInfo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote"
+                android:textColor="@color/lg_label" />
+            <Button
+                android:id="@+id/openEvidence" style="@style/Widget.LifeGuard.Button.Row"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                app:backgroundTint="@color/lg_surface_2" android:text="@string/open_evidence" />
+        </LinearLayout>
+
+        <!-- AI hazard alerts (on-device sound detection). Rows built by HazardSettingsSection (prefs stored encrypted) -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hazard_section" />
+        <LinearLayout
+            android:id="@+id/hazardBox" style="@style/LifeGuard.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <!-- place-of-worship fallback (optional; stored only on this device, encrypted). Radio buttons added by SettingsActivity -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/worship_title" />
+        <LinearLayout
+            android:id="@+id/worshipBox" style="@style/LifeGuard.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/worshipExplain" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.LifeGuard.Subhead" />
+            <TextView
+                android:id="@+id/worshipMsg" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textAppearance="@style/TextAppearance.LifeGuard.Footnote"
+                android:accessibilityLiveRegion="polite" />
+        </LinearLayout>
+
+        <!-- privacy -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/privacy_section" />
+        <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="6dp">
+            <Button
+                android:id="@+id/openLocationSharing" style="@style/Widget.LifeGuard.Button.Row"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/location_sharing_title" />
+            <Button
+                android:id="@+id/openContactsLocation" style="@style/Widget.LifeGuard.Button.Row"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/contacts_location_title" />
+            <Button
+                android:id="@+id/openGuardian" style="@style/Widget.LifeGuard.Button.Row"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/guardian_title" />
+            <Button
+                android:id="@+id/openPrivacyHistory" style="@style/Widget.LifeGuard.Button.Row"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/privacy_history_title" />
+        </LinearLayout>
+
+        <!-- server -->
+        <TextView
+            style="@style/LifeGuard.SectionHeader"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/server_url" />
+        <LinearLayout style="@style/LifeGuard.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/serverUrl" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textDirection="ltr" android:textAppearance="@style/TextAppearance.LifeGuard.Callout"
+                android:textIsSelectable="true" />
+            <Button
+                android:id="@+id/changeServer" style="@style/Widget.LifeGuard.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change_server" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

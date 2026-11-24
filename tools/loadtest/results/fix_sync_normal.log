@@ -1,0 +1,36 @@
+machine: {'cpu_count': 12, 'python': '3.11.0', 'platform': 'win32', 'time': '2026-11-06 23:41:26', 'cpu_percent_busy': 40.2, 'cpu_physical': 6, 'mem_total_gb': 31.5, 'mem_available_gb': 6.6, 'top_processes_cpu_percent': [('System Idle Process', 771), ('python.exe', 100), ('python.exe', 98), ('python.exe', 71), ('msedgewebview2.exe', 16)]}
+rep 1/2  server pid=28812
+  POST /incidents              c=1       56.8 ok/s  p50=14.6 p95=33.4 p99=77.7 ms  cpu=0.96 lock=0.684 {200: 333}
+  POST /incidents              c=16      37.2 ok/s  p50=411.7 p95=745.7 p99=787.9 ms  cpu=1.01 lock=0.801 {200: 244}
+  POST /incidents              c=64      25.8 ok/s  p50=2260.5 p95=2828.6 p99=3111.6 ms  cpu=1.0 lock=0.826 {200: 233}
+  (64 active incidents for the next tests)
+  POST /incidents/{id}/location c=1      595.9 ok/s  p50=1.2 p95=3.6 p99=9.6 ms  cpu=0.78 lock=0.474 {200: 3442}
+  POST /incidents/{id}/location c=16     687.2 ok/s  p50=20.6 p95=42.3 p99=59.7 ms  cpu=1.16 lock=0.689 {200: 4078}
+  POST /incidents/{id}/location c=64     606.0 ok/s  p50=84.7 p95=241.6 p99=349.3 ms  cpu=1.17 lock=0.679 {200: 3610}
+  GET /incidents/{id} (owner)  c=1      305.2 ok/s  p50=2.4 p95=5.9 p99=10.9 ms  cpu=0.86 lock=0.534 {200: 1809}
+  GET /incidents/{id} (owner)  c=16     149.0 ok/s  p50=116.0 p95=180.9 p99=221.7 ms  cpu=1.15 lock=0.668 {200: 889}
+  GET /incidents/{id} (owner)  c=64     216.5 ok/s  p50=225.7 p95=593.5 p99=906.6 ms  cpu=1.22 lock=0.664 {200: 1330}
+  GET /incidents/{id} (contact) c=1      392.5 ok/s  p50=1.6 p95=6.2 p99=11.1 ms  cpu=0.94 lock=0.493 {200: 2311}
+  GET /incidents/{id} (contact) c=16     431.3 ok/s  p50=33.0 p95=62.0 p99=106.3 ms  cpu=1.17 lock=0.576 {200: 2375}
+  GET /incidents/{id} (contact) c=64     338.3 ok/s  p50=133.9 p95=544.9 p99=725.8 ms  cpu=1.23 lock=0.571 {200: 1971}
+  POST /incidents/{id}/messages c=1      177.3 ok/s  p50=1.6 p95=7.0 p99=15.4 ms  cpu=0.87 lock=0.713 {200: 997}
+  POST /incidents/{id}/messages c=16     234.1 ok/s  p50=16.2 p95=42.8 p99=186.6 ms  cpu=1.08 lock=0.784 {200: 1594, 429: 18}
+  POST /incidents/{id}/messages c=64     209.5 ok/s  p50=99.6 p95=275.8 p99=682.3 ms  cpu=1.1 lock=0.779 {429: 289, 200: 1527}
+rep 2/2  server pid=12640
+  POST /incidents              c=1       46.9 ok/s  p50=17.9 p95=35.9 p99=60.5 ms  cpu=0.97 lock=0.657 {200: 271}
+  POST /incidents              c=16      34.6 ok/s  p50=415.1 p95=806.4 p99=892.5 ms  cpu=0.97 lock=0.767 {200: 210}
+  POST /incidents              c=64      23.6 ok/s  p50=2094.5 p95=4146.3 p99=4309.3 ms  cpu=1.0 lock=0.813 {200: 239}
+  (64 active incidents for the next tests)
+  POST /incidents/{id}/location c=1       83.6 ok/s  p50=10.4 p95=28.5 p99=46.9 ms  cpu=0.91 lock=1.011 {200: 313}
+  POST /incidents/{id}/location c=16     108.9 ok/s  p50=142.9 p95=220.9 p99=274.4 ms  cpu=1.17 lock=0.671 {200: 643}
+  POST /incidents/{id}/location c=64     132.1 ok/s  p50=384.9 p95=831.1 p99=1187.3 ms  cpu=1.16 lock=0.623 {200: 805}
+  GET /incidents/{id} (owner)  c=1       92.7 ok/s  p50=7.2 p95=20.7 p99=88.2 ms  cpu=0.77 lock=0.621 {200: 540}
+  GET /incidents/{id} (owner)  c=16     224.1 ok/s  p50=59.5 p95=144.2 p99=190.7 ms  cpu=1.16 lock=0.661 {200: 1303}
+  GET /incidents/{id} (owner)  c=64     212.5 ok/s  p50=239.8 p95=680.9 p99=961.5 ms  cpu=1.18 lock=0.664 {200: 1305}
+  GET /incidents/{id} (contact) c=1      311.2 ok/s  p50=1.9 p95=7.7 p99=13.7 ms  cpu=0.96 lock=0.493 {200: 1847}
+  GET /incidents/{id} (contact) c=16     232.9 ok/s  p50=55.2 p95=132.6 p99=188.9 ms  cpu=1.18 lock=0.587 {200: 1036}
+  GET /incidents/{id} (contact) c=64     513.0 ok/s  p50=103.2 p95=217.1 p99=375.2 ms  cpu=1.14 lock=0.564 {200: 2801}
+  POST /incidents/{id}/messages c=1      190.6 ok/s  p50=1.7 p95=8.6 p99=13.3 ms  cpu=0.8 lock=0.47 {200: 1126}
+  POST /incidents/{id}/messages c=16     149.2 ok/s  p50=26.9 p95=131.1 p99=189.7 ms  cpu=0.97 lock=0.735 {200: 888, 429: 18}
+  POST /incidents/{id}/messages c=64     145.1 ok/s  p50=89.4 p95=276.5 p99=707.8 ms  cpu=0.98 lock=0.773 {429: 289, 200: 1467}
+saved: C:\Users\admin\Downloads\LifeGuard_Windows_Refresh\lifeguard\tools\loadtest\results\fix_sync_normal_20261106_234528.json
