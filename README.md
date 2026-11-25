@@ -878,7 +878,7 @@ streamlit run dashboard/app.py
 | **דניאל למברסקי** | תכנות ואיסוף נתונים | [danielemb1](https://github.com/danielemb1) |
 | **רועי** | איסוף נתונים | [roei789](https://github.com/roei789) |
 | **יהב כהן** | הצגה ועיצוב | [Yahavb97](https://github.com/Yahavb97) |
-| **עמית כהן** | הצגה ועיצוב | [aamitochen](https://github.com/aamitochen) |
+| **עמית כהן** | איסוף נתונים ועיצוב מוצר | [aamitochen](https://github.com/aamitochen) |
 
 ### עבודה משותפת ב־GitHub
 
